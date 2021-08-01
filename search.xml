@@ -71,6 +71,37 @@
       </tags>
   </entry>
   <entry>
+    <title>Hexo博客使用静态链接</title>
+    <url>/posts/11857/</url>
+    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有以下两种设置:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示列</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Hello World</title>
     <url>/posts/16112/</url>
     <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看 <a href="https://hexo.io/docs/">文档</a> 以获取更多信息。如果您在使用 Hexo 时遇到任何问题，可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除中</a>找到答案，或者您可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>询问我。</p>
@@ -106,37 +137,6 @@
         <tag>Hexo</tag>
         <tag>npm</tag>
         <tag>node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客使用静态链接</title>
-    <url>/posts/11857/</url>
-    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>有以下两种设置:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>示列</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
-<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
-        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -314,24 +314,6 @@
       </tags>
   </entry>
   <entry>
-    <title>咸鱼淘的二手主板到了</title>
-    <url>/posts/36335/</url>
-    <content><![CDATA[<p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖</p>
-<h4 id="为什么买二手呢？"><a href="#为什么买二手呢？" class="headerlink" title="为什么买二手呢？"></a>为什么买二手呢？</h4><p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 <code>intel</code>的主板，但是不知道怎么回事竟然坏了，<span id="more"></span>可能是因为电压不稳定导致的具体的不知道情况,然后去过维修店里看过，店员告诉我要换主板，他让我上网淘一个，然后我就从某东上白条了一块 B75 的主板，结果拿来装上 2 天就出问题了，把我的网卡烧毁了，声卡也坏了。:tw-1f47f:真是倒霉。然后我爸妈又让我重新买台笔记本，我也想着这台随便用用算了，就去咸鱼淘了一个 B78M-PULS 现在用着还是挺不错的.</p>
-<h4 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h4><p><img src="2.jpg" alt="原来的主板" title="原来的主板"><br><img src="a.jpg" alt="华硕B75" title="华硕B75"><br><img src="1.jpg" alt="烧坏的无线网卡" title="烧坏的无线网卡"></p>
-<h4 id="恭喜恭喜自己"><a href="#恭喜恭喜自己" class="headerlink" title="恭喜恭喜自己"></a>恭喜恭喜自己</h4><p>明天我的小米游戏本就到了，等到了在写一个开箱体验文章，哈哈</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>华硕</tag>
-        <tag>电脑</tag>
-        <tag>主板</tag>
-        <tag>咸鱼二手</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>好不容易来更新一下文章，写写几个字</title>
     <url>/posts/18472/</url>
     <content><![CDATA[<p>网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看 <span id="more"></span></p>
@@ -353,28 +335,21 @@
       </tags>
   </entry>
   <entry>
-    <title>最新HEXO博客NEXT主题隐藏文章方法</title>
-    <url>/posts/27190/</url>
-    <content><![CDATA[<p>其实方法很简单，打开主题首页对应的文件，添加一个判断即可</p>
-<p>打开文件 <code>\themes\next\layout\index.njk</code>文件，大概在11行把</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>替换为以下代码即可 <span id="more"></span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if post.hide != true %&#125;</span><br><span class="line">	&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>如图</p>
-<p><img src="2020-11-21203459.png" alt="代码页截图"></p>
-<p>然后在post文章头中加入 <code>hide:true</code>即可实现首页文章隐藏，true为隐藏false或者不写则为显示</p>
-<p>建议直接在 <code>/scaffolds/post.md</code>中直接添加 <code>hide:false</code>，即可实现新建文章自动添加</p>
-<p>在分类或者标签中实现隐藏也是同理</p>
+    <title>咸鱼淘的二手主板到了</title>
+    <url>/posts/36335/</url>
+    <content><![CDATA[<p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖</p>
+<h4 id="为什么买二手呢？"><a href="#为什么买二手呢？" class="headerlink" title="为什么买二手呢？"></a>为什么买二手呢？</h4><p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 <code>intel</code>的主板，但是不知道怎么回事竟然坏了，<span id="more"></span>可能是因为电压不稳定导致的具体的不知道情况,然后去过维修店里看过，店员告诉我要换主板，他让我上网淘一个，然后我就从某东上白条了一块 B75 的主板，结果拿来装上 2 天就出问题了，把我的网卡烧毁了，声卡也坏了。:tw-1f47f:真是倒霉。然后我爸妈又让我重新买台笔记本，我也想着这台随便用用算了，就去咸鱼淘了一个 B78M-PULS 现在用着还是挺不错的.</p>
+<h4 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h4><p><img src="2.jpg" alt="原来的主板" title="原来的主板"><br><img src="a.jpg" alt="华硕B75" title="华硕B75"><br><img src="1.jpg" alt="烧坏的无线网卡" title="烧坏的无线网卡"></p>
+<h4 id="恭喜恭喜自己"><a href="#恭喜恭喜自己" class="headerlink" title="恭喜恭喜自己"></a>恭喜恭喜自己</h4><p>明天我的小米游戏本就到了，等到了在写一个开箱体验文章，哈哈</p>
 ]]></content>
       <categories>
-        <category>常用技术</category>
+        <category>闲言碎语</category>
       </categories>
       <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
-        <tag>node</tag>
+        <tag>华硕</tag>
+        <tag>电脑</tag>
+        <tag>主板</tag>
+        <tag>咸鱼二手</tag>
       </tags>
   </entry>
   <entry>
@@ -409,12 +384,37 @@
       </tags>
   </entry>
   <entry>
+    <title>最新HEXO博客NEXT主题隐藏文章方法</title>
+    <url>/posts/27190/</url>
+    <content><![CDATA[<p>其实方法很简单，打开主题首页对应的文件，添加一个判断即可</p>
+<p>打开文件 <code>\themes\next\layout\index.njk</code>文件，大概在11行把</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>替换为以下代码即可 <span id="more"></span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if post.hide != true %&#125;</span><br><span class="line">	&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如图</p>
+<p><img src="2020-11-21203459.png" alt="代码页截图"></p>
+<p>然后在post文章头中加入 <code>hide:true</code>即可实现首页文章隐藏，true为隐藏false或者不写则为显示</p>
+<p>建议直接在 <code>/scaffolds/post.md</code>中直接添加 <code>hide:false</code>，即可实现新建文章自动添加</p>
+<p>在分类或者标签中实现隐藏也是同理</p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>node</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>本站主题安装和配置详情</title>
     <url>/posts/7434/</url>
     <content><![CDATA[<h1 id="本站主题安装和配置详情"><a href="#本站主题安装和配置详情" class="headerlink" title="本站主题安装和配置详情"></a>本站主题安装和配置详情</h1><p>本站主题是一款单栏响应式的[Hexo](<a href="https://hexo.io)主题;基于/">https://hexo.io)主题；基于</a> Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上</p>
-<p><img src="1.jpg" alt="本站主题"></p>
 <span id="more"></span>
 
+<p><img src="1.jpg" alt="本站主题"></p>
 <h3 id="一-主题简介"><a href="#一-主题简介" class="headerlink" title="一. 主题简介"></a>一. 主题简介</h3><p>  本站主题是一款单栏响应式的<a href="https://hexo.io/">Hexo</a>主题；基于 Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在<a href="https://github.com/WongMinHo/hexo-theme-miho">GitHub</a>上，<br>欢迎 Star 和 Fork；如遇到问题或发表建议，可以提<a href="https://github.com/WongMinHo/hexo-theme-miho/issues">Issues</a>，也可以在博客中留言给我，另外,喜欢的话不妨给个 Star。</p>
 <h3 id="二-安装"><a href="#二-安装" class="headerlink" title="二. 安装"></a>二. 安装</h3><h4 id="2-1-安装主题"><a href="#2-1-安装主题" class="headerlink" title="2.1 安装主题"></a>2.1 安装主题</h4><p><code>$ git clone https://github.com/WongMinHo/hexo-theme-miho.git themes/miho</code></p>
 <p>MiHo 主题需要 Hexo 3.0 或以上版本，请先升级。</p>
@@ -536,20 +536,6 @@
       </tags>
   </entry>
   <entry>
-    <title>要开始写笔记咯</title>
-    <url>/posts/58320/</url>
-    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
-<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记录一下今天的糗事</title>
     <url>/posts/476/</url>
     <content><![CDATA[<p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）<span id="more"></span></p>
@@ -570,6 +556,20 @@
         <tag>网站</tag>
         <tag>失误</tag>
         <tag>文件</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>要开始写笔记咯</title>
+    <url>/posts/58320/</url>
+    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
+<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
       </tags>
   </entry>
 </search>
