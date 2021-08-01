@@ -71,37 +71,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客使用静态链接</title>
-    <url>/posts/11857/</url>
-    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>有以下两种设置:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>示列</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
-<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
-        <tag>node</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/posts/16112/</url>
     <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看 <a href="https://hexo.io/docs/">文档</a> 以获取更多信息。如果您在使用 Hexo 时遇到任何问题，可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除中</a>找到答案，或者您可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>询问我。</p>
@@ -137,6 +106,37 @@
         <tag>Hexo</tag>
         <tag>npm</tag>
         <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客使用静态链接</title>
+    <url>/posts/11857/</url>
+    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有以下两种设置:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示列</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -536,6 +536,20 @@
       </tags>
   </entry>
   <entry>
+    <title>要开始写笔记咯</title>
+    <url>/posts/58320/</url>
+    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
+<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记录一下今天的糗事</title>
     <url>/posts/476/</url>
     <content><![CDATA[<p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）<span id="more"></span></p>
@@ -556,20 +570,6 @@
         <tag>网站</tag>
         <tag>失误</tag>
         <tag>文件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>要开始写笔记咯</title>
-    <url>/posts/58320/</url>
-    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
-<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
       </tags>
   </entry>
 </search>
