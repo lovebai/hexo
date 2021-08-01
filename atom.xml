@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>小白博客</title>
-  <icon>https://19981115.xyz/icon.png</icon>
+  <icon>http://localhost:4000/icon.png</icon>
   <subtitle>记录点滴，学习笔记</subtitle>
-  <link href="https://19981115.xyz/atom.xml" rel="self"/>
+  <link href="http://localhost:4000/atom.xml" rel="self"/>
   
-  <link href="https://19981115.xyz/"/>
+  <link href="http://localhost:4000/"/>
   <updated>2021-08-01T07:23:47.099Z</updated>
-  <id>https://19981115.xyz/</id>
+  <id>http://localhost:4000/</id>
   
   <author>
     <name>小白</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>最新HEXO博客NEXT主题隐藏文章方法</title>
-    <link href="https://19981115.xyz/posts/27190/"/>
-    <id>https://19981115.xyz/posts/27190/</id>
+    <link href="http://localhost:4000/posts/27190/"/>
+    <id>http://localhost:4000/posts/27190/</id>
     <published>2020-11-21T04:25:16.000Z</published>
     <updated>2021-08-01T07:23:47.099Z</updated>
     
@@ -28,25 +28,25 @@
 &lt;p&gt;打开文件 &lt;code&gt;\themes\next\layout\index.njk&lt;/code&gt;文件，大概在11行把&lt;/p&gt;
 &lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;#123; partial(&amp;#x27;_macro/post.njk&amp;#x27;, &amp;#123;post: post, is_index: true&amp;#125;) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;p&gt;替换为以下代码即可&lt;/p&gt;</summary>
+&lt;p&gt;替换为以下代码即可</summary>
     
     
     
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
+    <category term="常用技术" scheme="http://localhost:4000/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
+    <category term="博客" scheme="http://localhost:4000/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="node" scheme="https://19981115.xyz/tags/node/"/>
+    <category term="Hexo" scheme="http://localhost:4000/tags/Hexo/"/>
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="node" scheme="http://localhost:4000/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>Hexo博客使用静态链接</title>
-    <link href="https://19981115.xyz/posts/11857/"/>
-    <id>https://19981115.xyz/posts/11857/</id>
+    <link href="http://localhost:4000/posts/11857/"/>
+    <id>http://localhost:4000/posts/11857/</id>
     <published>2020-03-07T04:18:23.000Z</published>
     <updated>2021-08-01T07:23:59.659Z</updated>
     
@@ -55,25 +55,25 @@
 &lt;h2 id=&quot;开始安装&quot;&gt;&lt;a href=&quot;#开始安装&quot; class=&quot;headerlink&quot; title=&quot;开始安装&quot;&gt;&lt;/a&gt;开始安装&lt;/h2&gt;&lt;p&gt;添加插件到 HEXO 中，执行以下命令行安装:&lt;/p&gt;
 &lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-abbrlink --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
-&lt;p&gt;在 config.yml 文件中配置以下信息:&lt;/p&gt;</summary>
+&lt;p&gt;在 config.yml 文件中配置以下信息:</summary>
     
     
     
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
+    <category term="常用技术" scheme="http://localhost:4000/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
+    <category term="博客" scheme="http://localhost:4000/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="node" scheme="https://19981115.xyz/tags/node/"/>
+    <category term="Hexo" scheme="http://localhost:4000/tags/Hexo/"/>
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="node" scheme="http://localhost:4000/tags/node/"/>
     
   </entry>
   
   <entry>
     <title>纯代码屏蔽WordPress后台无用项让你的后台更加简洁</title>
-    <link href="https://19981115.xyz/posts/32702/"/>
-    <id>https://19981115.xyz/posts/32702/</id>
+    <link href="http://localhost:4000/posts/32702/"/>
+    <id>http://localhost:4000/posts/32702/</id>
     <published>2019-09-05T04:13:46.000Z</published>
     <updated>2021-08-01T07:22:54.484Z</updated>
     
@@ -82,69 +82,69 @@
     
     
     
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
+    <category term="常用技术" scheme="http://localhost:4000/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="http://localhost:4000/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="wordpress" scheme="https://19981115.xyz/tags/wordpress/"/>
+    <category term="wordpress" scheme="http://localhost:4000/tags/wordpress/"/>
     
-    <category term="php" scheme="https://19981115.xyz/tags/php/"/>
+    <category term="php" scheme="http://localhost:4000/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>好不容易来更新一下文章，写写几个字</title>
-    <link href="https://19981115.xyz/posts/18472/"/>
-    <id>https://19981115.xyz/posts/18472/</id>
+    <link href="http://localhost:4000/posts/18472/"/>
+    <id>http://localhost:4000/posts/18472/</id>
     <published>2019-03-28T04:15:45.000Z</published>
     <updated>2021-08-01T07:23:04.361Z</updated>
     
     
-    <summary type="html">&lt;p&gt;网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看</summary>
     
     
     
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+    <category term="闲言碎语" scheme="http://localhost:4000/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="http://localhost:4000/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="wordpress" scheme="https://19981115.xyz/tags/wordpress/"/>
+    <category term="wordpress" scheme="http://localhost:4000/tags/wordpress/"/>
     
-    <category term="php" scheme="https://19981115.xyz/tags/php/"/>
+    <category term="php" scheme="http://localhost:4000/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>记录一下今天的糗事</title>
-    <link href="https://19981115.xyz/posts/476/"/>
-    <id>https://19981115.xyz/posts/476/</id>
+    <link href="http://localhost:4000/posts/476/"/>
+    <id>http://localhost:4000/posts/476/</id>
     <published>2019-02-27T18:33:58.000Z</published>
     <updated>2021-08-01T07:23:10.059Z</updated>
     
     
-    <summary type="html">&lt;p&gt;本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）</summary>
     
     
     
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+    <category term="闲言碎语" scheme="http://localhost:4000/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
-    <category term="网站" scheme="https://19981115.xyz/tags/%E7%BD%91%E7%AB%99/"/>
+    <category term="网站" scheme="http://localhost:4000/tags/%E7%BD%91%E7%AB%99/"/>
     
-    <category term="失误" scheme="https://19981115.xyz/tags/%E5%A4%B1%E8%AF%AF/"/>
+    <category term="失误" scheme="http://localhost:4000/tags/%E5%A4%B1%E8%AF%AF/"/>
     
-    <category term="文件" scheme="https://19981115.xyz/tags/%E6%96%87%E4%BB%B6/"/>
+    <category term="文件" scheme="http://localhost:4000/tags/%E6%96%87%E4%BB%B6/"/>
     
   </entry>
   
   <entry>
     <title>瞧？这是啥？哈哈</title>
-    <link href="https://19981115.xyz/posts/35134/"/>
-    <id>https://19981115.xyz/posts/35134/</id>
+    <link href="http://localhost:4000/posts/35134/"/>
+    <id>http://localhost:4000/posts/35134/</id>
     <published>2019-02-16T04:08:43.000Z</published>
-    <updated>2021-08-01T07:23:18.054Z</updated>
+    <updated>2021-08-01T08:40:23.884Z</updated>
     
     
     <summary type="html">&lt;p&gt;来源百度百科： 属蚌科。壳内面的铰齿板具有发达的铰齿，但有的种类并不具备铰齿。贝壳内面具有亮丽的珍珠光泽，壳皮甚&lt;/p&gt;
@@ -154,19 +154,19 @@
     
     
     
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+    <category term="闲言碎语" scheme="http://localhost:4000/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
-    <category term="蚌壳" scheme="https://19981115.xyz/tags/%E8%9A%8C%E5%A3%B3/"/>
+    <category term="蚌壳" scheme="http://localhost:4000/tags/%E8%9A%8C%E5%A3%B3/"/>
     
-    <category term="田蚌" scheme="https://19981115.xyz/tags/%E7%94%B0%E8%9A%8C/"/>
+    <category term="田蚌" scheme="http://localhost:4000/tags/%E7%94%B0%E8%9A%8C/"/>
     
   </entry>
   
   <entry>
     <title>HUGO博客程序的安装文档</title>
-    <link href="https://19981115.xyz/posts/57274/"/>
-    <id>https://19981115.xyz/posts/57274/</id>
+    <link href="http://localhost:4000/posts/57274/"/>
+    <id>http://localhost:4000/posts/57274/</id>
     <published>2019-02-15T04:01:31.000Z</published>
     <updated>2021-08-01T07:24:07.744Z</updated>
     
@@ -180,147 +180,147 @@
     
     
     
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
+    <category term="常用技术" scheme="http://localhost:4000/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="Hugo" scheme="http://localhost:4000/tags/Hugo/"/>
     
-    <category term="Hugo" scheme="https://19981115.xyz/tags/Hugo/"/>
+    <category term="go" scheme="http://localhost:4000/tags/go/"/>
     
-    <category term="go" scheme="https://19981115.xyz/tags/go/"/>
+    <category term="博客" scheme="http://localhost:4000/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>小米游戏本开箱体验</title>
-    <link href="https://19981115.xyz/posts/64043/"/>
-    <id>https://19981115.xyz/posts/64043/</id>
+    <link href="http://localhost:4000/posts/64043/"/>
+    <id>http://localhost:4000/posts/64043/</id>
     <published>2019-01-30T03:57:07.000Z</published>
     <updated>2021-08-01T07:23:36.367Z</updated>
     
     
     <summary type="html">&lt;p&gt;黑色包装箱上印制了小米游戏本的内部X光扫描线稿图，这一点有点新意。全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方&lt;/p&gt;
-&lt;p&gt;黑色包装箱上印制了小米游戏本的内部 X 光扫描线稿图，这一点有点新意。&lt;/p&gt;</summary>
+&lt;p&gt;黑色包装箱上印制了小米游戏本的内部 X 光扫描线稿图，这一点有点新意。</summary>
     
     
     
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+    <category term="闲言碎语" scheme="http://localhost:4000/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
-    <category term="电脑" scheme="https://19981115.xyz/tags/%E7%94%B5%E8%84%91/"/>
+    <category term="电脑" scheme="http://localhost:4000/tags/%E7%94%B5%E8%84%91/"/>
     
-    <category term="开箱" scheme="https://19981115.xyz/tags/%E5%BC%80%E7%AE%B1/"/>
+    <category term="开箱" scheme="http://localhost:4000/tags/%E5%BC%80%E7%AE%B1/"/>
     
-    <category term="日常" scheme="https://19981115.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
+    <category term="日常" scheme="http://localhost:4000/tags/%E6%97%A5%E5%B8%B8/"/>
     
-    <category term="小米游戏本" scheme="https://19981115.xyz/tags/%E5%B0%8F%E7%B1%B3%E6%B8%B8%E6%88%8F%E6%9C%AC/"/>
+    <category term="小米游戏本" scheme="http://localhost:4000/tags/%E5%B0%8F%E7%B1%B3%E6%B8%B8%E6%88%8F%E6%9C%AC/"/>
     
-    <category term="小米" scheme="https://19981115.xyz/tags/%E5%B0%8F%E7%B1%B3/"/>
+    <category term="小米" scheme="http://localhost:4000/tags/%E5%B0%8F%E7%B1%B3/"/>
     
-    <category term="笔记本" scheme="https://19981115.xyz/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
+    <category term="笔记本" scheme="http://localhost:4000/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
     
   </entry>
   
   <entry>
     <title>咸鱼淘的二手主板到了</title>
-    <link href="https://19981115.xyz/posts/36335/"/>
-    <id>https://19981115.xyz/posts/36335/</id>
+    <link href="http://localhost:4000/posts/36335/"/>
+    <id>http://localhost:4000/posts/36335/</id>
     <published>2019-01-28T03:53:48.000Z</published>
     <updated>2021-08-01T07:23:31.381Z</updated>
     
     
     <summary type="html">&lt;p&gt;我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖&lt;/p&gt;
-&lt;h4 id=&quot;为什么买二手呢？&quot;&gt;&lt;a href=&quot;#为什么买二手呢？&quot; class=&quot;headerlink&quot; title=&quot;为什么买二手呢？&quot;&gt;&lt;/a&gt;为什么买二手呢？&lt;/h4&gt;&lt;p&gt;我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 &lt;code&gt;intel&lt;/code&gt;的主板，但是不知道怎么回事竟然坏了，&lt;/p&gt;</summary>
+&lt;h4 id=&quot;为什么买二手呢？&quot;&gt;&lt;a href=&quot;#为什么买二手呢？&quot; class=&quot;headerlink&quot; title=&quot;为什么买二手呢？&quot;&gt;&lt;/a&gt;为什么买二手呢？&lt;/h4&gt;&lt;p&gt;我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 &lt;code&gt;intel&lt;/code&gt;的主板，但是不知道怎么回事竟然坏了，</summary>
     
     
     
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+    <category term="闲言碎语" scheme="http://localhost:4000/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
-    <category term="华硕" scheme="https://19981115.xyz/tags/%E5%8D%8E%E7%A1%95/"/>
+    <category term="华硕" scheme="http://localhost:4000/tags/%E5%8D%8E%E7%A1%95/"/>
     
-    <category term="电脑" scheme="https://19981115.xyz/tags/%E7%94%B5%E8%84%91/"/>
+    <category term="电脑" scheme="http://localhost:4000/tags/%E7%94%B5%E8%84%91/"/>
     
-    <category term="主板" scheme="https://19981115.xyz/tags/%E4%B8%BB%E6%9D%BF/"/>
+    <category term="主板" scheme="http://localhost:4000/tags/%E4%B8%BB%E6%9D%BF/"/>
     
-    <category term="咸鱼二手" scheme="https://19981115.xyz/tags/%E5%92%B8%E9%B1%BC%E4%BA%8C%E6%89%8B/"/>
+    <category term="咸鱼二手" scheme="http://localhost:4000/tags/%E5%92%B8%E9%B1%BC%E4%BA%8C%E6%89%8B/"/>
     
   </entry>
   
   <entry>
     <title>使用Markdown编辑器的基本语法</title>
-    <link href="https://19981115.xyz/posts/41250/"/>
-    <id>https://19981115.xyz/posts/41250/</id>
+    <link href="http://localhost:4000/posts/41250/"/>
+    <id>http://localhost:4000/posts/41250/</id>
     <published>2019-01-28T03:47:20.000Z</published>
     <updated>2021-08-01T07:23:25.311Z</updated>
     
     
     <summary type="html">&lt;h2 id=&quot;主要内容&quot;&gt;&lt;a href=&quot;#主要内容&quot; class=&quot;headerlink&quot; title=&quot;主要内容&quot;&gt;&lt;/a&gt;主要内容&lt;/h2&gt;&lt;blockquote&gt;
 &lt;h4 id=&quot;Markdown是什么？&quot;&gt;&lt;a href=&quot;#Markdown是什么？&quot; class=&quot;headerlink&quot; title=&quot;Markdown是什么？&quot;&gt;&lt;/a&gt;Markdown&lt;em&gt;是什么&lt;/em&gt;？&lt;/h4&gt;&lt;h4 id=&quot;谁创造了它？&quot;&gt;&lt;a href=&quot;#谁创造了它？&quot; class=&quot;headerlink&quot; title=&quot;谁创造了它？&quot;&gt;&lt;/a&gt;&lt;em&gt;谁&lt;/em&gt;创造了它？&lt;/h4&gt;&lt;h4 id=&quot;为什么要使用它？&quot;&gt;&lt;a href=&quot;#为什么要使用它？&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用它？&quot;&gt;&lt;/a&gt;&lt;em&gt;为什么&lt;/em&gt;要使用它？&lt;/h4&gt;&lt;h4 id=&quot;怎么使用？&quot;&gt;&lt;a href=&quot;#怎么使用？&quot; class=&quot;headerlink&quot; title=&quot;怎么使用？&quot;&gt;&lt;/a&gt;&lt;em&gt;怎么&lt;/em&gt;使用？&lt;/h4&gt;&lt;h4 id=&quot;谁在用？&quot;&gt;&lt;a href=&quot;#谁在用？&quot; class=&quot;headerlink&quot; title=&quot;谁在用？&quot;&gt;&lt;/a&gt;&lt;em&gt;谁&lt;/em&gt;在用？&lt;/h4&gt;&lt;h4 id=&quot;尝试一下&quot;&gt;&lt;a href=&quot;#尝试一下&quot; class=&quot;headerlink&quot; title=&quot;尝试一下&quot;&gt;&lt;/a&gt;尝试一下&lt;/h4&gt;&lt;/blockquote&gt;
-&lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;h3 id=&quot;1-Markdown是什么？&quot;&gt;&lt;a href=&quot;#1-Markdown是什么？&quot; class=&quot;headerlink&quot; title=&quot;1. Markdown是什么？&quot;&gt;&lt;/a&gt;1. Markdown&lt;em&gt;是什么&lt;/em&gt;？&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;是一种轻量级&lt;strong&gt;标记语言&lt;/strong&gt;，它以纯文本形式(&lt;em&gt;易读、易写、易更改&lt;/em&gt;)编写文档，并最终以HTML格式发布。&lt;br&gt;&lt;strong&gt;Markdown&lt;/strong&gt;也可以理解为将以MARKDOWN语法编写的语言转换成HTML内容的工具。&lt;/p&gt;</summary>
+&lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;h3 id=&quot;1-Markdown是什么？&quot;&gt;&lt;a href=&quot;#1-Markdown是什么？&quot; class=&quot;headerlink&quot; title=&quot;1. Markdown是什么？&quot;&gt;&lt;/a&gt;1. Markdown&lt;em&gt;是什么&lt;/em&gt;？&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;是一种轻量级&lt;strong&gt;标记语言&lt;/strong&gt;，它以纯文本形式(&lt;em&gt;易读、易写、易更改&lt;/em&gt;)编写文档，并最终以HTML格式发布。&lt;br&gt;&lt;strong&gt;Markdown&lt;/strong&gt;也可以理解为将以MARKDOWN语法编写的语言转换成HTML内容的工具。</summary>
     
     
     
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
+    <category term="常用技术" scheme="http://localhost:4000/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="markdown" scheme="https://19981115.xyz/tags/markdown/"/>
+    <category term="markdown" scheme="http://localhost:4000/tags/markdown/"/>
     
-    <category term="编辑器" scheme="https://19981115.xyz/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
+    <category term="编辑器" scheme="http://localhost:4000/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
-    <category term="标记语言" scheme="https://19981115.xyz/tags/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
+    <category term="标记语言" scheme="http://localhost:4000/tags/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
   <entry>
     <title>要开始写笔记咯</title>
-    <link href="https://19981115.xyz/posts/58320/"/>
-    <id>https://19981115.xyz/posts/58320/</id>
+    <link href="http://localhost:4000/posts/58320/"/>
+    <id>http://localhost:4000/posts/58320/</id>
     <published>2019-01-16T03:44:12.000Z</published>
     <updated>2021-08-01T07:27:34.546Z</updated>
     
     
-    <summary type="html">&lt;p&gt;今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练&lt;br&gt;今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，&lt;/p&gt;</summary>
+    <summary type="html">&lt;p&gt;今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练&lt;br&gt;今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，</summary>
     
     
     
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
+    <category term="闲言碎语" scheme="http://localhost:4000/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
     
     
-    <category term="hexo" scheme="https://19981115.xyz/tags/hexo/"/>
+    <category term="hexo" scheme="http://localhost:4000/tags/hexo/"/>
     
-    <category term="github" scheme="https://19981115.xyz/tags/github/"/>
+    <category term="github" scheme="http://localhost:4000/tags/github/"/>
     
   </entry>
   
   <entry>
     <title>本站主题安装和配置详情</title>
-    <link href="https://19981115.xyz/posts/7434/"/>
-    <id>https://19981115.xyz/posts/7434/</id>
+    <link href="http://localhost:4000/posts/7434/"/>
+    <id>http://localhost:4000/posts/7434/</id>
     <published>2019-01-09T03:37:52.000Z</published>
     <updated>2021-08-01T07:22:41.742Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;本站主题安装和配置详情&quot;&gt;&lt;a href=&quot;#本站主题安装和配置详情&quot; class=&quot;headerlink&quot; title=&quot;本站主题安装和配置详情&quot;&gt;&lt;/a&gt;本站主题安装和配置详情&lt;/h1&gt;&lt;p&gt;本站主题是一款单栏响应式的[Hexo](&lt;a href=&quot;https://hexo.io)主题;基于/&quot;&gt;https://hexo.io)主题；基于&lt;/a&gt; Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;/.xyz//1.jpg&quot; alt=&quot;本站主题&quot;&gt;&lt;/p&gt;</summary>
+&lt;p&gt;&lt;img src=&quot;1.jpg&quot; alt=&quot;本站主题&quot;&gt;&lt;/p&gt;</summary>
     
     
     
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
+    <category term="常用技术" scheme="http://localhost:4000/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
+    <category term="博客" scheme="http://localhost:4000/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="Hexo" scheme="http://localhost:4000/tags/Hexo/"/>
     
-    <category term="node.js" scheme="https://19981115.xyz/tags/node-js/"/>
+    <category term="node.js" scheme="http://localhost:4000/tags/node-js/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="https://19981115.xyz/posts/16112/"/>
-    <id>https://19981115.xyz/posts/16112/</id>
+    <link href="http://localhost:4000/posts/16112/"/>
+    <id>http://localhost:4000/posts/16112/</id>
     <published>2019-01-01T09:56:49.000Z</published>
     <updated>2021-08-01T07:23:53.148Z</updated>
     
@@ -330,14 +330,14 @@
     
     
     
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
+    <category term="常用技术" scheme="http://localhost:4000/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
+    <category term="Hexo" scheme="http://localhost:4000/tags/Hexo/"/>
     
-    <category term="npm" scheme="https://19981115.xyz/tags/npm/"/>
+    <category term="npm" scheme="http://localhost:4000/tags/npm/"/>
     
-    <category term="node.js" scheme="https://19981115.xyz/tags/node-js/"/>
+    <category term="node.js" scheme="http://localhost:4000/tags/node-js/"/>
     
   </entry>
   

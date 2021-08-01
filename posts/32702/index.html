@@ -18,17 +18,17 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"19981115.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"localhost","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="WordPress 的功能十分强大，但是有些功能模块我们平时是用不到的，所以说一下如何使用代码将它们屏蔽掉,根据自己的需要，将下面代码添加到当前主题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="纯代码屏蔽WordPress后台无用项让你的后台更加简洁">
-<meta property="og:url" content="https://19981115.xyz/posts/32702/index.html">
+<meta property="og:url" content="http://localhost:4000/posts/32702/index.html">
 <meta property="og:site_name" content="小白博客">
 <meta property="og:description" content="WordPress 的功能十分强大，但是有些功能模块我们平时是用不到的，所以说一下如何使用代码将它们屏蔽掉,根据自己的需要，将下面代码添加到当前主题">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://19981115.xyz/.xyz//wp-admin.png">
+<meta property="og:image" content="http://localhost:4000/posts/32702/wp-admin.png">
 <meta property="article:published_time" content="2019-09-05T04:13:46.000Z">
 <meta property="article:modified_time" content="2021-08-01T07:22:54.484Z">
 <meta property="article:author" content="小白">
@@ -36,9 +36,9 @@
 <meta property="article:tag" content="wordpress">
 <meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://19981115.xyz/.xyz//wp-admin.png">
+<meta name="twitter:image" content="http://localhost:4000/posts/32702/wp-admin.png">
 
-<link rel="canonical" href="https://19981115.xyz/posts/32702/">
+<link rel="canonical" href="http://localhost:4000/posts/32702/">
 
 
 <script id="page-configurations">
@@ -201,7 +201,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://19981115.xyz/posts/32702/">
+    <link itemprop="mainEntityOfPage" href="http://localhost:4000/posts/32702/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -279,7 +279,7 @@
 
 <h3 id="页脚版本信息"><a href="#页脚版本信息" class="headerlink" title="页脚版本信息"></a>页脚版本信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">function change_footer_admin () &#123;return &#x27;&#x27;;&#125;</span><br><span class="line">add_filter(&#x27;admin_footer_text&#x27;, &#x27;change_footer_admin&#x27;, 9999);</span><br><span class="line">function change_footer_version() &#123;return &#x27;&#x27;;&#125;</span><br><span class="line">add_filter( &#x27;update_footer&#x27;, &#x27;change_footer_version&#x27;, 9999);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img src="/.xyz//wp-admin.png" alt="后台页面" title="后台页面"></p>
+<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img src="wp-admin.png" alt="后台页面" title="后台页面"></p>
 
     </div>
 
@@ -315,7 +315,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://19981115.xyz/posts/32702/" title="纯代码屏蔽WordPress后台无用项让你的后台更加简洁">https://19981115.xyz/posts/32702/</a>
+    <a href="http://localhost:4000/posts/32702/" title="纯代码屏蔽WordPress后台无用项让你的后台更加简洁">http://localhost:4000/posts/32702/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！

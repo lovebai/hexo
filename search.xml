@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo博客使用静态链接</title>
-    <url>/posts/11857/</url>
-    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>有以下两种设置:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>示列</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
-<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>node</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>HUGO博客程序的安装文档</title>
     <url>/posts/57274/</url>
     <content><![CDATA[<p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。</p>
@@ -96,9 +65,40 @@
         <category>常用技术</category>
       </categories>
       <tags>
-        <tag>博客</tag>
         <tag>Hugo</tag>
         <tag>go</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo博客使用静态链接</title>
+    <url>/posts/11857/</url>
+    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有以下两种设置:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示列</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -155,7 +155,7 @@
 <li><strong>2011</strong>年7月19日，因被控从MIT和JSTOR下载480万篇学术论文并以免费形式上传于网络被捕。</li>
 <li><strong>2013</strong>年1月自杀身亡。</li>
 </ul>
-<p><img src="/.xyz//Aaron_Swartz.jpg" alt="Aaron Swartz"></p>
+<p><img src="Aaron_Swartz.jpg" alt="Aaron Swartz"></p>
 <p>天才都有早逝的归途。</p>
 <h3 id="3-为什么要使用它？"><a href="#3-为什么要使用它？" class="headerlink" title="3. 为什么要使用它？"></a>3. <em>为什么</em>要使用它？</h3><ul>
 <li>它是易读（看起来舒服）、易写（语法简单）、易更改<strong>纯文本</strong>。处处体现着<strong>极简主义</strong>的影子。</li>
@@ -318,7 +318,7 @@
     <url>/posts/36335/</url>
     <content><![CDATA[<p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖</p>
 <h4 id="为什么买二手呢？"><a href="#为什么买二手呢？" class="headerlink" title="为什么买二手呢？"></a>为什么买二手呢？</h4><p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 <code>intel</code>的主板，但是不知道怎么回事竟然坏了，<span id="more"></span>可能是因为电压不稳定导致的具体的不知道情况,然后去过维修店里看过，店员告诉我要换主板，他让我上网淘一个，然后我就从某东上白条了一块 B75 的主板，结果拿来装上 2 天就出问题了，把我的网卡烧毁了，声卡也坏了。:tw-1f47f:真是倒霉。然后我爸妈又让我重新买台笔记本，我也想着这台随便用用算了，就去咸鱼淘了一个 B78M-PULS 现在用着还是挺不错的.</p>
-<h4 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h4><p><img src="/.xyz//2.jpg" alt="原来的主板" title="原来的主板"><br><img src="/.xyz//a.jpg" alt="华硕B75" title="华硕B75"><br><img src="/.xyz//1.jpg" alt="烧坏的无线网卡" title="烧坏的无线网卡"></p>
+<h4 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h4><p><img src="2.jpg" alt="原来的主板" title="原来的主板"><br><img src="a.jpg" alt="华硕B75" title="华硕B75"><br><img src="1.jpg" alt="烧坏的无线网卡" title="烧坏的无线网卡"></p>
 <h4 id="恭喜恭喜自己"><a href="#恭喜恭喜自己" class="headerlink" title="恭喜恭喜自己"></a>恭喜恭喜自己</h4><p>明天我的小米游戏本就到了，等到了在写一个开箱体验文章，哈哈</p>
 ]]></content>
       <categories>
@@ -336,7 +336,7 @@
     <url>/posts/18472/</url>
     <content><![CDATA[<p>网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看 <span id="more"></span></p>
 <h3 id="有很多网站怎么办？"><a href="#有很多网站怎么办？" class="headerlink" title="有很多网站怎么办？"></a>有很多网站怎么办？</h3><p>网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看，当然还会出售别的网站程序源码，这些源码都是很不错的希望可以卖个好价钱</p>
-<h3 id="wordpress的程序"><a href="#wordpress的程序" class="headerlink" title="wordpress的程序"></a>wordpress的程序</h3><p>这个博客程序还是很不错的，功能齐全，对搜索引擎特别友好，看这个截图就知道了<br><img src="/.xyz//1122.png" alt="惜文博客" title="惜文博客"></p>
+<h3 id="wordpress的程序"><a href="#wordpress的程序" class="headerlink" title="wordpress的程序"></a>wordpress的程序</h3><p>这个博客程序还是很不错的，功能齐全，对搜索引擎特别友好，看这个截图就知道了<br><img src="1122.png" alt="惜文博客" title="惜文博客"></p>
 <p>还有一些四方交易平台的源码，还是很优秀的</p>
 <h3 id="近期"><a href="#近期" class="headerlink" title="近期"></a>近期</h3><p>最近我下铺想学习做网站，我决定把他交会了</p>
 <p><em>想着让他使用hexo的博客系统，但是不知道怎么回事就是安装不算 <code>npm</code>,所以只能在本地使用 <code>phpstudy</code>搭建个 <code>typecho</code>的博客系统，这个博客系统是使用 <code>php</code>语言所编写的</em></p>
@@ -357,7 +357,7 @@
     <url>/posts/64043/</url>
     <content><![CDATA[<p>黑色包装箱上印制了小米游戏本的内部X光扫描线稿图，这一点有点新意。全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方</p>
 <p>黑色包装箱上印制了小米游戏本的内部 X 光扫描线稿图，这一点有点新意。<span id="more"></span><br>全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方，整体造型属于看起来有点低调，但同时又能给你隐隐觉得“好像有点厉害”的感觉全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方，整体造型属于看起来有点低调，但同时又能给你隐隐觉得“好像有点厉害”的感觉。</p>
-<p><img src="/.xyz//xmyxb1.jpg" alt="外观1" title="外观 1"><br><img src="/.xyz//xmyxb2.jpg" alt="外观2" title="外观 2"><br><img src="/.xyz//xmyxb3.jpg" alt="外观3" title="外观 3"><br><img src="/.xyz//xmyxb4.jpg" alt="外观4" title="外观 4"><br><img src="/.xyz//xmyxb5.jpg" alt="外观5" title="外观 5"></p>
+<p><img src="xmyxb1.jpg" alt="外观1" title="外观 1"><br><img src="xmyxb2.jpg" alt="外观2" title="外观 2"><br><img src="xmyxb3.jpg" alt="外观3" title="外观 3"><br><img src="xmyxb4.jpg" alt="外观4" title="外观 4"><br><img src="xmyxb5.jpg" alt="外观5" title="外观 5"></p>
 <h3 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h3><p>正如雷老板所说，确实是外观低调，内心澎湃。第一眼看上去就是标准的笔记本。但是当你打开灯效的时候又燥了起来。我还挺喜欢这种设计。</p>
 <h3 id="续航"><a href="#续航" class="headerlink" title="续航"></a>续航</h3><p>经本人不严谨的测试，看了 3 个电影正好没电，耗时 6 个小时左右。</p>
 <h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>重点来了，买游戏本的都奔着游戏来的，包括我。玩了几款游戏，绝地求生 魔兽世界 守望先锋 LOL 等，都是完美运行，没有出现卡顿，掉帧的现象。<br>![键盘]xmyxb6.jpg “键盘”)<br>![键盘]xmyxb8.jpg “键盘”)<br>![键盘]xmyxb9.jpg “键盘”)<br>![键盘]xmyxb7.jpg “键盘”)</p>
@@ -367,7 +367,7 @@
 <h3 id="散热"><a href="#散热" class="headerlink" title="散热"></a>散热</h3><p>真如发布会上所说，龙卷风确实很牛逼，再加上背面的超大散热面积，散热杠杠的，完全不用担心，并且有一键龙卷风按键，点击一下即开启，挺方便。</p>
 <h3 id="音效"><a href="#音效" class="headerlink" title="音效"></a>音效</h3><p>外置喇叭声音还原非常好，层次清晰。耳机的话，支持杜比音效，音效确实不错。</p>
 <h3 id="触摸板"><a href="#触摸板" class="headerlink" title="触摸板"></a>触摸板</h3><p>这个手感真的不错，是让人能愿意去用的。比我之前的 L 家的好太多。</p>
-<h3 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h3><p>bios 界面全部是简体中文，这是我用过电脑里最喜欢的 BIOS。功能界面看着贼舒服。<br><img src="/.xyz//c182cd3ab582297b59a41a7c6a66757d.jpg" alt="BIOS" title="BIOS"></p>
+<h3 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h3><p>bios 界面全部是简体中文，这是我用过电脑里最喜欢的 BIOS。功能界面看着贼舒服。<br><img src="c182cd3ab582297b59a41a7c6a66757d.jpg" alt="BIOS" title="BIOS"></p>
 ]]></content>
       <categories>
         <category>闲言碎语</category>
@@ -392,7 +392,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if post.hide != true %&#125;</span><br><span class="line">	&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p>如图</p>
-<p><img src="/.xyz//2020-11-21203459.png" alt="代码页截图"></p>
+<p><img src="2020-11-21203459.png" alt="代码页截图"></p>
 <p>然后在post文章头中加入 <code>hide:true</code>即可实现首页文章隐藏，true为隐藏false或者不写则为显示</p>
 <p>建议直接在 <code>/scaffolds/post.md</code>中直接添加 <code>hide:false</code>，即可实现新建文章自动添加</p>
 <p>在分类或者标签中实现隐藏也是同理</p>
@@ -401,16 +401,16 @@
         <category>常用技术</category>
       </categories>
       <tags>
+        <tag>博客</tag>
         <tag>Hexo</tag>
         <tag>node</tag>
-        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
     <title>本站主题安装和配置详情</title>
     <url>/posts/7434/</url>
     <content><![CDATA[<h1 id="本站主题安装和配置详情"><a href="#本站主题安装和配置详情" class="headerlink" title="本站主题安装和配置详情"></a>本站主题安装和配置详情</h1><p>本站主题是一款单栏响应式的[Hexo](<a href="https://hexo.io)主题;基于/">https://hexo.io)主题；基于</a> Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上</p>
-<p><img src="/.xyz//1.jpg" alt="本站主题"></p>
+<p><img src="1.jpg" alt="本站主题"></p>
 <span id="more"></span>
 
 <h3 id="一-主题简介"><a href="#一-主题简介" class="headerlink" title="一. 主题简介"></a>一. 主题简介</h3><p>  本站主题是一款单栏响应式的<a href="https://hexo.io/">Hexo</a>主题；基于 Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在<a href="https://github.com/WongMinHo/hexo-theme-miho">GitHub</a>上，<br>欢迎 Star 和 Fork；如遇到问题或发表建议，可以提<a href="https://github.com/WongMinHo/hexo-theme-miho/issues">Issues</a>，也可以在博客中留言给我，另外,喜欢的话不妨给个 Star。</p>
@@ -470,8 +470,8 @@
         <category>常用技术</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
         <tag>博客</tag>
+        <tag>Hexo</tag>
         <tag>node.js</tag>
       </tags>
   </entry>
@@ -484,7 +484,9 @@
 </blockquote>
 <span id="more"></span>
 
-<p>别的废话不多说，上图<br><img src="/.xyz//IMG_20190216_104639.jpg" alt="田蚌1" title="田蚌"><br><img src="/.xyz//IMG_20190216_095835.jpg" alt="田蚌2" title="田蚌"><br><img src="/.xyz//IMG_20190216_100528.jpg" alt="田蚌3" title="田蚌"><br><img src="/.xyz//IMG_20190216_100535.jpg" alt="田蚌4" title="田蚌"><br><img src="/.xyz//IMG_20190216_101617.jpg" alt="田蚌5" title="田蚌"></p>
+<img src="/posts/35134/IMG_20190216_104639.jpg" class="" title="This is an example image">
+
+<p>别的废话不多说，上图<br><img src="./IMG_20190216_104639.jpg" alt="田蚌1" title="田蚌"><br><img src="./IMG_20190216_095835.jpg" alt="田蚌2" title="田蚌"><br><img src="./IMG_20190216_100528.jpg" alt="田蚌3" title="田蚌"><br><img src="./IMG_20190216_100535.jpg" alt="田蚌4" title="田蚌"><br><img src="IMG_20190216_101617.jpg" alt="田蚌5" title="田蚌"></p>
 ]]></content>
       <categories>
         <category>闲言碎语</category>
@@ -492,6 +494,20 @@
       <tags>
         <tag>蚌壳</tag>
         <tag>田蚌</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>要开始写笔记咯</title>
+    <url>/posts/58320/</url>
+    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
+<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -522,7 +538,7 @@
 
 <h3 id="页脚版本信息"><a href="#页脚版本信息" class="headerlink" title="页脚版本信息"></a>页脚版本信息</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function change_footer_admin () &#123;return &#x27;&#x27;;&#125;</span><br><span class="line">add_filter(&#x27;admin_footer_text&#x27;, &#x27;change_footer_admin&#x27;, 9999);</span><br><span class="line">function change_footer_version() &#123;return &#x27;&#x27;;&#125;</span><br><span class="line">add_filter( &#x27;update_footer&#x27;, &#x27;change_footer_version&#x27;, 9999);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img src="/.xyz//wp-admin.png" alt="后台页面" title="后台页面"></p>
+<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img src="wp-admin.png" alt="后台页面" title="后台页面"></p>
 ]]></content>
       <categories>
         <category>常用技术</category>
@@ -534,30 +550,16 @@
       </tags>
   </entry>
   <entry>
-    <title>要开始写笔记咯</title>
-    <url>/posts/58320/</url>
-    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
-<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>记录一下今天的糗事</title>
     <url>/posts/476/</url>
     <content><![CDATA[<p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）<span id="more"></span></p>
 <blockquote>
-<p>唉，今天糗了，好烦恼！<br><img src="/.xyz//1.PNG" alt="捕获" title="捕获1"></p>
+<p>唉，今天糗了，好烦恼！<br><img src="1.PNG" alt="捕获" title="捕获1"></p>
 </blockquote>
 <h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy文件【discuz系统做的分类信息网】）<br>真是太手残了，该打</p>
 <h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><p>正在下载阿里云oss上的备份文件……<br>下载好了<br>但是并不可以得到解决<br>看来只能从数据库入手了</p>
 <p>然后就恢复_common_block、_common_diy_data与_common_template_block数据表<br>以及data下diy的所有文件<br>做了以上步骤差不多已经好了，只是推荐用户模块丢失了，没办法只能自己重新写代码了<br>不过不错；</p>
-<p><img src="/.xyz//2.PNG" alt="捕" title="捕获"></p>
+<p><img src="2.PNG" alt="捕" title="捕获"></p>
 <h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><p>DZ系统的模块数据不可以随便清理，有备份的不影响，现在我也要做一份备份了</p>
 <p>说起来比着还糟糕，懒得打字，各位晚安！</p>
 ]]></content>
