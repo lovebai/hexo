@@ -71,37 +71,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo博客使用静态链接</title>
-    <url>/posts/11857/</url>
-    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>有以下两种设置:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>示列</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
-<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
-        <tag>node</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/posts/16112/</url>
     <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看 <a href="https://hexo.io/docs/">文档</a> 以获取更多信息。如果您在使用 Hexo 时遇到任何问题，可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除中</a>找到答案，或者您可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>询问我。</p>
@@ -353,32 +322,34 @@
       </tags>
   </entry>
   <entry>
-    <title>小米游戏本开箱体验</title>
-    <url>/posts/64043/</url>
-    <content><![CDATA[<p>黑色包装箱上印制了小米游戏本的内部X光扫描线稿图，这一点有点新意。全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方</p>
-<p>黑色包装箱上印制了小米游戏本的内部 X 光扫描线稿图，这一点有点新意。<span id="more"></span><br>全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方，整体造型属于看起来有点低调，但同时又能给你隐隐觉得“好像有点厉害”的感觉全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方，整体造型属于看起来有点低调，但同时又能给你隐隐觉得“好像有点厉害”的感觉。</p>
-<p><img src="xmyxb1.jpg" alt="外观1" title="外观 1"><br><img src="xmyxb2.jpg" alt="外观2" title="外观 2"><br><img src="xmyxb3.jpg" alt="外观3" title="外观 3"><br><img src="xmyxb4.jpg" alt="外观4" title="外观 4"><br><img src="xmyxb5.jpg" alt="外观5" title="外观 5"></p>
-<h3 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h3><p>正如雷老板所说，确实是外观低调，内心澎湃。第一眼看上去就是标准的笔记本。但是当你打开灯效的时候又燥了起来。我还挺喜欢这种设计。</p>
-<h3 id="续航"><a href="#续航" class="headerlink" title="续航"></a>续航</h3><p>经本人不严谨的测试，看了 3 个电影正好没电，耗时 6 个小时左右。</p>
-<h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>重点来了，买游戏本的都奔着游戏来的，包括我。玩了几款游戏，绝地求生 魔兽世界 守望先锋 LOL 等，都是完美运行，没有出现卡顿，掉帧的现象。<br>![键盘]xmyxb6.jpg “键盘”)<br>![键盘]xmyxb8.jpg “键盘”)<br>![键盘]xmyxb9.jpg “键盘”)<br>![键盘]xmyxb7.jpg “键盘”)</p>
-<h3 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h3><p>总体来说，个人觉得键盘手感不错，用起来挺舒适的，码字贼爽，<code>但是过几天我要买个青轴键盘</code>。<br>![屏幕]xmyxb10.jpg “屏幕”)</p>
-<h3 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h3><p>我对屏幕不懂，看不出好还是不好，就不多说了。不过游戏本用 72%色域的屏幕，雷老板还是挺良心的。</p>
-<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>确实接口很丰富，要啥有啥，不过我确实觉得 SD 卡的接口可以不要，还能省点成本。另外说下 HDMI 可以输出 4K，这个比较赞。</p>
-<h3 id="散热"><a href="#散热" class="headerlink" title="散热"></a>散热</h3><p>真如发布会上所说，龙卷风确实很牛逼，再加上背面的超大散热面积，散热杠杠的，完全不用担心，并且有一键龙卷风按键，点击一下即开启，挺方便。</p>
-<h3 id="音效"><a href="#音效" class="headerlink" title="音效"></a>音效</h3><p>外置喇叭声音还原非常好，层次清晰。耳机的话，支持杜比音效，音效确实不错。</p>
-<h3 id="触摸板"><a href="#触摸板" class="headerlink" title="触摸板"></a>触摸板</h3><p>这个手感真的不错，是让人能愿意去用的。比我之前的 L 家的好太多。</p>
-<h3 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h3><p>bios 界面全部是简体中文，这是我用过电脑里最喜欢的 BIOS。功能界面看着贼舒服。<br><img src="c182cd3ab582297b59a41a7c6a66757d.jpg" alt="BIOS" title="BIOS"></p>
+    <title>Hexo博客使用静态链接</title>
+    <url>/posts/11857/</url>
+    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有以下两种设置:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示列</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
 ]]></content>
       <categories>
-        <category>闲言碎语</category>
+        <category>常用技术</category>
       </categories>
       <tags>
-        <tag>电脑</tag>
-        <tag>开箱</tag>
-        <tag>日常</tag>
-        <tag>小米游戏本</tag>
-        <tag>小米</tag>
-        <tag>笔记本</tag>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -484,9 +455,7 @@
 </blockquote>
 <span id="more"></span>
 
-<img src="/posts/35134/IMG_20190216_104639.jpg" class="" title="This is an example image">
-
-<p>别的废话不多说，上图<br><img src="./IMG_20190216_104639.jpg" alt="田蚌1" title="田蚌"><br><img src="./IMG_20190216_095835.jpg" alt="田蚌2" title="田蚌"><br><img src="./IMG_20190216_100528.jpg" alt="田蚌3" title="田蚌"><br><img src="./IMG_20190216_100535.jpg" alt="田蚌4" title="田蚌"><br><img src="IMG_20190216_101617.jpg" alt="田蚌5" title="田蚌"></p>
+<p>别的废话不多说，上图<br><img src="IMG_20190216_104639.jpg" alt="田蚌1" title="田蚌"><br><img src="IMG_20190216_095835.jpg" alt="田蚌2" title="田蚌"><br><img src="IMG_20190216_100528.jpg" alt="田蚌3" title="田蚌"><br><img src="IMG_20190216_100535.jpg" alt="田蚌4" title="田蚌"><br><img src="IMG_20190216_101617.jpg" alt="田蚌5" title="田蚌"></p>
 ]]></content>
       <categories>
         <category>闲言碎语</category>
@@ -494,20 +463,6 @@
       <tags>
         <tag>蚌壳</tag>
         <tag>田蚌</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>要开始写笔记咯</title>
-    <url>/posts/58320/</url>
-    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
-<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>
@@ -547,6 +502,20 @@
         <tag>博客</tag>
         <tag>wordpress</tag>
         <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>要开始写笔记咯</title>
+    <url>/posts/58320/</url>
+    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
+<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
       </tags>
   </entry>
   <entry>
