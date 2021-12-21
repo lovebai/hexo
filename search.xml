@@ -1515,24 +1515,6 @@
       </tags>
   </entry>
   <entry>
-    <title>咸鱼淘的二手主板到了</title>
-    <url>/posts/36335/</url>
-    <content><![CDATA[<p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖</p>
-<h4 id="为什么买二手呢？"><a href="#为什么买二手呢？" class="headerlink" title="为什么买二手呢？"></a>为什么买二手呢？</h4><p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 <code>intel</code>的主板，但是不知道怎么回事竟然坏了，<span id="more"></span>可能是因为电压不稳定导致的具体的不知道情况,然后去过维修店里看过，店员告诉我要换主板，他让我上网淘一个，然后我就从某东上白条了一块 B75 的主板，结果拿来装上 2 天就出问题了，把我的网卡烧毁了，声卡也坏了。:tw-1f47f:真是倒霉。然后我爸妈又让我重新买台笔记本，我也想着这台随便用用算了，就去咸鱼淘了一个 B78M-PULS 现在用着还是挺不错的.</p>
-<h4 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h4><p><img data-src="2.jpg" alt="原来的主板" title="原来的主板"><br><img data-src="a.jpg" alt="华硕B75" title="华硕B75"><br><img data-src="1.jpg" alt="烧坏的无线网卡" title="烧坏的无线网卡"></p>
-<h4 id="恭喜恭喜自己"><a href="#恭喜恭喜自己" class="headerlink" title="恭喜恭喜自己"></a>恭喜恭喜自己</h4><p>明天我的小米游戏本就到了，等到了在写一个开箱体验文章，哈哈</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>华硕</tag>
-        <tag>电脑</tag>
-        <tag>主板</tag>
-        <tag>咸鱼二手</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Markdown编辑器的基本语法</title>
     <url>/posts/41250/</url>
     <content><![CDATA[<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><blockquote>
@@ -1704,6 +1686,24 @@
         <tag>markdown</tag>
         <tag>编辑器</tag>
         <tag>标记语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>咸鱼淘的二手主板到了</title>
+    <url>/posts/36335/</url>
+    <content><![CDATA[<p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖</p>
+<h4 id="为什么买二手呢？"><a href="#为什么买二手呢？" class="headerlink" title="为什么买二手呢？"></a>为什么买二手呢？</h4><p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 <code>intel</code>的主板，但是不知道怎么回事竟然坏了，<span id="more"></span>可能是因为电压不稳定导致的具体的不知道情况,然后去过维修店里看过，店员告诉我要换主板，他让我上网淘一个，然后我就从某东上白条了一块 B75 的主板，结果拿来装上 2 天就出问题了，把我的网卡烧毁了，声卡也坏了。:tw-1f47f:真是倒霉。然后我爸妈又让我重新买台笔记本，我也想着这台随便用用算了，就去咸鱼淘了一个 B78M-PULS 现在用着还是挺不错的.</p>
+<h4 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h4><p><img data-src="2.jpg" alt="原来的主板" title="原来的主板"><br><img data-src="a.jpg" alt="华硕B75" title="华硕B75"><br><img data-src="1.jpg" alt="烧坏的无线网卡" title="烧坏的无线网卡"></p>
+<h4 id="恭喜恭喜自己"><a href="#恭喜恭喜自己" class="headerlink" title="恭喜恭喜自己"></a>恭喜恭喜自己</h4><p>明天我的小米游戏本就到了，等到了在写一个开箱体验文章，哈哈</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>华硕</tag>
+        <tag>电脑</tag>
+        <tag>主板</tag>
+        <tag>咸鱼二手</tag>
       </tags>
   </entry>
   <entry>
@@ -2567,12 +2567,12 @@
       </tags>
   </entry>
   <entry>
-    <title>学习Golang笔记一</title>
+    <title>学习Golang笔记-基础知识一</title>
     <url>/posts/19895/</url>
     <content><![CDATA[<p>开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。</p>
 <h2 id="什么是-Go"><a href="#什么是-Go" class="headerlink" title="什么是 Go?"></a>什么是 Go?</h2><p>Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。</p>
 <p><strong>官网：</strong><a href="https://go.dev/" title="https://go.dev/">https://go.dev/</a></p>
-<p><img data-src="%E5%AD%A6%E4%B9%A0Golang%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%80/1639702840194.png" alt="官网" title="官网截图"></p>
+<p><img data-src="1639702840194.png" alt="官网" title="官网截图"></p>
 <p><strong>文档地址:</strong> <a href="https://go.dev/doc/" title="https://go.dev/doc/">https://go.dev/doc/</a></p>
 <p><strong>packages</strong>: <a href="https://pkg.go.dev/" title="https://pkg.go.dev/">https://pkg.go.dev/</a></p>
 <span id="more"></span>
@@ -2645,8 +2645,8 @@
 <li><p>执行</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hello, Go!</span><br><span class="line"> string(</span><br><span class="line">-       &quot;Hello World&quot;,</span><br><span class="line">+       &quot;Hello Go&quot;,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="Golang-变量"><a href="#Golang-变量" class="headerlink" title="Golang 变量"></a>Golang 变量</h2><p>变量是计算机语言中能<strong>储存</strong>计算结果或能表示值的抽象概念。不同的变量保存的数据类型可能会不一样。</p>
-<h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><p>Go 语言中的变量需要声明后才能使用，同一作用域内不支持重复声明。并且 Go 语言的变量声明后必须使用。</p>
+<h2 id="Golang变量"><a href="#Golang变量" class="headerlink" title="Golang变量"></a>Golang变量</h2><p>变量是计算机语言中能<strong>储存</strong>计算结果或能表示值的抽象概念。不同的变量保存的数据类型可能会不一样。</p>
+<h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><p>Go语言中的变量需要声明后才能使用，同一作用域内不支持重复声明。并且Go语言的变量声明后必须使用。</p>
 <p><strong>声明变量的语法</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var identifier type</span><br></pre></td></tr></table></figure>
 
@@ -2659,7 +2659,7 @@
 <h3 id="批量声明"><a href="#批量声明" class="headerlink" title="批量声明"></a>批量声明</h3><p>使用一个 <code>var</code>关键字，把一些变量写在一个括号 <code>()</code>里</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line">func main() &#123;</span><br><span class="line">var (</span><br><span class="line">name string</span><br><span class="line">age  int</span><br><span class="line">ok   bool</span><br><span class="line">)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><p>Go 语言在声明变量的时候，会自动对变量对应的内存区域进行初始化操作。每个变量会被初始化成其类型的默认值，例如：整型和浮点型变量的默认值为 <code>0</code>。字符串变量的默认值为空字符串 <code>“”</code>。布尔型变量默认为 <code>false</code>。切片、函数、指针变量的默认为 <code>nil</code>。</p>
+<h3 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><p>Go语言在声明变量的时候，会自动对变量对应的内存区域进行初始化操作。每个变量会被初始化成其类型的默认值，例如：整型和浮点型变量的默认值为 <code>0</code>。字符串变量的默认值为空字符串 <code>“”</code>。布尔型变量默认为 <code>false</code>。切片、函数、指针变量的默认为 <code>nil</code>。</p>
 <p><strong>变量初始化语法</strong></p>
 <figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> 变量名 类型 = 表达式</span><br></pre></td></tr></table></figure>
 
@@ -2683,8 +2683,9 @@
 <h3 id="匿名变量"><a href="#匿名变量" class="headerlink" title="匿名变量"></a>匿名变量</h3><p>如果我们接收到多个变量，有一些变量使用不到，可以使用下划线 <code>_</code>表示变量名称，这种变量叫做匿名变量。例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func getNameAndAge() (string, int) &#123;</span><br><span class="line">return &quot;xiaoyao&quot;, 12</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name, _ := getNameAndAge()</span><br><span class="line">fmt.Printf(&quot;name: %v\n&quot;, name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Golang-常量"><a href="#Golang-常量" class="headerlink" title="Golang 常量"></a>Golang 常量</h2><p>常量，就是在程序<strong>编译阶段</strong>就确定下来的值，而程序在<strong>运行时</strong>则无法改变该值。在 Go 程序中，常量可以是数值类型（包括整型、浮点型和复数类型）、布尔类型、字符串类型等。</p>
-<h3 id="定义常量的语法"><a href="#定义常量的语法" class="headerlink" title="定义常量的语法"></a>定义常量的语法</h3><p>定义一个常量使用 const 关键字，语法格式如下：</p>
+
+<h2 id="Golang常量"><a href="#Golang常量" class="headerlink" title="Golang常量"></a>Golang常量</h2><p>常量，就是在程序<strong>编译阶段</strong>就确定下来的值，而程序在<strong>运行时</strong>则无法改变该值。在Go程序中，常量可以是数值类型（包括整型、浮点型和复数类型）、布尔类型、字符串类型等。</p>
+<h3 id="定义常量的语法"><a href="#定义常量的语法" class="headerlink" title="定义常量的语法"></a>定义常量的语法</h3><p>定义一个常量使用const关键字，语法格式如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const constantName [type]= value</span><br></pre></td></tr></table></figure>
 
 <p><code>const</code>：定义常量关键字</p>
@@ -2720,7 +2721,7 @@
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a1: 0</span><br><span class="line">a2: 100</span><br><span class="line">a3: 2</span><br></pre></td></tr></table></figure>
 
-<h2 id="Golang-布尔类型"><a href="#Golang-布尔类型" class="headerlink" title="Golang 布尔类型"></a>Golang 布尔类型</h2><p>go 语言中的布尔类型有两个常量值：<code>true</code>和 <code>false</code>。布尔类型经常用在<strong>条件判断</strong>语句，或者<strong>循环语句</strong>。也可以用在<strong>逻辑表达式</strong>中。</p>
+<h2 id="Golang-布尔类型"><a href="#Golang-布尔类型" class="headerlink" title="Golang 布尔类型"></a>Golang 布尔类型</h2><p>go语言中的布尔类型有两个常量值：<code>true</code>和 <code>false</code>。布尔类型经常用在<strong>条件判断</strong>语句，或者<strong>循环语句</strong>。也可以用在<strong>逻辑表达式</strong>中。</p>
 <h3 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var b1 bool = true</span><br><span class="line">var b2 bool = false</span><br><span class="line">var b3 = true</span><br><span class="line">var b4 = false</span><br><span class="line"></span><br><span class="line">b5 := true</span><br><span class="line">b6 := false</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;b1: %v\n&quot;, b1)</span><br><span class="line">fmt.Printf(&quot;b2: %v\n&quot;, b2)</span><br><span class="line">fmt.Printf(&quot;b3: %v\n&quot;, b3)</span><br><span class="line">fmt.Printf(&quot;b4: %v\n&quot;, b4)</span><br><span class="line">fmt.Printf(&quot;b5: %v\n&quot;, b5)</span><br><span class="line">fmt.Printf(&quot;b6: %v\n&quot;, b6)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果</p>
@@ -2738,14 +2739,14 @@
 <p>注意：不能使用 <code>0</code>和非 <code>0</code>表示真假</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">i := 1</span><br><span class="line">if i &#123;</span><br><span class="line">// 编译错误</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Golang-数字类型"><a href="#Golang-数字类型" class="headerlink" title="Golang 数字类型"></a>Golang 数字类型</h2><p>Go 语言支持整型和浮点型数字，并且原生支持复数，其中位的运算采用补码。</p>
+<h2 id="Golang数字类型"><a href="#Golang数字类型" class="headerlink" title="Golang数字类型"></a>Golang数字类型</h2><p>Go 语言支持整型和浮点型数字，并且原生支持复数，其中位的运算采用补码。</p>
 <p>Go 也有基于架构的类型，例如：<code>int</code>、<code>uint</code> 和 <code>uintptr</code>。</p>
 <p>这些类型的长度都是根据运行程序所在的操作系统类型所决定的：</p>
 <ul>
 <li><code>int</code> 和<code>uint</code> 在 32 位操作系统上，它们均使用 32 位（4 个字节），在 64 位操作系统上，它们均使用 64 位（8 个字节）。</li>
 <li><code>uintptr</code> 的长度被设定为足够存放一个指针即可。</li>
 </ul>
-<p>Go 语言中没有 <code>float</code> 类型。（Go 语言中只有 <code>float32</code> 和 <code>float64</code>）没有 double 类型。</p>
+<p>Go 语言中没有 <code>float</code> 类型。（Go语言中只有 <code>float32</code> 和 <code>float64</code>）没有double类型。</p>
 <p>与操作系统架构无关的类型都有固定的大小，并在类型的名称中就可以看出来：</p>
 <p>整数：</p>
 <ul>
@@ -2764,7 +2765,7 @@
 <p>浮点型（IEEE-754 标准）：</p>
 <ul>
 <li>float32（+- 1e-45 -&gt; +- 3.4 * 1e38）</li>
-<li>float64（+- 5 _ 1e-324 -&gt; 107 _ 1e308）</li>
+<li>float64（+- 5 * 1e-324 -&gt; 107 * 1e308）</li>
 </ul>
 <p>int 型是计算最快的一种类型。</p>
 <p>整型的零值为 0，浮点型的零值为 0.0。</p>
@@ -2779,32 +2780,32 @@
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10</span><br><span class="line">1010</span><br><span class="line">77</span><br><span class="line">ff</span><br><span class="line">FF</span><br></pre></td></tr></table></figure>
 
-<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>Go 语言支持两种浮点型数：<code>float32</code>和 <code>float64</code>。这两种浮点型数据格式遵循 <code>IEEE 754</code>标准：<code>float32</code> 的浮点数的最大范围约为 <code>3.4e38</code>，可以使用常量定义：<code>math.MaxFloat32</code>。<code>float64</code> 的浮点数的最大范围约为 <code>1.8e308</code>，可以使用一个常量定义：<code>math.MaxFloat64</code>。</p>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>Go语言支持两种浮点型数：<code>float32</code>和 <code>float64</code>。这两种浮点型数据格式遵循 <code>IEEE 754</code>标准：<code>float32</code> 的浮点数的最大范围约为 <code>3.4e38</code>，可以使用常量定义：<code>math.MaxFloat32</code>。<code>float64</code> 的浮点数的最大范围约为 <code>1.8e308</code>，可以使用一个常量定义：<code>math.MaxFloat64</code>。</p>
 <p>打印浮点数时，可以使用 <code>fmt</code>包配合动词 <code>%f</code>，代码如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line">import (</span><br><span class="line">       &quot;fmt&quot;</span><br><span class="line">       &quot;math&quot;</span><br><span class="line">)</span><br><span class="line">func main() &#123;</span><br><span class="line">       fmt.Printf(&quot;%f\n&quot;, math.Pi)</span><br><span class="line">       fmt.Printf(&quot;%.2f\n&quot;, math.Pi)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h3><p>complex64 和 complex128</p>
+<h3 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h3><p>complex64和complex128</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var c1 complex64</span><br><span class="line">c1 = 1 + 2i</span><br><span class="line">var c2 complex128</span><br><span class="line">c2 = 2 + 3i</span><br><span class="line">fmt.Println(c1)</span><br><span class="line">fmt.Println(c2)</span><br></pre></td></tr></table></figure>
 
-<p>复数有实部和虚部，complex64 的实部和虚部为 32 位，complex128 的实部和虚部为 64 位。</p>
-<h2 id="Golang-字符串"><a href="#Golang-字符串" class="headerlink" title="Golang 字符串"></a>Golang 字符串</h2><blockquote>
-<p>一个 Go 语言字符串是一个任意字节的常量序列。</p>
+<p>复数有实部和虚部，complex64的实部和虚部为32位，complex128的实部和虚部为64位。</p>
+<h2 id="Golang字符串"><a href="#Golang字符串" class="headerlink" title="Golang字符串"></a>Golang字符串</h2><blockquote>
+<p>一个Go语言字符串是一个任意字节的常量序列。</p>
 </blockquote>
-<p><strong>Go 语言字符串与其他语言（Java，C++，Python）字符串的不同点</strong> Go 语言中字符串的字节使用 UTF-8 编码表示 Unicode 文本，因此 Go 语言字符串是变宽字符序列，每一个字符都用一个或者多个字符表示，这跟其他的（C++，Java，Python 3）的字符串类型有着本质上的不同，后者为定宽字符序列。</p>
-<p>其他语言的字符串中的单个字符可以被字节索引，而 Go 语言中只有在字符串只包含 7 位的 ASCII 字符（因为它们都是用一个单一的 UTF-8 字节表示）时才可以被字节索引。那么这是不是表示 Go 语言在字符串处理能力上就比其他语言弱呢？答案时否定的，应为 Go 语言支持一个字符一个字符的迭代，而且标准库中存在大量的字符串操作函数，最后我们还可以将 Go 语言的字符串转化为 Unicode 码点切片（类型为 <code>[]rune</code>），切片是支持直接索引的。</p>
-<p>对于英文文本，Go 使用 8 位来表示每一个字节，而 Java 或 Python 则需要 16 位或更多。采用 UTF-8 编码，使得 Go 语言无需关系机器码的排列顺序，也无需编码解码来使用其他语言。</p>
+<p><strong>Go语言字符串与其他语言（Java，C++，Python）字符串的不同点</strong> Go语言中字符串的字节使用UTF-8编码表示Unicode文本，因此Go语言字符串是变宽字符序列，每一个字符都用一个或者多个字符表示，这跟其他的（C++，Java，Python 3）的字符串类型有着本质上的不同，后者为定宽字符序列。</p>
+<p>其他语言的字符串中的单个字符可以被字节索引，而Go语言中只有在字符串只包含7位的ASCII字符（因为它们都是用一个单一的UTF-8字节表示）时才可以被字节索引。那么这是不是表示Go语言在字符串处理能力上就比其他语言弱呢？答案时否定的，应为Go语言支持一个字符一个字符的迭代，而且标准库中存在大量的字符串操作函数，最后我们还可以将Go语言的字符串转化为Unicode码点切片（类型为 <code>[]rune</code>），切片是支持直接索引的。</p>
+<p>对于英文文本，Go使用8位来表示每一个字节，而Java或Python则需要16位或更多。采用UTF-8编码，使得Go语言无需关系机器码的排列顺序，也无需编码解码来使用其他语言。</p>
 <blockquote>
-<p>注：每一个 Unicode 字符都有一个唯一的叫做“码点”的标识数字。在 Go 语言中，一个单一的码点在内存中以 <code>rune</code> 的形式表示，<code>rune</code>表示 int32 类型的别名</p>
+<p>注：每一个Unicode字符都有一个唯一的叫做“码点”的标识数字。在Go语言中，一个单一的码点在内存中以 <code>rune</code> 的形式表示，<code>rune</code>表示int32类型的别名</p>
 </blockquote>
-<h3 id="go-语言字符串字面量"><a href="#go-语言字符串字面量" class="headerlink" title="go 语言字符串字面量"></a>go 语言字符串字面量</h3><p>在 Go 语言中，字符串字面量使用双引号 <code>&quot;&quot;</code> 或者反引号 <code>&#39;</code> 来创建。双引号用来创建可解析的字符串，支持转义，但不能用来引用多行；反引号用来创建原生的字符串字面量，可能由多行组成，但不支持转义，并且可以包含除了反引号外其他所有字符。双引号创建可解析的字符串应用最广泛，反引号用来创建原生的字符串则多用于书写多行消息，HTML 以及正则表达式。</p>
+<h3 id="go语言字符串字面量"><a href="#go语言字符串字面量" class="headerlink" title="go语言字符串字面量"></a>go语言字符串字面量</h3><p>在Go语言中，字符串字面量使用双引号 <code>&quot;&quot;</code> 或者反引号 <code>&#39;</code> 来创建。双引号用来创建可解析的字符串，支持转义，但不能用来引用多行；反引号用来创建原生的字符串字面量，可能由多行组成，但不支持转义，并且可以包含除了反引号外其他所有字符。双引号创建可解析的字符串应用最广泛，反引号用来创建原生的字符串则多用于书写多行消息，HTML以及正则表达式。</p>
 <p><strong>实例</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var str1 string = &quot;hello world&quot;</span><br><span class="line">var html string =</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;hello golang&lt;/title&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">`</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;str1: %v\n&quot;, str1)</span><br><span class="line">fmt.Printf(&quot;html: %v\n&quot;, html)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">str1: hello world</span><br><span class="line">html:</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;hello golang&lt;/title&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="go-语言字符串连接"><a href="#go-语言字符串连接" class="headerlink" title="go 语言字符串连接"></a>go 语言字符串连接</h3><p><strong>使用加号</strong></p>
-<p>虽然 Go 语言中的字符串是不可变的，但是字符串支持 <code>+</code> 级联操作和 <code>+=</code>追加操作，例如：</p>
+<h3 id="go语言字符串连接"><a href="#go语言字符串连接" class="headerlink" title="go语言字符串连接"></a>go语言字符串连接</h3><p><strong>使用加号</strong></p>
+<p>虽然Go语言中的字符串是不可变的，但是字符串支持 <code>+</code> 级联操作和 <code>+=</code>追加操作，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name := &quot;tom&quot;</span><br><span class="line">age := &quot;20&quot;</span><br><span class="line">msg := name + &quot; &quot; + age</span><br><span class="line">fmt.Printf(&quot;msg: %v\n&quot;, msg)</span><br><span class="line">fmt.Println(&quot;-------------&quot;)</span><br><span class="line">msg = &quot;&quot;</span><br><span class="line">msg += name</span><br><span class="line">msg += &quot; &quot;</span><br><span class="line">msg += age</span><br><span class="line">fmt.Printf(&quot;msg: %v\n&quot;, msg)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -2826,7 +2827,7 @@
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">msg: tom,20</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>join 会先根据字符串数组的内容，计算出一个拼接之后的长度，然后申请对应大小的内存，一个一个字符串填入，在已有一个数组的情况下，这种效率会很高，但是本来没有，去构造这个数据的代价也不小</p>
+<p>join会先根据字符串数组的内容，计算出一个拼接之后的长度，然后申请对应大小的内存，一个一个字符串填入，在已有一个数组的情况下，这种效率会很高，但是本来没有，去构造这个数据的代价也不小</p>
 </blockquote>
 <p><strong><code>buffer.WriteString()</code></strong></p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;bytes&quot;</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var buffer bytes.Buffer</span><br><span class="line">buffer.WriteString(&quot;tom&quot;)</span><br><span class="line">buffer.WriteString(&quot;,&quot;)</span><br><span class="line">buffer.WriteString(&quot;20&quot;)</span><br><span class="line">fmt.Printf(&quot;buffer.String(): %v\n&quot;, buffer.String())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -2834,7 +2835,7 @@
 <blockquote>
 <p>这个比较理想，可以当成可变字符使用，对内存的增长也有优化，如果能预估字符串的长度，还可以用 <code>buffer.Grow()</code> 接口来设置 capacity</p>
 </blockquote>
-<h3 id="go-语言字符串转义字符"><a href="#go-语言字符串转义字符" class="headerlink" title="go 语言字符串转义字符"></a>go 语言字符串转义字符</h3><p>Go 语言的字符串常见转义符包含回车、换行、单双引号、制表符等，如下表所示。</p>
+<h3 id="go语言字符串转义字符"><a href="#go语言字符串转义字符" class="headerlink" title="go语言字符串转义字符"></a>go语言字符串转义字符</h3><p>Go 语言的字符串常见转义符包含回车、换行、单双引号、制表符等，如下表所示。</p>
 <table>
 <thead>
 <tr>
@@ -2873,12 +2874,12 @@
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">helloworld</span><br><span class="line">&quot;c:\test\&quot;</span><br></pre></td></tr></table></figure>
 
-<h3 id="go-语言字符串切片操作"><a href="#go-语言字符串切片操作" class="headerlink" title="go 语言字符串切片操作"></a>go 语言字符串切片操作</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">str := &quot;hello world&quot;</span><br><span class="line">n := 3</span><br><span class="line">m := 5</span><br><span class="line">fmt.Println(str[n])   //获取字符串索引位置为n的原始字节</span><br><span class="line">fmt.Println(str[n:m]) //截取得字符串索引位置为 n 到 m-1 的字符串</span><br><span class="line">fmt.Println(str[n:])  //截取得字符串索引位置为 n 到 len(s)-1 的字符串</span><br><span class="line">fmt.Println(str[:m])  //截取得字符串索引位置为 0 到 m-1 的字符串</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="go语言字符串切片操作"><a href="#go语言字符串切片操作" class="headerlink" title="go语言字符串切片操作"></a>go语言字符串切片操作</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">str := &quot;hello world&quot;</span><br><span class="line">n := 3</span><br><span class="line">m := 5</span><br><span class="line">fmt.Println(str[n])   //获取字符串索引位置为n的原始字节</span><br><span class="line">fmt.Println(str[n:m]) //截取得字符串索引位置为 n 到 m-1 的字符串</span><br><span class="line">fmt.Println(str[n:])  //截取得字符串索引位置为 n 到 len(s)-1 的字符串</span><br><span class="line">fmt.Println(str[:m])  //截取得字符串索引位置为 0 到 m-1 的字符串</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">108</span><br><span class="line">lo</span><br><span class="line">lo world</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
 
-<h3 id="go-语言字符串常用方法"><a href="#go-语言字符串常用方法" class="headerlink" title="go 语言字符串常用方法"></a>go 语言字符串常用方法</h3><table>
+<h3 id="go语言字符串常用方法"><a href="#go语言字符串常用方法" class="headerlink" title="go语言字符串常用方法"></a>go语言字符串常用方法</h3><table>
 <thead>
 <tr>
 <th>方法</th>
@@ -2890,7 +2891,7 @@
 <td>求长度</td>
 </tr>
 <tr>
-<td>+或 fmt.Sprintf</td>
+<td>+或fmt.Sprintf</td>
 <td>拼接字符串</td>
 </tr>
 <tr>
@@ -2911,7 +2912,7 @@
 </tr>
 <tr>
 <td>strings.Join(a[]string, sep string)</td>
-<td>join 操作</td>
+<td>join操作</td>
 </tr>
 </tbody></table>
 <p><strong>实例</strong></p>
@@ -2920,7 +2921,7 @@
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">len(s): 14</span><br><span class="line">strings.Split(s, &quot;&quot;): [hello world！]</span><br><span class="line">strings.Contains(s, &quot;hello&quot;): true</span><br><span class="line">strings.HasPrefix(s, &quot;hello&quot;): true</span><br><span class="line">strings.HasSuffix(s, &quot;world！&quot;): true</span><br><span class="line">strings.Index(s, &quot;l&quot;): 2</span><br><span class="line">strings.LastIndex(s, &quot;l&quot;): 9</span><br></pre></td></tr></table></figure>
 
-<h3 id="byte-和-rune-类型"><a href="#byte-和-rune-类型" class="headerlink" title="byte 和 rune 类型"></a>byte 和 rune 类型</h3><p>组成每个字符串的元素叫做“字符”，可以通过遍历或者单个获取字符串元素获得字符。字符用单引号（’）包裹起来，如：</p>
+<h3 id="byte和rune类型"><a href="#byte和rune类型" class="headerlink" title="byte和rune类型"></a>byte和rune类型</h3><p>组成每个字符串的元素叫做“字符”，可以通过遍历或者单个获取字符串元素获得字符。字符用单引号（’）包裹起来，如：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var a = &#x27;华&#x27;</span><br><span class="line">var b = &#x27;a&#x27;</span><br><span class="line">fmt.Printf(&quot;a: %v,%c\n&quot;, a, a)</span><br><span class="line">fmt.Printf(&quot;b: %v,%c\n&quot;, b, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果</p>
@@ -2933,7 +2934,7 @@
 </ol>
 <p>当需要处理中文、日文或者其他复合字符时，则需要用到 <code>rune</code>类型。<code>rune</code>类型实际是一个 <code>int32</code>。</p>
 <p>Go 使用了特殊的 rune 类型来处理 Unicode，让基于 Unicode 的文本处理更为方便，也可以使用 byte 型进行默认字符串处理，性能和扩展性都有照顾。</p>
-<h2 id="Golang-格式化输出"><a href="#Golang-格式化输出" class="headerlink" title="Golang 格式化输出"></a>Golang 格式化输出</h2><p>下面实例使用到的结构体</p>
+<h2 id="Golang格式化输出"><a href="#Golang格式化输出" class="headerlink" title="Golang格式化输出"></a>Golang格式化输出</h2><p>下面实例使用到的结构体</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type Website struct &#123;</span><br><span class="line">    Name string</span><br><span class="line">&#125;</span><br><span class="line">// 定义结构体变量</span><br><span class="line">var site = Website&#123;Name:&quot;yaowanyu&quot;&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><h4 id="普通占位符"><a href="#普通占位符" class="headerlink" title="普通占位符"></a>普通占位符</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">占位符说明举例输出</span><br><span class="line">%v相应值的默认格式。Printf(&quot;%v&quot;, site)，Printf(&quot;%+v&quot;, site)&#123;yaowanyu&#125;，&#123;Name:yaowanyu&#125;</span><br><span class="line">在打印结构体时，“加号”标记（%+v）会添加字段名</span><br><span class="line">%#v相应值的Go语法表示Printf(&quot;#v&quot;, site)main.Website&#123;Name:&quot;yaowanyu&quot;&#125;</span><br><span class="line">%T相应值的类型的Go语法表示Printf(&quot;%T&quot;, site)main.Website</span><br><span class="line">%%字面上的百分号，并非值的占位符Printf(&quot;%%&quot;)%</span><br></pre></td></tr></table></figure>
@@ -3147,6 +3148,78 @@
       </tags>
   </entry>
   <entry>
+    <title>纯代码屏蔽WordPress后台无用项让你的后台更加简洁</title>
+    <url>/posts/32702/</url>
+    <content><![CDATA[<p>WordPress 的功能十分强大，但是有些功能模块我们平时是用不到的，所以说一下如何使用代码将它们屏蔽掉,根据自己的需要，将下面代码添加到当前主题</p>
+<span id="more"></span>
+
+<p>WordPress 的功能十分强大，但是有些功能模块我们平时是用不到的，所以说一下如何使用代码将它们屏蔽掉<br>根据自己的需要，将下面代码添加到当前主题 <code>functions.php</code>或 <code>functions-diy.php</code>文件中<br>推荐在原 <code>functions.php</code>加入一个自定义文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">require get_template_directory() . &#x27;/functions-diy.php&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>将我们自定义的代码加入到其中，无须担心更新主题时 <code>functions.php</code>被覆盖<br>那么我们从上至下开始清理吧</p>
+<h3 id="顶部工具栏"><a href="#顶部工具栏" class="headerlink" title="顶部工具栏"></a>顶部工具栏</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function my_edit_toolbar($wp_toolbar) &#123;</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;wp-logo&#x27;); // 去掉 WordPress LOGO</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;site-name&#x27;); // 去掉网站名称</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;updates&#x27;); // 去掉更新提醒</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;comments&#x27;); // 去掉评论提醒</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;new-content&#x27;); // 去掉新建文件</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;top-secondary&#x27;); // 用户信息</span><br><span class="line">&#125;</span><br><span class="line">add_action(&#x27;admin_bar_menu&#x27;, &#x27;my_edit_toolbar&#x27;, 999);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="左侧顶级菜单"><a href="#左侧顶级菜单" class="headerlink" title="左侧顶级菜单"></a>左侧顶级菜单</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function remove_menus() &#123;</span><br><span class="line">   global $menu;</span><br><span class="line">   $restricted = array(</span><br><span class="line">      __(&#x27;Dashboard&#x27;), // 仪表盘</span><br><span class="line">      __(&#x27;Posts&#x27;), // 文章</span><br><span class="line">      __(&#x27;Media&#x27;), // 媒体</span><br><span class="line">      __(&#x27;Links&#x27;), // 链接</span><br><span class="line">      __(&#x27;Pages&#x27;), // 页面</span><br><span class="line">      __(&#x27;Appearance&#x27;), // 外观</span><br><span class="line">      __(&#x27;Tools&#x27;), // 工具</span><br><span class="line">      __(&#x27;Users&#x27;), // 用户</span><br><span class="line">      __(&#x27;Settings&#x27;), // 设置</span><br><span class="line">      __(&#x27;Comments&#x27;), // 评论</span><br><span class="line">      __(&#x27;Plugins&#x27;) // 插件</span><br><span class="line">   );</span><br><span class="line">   end ($menu);</span><br><span class="line">   while (prev($menu))&#123;</span><br><span class="line">      $value = explode(&#x27; &#x27;,$menu[key($menu)][0]);</span><br><span class="line">      if(strpos($value[0], &#x27;&lt;&#x27;) === FALSE) &#123;</span><br><span class="line">         if(in_array($value[0] != NULL ? $value[0]:&quot;&quot; , $restricted))&#123;</span><br><span class="line">            unset($menu[key($menu)]);</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;else &#123;</span><br><span class="line">         $value2 = explode(&#x27;&lt;&#x27;, $value[0]);</span><br><span class="line">         if(in_array($value2[0] != NULL ? $value2[0]:&quot;&quot; , $restricted))&#123;</span><br><span class="line">            unset($menu[key($menu)]);</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 是后台的情况时</span><br><span class="line">if (is_admin())&#123;</span><br><span class="line">   add_action(&#x27;admin_menu&#x27;, &#x27;remove_menus&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如果你只想删除用户和工具菜单，你只需改写以上代码第 <code>3</code> 行的 <code>$restricted</code>数组修改为如下代码即可：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$restricted = array(</span><br><span class="line">   __(&#x27;Tools&#x27;),</span><br><span class="line">   __(&#x27;Users&#x27;),</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="左侧子菜单"><a href="#左侧子菜单" class="headerlink" title="左侧子菜单"></a>左侧子菜单</h3><p>如果只想删除某个顶级菜单下的子菜单的话，可以这么写</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function remove_submenu() &#123;</span><br><span class="line">   // 删除仪表盘下的首页</span><br><span class="line">   remove_submenu_page(&#x27;index.php&#x27;, &#x27;index.php&#x27;);</span><br><span class="line">   // 删除仪表盘下的更新</span><br><span class="line">   remove_submenu_page(&#x27;index.php&#x27;, &#x27;update-core.php&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">if (is_admin())&#123;</span><br><span class="line">   //删除子菜单</span><br><span class="line">   add_action(&#x27;admin_init&#x27;,&#x27;remove_submenu&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>具体的缩略名如何获取呢？这里举例说明：<br>我们点击仪表盘时 url 为 <code>/wp-admin/index.php</code>，点击首页时也是，点击更新时为 <code>/wp-admin/update-core.php</code>，其他的依次类推～<br>只需要获取顶级菜单和子菜单相应的缩略名，然后在 <code>remove_submenu()</code>函数内添加 <code>remove_submenu_page()</code>函数即可</p>
+<h3 id="仪表盘无用模块"><a href="#仪表盘无用模块" class="headerlink" title="仪表盘无用模块"></a>仪表盘无用模块</h3><p>这个可以仪表盘右上角的显示选项中进行手动修改</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function example_remove_dashboard_widgets() &#123;</span><br><span class="line">   global $wp_meta_boxes;</span><br><span class="line">   // 以下这一行代码将删除 &quot;快速发布&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;side&#x27;][&#x27;core&#x27;][&#x27;dashboard_quick_press&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;引入链接&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;normal&#x27;][&#x27;core&#x27;][&#x27;dashboard_incoming_links&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;插件&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;normal&#x27;][&#x27;core&#x27;][&#x27;dashboard_plugins&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;近期评论&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;normal&#x27;][&#x27;core&#x27;][&#x27;dashboard_recent_comments&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;近期草稿&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;side&#x27;][&#x27;core&#x27;][&#x27;dashboard_recent_drafts&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;WordPress 开发日志&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;side&#x27;][&#x27;core&#x27;][&#x27;dashboard_primary&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;其它 WordPress 新闻&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;side&#x27;][&#x27;core&#x27;][&#x27;dashboard_secondary&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;概况&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;normal&#x27;][&#x27;core&#x27;][&#x27;dashboard_right_now&#x27;]);</span><br><span class="line">&#125;</span><br><span class="line">add_action(&#x27;wp_dashboard_setup&#x27;, &#x27;example_remove_dashboard_widgets&#x27; );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="显示选项和帮助选项卡"><a href="#显示选项和帮助选项卡" class="headerlink" title="显示选项和帮助选项卡"></a>显示选项和帮助选项卡</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function remove_screen_options()&#123; return false;&#125;</span><br><span class="line">add_filter(&#x27;screen_options_show_screen&#x27;, &#x27;remove_screen_options&#x27;);</span><br><span class="line">add_filter( &#x27;contextual_help&#x27;, &#x27;syz_remove_help&#x27;, 999, 3 );</span><br><span class="line">function syz_remove_help($old_help, $screen_id, $screen)&#123;</span><br><span class="line">   $screen-&gt;remove_help_tabs();</span><br><span class="line">   return $old_help;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="页脚版本信息"><a href="#页脚版本信息" class="headerlink" title="页脚版本信息"></a>页脚版本信息</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function change_footer_admin () &#123;return &#x27;&#x27;;&#125;</span><br><span class="line">add_filter(&#x27;admin_footer_text&#x27;, &#x27;change_footer_admin&#x27;, 9999);</span><br><span class="line">function change_footer_version() &#123;return &#x27;&#x27;;&#125;</span><br><span class="line">add_filter( &#x27;update_footer&#x27;, &#x27;change_footer_version&#x27;, 9999);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img data-src="wp-admin.png" alt="后台页面" title="后台页面"></p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>wordpress</tag>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>要开始写笔记咯</title>
+    <url>/posts/58320/</url>
+    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
+<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>瞧？这是啥？哈哈</title>
+    <url>/posts/35134/</url>
+    <content><![CDATA[<p>来源百度百科： 属蚌科。壳内面的铰齿板具有发达的铰齿，但有的种类并不具备铰齿。贝壳内面具有亮丽的珍珠光泽，壳皮甚</p>
+<blockquote>
+<p>来源百度百科： 属蚌科。壳内面的铰齿板具有发达的铰齿，但有的种类并不具备铰齿。贝壳内面具有亮丽的珍珠光泽，壳皮甚厚，壳顶区通常有雕刻存在</p>
+</blockquote>
+<span id="more"></span>
+
+<p>别的废话不多说，上图<br><img data-src="IMG_20190216_104639.jpg" alt="田蚌1" title="田蚌"><br><img data-src="IMG_20190216_095835.jpg" alt="田蚌2" title="田蚌"><br><img data-src="IMG_20190216_100528.jpg" alt="田蚌3" title="田蚌"><br><img data-src="IMG_20190216_100535.jpg" alt="田蚌4" title="田蚌"><br><img data-src="IMG_20190216_101617.jpg" alt="田蚌5" title="田蚌"></p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>蚌壳</tag>
+        <tag>田蚌</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>本站主题安装和配置详情</title>
     <url>/posts/7434/</url>
     <content><![CDATA[<h1 id="本站主题安装和配置详情"><a href="#本站主题安装和配置详情" class="headerlink" title="本站主题安装和配置详情"></a>本站主题安装和配置详情</h1><p>本站主题是一款单栏响应式的[Hexo](<a href="https://hexo.io)主题;基于/">https://hexo.io)主题；基于</a> Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上</p>
@@ -3213,78 +3286,6 @@
         <tag>Hexo</tag>
         <tag>博客</tag>
         <tag>node.js</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>瞧？这是啥？哈哈</title>
-    <url>/posts/35134/</url>
-    <content><![CDATA[<p>来源百度百科： 属蚌科。壳内面的铰齿板具有发达的铰齿，但有的种类并不具备铰齿。贝壳内面具有亮丽的珍珠光泽，壳皮甚</p>
-<blockquote>
-<p>来源百度百科： 属蚌科。壳内面的铰齿板具有发达的铰齿，但有的种类并不具备铰齿。贝壳内面具有亮丽的珍珠光泽，壳皮甚厚，壳顶区通常有雕刻存在</p>
-</blockquote>
-<span id="more"></span>
-
-<p>别的废话不多说，上图<br><img data-src="IMG_20190216_104639.jpg" alt="田蚌1" title="田蚌"><br><img data-src="IMG_20190216_095835.jpg" alt="田蚌2" title="田蚌"><br><img data-src="IMG_20190216_100528.jpg" alt="田蚌3" title="田蚌"><br><img data-src="IMG_20190216_100535.jpg" alt="田蚌4" title="田蚌"><br><img data-src="IMG_20190216_101617.jpg" alt="田蚌5" title="田蚌"></p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>蚌壳</tag>
-        <tag>田蚌</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>纯代码屏蔽WordPress后台无用项让你的后台更加简洁</title>
-    <url>/posts/32702/</url>
-    <content><![CDATA[<p>WordPress 的功能十分强大，但是有些功能模块我们平时是用不到的，所以说一下如何使用代码将它们屏蔽掉,根据自己的需要，将下面代码添加到当前主题</p>
-<span id="more"></span>
-
-<p>WordPress 的功能十分强大，但是有些功能模块我们平时是用不到的，所以说一下如何使用代码将它们屏蔽掉<br>根据自己的需要，将下面代码添加到当前主题 <code>functions.php</code>或 <code>functions-diy.php</code>文件中<br>推荐在原 <code>functions.php</code>加入一个自定义文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">require get_template_directory() . &#x27;/functions-diy.php&#x27;;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>将我们自定义的代码加入到其中，无须担心更新主题时 <code>functions.php</code>被覆盖<br>那么我们从上至下开始清理吧</p>
-<h3 id="顶部工具栏"><a href="#顶部工具栏" class="headerlink" title="顶部工具栏"></a>顶部工具栏</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function my_edit_toolbar($wp_toolbar) &#123;</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;wp-logo&#x27;); // 去掉 WordPress LOGO</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;site-name&#x27;); // 去掉网站名称</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;updates&#x27;); // 去掉更新提醒</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;comments&#x27;); // 去掉评论提醒</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;new-content&#x27;); // 去掉新建文件</span><br><span class="line">   $wp_toolbar-&gt;remove_node(&#x27;top-secondary&#x27;); // 用户信息</span><br><span class="line">&#125;</span><br><span class="line">add_action(&#x27;admin_bar_menu&#x27;, &#x27;my_edit_toolbar&#x27;, 999);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="左侧顶级菜单"><a href="#左侧顶级菜单" class="headerlink" title="左侧顶级菜单"></a>左侧顶级菜单</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function remove_menus() &#123;</span><br><span class="line">   global $menu;</span><br><span class="line">   $restricted = array(</span><br><span class="line">      __(&#x27;Dashboard&#x27;), // 仪表盘</span><br><span class="line">      __(&#x27;Posts&#x27;), // 文章</span><br><span class="line">      __(&#x27;Media&#x27;), // 媒体</span><br><span class="line">      __(&#x27;Links&#x27;), // 链接</span><br><span class="line">      __(&#x27;Pages&#x27;), // 页面</span><br><span class="line">      __(&#x27;Appearance&#x27;), // 外观</span><br><span class="line">      __(&#x27;Tools&#x27;), // 工具</span><br><span class="line">      __(&#x27;Users&#x27;), // 用户</span><br><span class="line">      __(&#x27;Settings&#x27;), // 设置</span><br><span class="line">      __(&#x27;Comments&#x27;), // 评论</span><br><span class="line">      __(&#x27;Plugins&#x27;) // 插件</span><br><span class="line">   );</span><br><span class="line">   end ($menu);</span><br><span class="line">   while (prev($menu))&#123;</span><br><span class="line">      $value = explode(&#x27; &#x27;,$menu[key($menu)][0]);</span><br><span class="line">      if(strpos($value[0], &#x27;&lt;&#x27;) === FALSE) &#123;</span><br><span class="line">         if(in_array($value[0] != NULL ? $value[0]:&quot;&quot; , $restricted))&#123;</span><br><span class="line">            unset($menu[key($menu)]);</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;else &#123;</span><br><span class="line">         $value2 = explode(&#x27;&lt;&#x27;, $value[0]);</span><br><span class="line">         if(in_array($value2[0] != NULL ? $value2[0]:&quot;&quot; , $restricted))&#123;</span><br><span class="line">            unset($menu[key($menu)]);</span><br><span class="line">         &#125;</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">// 是后台的情况时</span><br><span class="line">if (is_admin())&#123;</span><br><span class="line">   add_action(&#x27;admin_menu&#x27;, &#x27;remove_menus&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>如果你只想删除用户和工具菜单，你只需改写以上代码第 <code>3</code> 行的 <code>$restricted</code>数组修改为如下代码即可：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$restricted = array(</span><br><span class="line">   __(&#x27;Tools&#x27;),</span><br><span class="line">   __(&#x27;Users&#x27;),</span><br><span class="line">);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="左侧子菜单"><a href="#左侧子菜单" class="headerlink" title="左侧子菜单"></a>左侧子菜单</h3><p>如果只想删除某个顶级菜单下的子菜单的话，可以这么写</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function remove_submenu() &#123;</span><br><span class="line">   // 删除仪表盘下的首页</span><br><span class="line">   remove_submenu_page(&#x27;index.php&#x27;, &#x27;index.php&#x27;);</span><br><span class="line">   // 删除仪表盘下的更新</span><br><span class="line">   remove_submenu_page(&#x27;index.php&#x27;, &#x27;update-core.php&#x27;);</span><br><span class="line">&#125;</span><br><span class="line">if (is_admin())&#123;</span><br><span class="line">   //删除子菜单</span><br><span class="line">   add_action(&#x27;admin_init&#x27;,&#x27;remove_submenu&#x27;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>具体的缩略名如何获取呢？这里举例说明：<br>我们点击仪表盘时 url 为 <code>/wp-admin/index.php</code>，点击首页时也是，点击更新时为 <code>/wp-admin/update-core.php</code>，其他的依次类推～<br>只需要获取顶级菜单和子菜单相应的缩略名，然后在 <code>remove_submenu()</code>函数内添加 <code>remove_submenu_page()</code>函数即可</p>
-<h3 id="仪表盘无用模块"><a href="#仪表盘无用模块" class="headerlink" title="仪表盘无用模块"></a>仪表盘无用模块</h3><p>这个可以仪表盘右上角的显示选项中进行手动修改</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function example_remove_dashboard_widgets() &#123;</span><br><span class="line">   global $wp_meta_boxes;</span><br><span class="line">   // 以下这一行代码将删除 &quot;快速发布&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;side&#x27;][&#x27;core&#x27;][&#x27;dashboard_quick_press&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;引入链接&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;normal&#x27;][&#x27;core&#x27;][&#x27;dashboard_incoming_links&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;插件&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;normal&#x27;][&#x27;core&#x27;][&#x27;dashboard_plugins&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;近期评论&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;normal&#x27;][&#x27;core&#x27;][&#x27;dashboard_recent_comments&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;近期草稿&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;side&#x27;][&#x27;core&#x27;][&#x27;dashboard_recent_drafts&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;WordPress 开发日志&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;side&#x27;][&#x27;core&#x27;][&#x27;dashboard_primary&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;其它 WordPress 新闻&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;side&#x27;][&#x27;core&#x27;][&#x27;dashboard_secondary&#x27;]);</span><br><span class="line">   // 以下这一行代码将删除 &quot;概况&quot; 模块</span><br><span class="line">   unset($wp_meta_boxes[&#x27;dashboard&#x27;][&#x27;normal&#x27;][&#x27;core&#x27;][&#x27;dashboard_right_now&#x27;]);</span><br><span class="line">&#125;</span><br><span class="line">add_action(&#x27;wp_dashboard_setup&#x27;, &#x27;example_remove_dashboard_widgets&#x27; );</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="显示选项和帮助选项卡"><a href="#显示选项和帮助选项卡" class="headerlink" title="显示选项和帮助选项卡"></a>显示选项和帮助选项卡</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function remove_screen_options()&#123; return false;&#125;</span><br><span class="line">add_filter(&#x27;screen_options_show_screen&#x27;, &#x27;remove_screen_options&#x27;);</span><br><span class="line">add_filter( &#x27;contextual_help&#x27;, &#x27;syz_remove_help&#x27;, 999, 3 );</span><br><span class="line">function syz_remove_help($old_help, $screen_id, $screen)&#123;</span><br><span class="line">   $screen-&gt;remove_help_tabs();</span><br><span class="line">   return $old_help;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="页脚版本信息"><a href="#页脚版本信息" class="headerlink" title="页脚版本信息"></a>页脚版本信息</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">function change_footer_admin () &#123;return &#x27;&#x27;;&#125;</span><br><span class="line">add_filter(&#x27;admin_footer_text&#x27;, &#x27;change_footer_admin&#x27;, 9999);</span><br><span class="line">function change_footer_version() &#123;return &#x27;&#x27;;&#125;</span><br><span class="line">add_filter( &#x27;update_footer&#x27;, &#x27;change_footer_version&#x27;, 9999);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="截图"><a href="#截图" class="headerlink" title="截图"></a>截图</h3><p><img data-src="wp-admin.png" alt="后台页面" title="后台页面"></p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>wordpress</tag>
-        <tag>php</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>要开始写笔记咯</title>
-    <url>/posts/58320/</url>
-    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
-<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>

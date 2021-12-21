@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2021-12-21T10:31:07.652Z</updated>
+  <updated>2021-12-21T10:38:55.469Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>学习Golang笔记一</title>
+    <title>学习Golang笔记-基础知识一</title>
     <link href="https://19981115.xyz/posts/19895/"/>
     <id>https://19981115.xyz/posts/19895/</id>
     <published>2021-12-17T00:51:04.000Z</published>
-    <updated>2021-12-21T10:31:07.652Z</updated>
+    <updated>2021-12-21T10:38:55.469Z</updated>
     
     
     <summary type="html">&lt;p&gt;开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。&lt;/p&gt;
 &lt;h2 id=&quot;什么是-Go&quot;&gt;&lt;a href=&quot;#什么是-Go&quot; class=&quot;headerlink&quot; title=&quot;什么是 Go?&quot;&gt;&lt;/a&gt;什么是 Go?&lt;/h2&gt;&lt;p&gt;Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;官网：&lt;/strong&gt;&lt;a href=&quot;https://go.dev/&quot; title=&quot;https://go.dev/&quot;&gt;https://go.dev/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;%E5%AD%A6%E4%B9%A0Golang%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%80/1639702840194.png&quot; alt=&quot;官网&quot; title=&quot;官网截图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&quot;1639702840194.png&quot; alt=&quot;官网&quot; title=&quot;官网截图&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;文档地址:&lt;/strong&gt; &lt;a href=&quot;https://go.dev/doc/&quot; title=&quot;https://go.dev/doc/&quot;&gt;https://go.dev/doc/&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;packages&lt;/strong&gt;: &lt;a href=&quot;https://pkg.go.dev/&quot; title=&quot;https://pkg.go.dev/&quot;&gt;https://pkg.go.dev/&lt;/a&gt;&lt;/p&gt;</summary>
     
