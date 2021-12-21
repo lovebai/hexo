@@ -1,6 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hexo博客使用静态链接</title>
+    <url>/posts/11857/</url>
+    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>有以下两种设置:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>示列</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
+<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>node</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>HUGO博客程序的安装文档</title>
     <url>/posts/57274/</url>
     <content><![CDATA[<p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。</p>
@@ -65,40 +96,9 @@
         <category>常用技术</category>
       </categories>
       <tags>
+        <tag>博客</tag>
         <tag>Hugo</tag>
         <tag>go</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hexo博客使用静态链接</title>
-    <url>/posts/11857/</url>
-    <content><![CDATA[<h1 id="hexo-静态链接"><a href="#hexo-静态链接" class="headerlink" title="hexo-静态链接"></a>hexo-静态链接</h1><p>一个基于帖子标题生成静态帖子链接的Hexo插件。</p>
-<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><p>添加插件到 HEXO 中，执行以下命令行安装:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">npm install hexo-abbrlink --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>在 config.yml 文件中配置以下信息:<span id="more"></span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">permalink: posts/:abbrlink/</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>有以下两种设置:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">alg -- Algorithm (currently support crc16 and crc32, which crc16 is default)</span><br><span class="line">rep -- Represent (the generated link could be presented in hex or dec value)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>示列</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># abbrlink config</span><br><span class="line">abbrlink:</span><br><span class="line">  alg: crc32  #support crc16(default) and crc32</span><br><span class="line">  rep: hex    #support dec(default) and hex</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="样品"><a href="#样品" class="headerlink" title="样品"></a>样品</h2><p>不同配置的链接效果如下:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">crc16 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/66c8.html</span><br><span class="line"></span><br><span class="line">crc16 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/65535.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; hex</span><br><span class="line">https://post.zz173.com/posts/8ddf18fb.html</span><br><span class="line"></span><br><span class="line">crc32 &amp; dec</span><br><span class="line">https://post.zz173.com/posts/1690090958.html</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="局限性"><a href="#局限性" class="headerlink" title="局限性"></a>局限性</h2><p>crc16 的最大帖子数是 65535 但是对于个人博客网站，这个也不错了</p>
-<h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><p><a href="https://github.com/NoahDragon">NoahDragon</a></p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
-        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -1477,6 +1477,62 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/16112/</url>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看 <a href="https://hexo.io/docs/">文档</a> 以获取更多信息。如果您在使用 Hexo 时遇到任何问题，可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除中</a>找到答案，或者您可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>询问我。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请<a href="https://github.com/hexojs/hexo/issues" title="提交问题">提交问题</a>，我会尽力解决您的问题。</p>
+<span id="more"></span>
+
+<h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：<br><a href="https://nodejs.org/" title="Node.js">Node.js</a><br><a href="https://git-scm.com/" title="Git">Git</a></p>
+<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<!--more-->
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>npm</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>咸鱼淘的二手主板到了</title>
+    <url>/posts/36335/</url>
+    <content><![CDATA[<p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖</p>
+<h4 id="为什么买二手呢？"><a href="#为什么买二手呢？" class="headerlink" title="为什么买二手呢？"></a>为什么买二手呢？</h4><p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 <code>intel</code>的主板，但是不知道怎么回事竟然坏了，<span id="more"></span>可能是因为电压不稳定导致的具体的不知道情况,然后去过维修店里看过，店员告诉我要换主板，他让我上网淘一个，然后我就从某东上白条了一块 B75 的主板，结果拿来装上 2 天就出问题了，把我的网卡烧毁了，声卡也坏了。:tw-1f47f:真是倒霉。然后我爸妈又让我重新买台笔记本，我也想着这台随便用用算了，就去咸鱼淘了一个 B78M-PULS 现在用着还是挺不错的.</p>
+<h4 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h4><p><img data-src="2.jpg" alt="原来的主板" title="原来的主板"><br><img data-src="a.jpg" alt="华硕B75" title="华硕B75"><br><img data-src="1.jpg" alt="烧坏的无线网卡" title="烧坏的无线网卡"></p>
+<h4 id="恭喜恭喜自己"><a href="#恭喜恭喜自己" class="headerlink" title="恭喜恭喜自己"></a>恭喜恭喜自己</h4><p>明天我的小米游戏本就到了，等到了在写一个开箱体验文章，哈哈</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>华硕</tag>
+        <tag>电脑</tag>
+        <tag>主板</tag>
+        <tag>咸鱼二手</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>使用Markdown编辑器的基本语法</title>
     <url>/posts/41250/</url>
     <content><![CDATA[<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><blockquote>
@@ -1651,41 +1707,24 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/posts/16112/</url>
-    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看 <a href="https://hexo.io/docs/">文档</a> 以获取更多信息。如果您在使用 Hexo 时遇到任何问题，可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除中</a>找到答案，或者您可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>询问我。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请<a href="https://github.com/hexojs/hexo/issues" title="提交问题">提交问题</a>，我会尽力解决您的问题。</p>
-<span id="more"></span>
-
-<h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：<br><a href="https://nodejs.org/" title="Node.js">Node.js</a><br><a href="https://git-scm.com/" title="Git">Git</a></p>
-<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
-<!--more-->
-
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+    <title>好不容易来更新一下文章，写写几个字</title>
+    <url>/posts/18472/</url>
+    <content><![CDATA[<p>网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看 <span id="more"></span></p>
+<h3 id="有很多网站怎么办？"><a href="#有很多网站怎么办？" class="headerlink" title="有很多网站怎么办？"></a>有很多网站怎么办？</h3><p>网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看，当然还会出售别的网站程序源码，这些源码都是很不错的希望可以卖个好价钱</p>
+<h3 id="wordpress的程序"><a href="#wordpress的程序" class="headerlink" title="wordpress的程序"></a>wordpress的程序</h3><p>这个博客程序还是很不错的，功能齐全，对搜索引擎特别友好，看这个截图就知道了<br><img data-src="1122.png" alt="惜文博客" title="惜文博客"></p>
+<p>还有一些四方交易平台的源码，还是很优秀的</p>
+<h3 id="近期"><a href="#近期" class="headerlink" title="近期"></a>近期</h3><p>最近我下铺想学习做网站，我决定把他交会了</p>
+<p><em>想着让他使用hexo的博客系统，但是不知道怎么回事就是安装不算 <code>npm</code>,所以只能在本地使用 <code>phpstudy</code>搭建个 <code>typecho</code>的博客系统，这个博客系统是使用 <code>php</code>语言所编写的</em></p>
+<p><code>typecho</code> 这个轻量级博客系统还是很好用的，哈哈<br>官网：<a href="http://typecho.org/" title="typecho">typecho</a><br>主题：<a href="https://typecho.me/" title="Themes">Themes</a><br>插件：<a href="https://plugins.typecho.me/" title="plugins">plugins</a></p>
+<h3 id="尾"><a href="#尾" class="headerlink" title="尾"></a>尾</h3><p>哎呀，没什么好说的，~~~<br>强大的md编辑器呀</p>
 ]]></content>
       <categories>
-        <category>常用技术</category>
+        <category>闲言碎语</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
-        <tag>npm</tag>
-        <tag>node.js</tag>
+        <tag>博客</tag>
+        <tag>wordpress</tag>
+        <tag>php</tag>
       </tags>
   </entry>
   <entry>
@@ -2528,42 +2567,400 @@
       </tags>
   </entry>
   <entry>
-    <title>咸鱼淘的二手主板到了</title>
-    <url>/posts/36335/</url>
-    <content><![CDATA[<p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖</p>
-<h4 id="为什么买二手呢？"><a href="#为什么买二手呢？" class="headerlink" title="为什么买二手呢？"></a>为什么买二手呢？</h4><p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 <code>intel</code>的主板，但是不知道怎么回事竟然坏了，<span id="more"></span>可能是因为电压不稳定导致的具体的不知道情况,然后去过维修店里看过，店员告诉我要换主板，他让我上网淘一个，然后我就从某东上白条了一块 B75 的主板，结果拿来装上 2 天就出问题了，把我的网卡烧毁了，声卡也坏了。:tw-1f47f:真是倒霉。然后我爸妈又让我重新买台笔记本，我也想着这台随便用用算了，就去咸鱼淘了一个 B78M-PULS 现在用着还是挺不错的.</p>
-<h4 id="一些图片"><a href="#一些图片" class="headerlink" title="一些图片"></a>一些图片</h4><p><img data-src="2.jpg" alt="原来的主板" title="原来的主板"><br><img data-src="a.jpg" alt="华硕B75" title="华硕B75"><br><img data-src="1.jpg" alt="烧坏的无线网卡" title="烧坏的无线网卡"></p>
-<h4 id="恭喜恭喜自己"><a href="#恭喜恭喜自己" class="headerlink" title="恭喜恭喜自己"></a>恭喜恭喜自己</h4><p>明天我的小米游戏本就到了，等到了在写一个开箱体验文章，哈哈</p>
+    <title>学习Golang笔记一</title>
+    <url>/posts/19895/</url>
+    <content><![CDATA[<p>开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。</p>
+<h2 id="什么是-Go"><a href="#什么是-Go" class="headerlink" title="什么是 Go?"></a>什么是 Go?</h2><p>Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。</p>
+<p><strong>官网：</strong><a href="https://go.dev/" title="https://go.dev/">https://go.dev/</a></p>
+<p><img data-src="%E5%AD%A6%E4%B9%A0Golang%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%80/1639702840194.png" alt="官网" title="官网截图"></p>
+<p><strong>文档地址:</strong> <a href="https://go.dev/doc/" title="https://go.dev/doc/">https://go.dev/doc/</a></p>
+<p><strong>packages</strong>: <a href="https://pkg.go.dev/" title="https://pkg.go.dev/">https://pkg.go.dev/</a></p>
+<span id="more"></span>
+
+<h2 id="Golang-的安装"><a href="#Golang-的安装" class="headerlink" title="Golang 的安装"></a>Golang 的安装</h2><p>通过官网下载对应的包，下载地址：<a href="https://go.dev/dl/" title="https://go.dev/dl/">https://go.dev/dl/</a></p>
+<h4 id="windows-系统下的安装"><a href="#windows-系统下的安装" class="headerlink" title="windows 系统下的安装"></a>windows 系统下的安装</h4><p>双击打开下载的 msi 可执行文件，估计提示进行安装即可，若不修改默认的安装为 <code>C:/Program Files/go</code>目录下，会自动添加系统环境变量。安装好之后打开命令执行 <code>go version </code>验证安装情况。</p>
+<h4 id="Linux-系统下的安装"><a href="#Linux-系统下的安装" class="headerlink" title="Linux 系统下的安装"></a>Linux 系统下的安装</h4><p>将文件下载到到当前目录，然后使用命令 <code>mkdir /usr/local/go</code> 创建一个 go 目录，把文件直接解压缩到 go 目录下，或者解压缩到当前目录下并移动 <code>/usr/local/go</code>目录下，之后编辑当前用户目录下的./profile 或者 <code>/etc/profile</code>文件,在文件末尾添加如下环境变量，内容如下：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">export PATH=/usr/local/go/bin</span><br></pre></td></tr></table></figure>
+
+<p>保存并退出之后在终端执行 <code>source</code>命令使配置生效,然后通过 <code>go version</code>验证是否成功。</p>
+<h4 id="mac-系统下的安装"><a href="#mac-系统下的安装" class="headerlink" title="mac 系统下的安装"></a>mac 系统下的安装</h4><p>如果已经安装有 Homebrew 包管理软件，可以直接使用一下命令来安装：</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">brew install go</span><br></pre></td></tr></table></figure>
+
+<p>如果没有则和一下 Linux 安装步骤一样。</p>
+<h2 id="第一个-Golang-小程序"><a href="#第一个-Golang-小程序" class="headerlink" title="第一个 Golang 小程序"></a>第一个 Golang 小程序</h2><h4 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h4><p>在任意位置创建一个英文名的文件夹，在文件夹里创建一个 go 后缀的文件，列如：test.go,在 test.go 文件中输入一下内容:</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="comment">//主包，可执行文件所在包</span></span><br><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="comment">//导入包</span></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"><span class="comment">//主函数，入口函数</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="comment">//打印输出</span></span><br><span class="line">fmt.Println(<span class="string">&quot;Hello World&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>保存在命令行编译执行 <code>go run test.go</code>,便会在终端输出 <code>Hello World</code>字符。</p>
+<h3 id="main-包的意义"><a href="#main-包的意义" class="headerlink" title="main 包的意义"></a>main 包的意义</h3><p>在 Go 语言里，命名为 <code>main</code> 的包具有特殊的含义。Go 语言的编译程序会试图把这种名字的包编译为二进制可执行文件。所有用 Go 语言编译的可执行程序都必须有一个名叫 <code>main</code> 的包。一个可执行程序有且仅有一个 <code>main</code> 包。当编译器发现某个包的名字为 <code>main</code> 时，它一定也会发现名为 <code>main()</code>的函数，否则不会创建可执行文件。main()函数是程序的入口，所以，如果没有这个函数，程序就没有办法开始执行。程序编译时，会使用声明 main 包的代码所在的目录的目录名作为二进制可执行文件的文件名。</p>
+<h2 id="Go-基本常用的命令"><a href="#Go-基本常用的命令" class="headerlink" title="Go 基本常用的命令"></a>Go 基本常用的命令</h2><h4 id="基本-go-help-命令"><a href="#基本-go-help-命令" class="headerlink" title="基本 go help 命令"></a>基本 go help 命令</h4><ul>
+<li>build: 编译包和依赖</li>
+<li>clean: 移除对象文件</li>
+<li>doc: 显示包或者符号的文档</li>
+<li>env: 打印 go 的环境信息</li>
+<li>bug: 启动错误报告</li>
+<li>fix: 运行 go tool fix</li>
+<li>fmt: 运行 gofmt 进行格式化</li>
+<li>generate: 从 processing source 生成 go 文件</li>
+<li>get: 下载并安装包和依赖</li>
+<li>install: 编译并安装包和依赖</li>
+<li>list: 列出包</li>
+<li>run: 编译并运行 go 程序</li>
+<li>test: 运行测试</li>
+<li>tool: 运行 go 提供的工具</li>
+<li>version: 显示 go 的版本</li>
+<li>vet: 运行 go tool vet</li>
+</ul>
+<p>详细参考文档：<a href="https://golang.org/doc/cmd" title="https://golang.org/doc/cmd">https://golang.org/doc/cmd</a></p>
+<h2 id="如何编写-golang-代码"><a href="#如何编写-golang-代码" class="headerlink" title="如何编写 golang 代码"></a>如何编写 golang 代码</h2><h3 id="代码组织"><a href="#代码组织" class="headerlink" title="代码组织"></a>代码组织</h3><p>go 应用使用<strong>包</strong>和<strong>模块</strong>来组织代码，包对应到文件系统就是文件夹，模块就是**.go**的 go 源文件。一个包中会有多个模块，或者多个子包。</p>
+<h3 id="go-项目管理工具"><a href="#go-项目管理工具" class="headerlink" title="go 项目管理工具"></a>go 项目管理工具</h3><p>早期的 go 项目使用 gopath 来管理项目，不方便而且容易出错，从 golang 1.11 开始使用 gomod 管理项目，当然还有第三方模块例如 govendor，我们给大家结束 gomod 的使用</p>
+<h3 id="创建一个应用"><a href="#创建一个应用" class="headerlink" title="创建一个应用"></a>创建一个应用</h3><ol>
+<li><p>首先，创建一个模块路径，例如：<code>xiaobaibk.com/hello</code>，前缀一般为域名</p>
+</li>
+<li><p>在该目录中执行 <code>go mod init xiaobaibk.com/hello</code>，该命令会创建一个 go.mod 文件，内容如下：</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line">module xiaobaibk.com/hello</span><br><span class="line"><span class="keyword">go</span> <span class="number">1.17</span></span><br></pre></td></tr></table></figure></li>
+<li><p>在 hello 文件夹中创建一个 test.go 文件内容如下：</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">fmt.Println(<span class="string">&quot;这是第一个Go的程序&quot;</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>构建并安装程序，执行如下命令，该命令会在 GOPATH 或者 GOBIN 环境变量下面创建一个 hello.exe 可执行文件</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">go install xiaobaibk.com/hello/</span><br></pre></td></tr></table></figure></li>
+<li><p>执行，输入 hello，运行结果如下</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">这是第一个Go的程序</span><br></pre></td></tr></table></figure></li>
+<li><p>创建子包，创建一个 morestrings 子包，就是创建一个子文件夹，在 hello 目录下面</p>
+</li>
+<li><p>创建一个子模块，morestrings.go，内容如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package morestrings</span><br><span class="line"></span><br><span class="line">func ReverseRunes(s string) string &#123;</span><br><span class="line">r := []rune(s)</span><br><span class="line">for i, j := 0, len(r)-1; i &lt; len(r)/2; i, j = i+1, j-1 &#123;</span><br><span class="line">r[i], r[j] = r[j], r[i]</span><br><span class="line">&#125;</span><br><span class="line">return string(r)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>切换到子包目录下面，执行编译</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">go build</span><br></pre></td></tr></table></figure></li>
+<li><p>在 test.go 中导入子模块</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fmt.Println(morestrings.ReverseRunes(&quot;!oG ,olleH&quot;))</span><br></pre></td></tr></table></figure></li>
+<li><p>安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">go install xiaobai.com/hello/</span><br></pre></td></tr></table></figure></li>
+<li><p>执行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hello, Go!</span><br></pre></td></tr></table></figure></li>
+<li><p>导入网络模块，查找地址：<code>https://pkg.go.dev/</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;xiaobai.com/hello/morestrings&quot;</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">&quot;github.com/google/go-cmp/cmp&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">fmt.Println(morestrings.ReverseRunes(&quot;!oG ,olleH&quot;))</span><br><span class="line">fmt.Println(cmp.Diff(&quot;Hello World&quot;, &quot;Hello Go&quot;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li><p>执行命令，<code>go mod tidy</code>,查看 go.mod 变量</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">module duoke360.com/hello</span><br><span class="line"></span><br><span class="line">go 1.17</span><br><span class="line"></span><br><span class="line">require github.com/google/go-cmp v0.5.6</span><br></pre></td></tr></table></figure></li>
+<li><p>安装</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">go install xiaobaibk.com/hello/</span><br></pre></td></tr></table></figure></li>
+<li><p>执行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Hello, Go!</span><br><span class="line"> string(</span><br><span class="line">-       &quot;Hello World&quot;,</span><br><span class="line">+       &quot;Hello Go&quot;,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Golang-变量"><a href="#Golang-变量" class="headerlink" title="Golang 变量"></a>Golang 变量</h2><p>变量是计算机语言中能<strong>储存</strong>计算结果或能表示值的抽象概念。不同的变量保存的数据类型可能会不一样。</p>
+<h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><p>Go 语言中的变量需要声明后才能使用，同一作用域内不支持重复声明。并且 Go 语言的变量声明后必须使用。</p>
+<p><strong>声明变量的语法</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var identifier type</span><br></pre></td></tr></table></figure>
+
+<p><code>var</code>：声明变量关键字</p>
+<p><code>identifier</code>：变量名称</p>
+<p><code>type</code>：变量类型</p>
+<p><strong>例如</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> <span class="string">&quot;fmt&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> name <span class="keyword">string</span></span><br><span class="line"><span class="keyword">var</span> age <span class="keyword">int</span></span><br><span class="line"><span class="keyword">var</span> ok <span class="keyword">bool</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="批量声明"><a href="#批量声明" class="headerlink" title="批量声明"></a>批量声明</h3><p>使用一个 <code>var</code>关键字，把一些变量写在一个括号 <code>()</code>里</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line">func main() &#123;</span><br><span class="line">var (</span><br><span class="line">name string</span><br><span class="line">age  int</span><br><span class="line">ok   bool</span><br><span class="line">)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><p>Go 语言在声明变量的时候，会自动对变量对应的内存区域进行初始化操作。每个变量会被初始化成其类型的默认值，例如：整型和浮点型变量的默认值为 <code>0</code>。字符串变量的默认值为空字符串 <code>“”</code>。布尔型变量默认为 <code>false</code>。切片、函数、指针变量的默认为 <code>nil</code>。</p>
+<p><strong>变量初始化语法</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> 变量名 类型 = 表达式</span><br></pre></td></tr></table></figure>
+
+<p><strong>例如</strong></p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> name <span class="keyword">string</span> = <span class="string">&quot;yaowanyu&quot;</span></span><br><span class="line"><span class="keyword">var</span> site <span class="keyword">string</span> = <span class="string">&quot;xiaobaibk.com&quot;</span></span><br><span class="line"><span class="keyword">var</span> age <span class="keyword">int</span> = <span class="number">18</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>类型推导</strong></p>
+<p>我们在声明变量时，可以根据初始化值进行类型推导，从而省略类型。</p>
+<figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line"><span class="keyword">var</span> name = <span class="string">&quot;xiaoyu&quot;</span></span><br><span class="line"><span class="keyword">var</span> site = <span class="string">&quot;www.xiaobaibk.com&quot;</span></span><br><span class="line"><span class="keyword">var</span> age = <span class="number">30</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>初始化多个变量</strong></p>
+<p>可以一次初始化多个变量，中间用逗号分隔。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line">func main() &#123;</span><br><span class="line">var name, site, age = &quot;yaowanyu&quot;, &quot;www.xiaobaibk.com&quot;, 30</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="短变量声明"><a href="#短变量声明" class="headerlink" title="短变量声明"></a>短变量声明</h3><p>在函数内部，可以使用 <code>:=</code>运算符对变量进行声明和初始化。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name := &quot;xiaoyu&quot;</span><br><span class="line">site := &quot;www.xiaobaibk.com&quot;</span><br><span class="line">age := 20</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>注意：这种方法只适合在函数内部，函数外面不能使用。</p>
+</blockquote>
+<h3 id="匿名变量"><a href="#匿名变量" class="headerlink" title="匿名变量"></a>匿名变量</h3><p>如果我们接收到多个变量，有一些变量使用不到，可以使用下划线 <code>_</code>表示变量名称，这种变量叫做匿名变量。例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func getNameAndAge() (string, int) &#123;</span><br><span class="line">return &quot;xiaoyao&quot;, 12</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name, _ := getNameAndAge()</span><br><span class="line">fmt.Printf(&quot;name: %v\n&quot;, name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Golang-常量"><a href="#Golang-常量" class="headerlink" title="Golang 常量"></a>Golang 常量</h2><p>常量，就是在程序<strong>编译阶段</strong>就确定下来的值，而程序在<strong>运行时</strong>则无法改变该值。在 Go 程序中，常量可以是数值类型（包括整型、浮点型和复数类型）、布尔类型、字符串类型等。</p>
+<h3 id="定义常量的语法"><a href="#定义常量的语法" class="headerlink" title="定义常量的语法"></a>定义常量的语法</h3><p>定义一个常量使用 const 关键字，语法格式如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">const constantName [type]= value</span><br></pre></td></tr></table></figure>
+
+<p><code>const</code>：定义常量关键字</p>
+<p><code>constantName</code>：常量名称</p>
+<p><code>type</code>：常量类型</p>
+<p><code>value</code>：常量的值</p>
+<p><strong>实例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">const PI float64 = 3.14</span><br><span class="line">const PI2 = 3.1415 // 可以省略类型</span><br><span class="line"></span><br><span class="line">const (</span><br><span class="line">width  = 100</span><br><span class="line">height = 200</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">const i, j = 1, 2 // 多重赋值</span><br><span class="line">const a, b, c = 1, 2, &quot;foo&quot;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>const</code>同时声明多个常量时，如果省略了值则表示和上面一行的值相同</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">const (</span><br><span class="line">a1 = 100</span><br><span class="line">a2</span><br><span class="line">a3</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;a1: %v\n&quot;, a1)</span><br><span class="line">fmt.Printf(&quot;a2: %v\n&quot;, a2)</span><br><span class="line">fmt.Printf(&quot;a3: %v\n&quot;, a3)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a1: 100</span><br><span class="line">a2: 100</span><br><span class="line">a3: 100</span><br></pre></td></tr></table></figure>
+
+<p><strong>iota</strong></p>
+<p>iota 比较特殊，可以被认为是一个可被编译器修改的常量，它默认开始值是 <code>0</code>，每调用一次加 <code>1</code>。遇到 <code>const</code> 关键字时被重置为 <code>0</code>。</p>
+<p><strong>实例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">const (</span><br><span class="line">a1 = iota</span><br><span class="line">a2 = iota</span><br><span class="line">a3 = iota</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;a1: %v\n&quot;, a1)</span><br><span class="line">fmt.Printf(&quot;a2: %v\n&quot;, a2)</span><br><span class="line">fmt.Printf(&quot;a3: %v\n&quot;, a3)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a1: 0</span><br><span class="line">a2: 1</span><br><span class="line">a3: 2</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用 <code>_</code>跳过某些值</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">const (</span><br><span class="line">a1 = iota</span><br><span class="line">_</span><br><span class="line">a2 = iota</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;a1: %v\n&quot;, a1)</span><br><span class="line">fmt.Printf(&quot;a2: %v\n&quot;, a2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a1: 0</span><br><span class="line">a2: 2</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>iota</code>声明中间插队</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">const (</span><br><span class="line">a1 = iota</span><br><span class="line">a2 = 100</span><br><span class="line">a3 = iota</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;a1: %v\n&quot;, a1)</span><br><span class="line">fmt.Printf(&quot;a2: %v\n&quot;, a2)</span><br><span class="line">fmt.Printf(&quot;a3: %v\n&quot;, a3)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a1: 0</span><br><span class="line">a2: 100</span><br><span class="line">a3: 2</span><br></pre></td></tr></table></figure>
+
+<h2 id="Golang-布尔类型"><a href="#Golang-布尔类型" class="headerlink" title="Golang 布尔类型"></a>Golang 布尔类型</h2><p>go 语言中的布尔类型有两个常量值：<code>true</code>和 <code>false</code>。布尔类型经常用在<strong>条件判断</strong>语句，或者<strong>循环语句</strong>。也可以用在<strong>逻辑表达式</strong>中。</p>
+<h3 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var b1 bool = true</span><br><span class="line">var b2 bool = false</span><br><span class="line">var b3 = true</span><br><span class="line">var b4 = false</span><br><span class="line"></span><br><span class="line">b5 := true</span><br><span class="line">b6 := false</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;b1: %v\n&quot;, b1)</span><br><span class="line">fmt.Printf(&quot;b2: %v\n&quot;, b2)</span><br><span class="line">fmt.Printf(&quot;b3: %v\n&quot;, b3)</span><br><span class="line">fmt.Printf(&quot;b4: %v\n&quot;, b4)</span><br><span class="line">fmt.Printf(&quot;b5: %v\n&quot;, b5)</span><br><span class="line">fmt.Printf(&quot;b6: %v\n&quot;, b6)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">b1: true</span><br><span class="line">b2: false</span><br><span class="line">b3: true</span><br><span class="line">b4: false</span><br><span class="line">b5: true</span><br><span class="line">b6: false</span><br></pre></td></tr></table></figure>
+
+<h3 id="用在条件判断中"><a href="#用在条件判断中" class="headerlink" title="用在条件判断中"></a>用在条件判断中</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">age := 18</span><br><span class="line">ok := age &gt;= 18</span><br><span class="line">if ok &#123;</span><br><span class="line">fmt.Println(&quot;你已经成年&quot;)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">fmt.Println(&quot;你还未成年&quot;)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">你已经成年</span><br></pre></td></tr></table></figure>
+
+<h3 id="用在循环语句中"><a href="#用在循环语句中" class="headerlink" title="用在循环语句中"></a>用在循环语句中</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">count := 10</span><br><span class="line">for i := 0; i &lt; count; i++ &#123;</span><br><span class="line">fmt.Printf(&quot;i: %v\n&quot;, i)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="用在逻辑表达式中"><a href="#用在逻辑表达式中" class="headerlink" title="用在逻辑表达式中"></a>用在逻辑表达式中</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">age := 18</span><br><span class="line">gender := &quot;男&quot;</span><br><span class="line"></span><br><span class="line">if age &gt;= 18 &amp;&amp; gender == &quot;男&quot; &#123;</span><br><span class="line">fmt.Println(&quot;你是成年男子&quot;)</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注意：不能使用 <code>0</code>和非 <code>0</code>表示真假</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">i := 1</span><br><span class="line">if i &#123;</span><br><span class="line">// 编译错误</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Golang-数字类型"><a href="#Golang-数字类型" class="headerlink" title="Golang 数字类型"></a>Golang 数字类型</h2><p>Go 语言支持整型和浮点型数字，并且原生支持复数，其中位的运算采用补码。</p>
+<p>Go 也有基于架构的类型，例如：<code>int</code>、<code>uint</code> 和 <code>uintptr</code>。</p>
+<p>这些类型的长度都是根据运行程序所在的操作系统类型所决定的：</p>
+<ul>
+<li><code>int</code> 和<code>uint</code> 在 32 位操作系统上，它们均使用 32 位（4 个字节），在 64 位操作系统上，它们均使用 64 位（8 个字节）。</li>
+<li><code>uintptr</code> 的长度被设定为足够存放一个指针即可。</li>
+</ul>
+<p>Go 语言中没有 <code>float</code> 类型。（Go 语言中只有 <code>float32</code> 和 <code>float64</code>）没有 double 类型。</p>
+<p>与操作系统架构无关的类型都有固定的大小，并在类型的名称中就可以看出来：</p>
+<p>整数：</p>
+<ul>
+<li>int8（-128 -&gt; 127）</li>
+<li>int16（-32768 -&gt; 32767）</li>
+<li>int32（-2,147,483,648 -&gt; 2,147,483,647）</li>
+<li>int64（-9,223,372,036,854,775,808 -&gt; 9,223,372,036,854,775,807）</li>
+</ul>
+<p>无符号整数：</p>
+<ul>
+<li>uint8（0 -&gt; 255）</li>
+<li>uint16（0 -&gt; 65,535）</li>
+<li>uint32（0 -&gt; 4,294,967,295）</li>
+<li>uint64（0 -&gt; 18,446,744,073,709,551,615）</li>
+</ul>
+<p>浮点型（IEEE-754 标准）：</p>
+<ul>
+<li>float32（+- 1e-45 -&gt; +- 3.4 * 1e38）</li>
+<li>float64（+- 5 _ 1e-324 -&gt; 107 _ 1e308）</li>
+</ul>
+<p>int 型是计算最快的一种类型。</p>
+<p>整型的零值为 0，浮点型的零值为 0.0。</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><p>下面实例演示了，各个数字类型的长度和取值范围</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">&quot;math&quot;</span><br><span class="line">&quot;unsafe&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var i8 int8</span><br><span class="line">var i16 int16</span><br><span class="line">var i32 int32</span><br><span class="line">var i64 int64</span><br><span class="line">var ui8 uint8</span><br><span class="line">var ui16 uint16</span><br><span class="line">var ui32 uint32</span><br><span class="line">var ui64 uint64</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, i8, unsafe.Sizeof(i8), math.MinInt8, math.MaxInt8)</span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, i16, unsafe.Sizeof(i16), math.MinInt16, math.MaxInt16)</span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, i32, unsafe.Sizeof(i32), math.MinInt32, math.MaxInt32)</span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, i64, unsafe.Sizeof(i64), math.MinInt64, math.MaxInt64)</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, ui8, unsafe.Sizeof(ui8), 0, math.MaxUint8)</span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, ui16, unsafe.Sizeof(ui16), 0, math.MaxUint16)</span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, ui32, unsafe.Sizeof(ui32), 0, math.MaxUint32)</span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, ui64, unsafe.Sizeof(ui64), 0, uint64(math.MaxUint64))</span><br><span class="line"></span><br><span class="line">var f32 float32</span><br><span class="line">var f64 float64</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, f32, unsafe.Sizeof(f32), -math.MaxFloat32, math.MaxFloat32)</span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, f64, unsafe.Sizeof(f64), -math.MaxFloat64, math.MaxFloat64)</span><br><span class="line"></span><br><span class="line">var ui uint</span><br><span class="line">ui = uint(math.MaxUint64) //再+1会导致overflows错误</span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, ui, unsafe.Sizeof(ui), 0, ui)</span><br><span class="line"></span><br><span class="line">var imax, imin int</span><br><span class="line">imax = int(math.MaxInt64) //再+1会导致overflows错误</span><br><span class="line">imin = int(math.MinInt64) //再-1会导致overflows错误</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;%T %dB %v~%v\n&quot;, imax, unsafe.Sizeof(imax), imin, imax)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">int8 1B -128~127</span><br><span class="line">int16 2B -32768~32767</span><br><span class="line">int32 4B -2147483648~2147483647</span><br><span class="line">int64 8B -9223372036854775808~9223372036854775807</span><br><span class="line">uint8 1B 0~255</span><br><span class="line">uint16 2B 0~65535</span><br><span class="line">uint32 4B 0~4294967295</span><br><span class="line">uint64 8B 0~18446744073709551615</span><br><span class="line">float32 4B -3.4028234663852886e+38~3.4028234663852886e+38</span><br><span class="line">float64 8B -1.7976931348623157e+308~1.7976931348623157e+308</span><br><span class="line">uint 8B 0~18446744073709551615</span><br><span class="line">int 8B -9223372036854775808~9223372036854775807</span><br></pre></td></tr></table></figure>
+
+<h3 id="以二进制、八进制或十六进制浮点数的格式定义数字"><a href="#以二进制、八进制或十六进制浮点数的格式定义数字" class="headerlink" title="以二进制、八进制或十六进制浮点数的格式定义数字"></a>以二进制、八进制或十六进制浮点数的格式定义数字</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">// 十进制</span><br><span class="line">var a int = 10</span><br><span class="line">fmt.Printf(&quot;%d \n&quot;, a) // 10</span><br><span class="line">fmt.Printf(&quot;%b \n&quot;, a) // 1010 占位符%b表示二进制</span><br><span class="line"></span><br><span class="line">// 八进制 以0开头</span><br><span class="line">var b int = 077</span><br><span class="line">fmt.Printf(&quot;%o \n&quot;, b) // 77</span><br><span class="line"></span><br><span class="line">// 十六进制 以0x开头</span><br><span class="line">var c int = 0xff</span><br><span class="line">fmt.Printf(&quot;%x \n&quot;, c) // ff</span><br><span class="line">fmt.Printf(&quot;%X \n&quot;, c) // FF</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">10</span><br><span class="line">1010</span><br><span class="line">77</span><br><span class="line">ff</span><br><span class="line">FF</span><br></pre></td></tr></table></figure>
+
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>Go 语言支持两种浮点型数：<code>float32</code>和 <code>float64</code>。这两种浮点型数据格式遵循 <code>IEEE 754</code>标准：<code>float32</code> 的浮点数的最大范围约为 <code>3.4e38</code>，可以使用常量定义：<code>math.MaxFloat32</code>。<code>float64</code> 的浮点数的最大范围约为 <code>1.8e308</code>，可以使用一个常量定义：<code>math.MaxFloat64</code>。</p>
+<p>打印浮点数时，可以使用 <code>fmt</code>包配合动词 <code>%f</code>，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line">import (</span><br><span class="line">       &quot;fmt&quot;</span><br><span class="line">       &quot;math&quot;</span><br><span class="line">)</span><br><span class="line">func main() &#123;</span><br><span class="line">       fmt.Printf(&quot;%f\n&quot;, math.Pi)</span><br><span class="line">       fmt.Printf(&quot;%.2f\n&quot;, math.Pi)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h3><p>complex64 和 complex128</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">var c1 complex64</span><br><span class="line">c1 = 1 + 2i</span><br><span class="line">var c2 complex128</span><br><span class="line">c2 = 2 + 3i</span><br><span class="line">fmt.Println(c1)</span><br><span class="line">fmt.Println(c2)</span><br></pre></td></tr></table></figure>
+
+<p>复数有实部和虚部，complex64 的实部和虚部为 32 位，complex128 的实部和虚部为 64 位。</p>
+<h2 id="Golang-字符串"><a href="#Golang-字符串" class="headerlink" title="Golang 字符串"></a>Golang 字符串</h2><blockquote>
+<p>一个 Go 语言字符串是一个任意字节的常量序列。</p>
+</blockquote>
+<p><strong>Go 语言字符串与其他语言（Java，C++，Python）字符串的不同点</strong> Go 语言中字符串的字节使用 UTF-8 编码表示 Unicode 文本，因此 Go 语言字符串是变宽字符序列，每一个字符都用一个或者多个字符表示，这跟其他的（C++，Java，Python 3）的字符串类型有着本质上的不同，后者为定宽字符序列。</p>
+<p>其他语言的字符串中的单个字符可以被字节索引，而 Go 语言中只有在字符串只包含 7 位的 ASCII 字符（因为它们都是用一个单一的 UTF-8 字节表示）时才可以被字节索引。那么这是不是表示 Go 语言在字符串处理能力上就比其他语言弱呢？答案时否定的，应为 Go 语言支持一个字符一个字符的迭代，而且标准库中存在大量的字符串操作函数，最后我们还可以将 Go 语言的字符串转化为 Unicode 码点切片（类型为 <code>[]rune</code>），切片是支持直接索引的。</p>
+<p>对于英文文本，Go 使用 8 位来表示每一个字节，而 Java 或 Python 则需要 16 位或更多。采用 UTF-8 编码，使得 Go 语言无需关系机器码的排列顺序，也无需编码解码来使用其他语言。</p>
+<blockquote>
+<p>注：每一个 Unicode 字符都有一个唯一的叫做“码点”的标识数字。在 Go 语言中，一个单一的码点在内存中以 <code>rune</code> 的形式表示，<code>rune</code>表示 int32 类型的别名</p>
+</blockquote>
+<h3 id="go-语言字符串字面量"><a href="#go-语言字符串字面量" class="headerlink" title="go 语言字符串字面量"></a>go 语言字符串字面量</h3><p>在 Go 语言中，字符串字面量使用双引号 <code>&quot;&quot;</code> 或者反引号 <code>&#39;</code> 来创建。双引号用来创建可解析的字符串，支持转义，但不能用来引用多行；反引号用来创建原生的字符串字面量，可能由多行组成，但不支持转义，并且可以包含除了反引号外其他所有字符。双引号创建可解析的字符串应用最广泛，反引号用来创建原生的字符串则多用于书写多行消息，HTML 以及正则表达式。</p>
+<p><strong>实例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var str1 string = &quot;hello world&quot;</span><br><span class="line">var html string =</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;hello golang&lt;/title&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">`</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;str1: %v\n&quot;, str1)</span><br><span class="line">fmt.Printf(&quot;html: %v\n&quot;, html)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">str1: hello world</span><br><span class="line">html:</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;hello golang&lt;/title&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="go-语言字符串连接"><a href="#go-语言字符串连接" class="headerlink" title="go 语言字符串连接"></a>go 语言字符串连接</h3><p><strong>使用加号</strong></p>
+<p>虽然 Go 语言中的字符串是不可变的，但是字符串支持 <code>+</code> 级联操作和 <code>+=</code>追加操作，例如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name := &quot;tom&quot;</span><br><span class="line">age := &quot;20&quot;</span><br><span class="line">msg := name + &quot; &quot; + age</span><br><span class="line">fmt.Printf(&quot;msg: %v\n&quot;, msg)</span><br><span class="line">fmt.Println(&quot;-------------&quot;)</span><br><span class="line">msg = &quot;&quot;</span><br><span class="line">msg += name</span><br><span class="line">msg += &quot; &quot;</span><br><span class="line">msg += age</span><br><span class="line">fmt.Printf(&quot;msg: %v\n&quot;, msg)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>golang 里面的字符串都是不可变的，每次运算都会产生一个新的字符串，所以会产生很多临时的无用的字符串，不仅没有用，还会给 gc 带来额外的负担，所以性能比较差</p>
+</blockquote>
+<p><strong>使用 <code>fmt.Sprintf()</code>函数</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name := &quot;tom&quot;</span><br><span class="line">age := &quot;20&quot;</span><br><span class="line">msg := fmt.Sprintf(&quot;%s,%s&quot;, name, age)</span><br><span class="line">fmt.Printf(&quot;msg: %v\n&quot;, msg)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">msg: tom,20</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>内部使用 <code>[]byte</code> 实现，不像直接运算符这种会产生很多临时的字符串，但是内部的逻辑比较复杂，有很多额外的判断，还用到了 <code>interface</code>，所以性能也不是很好</p>
+</blockquote>
+<p><strong><code>strings.Join()</code></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">&quot;strings&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name := &quot;tom&quot;</span><br><span class="line">age := &quot;20&quot;</span><br><span class="line">msg := strings.Join([]string&#123;name, age&#125;, &quot;,&quot;)</span><br><span class="line">fmt.Printf(&quot;msg: %v\n&quot;, msg)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">msg: tom,20</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>join 会先根据字符串数组的内容，计算出一个拼接之后的长度，然后申请对应大小的内存，一个一个字符串填入，在已有一个数组的情况下，这种效率会很高，但是本来没有，去构造这个数据的代价也不小</p>
+</blockquote>
+<p><strong><code>buffer.WriteString()</code></strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;bytes&quot;</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var buffer bytes.Buffer</span><br><span class="line">buffer.WriteString(&quot;tom&quot;)</span><br><span class="line">buffer.WriteString(&quot;,&quot;)</span><br><span class="line">buffer.WriteString(&quot;20&quot;)</span><br><span class="line">fmt.Printf(&quot;buffer.String(): %v\n&quot;, buffer.String())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这个比较理想，可以当成可变字符使用，对内存的增长也有优化，如果能预估字符串的长度，还可以用 <code>buffer.Grow()</code> 接口来设置 capacity</p>
+</blockquote>
+<h3 id="go-语言字符串转义字符"><a href="#go-语言字符串转义字符" class="headerlink" title="go 语言字符串转义字符"></a>go 语言字符串转义字符</h3><p>Go 语言的字符串常见转义符包含回车、换行、单双引号、制表符等，如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th>转义符</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>\r</code></td>
+<td>回车符（返回行首）</td>
+</tr>
+<tr>
+<td><code>\n</code></td>
+<td>换行符（直接跳到下一行的同列位置）</td>
+</tr>
+<tr>
+<td><code>\t</code></td>
+<td>制表符</td>
+</tr>
+<tr>
+<td><code>\&#39;</code></td>
+<td>单引号</td>
+</tr>
+<tr>
+<td><code>\&quot;</code></td>
+<td>双引号</td>
+</tr>
+<tr>
+<td><code>\\</code></td>
+<td>反斜杠</td>
+</tr>
+</tbody></table>
+<p><strong>实例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">fmt.Print(&quot;hello\tworld\n&quot;)</span><br><span class="line">fmt.Print(&quot;\&quot;c:\\test\\\&quot;&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">helloworld</span><br><span class="line">&quot;c:\test\&quot;</span><br></pre></td></tr></table></figure>
+
+<h3 id="go-语言字符串切片操作"><a href="#go-语言字符串切片操作" class="headerlink" title="go 语言字符串切片操作"></a>go 语言字符串切片操作</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">str := &quot;hello world&quot;</span><br><span class="line">n := 3</span><br><span class="line">m := 5</span><br><span class="line">fmt.Println(str[n])   //获取字符串索引位置为n的原始字节</span><br><span class="line">fmt.Println(str[n:m]) //截取得字符串索引位置为 n 到 m-1 的字符串</span><br><span class="line">fmt.Println(str[n:])  //截取得字符串索引位置为 n 到 len(s)-1 的字符串</span><br><span class="line">fmt.Println(str[:m])  //截取得字符串索引位置为 0 到 m-1 的字符串</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">108</span><br><span class="line">lo</span><br><span class="line">lo world</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
+
+<h3 id="go-语言字符串常用方法"><a href="#go-语言字符串常用方法" class="headerlink" title="go 语言字符串常用方法"></a>go 语言字符串常用方法</h3><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>介绍</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>len(str)</td>
+<td>求长度</td>
+</tr>
+<tr>
+<td>+或 fmt.Sprintf</td>
+<td>拼接字符串</td>
+</tr>
+<tr>
+<td>strings.Split</td>
+<td>分割</td>
+</tr>
+<tr>
+<td>strings.contains</td>
+<td>判断是否包含</td>
+</tr>
+<tr>
+<td>strings.HasPrefix,strings.HasSuffix</td>
+<td>前缀/后缀判断</td>
+</tr>
+<tr>
+<td>strings.Index(),strings.LastIndex()</td>
+<td>子串出现的位置</td>
+</tr>
+<tr>
+<td>strings.Join(a[]string, sep string)</td>
+<td>join 操作</td>
+</tr>
+</tbody></table>
+<p><strong>实例</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">&quot;strings&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">s := &quot;hello world！&quot;</span><br><span class="line">fmt.Printf(&quot;len(s): %v\n&quot;, len(s))</span><br><span class="line">fmt.Printf(&quot;strings.Split(s, \&quot;\&quot;): %v\n&quot;, strings.Split(s, &quot; &quot;))</span><br><span class="line">fmt.Printf(&quot;strings.Contains(s, \&quot;hello\&quot;): %v\n&quot;, strings.Contains(s, &quot;hello&quot;))</span><br><span class="line">fmt.Printf(&quot;strings.HasPrefix(s, \&quot;hello\&quot;): %v\n&quot;, strings.HasPrefix(s, &quot;hello&quot;))</span><br><span class="line">fmt.Printf(&quot;strings.HasSuffix(s, \&quot;world！\&quot;): %v\n&quot;, strings.HasSuffix(s, &quot;world！&quot;))</span><br><span class="line">fmt.Printf(&quot;strings.Index(s, \&quot;l\&quot;): %v\n&quot;, strings.Index(s, &quot;l&quot;))</span><br><span class="line">fmt.Printf(&quot;strings.LastIndex(s, \&quot;l\&quot;): %v\n&quot;, strings.LastIndex(s, &quot;l&quot;))</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">len(s): 14</span><br><span class="line">strings.Split(s, &quot;&quot;): [hello world！]</span><br><span class="line">strings.Contains(s, &quot;hello&quot;): true</span><br><span class="line">strings.HasPrefix(s, &quot;hello&quot;): true</span><br><span class="line">strings.HasSuffix(s, &quot;world！&quot;): true</span><br><span class="line">strings.Index(s, &quot;l&quot;): 2</span><br><span class="line">strings.LastIndex(s, &quot;l&quot;): 9</span><br></pre></td></tr></table></figure>
+
+<h3 id="byte-和-rune-类型"><a href="#byte-和-rune-类型" class="headerlink" title="byte 和 rune 类型"></a>byte 和 rune 类型</h3><p>组成每个字符串的元素叫做“字符”，可以通过遍历或者单个获取字符串元素获得字符。字符用单引号（’）包裹起来，如：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var a = &#x27;华&#x27;</span><br><span class="line">var b = &#x27;a&#x27;</span><br><span class="line">fmt.Printf(&quot;a: %v,%c\n&quot;, a, a)</span><br><span class="line">fmt.Printf(&quot;b: %v,%c\n&quot;, b, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a: 21326,华</span><br><span class="line">b: 97,a</span><br></pre></td></tr></table></figure>
+
+<p>Go 语言的字符有以下两种：</p>
+<ol>
+<li><code>uint8</code>类型，或者叫 byte 型，代表了<code>ASCII码</code>的一个字符。</li>
+<li><code>rune</code>类型，代表一个<code>UTF-8字符</code>。</li>
+</ol>
+<p>当需要处理中文、日文或者其他复合字符时，则需要用到 <code>rune</code>类型。<code>rune</code>类型实际是一个 <code>int32</code>。</p>
+<p>Go 使用了特殊的 rune 类型来处理 Unicode，让基于 Unicode 的文本处理更为方便，也可以使用 byte 型进行默认字符串处理，性能和扩展性都有照顾。</p>
+<h2 id="Golang-格式化输出"><a href="#Golang-格式化输出" class="headerlink" title="Golang 格式化输出"></a>Golang 格式化输出</h2><p>下面实例使用到的结构体</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type Website struct &#123;</span><br><span class="line">    Name string</span><br><span class="line">&#125;</span><br><span class="line">// 定义结构体变量</span><br><span class="line">var site = Website&#123;Name:&quot;yaowanyu&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><h4 id="普通占位符"><a href="#普通占位符" class="headerlink" title="普通占位符"></a>普通占位符</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">占位符说明举例输出</span><br><span class="line">%v相应值的默认格式。Printf(&quot;%v&quot;, site)，Printf(&quot;%+v&quot;, site)&#123;yaowanyu&#125;，&#123;Name:yaowanyu&#125;</span><br><span class="line">在打印结构体时，“加号”标记（%+v）会添加字段名</span><br><span class="line">%#v相应值的Go语法表示Printf(&quot;#v&quot;, site)main.Website&#123;Name:&quot;yaowanyu&quot;&#125;</span><br><span class="line">%T相应值的类型的Go语法表示Printf(&quot;%T&quot;, site)main.Website</span><br><span class="line">%%字面上的百分号，并非值的占位符Printf(&quot;%%&quot;)%</span><br></pre></td></tr></table></figure>
+
+<p><strong>布尔占位符</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">占位符说明举例输出</span><br><span class="line">%t单词 true 或 false。Printf(&quot;%t&quot;, true)true</span><br></pre></td></tr></table></figure>
+
+<p><strong>整数占位符</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">占位符说明举例输出</span><br><span class="line">%b二进制表示Printf(&quot;%b&quot;, 5)101</span><br><span class="line">%c相应Unicode码点所表示的字符Printf(&quot;%c&quot;, 0x4E2D)中</span><br><span class="line">%d十进制表示Printf(&quot;%d&quot;, 0x12)18</span><br><span class="line">%o八进制表示Printf(&quot;%o&quot;, 10)12</span><br><span class="line">%q单引号围绕的字符字面值，由Go语法安全地转义Printf(&quot;%q&quot;, 0x4E2D)&#x27;中&#x27;</span><br><span class="line">%x十六进制表示，字母形式为小写 a-fPrintf(&quot;%x&quot;, 13)d</span><br><span class="line">%X十六进制表示，字母形式为大写 A-FPrintf(&quot;%x&quot;, 13)D</span><br><span class="line">%UUnicode格式：U+1234，等同于 &quot;U+%04X&quot;Printf(&quot;%U&quot;, 0x4E2D)U+4E2D</span><br></pre></td></tr></table></figure>
+
+<p><strong>浮点数和复数的组成部分（实部和虚部）</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">占位符说明举例输出</span><br><span class="line">%b无小数部分的，指数为二的幂的科学计数法，与 strconv.FormatFloat</span><br><span class="line">的 &#x27;b&#x27; 转换格式一致。例如 -123456p-78</span><br><span class="line">%e科学计数法，例如 -1234.456e+78Printf(&quot;%e&quot;, 10.2)1.020000e+01</span><br><span class="line">%E科学计数法，例如 -1234.456E+78Printf(&quot;%e&quot;, 10.2)1.020000E+01</span><br><span class="line">%f有小数点而无指数，例如 123.456Printf(&quot;%f&quot;, 10.2)10.200000</span><br><span class="line">%g根据情况选择 %e 或 %f 以产生更紧凑的（无末尾的0）输出Printf(&quot;%g&quot;, 10.20)10.2</span><br><span class="line">%G根据情况选择 %E 或 %f 以产生更紧凑的（无末尾的0）输出Printf(&quot;%G&quot;, 10.20+2i)(10.2+2i)</span><br></pre></td></tr></table></figure>
+
+<p><strong>字符串与字节切片</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">占位符说明举例输出</span><br><span class="line">%s输出字符串表示（string类型或[]byte)Printf(&quot;%s&quot;, []byte(&quot;你好世界&quot;))你好世界</span><br><span class="line">%q双引号围绕的字符串，由Go语法安全地转义Printf(&quot;%q&quot;, &quot;你好世界&quot;)&quot;你好世界&quot;</span><br><span class="line">%x十六进制，小写字母，每字节两个字符Printf(&quot;%x&quot;, &quot;golang&quot;)676f6c616e67</span><br><span class="line">%X十六进制，大写字母，每字节两个字符Printf(&quot;%X&quot;, &quot;golang&quot;)676F6C616E67</span><br></pre></td></tr></table></figure>
+
+<p><strong>指针</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">占位符说明举例输出</span><br><span class="line">%p十六进制表示，前缀 0xPrintf(&quot;%p&quot;, &amp;site)0x4f57f0</span><br></pre></td></tr></table></figure>
+
+<h2 id="实例-1"><a href="#实例-1" class="headerlink" title="实例"></a>实例</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type user struct &#123;</span><br><span class="line">name string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">u := user&#123;&quot;guo&quot;&#125;</span><br><span class="line">//Printf 格式化输出</span><br><span class="line">fmt.Printf(&quot;% + v\n&quot;, u)     //格式化输出结构</span><br><span class="line">fmt.Printf(&quot;%#v\n&quot;, u)       //输出值的 Go 语言表示方法</span><br><span class="line">fmt.Printf(&quot;%T\n&quot;, u)        //输出值的类型的 Go 语言表示</span><br><span class="line">fmt.Printf(&quot;%t\n&quot;, true)     //输出值的 true 或 false</span><br><span class="line">fmt.Printf(&quot;%b\n&quot;, 1024)     //二进制表示</span><br><span class="line">fmt.Printf(&quot;%c\n&quot;, 11111111) //数值对应的 Unicode 编码字符</span><br><span class="line">fmt.Printf(&quot;%d\n&quot;, 10)       //十进制表示</span><br><span class="line">fmt.Printf(&quot;%o\n&quot;, 8)        //八进制表示</span><br><span class="line">fmt.Printf(&quot;%q\n&quot;, 22)       //转化为十六进制并附上单引号</span><br><span class="line">fmt.Printf(&quot;%x\n&quot;, 1223)     //十六进制表示，用a-f表示</span><br><span class="line">fmt.Printf(&quot;%X\n&quot;, 1223)     //十六进制表示，用A-F表示</span><br><span class="line">fmt.Printf(&quot;%U\n&quot;, 1233)     //Unicode表示</span><br><span class="line">fmt.Printf(&quot;%b\n&quot;, 12.34)    //无小数部分，两位指数的科学计数法6946802425218990p-49</span><br><span class="line">fmt.Printf(&quot;%e\n&quot;, 12.345)   //科学计数法，e表示</span><br><span class="line">fmt.Printf(&quot;%E\n&quot;, 12.34455) //科学计数法，E表示</span><br><span class="line">fmt.Printf(&quot;%f\n&quot;, 12.3456)  //有小数部分，无指数部分</span><br><span class="line">fmt.Printf(&quot;%g\n&quot;, 12.3456)  //根据实际情况采用%e或%f输出</span><br><span class="line">fmt.Printf(&quot;%G\n&quot;, 12.3456)  //根据实际情况采用%E或%f输出</span><br><span class="line">fmt.Printf(&quot;%s\n&quot;, &quot;wqdew&quot;)  //直接输出字符串或者[]byte</span><br><span class="line">fmt.Printf(&quot;%q\n&quot;, &quot;dedede&quot;) //双引号括起来的字符串</span><br><span class="line">fmt.Printf(&quot;%x\n&quot;, &quot;abczxc&quot;) //每个字节用两字节十六进制表示，a-f表示</span><br><span class="line">fmt.Printf(&quot;%X\n&quot;, &quot;asdzxc&quot;) //每个字节用两字节十六进制表示，A-F表示</span><br><span class="line">fmt.Printf(&quot;%p\n&quot;, 0x123)    //0x开头的十六进制数表示</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
-        <category>闲言碎语</category>
+        <category>学习笔记</category>
       </categories>
       <tags>
-        <tag>华硕</tag>
-        <tag>电脑</tag>
-        <tag>主板</tag>
-        <tag>咸鱼二手</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>好不容易来更新一下文章，写写几个字</title>
-    <url>/posts/18472/</url>
-    <content><![CDATA[<p>网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看 <span id="more"></span></p>
-<h3 id="有很多网站怎么办？"><a href="#有很多网站怎么办？" class="headerlink" title="有很多网站怎么办？"></a>有很多网站怎么办？</h3><p>网站做多了管理不过来怎么办？试过去站长资源网出售网站，但是审核没有通过，所以现在的打算是把网站程序源码发到二手平台上出售看看，当然还会出售别的网站程序源码，这些源码都是很不错的希望可以卖个好价钱</p>
-<h3 id="wordpress的程序"><a href="#wordpress的程序" class="headerlink" title="wordpress的程序"></a>wordpress的程序</h3><p>这个博客程序还是很不错的，功能齐全，对搜索引擎特别友好，看这个截图就知道了<br><img data-src="1122.png" alt="惜文博客" title="惜文博客"></p>
-<p>还有一些四方交易平台的源码，还是很优秀的</p>
-<h3 id="近期"><a href="#近期" class="headerlink" title="近期"></a>近期</h3><p>最近我下铺想学习做网站，我决定把他交会了</p>
-<p><em>想着让他使用hexo的博客系统，但是不知道怎么回事就是安装不算 <code>npm</code>,所以只能在本地使用 <code>phpstudy</code>搭建个 <code>typecho</code>的博客系统，这个博客系统是使用 <code>php</code>语言所编写的</em></p>
-<p><code>typecho</code> 这个轻量级博客系统还是很好用的，哈哈<br>官网：<a href="http://typecho.org/" title="typecho">typecho</a><br>主题：<a href="https://typecho.me/" title="Themes">Themes</a><br>插件：<a href="https://plugins.typecho.me/" title="plugins">plugins</a></p>
-<h3 id="尾"><a href="#尾" class="headerlink" title="尾"></a>尾</h3><p>哎呀，没什么好说的，~~~<br>强大的md编辑器呀</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>wordpress</tag>
-        <tag>php</tag>
+        <tag>Golang</tag>
+        <tag>编程语言</tag>
       </tags>
   </entry>
   <entry>
@@ -2744,9 +3141,9 @@
         <category>常用技术</category>
       </categories>
       <tags>
-        <tag>博客</tag>
         <tag>Hexo</tag>
         <tag>node</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>
@@ -2813,8 +3210,8 @@
         <category>常用技术</category>
       </categories>
       <tags>
-        <tag>博客</tag>
         <tag>Hexo</tag>
+        <tag>博客</tag>
         <tag>node.js</tag>
       </tags>
   </entry>
@@ -2877,6 +3274,20 @@
       </tags>
   </entry>
   <entry>
+    <title>要开始写笔记咯</title>
+    <url>/posts/58320/</url>
+    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
+<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>记录一下今天的糗事</title>
     <url>/posts/476/</url>
     <content><![CDATA[<p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）<span id="more"></span></p>
@@ -2897,20 +3308,6 @@
         <tag>网站</tag>
         <tag>失误</tag>
         <tag>文件</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>要开始写笔记咯</title>
-    <url>/posts/58320/</url>
-    <content><![CDATA[<p>今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练<br>今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，<span id="more"></span>可能过久会更新本文章。哈哈<br>这个站点就是我发布日记什么，技术性的文章不在这发<br>如果想看技术文章可以关注 <a href="https://www.xaiobaibk.com/" title="www.xaiobaibk.com">www.xaiobaibk.com</a>这是我的一个站点</p>
-<p>别的也不知道要说些什么了，哈哈<br>不说了，拜拜</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>github</tag>
       </tags>
   </entry>
   <entry>

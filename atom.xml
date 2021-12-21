@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2021-10-30T05:28:08.878Z</updated>
+  <updated>2021-12-21T10:31:07.652Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>学习Golang笔记一</title>
+    <link href="https://19981115.xyz/posts/19895/"/>
+    <id>https://19981115.xyz/posts/19895/</id>
+    <published>2021-12-17T00:51:04.000Z</published>
+    <updated>2021-12-21T10:31:07.652Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。&lt;/p&gt;
+&lt;h2 id=&quot;什么是-Go&quot;&gt;&lt;a href=&quot;#什么是-Go&quot; class=&quot;headerlink&quot; title=&quot;什么是 Go?&quot;&gt;&lt;/a&gt;什么是 Go?&lt;/h2&gt;&lt;p&gt;Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;官网：&lt;/strong&gt;&lt;a href=&quot;https://go.dev/&quot; title=&quot;https://go.dev/&quot;&gt;https://go.dev/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img data-src=&quot;%E5%AD%A6%E4%B9%A0Golang%E7%AC%94%E8%AE%B0-%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%E4%B8%80/1639702840194.png&quot; alt=&quot;官网&quot; title=&quot;官网截图&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;文档地址:&lt;/strong&gt; &lt;a href=&quot;https://go.dev/doc/&quot; title=&quot;https://go.dev/doc/&quot;&gt;https://go.dev/doc/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;packages&lt;/strong&gt;: &lt;a href=&quot;https://pkg.go.dev/&quot; title=&quot;https://pkg.go.dev/&quot;&gt;https://pkg.go.dev/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
+    
+    <category term="编程语言" scheme="https://19981115.xyz/tags/%E7%BC%96%E7%A8%8B%E8%AF%AD%E8%A8%80/"/>
+    
+  </entry>
   
   <entry>
     <title>Java JUC笔记PDF-狂神</title>
@@ -234,11 +260,11 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
     
     <category term="node" scheme="https://19981115.xyz/tags/node/"/>
+    
+    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -261,11 +287,11 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
     
     <category term="node" scheme="https://19981115.xyz/tags/node/"/>
+    
+    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -382,11 +408,11 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
+    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
     <category term="Hugo" scheme="https://19981115.xyz/tags/Hugo/"/>
     
     <category term="go" scheme="https://19981115.xyz/tags/go/"/>
-    
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -507,33 +533,9 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
+    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
+    
     <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
-    
-    <category term="node.js" scheme="https://19981115.xyz/tags/node-js/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://19981115.xyz/posts/16112/"/>
-    <id>https://19981115.xyz/posts/16112/</id>
-    <published>2019-01-01T09:56:49.000Z</published>
-    <updated>2021-08-01T07:23:53.148Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;欢迎来到 &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;！这是你的第一篇文章。查看 &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;文档&lt;/a&gt; 以获取更多信息。如果您在使用 Hexo 时遇到任何问题，可以在 &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;故障排除中&lt;/a&gt;找到答案，或者您可以在 &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;询问我。&lt;/p&gt;
-&lt;h3 id=&quot;安装&quot;&gt;&lt;a href=&quot;#安装&quot; class=&quot;headerlink&quot; title=&quot;安装&quot;&gt;&lt;/a&gt;安装&lt;/h3&gt;&lt;p&gt;安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请&lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; title=&quot;提交问题&quot;&gt;提交问题&lt;/a&gt;，我会尽力解决您的问题。&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
-    
-    <category term="npm" scheme="https://19981115.xyz/tags/npm/"/>
     
     <category term="node.js" scheme="https://19981115.xyz/tags/node-js/"/>
     
