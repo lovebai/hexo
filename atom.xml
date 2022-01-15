@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-01-15T05:44:19.550Z</updated>
+  <updated>2022-01-15T07:11:18.092Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Golang学习笔记四-接口、Golang包和并发</title>
+    <link href="https://19981115.xyz/posts/52141/"/>
+    <id>https://19981115.xyz/posts/52141/</id>
+    <published>2022-01-15T06:57:51.000Z</published>
+    <updated>2022-01-15T07:11:18.092Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Golang接口&quot;&gt;&lt;a href=&quot;#Golang接口&quot; class=&quot;headerlink&quot; title=&quot;Golang接口&quot;&gt;&lt;/a&gt;Golang接口&lt;/h1&gt;&lt;p&gt;接口像是一个公司里面的领导，他会定义一些通用规范，只设计规范，而不实现规范。&lt;/p&gt;
+&lt;p&gt;go语言的接口，是一种新的&lt;strong&gt;类型定义&lt;/strong&gt; ，它把所有的&lt;strong&gt;具有共性的方法&lt;/strong&gt; 定义在一起，任何其他类型只要实现了这些方法就是实现了这个接口。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
+    
+    <category term="接口" scheme="https://19981115.xyz/tags/%E6%8E%A5%E5%8F%A3/"/>
+    
+    <category term="构造函数" scheme="https://19981115.xyz/tags/%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0/"/>
+    
+    <category term="并发" scheme="https://19981115.xyz/tags/%E5%B9%B6%E5%8F%91/"/>
+    
+    <category term="包管理" scheme="https://19981115.xyz/tags/%E5%8C%85%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
   
   <entry>
     <title>Golang学习笔记三-函数与结构体</title>
@@ -108,6 +136,8 @@
     <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
+    <category term="并发" scheme="https://19981115.xyz/tags/%E5%B9%B6%E5%8F%91/"/>
+    
     <category term="JUC" scheme="https://19981115.xyz/tags/JUC/"/>
     
     <category term="线程" scheme="https://19981115.xyz/tags/%E7%BA%BF%E7%A8%8B/"/>
@@ -115,8 +145,6 @@
     <category term="进程" scheme="https://19981115.xyz/tags/%E8%BF%9B%E7%A8%8B/"/>
     
     <category term="并行" scheme="https://19981115.xyz/tags/%E5%B9%B6%E8%A1%8C/"/>
-    
-    <category term="并发" scheme="https://19981115.xyz/tags/%E5%B9%B6%E5%8F%91/"/>
     
   </entry>
   
@@ -520,31 +548,6 @@
     <category term="主板" scheme="https://19981115.xyz/tags/%E4%B8%BB%E6%9D%BF/"/>
     
     <category term="咸鱼二手" scheme="https://19981115.xyz/tags/%E5%92%B8%E9%B1%BC%E4%BA%8C%E6%89%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Markdown编辑器的基本语法</title>
-    <link href="https://19981115.xyz/posts/41250/"/>
-    <id>https://19981115.xyz/posts/41250/</id>
-    <published>2019-01-28T03:47:20.000Z</published>
-    <updated>2021-08-01T07:23:25.311Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;主要内容&quot;&gt;&lt;a href=&quot;#主要内容&quot; class=&quot;headerlink&quot; title=&quot;主要内容&quot;&gt;&lt;/a&gt;主要内容&lt;/h2&gt;&lt;blockquote&gt;
-&lt;h4 id=&quot;Markdown是什么？&quot;&gt;&lt;a href=&quot;#Markdown是什么？&quot; class=&quot;headerlink&quot; title=&quot;Markdown是什么？&quot;&gt;&lt;/a&gt;Markdown&lt;em&gt;是什么&lt;/em&gt;？&lt;/h4&gt;&lt;h4 id=&quot;谁创造了它？&quot;&gt;&lt;a href=&quot;#谁创造了它？&quot; class=&quot;headerlink&quot; title=&quot;谁创造了它？&quot;&gt;&lt;/a&gt;&lt;em&gt;谁&lt;/em&gt;创造了它？&lt;/h4&gt;&lt;h4 id=&quot;为什么要使用它？&quot;&gt;&lt;a href=&quot;#为什么要使用它？&quot; class=&quot;headerlink&quot; title=&quot;为什么要使用它？&quot;&gt;&lt;/a&gt;&lt;em&gt;为什么&lt;/em&gt;要使用它？&lt;/h4&gt;&lt;h4 id=&quot;怎么使用？&quot;&gt;&lt;a href=&quot;#怎么使用？&quot; class=&quot;headerlink&quot; title=&quot;怎么使用？&quot;&gt;&lt;/a&gt;&lt;em&gt;怎么&lt;/em&gt;使用？&lt;/h4&gt;&lt;h4 id=&quot;谁在用？&quot;&gt;&lt;a href=&quot;#谁在用？&quot; class=&quot;headerlink&quot; title=&quot;谁在用？&quot;&gt;&lt;/a&gt;&lt;em&gt;谁&lt;/em&gt;在用？&lt;/h4&gt;&lt;h4 id=&quot;尝试一下&quot;&gt;&lt;a href=&quot;#尝试一下&quot; class=&quot;headerlink&quot; title=&quot;尝试一下&quot;&gt;&lt;/a&gt;尝试一下&lt;/h4&gt;&lt;/blockquote&gt;
-&lt;h2 id=&quot;正文&quot;&gt;&lt;a href=&quot;#正文&quot; class=&quot;headerlink&quot; title=&quot;正文&quot;&gt;&lt;/a&gt;正文&lt;/h2&gt;&lt;h3 id=&quot;1-Markdown是什么？&quot;&gt;&lt;a href=&quot;#1-Markdown是什么？&quot; class=&quot;headerlink&quot; title=&quot;1. Markdown是什么？&quot;&gt;&lt;/a&gt;1. Markdown&lt;em&gt;是什么&lt;/em&gt;？&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Markdown&lt;/strong&gt;是一种轻量级&lt;strong&gt;标记语言&lt;/strong&gt;，它以纯文本形式(&lt;em&gt;易读、易写、易更改&lt;/em&gt;)编写文档，并最终以HTML格式发布。&lt;br&gt;&lt;strong&gt;Markdown&lt;/strong&gt;也可以理解为将以MARKDOWN语法编写的语言转换成HTML内容的工具。</summary>
-    
-    
-    
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="markdown" scheme="https://19981115.xyz/tags/markdown/"/>
-    
-    <category term="编辑器" scheme="https://19981115.xyz/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
-    
-    <category term="标记语言" scheme="https://19981115.xyz/tags/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
     
   </entry>
   
