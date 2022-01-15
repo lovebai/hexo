@@ -21,16 +21,16 @@
     var CONFIG = {"hostname":"19981115.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"right","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。 什么是 Go?Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。 官网：https:&#x2F;&#x2F;go.dev&#x2F;  文档地址: https:&#x2F;&#x2F;go.dev&#x2F;doc&#x2F; packages: https:&#x2F;&#x2F;pkg.go.dev&#x2F;">
+  <meta name="description" content="开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。 什么是 Go?Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。 官网：https:&#x2F;&#x2F;go.dev&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="学习Golang笔记-基础知识一">
 <meta property="og:url" content="https://19981115.xyz/posts/19895/index.html">
 <meta property="og:site_name" content="MY-Notes">
-<meta property="og:description" content="开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。 什么是 Go?Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。 官网：https:&#x2F;&#x2F;go.dev&#x2F;  文档地址: https:&#x2F;&#x2F;go.dev&#x2F;doc&#x2F; packages: https:&#x2F;&#x2F;pkg.go.dev&#x2F;">
+<meta property="og:description" content="开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。 什么是 Go?Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。 官网：https:&#x2F;&#x2F;go.dev&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://19981115.xyz/posts/19895/1639702840194.png">
 <meta property="article:published_time" content="2021-12-17T00:51:04.000Z">
-<meta property="article:modified_time" content="2021-12-21T10:38:55.469Z">
+<meta property="article:modified_time" content="2022-01-15T04:17:21.564Z">
 <meta property="article:author" content="小白">
 <meta property="article:tag" content="Golang">
 <meta property="article:tag" content="编程语言">
@@ -230,7 +230,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-12-21 18:38:55" itemprop="dateModified" datetime="2021-12-21T18:38:55+08:00">2021-12-21</time>
+                <time title="修改时间：2022-01-15 12:17:21" itemprop="dateModified" datetime="2022-01-15T12:17:21+08:00">2022-01-15</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -256,11 +256,11 @@
         <p>开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。</p>
 <h2 id="什么是-Go"><a href="#什么是-Go" class="headerlink" title="什么是 Go?"></a>什么是 Go?</h2><p>Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。</p>
 <p><strong>官网：</strong><a target="_blank" rel="noopener" href="https://go.dev/" title="https://go.dev/">https://go.dev/</a></p>
+<span id="more"></span>
+
 <p><img data-src="1639702840194.png" alt="官网" title="官网截图"></p>
 <p><strong>文档地址:</strong> <a target="_blank" rel="noopener" href="https://go.dev/doc/" title="https://go.dev/doc/">https://go.dev/doc/</a></p>
 <p><strong>packages</strong>: <a target="_blank" rel="noopener" href="https://pkg.go.dev/" title="https://pkg.go.dev/">https://pkg.go.dev/</a></p>
-<span id="more"></span>
-
 <h2 id="Golang-的安装"><a href="#Golang-的安装" class="headerlink" title="Golang 的安装"></a>Golang 的安装</h2><p>通过官网下载对应的包，下载地址：<a target="_blank" rel="noopener" href="https://go.dev/dl/" title="https://go.dev/dl/">https://go.dev/dl/</a></p>
 <h4 id="windows-系统下的安装"><a href="#windows-系统下的安装" class="headerlink" title="windows 系统下的安装"></a>windows 系统下的安装</h4><p>双击打开下载的 msi 可执行文件，估计提示进行安装即可，若不修改默认的安装为 <code>C:/Program Files/go</code>目录下，会自动添加系统环境变量。安装好之后打开命令执行 <code>go version </code>验证安装情况。</p>
 <h4 id="Linux-系统下的安装"><a href="#Linux-系统下的安装" class="headerlink" title="Linux 系统下的安装"></a>Linux 系统下的安装</h4><p>将文件下载到到当前目录，然后使用命令 <code>mkdir /usr/local/go</code> 创建一个 go 目录，把文件直接解压缩到 go 目录下，或者解压缩到当前目录下并移动 <code>/usr/local/go</code>目录下，之后编辑当前用户目录下的./profile 或者 <code>/etc/profile</code>文件,在文件末尾添加如下环境变量，内容如下：</p>
@@ -329,8 +329,8 @@
 <li><p>执行</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Hello, Go!</span><br><span class="line"> string(</span><br><span class="line">-       &quot;Hello World&quot;,</span><br><span class="line">+       &quot;Hello Go&quot;,</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="Golang变量"><a href="#Golang变量" class="headerlink" title="Golang变量"></a>Golang变量</h2><p>变量是计算机语言中能<strong>储存</strong>计算结果或能表示值的抽象概念。不同的变量保存的数据类型可能会不一样。</p>
-<h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><p>Go语言中的变量需要声明后才能使用，同一作用域内不支持重复声明。并且Go语言的变量声明后必须使用。</p>
+<h2 id="Golang-变量"><a href="#Golang-变量" class="headerlink" title="Golang 变量"></a>Golang 变量</h2><p>变量是计算机语言中能<strong>储存</strong>计算结果或能表示值的抽象概念。不同的变量保存的数据类型可能会不一样。</p>
+<h3 id="声明变量"><a href="#声明变量" class="headerlink" title="声明变量"></a>声明变量</h3><p>Go 语言中的变量需要声明后才能使用，同一作用域内不支持重复声明。并且 Go 语言的变量声明后必须使用。</p>
 <p><strong>声明变量的语法</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var identifier type</span><br></pre></td></tr></table></figure>
 
@@ -343,7 +343,7 @@
 <h3 id="批量声明"><a href="#批量声明" class="headerlink" title="批量声明"></a>批量声明</h3><p>使用一个 <code>var</code>关键字，把一些变量写在一个括号 <code>()</code>里</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">func main() &#123;</span><br><span class="line">var (</span><br><span class="line">name string</span><br><span class="line">age  int</span><br><span class="line">ok   bool</span><br><span class="line">)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><p>Go语言在声明变量的时候，会自动对变量对应的内存区域进行初始化操作。每个变量会被初始化成其类型的默认值，例如：整型和浮点型变量的默认值为 <code>0</code>。字符串变量的默认值为空字符串 <code>“”</code>。布尔型变量默认为 <code>false</code>。切片、函数、指针变量的默认为 <code>nil</code>。</p>
+<h3 id="变量的初始化"><a href="#变量的初始化" class="headerlink" title="变量的初始化"></a>变量的初始化</h3><p>Go 语言在声明变量的时候，会自动对变量对应的内存区域进行初始化操作。每个变量会被初始化成其类型的默认值，例如：整型和浮点型变量的默认值为 <code>0</code>。字符串变量的默认值为空字符串 <code>“”</code>。布尔型变量默认为 <code>false</code>。切片、函数、指针变量的默认为 <code>nil</code>。</p>
 <p><strong>变量初始化语法</strong></p>
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> 变量名 类型 = 表达式</span><br></pre></td></tr></table></figure>
 
@@ -367,9 +367,8 @@
 <h3 id="匿名变量"><a href="#匿名变量" class="headerlink" title="匿名变量"></a>匿名变量</h3><p>如果我们接收到多个变量，有一些变量使用不到，可以使用下划线 <code>_</code>表示变量名称，这种变量叫做匿名变量。例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func getNameAndAge() (string, int) &#123;</span><br><span class="line">return &quot;xiaoyao&quot;, 12</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name, _ := getNameAndAge()</span><br><span class="line">fmt.Printf(&quot;name: %v\n&quot;, name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-
-<h2 id="Golang常量"><a href="#Golang常量" class="headerlink" title="Golang常量"></a>Golang常量</h2><p>常量，就是在程序<strong>编译阶段</strong>就确定下来的值，而程序在<strong>运行时</strong>则无法改变该值。在Go程序中，常量可以是数值类型（包括整型、浮点型和复数类型）、布尔类型、字符串类型等。</p>
-<h3 id="定义常量的语法"><a href="#定义常量的语法" class="headerlink" title="定义常量的语法"></a>定义常量的语法</h3><p>定义一个常量使用const关键字，语法格式如下：</p>
+<h2 id="Golang-常量"><a href="#Golang-常量" class="headerlink" title="Golang 常量"></a>Golang 常量</h2><p>常量，就是在程序<strong>编译阶段</strong>就确定下来的值，而程序在<strong>运行时</strong>则无法改变该值。在 Go 程序中，常量可以是数值类型（包括整型、浮点型和复数类型）、布尔类型、字符串类型等。</p>
+<h3 id="定义常量的语法"><a href="#定义常量的语法" class="headerlink" title="定义常量的语法"></a>定义常量的语法</h3><p>定义一个常量使用 const 关键字，语法格式如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">const constantName [type]= value</span><br></pre></td></tr></table></figure>
 
 <p><code>const</code>：定义常量关键字</p>
@@ -405,7 +404,7 @@
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">a1: 0</span><br><span class="line">a2: 100</span><br><span class="line">a3: 2</span><br></pre></td></tr></table></figure>
 
-<h2 id="Golang-布尔类型"><a href="#Golang-布尔类型" class="headerlink" title="Golang 布尔类型"></a>Golang 布尔类型</h2><p>go语言中的布尔类型有两个常量值：<code>true</code>和 <code>false</code>。布尔类型经常用在<strong>条件判断</strong>语句，或者<strong>循环语句</strong>。也可以用在<strong>逻辑表达式</strong>中。</p>
+<h2 id="Golang-布尔类型"><a href="#Golang-布尔类型" class="headerlink" title="Golang 布尔类型"></a>Golang 布尔类型</h2><p>go 语言中的布尔类型有两个常量值：<code>true</code>和 <code>false</code>。布尔类型经常用在<strong>条件判断</strong>语句，或者<strong>循环语句</strong>。也可以用在<strong>逻辑表达式</strong>中。</p>
 <h3 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var b1 bool = true</span><br><span class="line">var b2 bool = false</span><br><span class="line">var b3 = true</span><br><span class="line">var b4 = false</span><br><span class="line"></span><br><span class="line">b5 := true</span><br><span class="line">b6 := false</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;b1: %v\n&quot;, b1)</span><br><span class="line">fmt.Printf(&quot;b2: %v\n&quot;, b2)</span><br><span class="line">fmt.Printf(&quot;b3: %v\n&quot;, b3)</span><br><span class="line">fmt.Printf(&quot;b4: %v\n&quot;, b4)</span><br><span class="line">fmt.Printf(&quot;b5: %v\n&quot;, b5)</span><br><span class="line">fmt.Printf(&quot;b6: %v\n&quot;, b6)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果</p>
@@ -423,14 +422,14 @@
 <p>注意：不能使用 <code>0</code>和非 <code>0</code>表示真假</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">i := 1</span><br><span class="line">if i &#123;</span><br><span class="line">// 编译错误</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="Golang数字类型"><a href="#Golang数字类型" class="headerlink" title="Golang数字类型"></a>Golang数字类型</h2><p>Go 语言支持整型和浮点型数字，并且原生支持复数，其中位的运算采用补码。</p>
+<h2 id="Golang-数字类型"><a href="#Golang-数字类型" class="headerlink" title="Golang 数字类型"></a>Golang 数字类型</h2><p>Go 语言支持整型和浮点型数字，并且原生支持复数，其中位的运算采用补码。</p>
 <p>Go 也有基于架构的类型，例如：<code>int</code>、<code>uint</code> 和 <code>uintptr</code>。</p>
 <p>这些类型的长度都是根据运行程序所在的操作系统类型所决定的：</p>
 <ul>
 <li><code>int</code> 和<code>uint</code> 在 32 位操作系统上，它们均使用 32 位（4 个字节），在 64 位操作系统上，它们均使用 64 位（8 个字节）。</li>
 <li><code>uintptr</code> 的长度被设定为足够存放一个指针即可。</li>
 </ul>
-<p>Go 语言中没有 <code>float</code> 类型。（Go语言中只有 <code>float32</code> 和 <code>float64</code>）没有double类型。</p>
+<p>Go 语言中没有 <code>float</code> 类型。（Go 语言中只有 <code>float32</code> 和 <code>float64</code>）没有 double 类型。</p>
 <p>与操作系统架构无关的类型都有固定的大小，并在类型的名称中就可以看出来：</p>
 <p>整数：</p>
 <ul>
@@ -449,7 +448,7 @@
 <p>浮点型（IEEE-754 标准）：</p>
 <ul>
 <li>float32（+- 1e-45 -&gt; +- 3.4 * 1e38）</li>
-<li>float64（+- 5 * 1e-324 -&gt; 107 * 1e308）</li>
+<li>float64（+- 5 _ 1e-324 -&gt; 107 _ 1e308）</li>
 </ul>
 <p>int 型是计算最快的一种类型。</p>
 <p>整型的零值为 0，浮点型的零值为 0.0。</p>
@@ -464,32 +463,32 @@
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">10</span><br><span class="line">1010</span><br><span class="line">77</span><br><span class="line">ff</span><br><span class="line">FF</span><br></pre></td></tr></table></figure>
 
-<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>Go语言支持两种浮点型数：<code>float32</code>和 <code>float64</code>。这两种浮点型数据格式遵循 <code>IEEE 754</code>标准：<code>float32</code> 的浮点数的最大范围约为 <code>3.4e38</code>，可以使用常量定义：<code>math.MaxFloat32</code>。<code>float64</code> 的浮点数的最大范围约为 <code>1.8e308</code>，可以使用一个常量定义：<code>math.MaxFloat64</code>。</p>
+<h3 id="浮点型"><a href="#浮点型" class="headerlink" title="浮点型"></a>浮点型</h3><p>Go 语言支持两种浮点型数：<code>float32</code>和 <code>float64</code>。这两种浮点型数据格式遵循 <code>IEEE 754</code>标准：<code>float32</code> 的浮点数的最大范围约为 <code>3.4e38</code>，可以使用常量定义：<code>math.MaxFloat32</code>。<code>float64</code> 的浮点数的最大范围约为 <code>1.8e308</code>，可以使用一个常量定义：<code>math.MaxFloat64</code>。</p>
 <p>打印浮点数时，可以使用 <code>fmt</code>包配合动词 <code>%f</code>，代码如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line">import (</span><br><span class="line">       &quot;fmt&quot;</span><br><span class="line">       &quot;math&quot;</span><br><span class="line">)</span><br><span class="line">func main() &#123;</span><br><span class="line">       fmt.Printf(&quot;%f\n&quot;, math.Pi)</span><br><span class="line">       fmt.Printf(&quot;%.2f\n&quot;, math.Pi)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h3><p>complex64和complex128</p>
+<h3 id="复数"><a href="#复数" class="headerlink" title="复数"></a>复数</h3><p>complex64 和 complex128</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var c1 complex64</span><br><span class="line">c1 = 1 + 2i</span><br><span class="line">var c2 complex128</span><br><span class="line">c2 = 2 + 3i</span><br><span class="line">fmt.Println(c1)</span><br><span class="line">fmt.Println(c2)</span><br></pre></td></tr></table></figure>
 
-<p>复数有实部和虚部，complex64的实部和虚部为32位，complex128的实部和虚部为64位。</p>
-<h2 id="Golang字符串"><a href="#Golang字符串" class="headerlink" title="Golang字符串"></a>Golang字符串</h2><blockquote>
-<p>一个Go语言字符串是一个任意字节的常量序列。</p>
+<p>复数有实部和虚部，complex64 的实部和虚部为 32 位，complex128 的实部和虚部为 64 位。</p>
+<h2 id="Golang-字符串"><a href="#Golang-字符串" class="headerlink" title="Golang 字符串"></a>Golang 字符串</h2><blockquote>
+<p>一个 Go 语言字符串是一个任意字节的常量序列。</p>
 </blockquote>
-<p><strong>Go语言字符串与其他语言（Java，C++，Python）字符串的不同点</strong> Go语言中字符串的字节使用UTF-8编码表示Unicode文本，因此Go语言字符串是变宽字符序列，每一个字符都用一个或者多个字符表示，这跟其他的（C++，Java，Python 3）的字符串类型有着本质上的不同，后者为定宽字符序列。</p>
-<p>其他语言的字符串中的单个字符可以被字节索引，而Go语言中只有在字符串只包含7位的ASCII字符（因为它们都是用一个单一的UTF-8字节表示）时才可以被字节索引。那么这是不是表示Go语言在字符串处理能力上就比其他语言弱呢？答案时否定的，应为Go语言支持一个字符一个字符的迭代，而且标准库中存在大量的字符串操作函数，最后我们还可以将Go语言的字符串转化为Unicode码点切片（类型为 <code>[]rune</code>），切片是支持直接索引的。</p>
-<p>对于英文文本，Go使用8位来表示每一个字节，而Java或Python则需要16位或更多。采用UTF-8编码，使得Go语言无需关系机器码的排列顺序，也无需编码解码来使用其他语言。</p>
+<p><strong>Go 语言字符串与其他语言（Java，C++，Python）字符串的不同点</strong> Go 语言中字符串的字节使用 UTF-8 编码表示 Unicode 文本，因此 Go 语言字符串是变宽字符序列，每一个字符都用一个或者多个字符表示，这跟其他的（C++，Java，Python 3）的字符串类型有着本质上的不同，后者为定宽字符序列。</p>
+<p>其他语言的字符串中的单个字符可以被字节索引，而 Go 语言中只有在字符串只包含 7 位的 ASCII 字符（因为它们都是用一个单一的 UTF-8 字节表示）时才可以被字节索引。那么这是不是表示 Go 语言在字符串处理能力上就比其他语言弱呢？答案时否定的，应为 Go 语言支持一个字符一个字符的迭代，而且标准库中存在大量的字符串操作函数，最后我们还可以将 Go 语言的字符串转化为 Unicode 码点切片（类型为 <code>[]rune</code>），切片是支持直接索引的。</p>
+<p>对于英文文本，Go 使用 8 位来表示每一个字节，而 Java 或 Python 则需要 16 位或更多。采用 UTF-8 编码，使得 Go 语言无需关系机器码的排列顺序，也无需编码解码来使用其他语言。</p>
 <blockquote>
-<p>注：每一个Unicode字符都有一个唯一的叫做“码点”的标识数字。在Go语言中，一个单一的码点在内存中以 <code>rune</code> 的形式表示，<code>rune</code>表示int32类型的别名</p>
+<p>注：每一个 Unicode 字符都有一个唯一的叫做“码点”的标识数字。在 Go 语言中，一个单一的码点在内存中以 <code>rune</code> 的形式表示，<code>rune</code>表示 int32 类型的别名</p>
 </blockquote>
-<h3 id="go语言字符串字面量"><a href="#go语言字符串字面量" class="headerlink" title="go语言字符串字面量"></a>go语言字符串字面量</h3><p>在Go语言中，字符串字面量使用双引号 <code>&quot;&quot;</code> 或者反引号 <code>&#39;</code> 来创建。双引号用来创建可解析的字符串，支持转义，但不能用来引用多行；反引号用来创建原生的字符串字面量，可能由多行组成，但不支持转义，并且可以包含除了反引号外其他所有字符。双引号创建可解析的字符串应用最广泛，反引号用来创建原生的字符串则多用于书写多行消息，HTML以及正则表达式。</p>
+<h3 id="go-语言字符串字面量"><a href="#go-语言字符串字面量" class="headerlink" title="go 语言字符串字面量"></a>go 语言字符串字面量</h3><p>在 Go 语言中，字符串字面量使用双引号 <code>&quot;&quot;</code> 或者反引号 <code>&#39;</code> 来创建。双引号用来创建可解析的字符串，支持转义，但不能用来引用多行；反引号用来创建原生的字符串字面量，可能由多行组成，但不支持转义，并且可以包含除了反引号外其他所有字符。双引号创建可解析的字符串应用最广泛，反引号用来创建原生的字符串则多用于书写多行消息，HTML 以及正则表达式。</p>
 <p><strong>实例</strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var str1 string = &quot;hello world&quot;</span><br><span class="line">var html string =</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;hello golang&lt;/title&gt;</span><br><span class="line">&lt;/html&gt;</span><br><span class="line">`</span><br><span class="line"></span><br><span class="line">fmt.Printf(&quot;str1: %v\n&quot;, str1)</span><br><span class="line">fmt.Printf(&quot;html: %v\n&quot;, html)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">str1: hello world</span><br><span class="line">html:</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;&lt;title&gt;hello golang&lt;/title&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="go语言字符串连接"><a href="#go语言字符串连接" class="headerlink" title="go语言字符串连接"></a>go语言字符串连接</h3><p><strong>使用加号</strong></p>
-<p>虽然Go语言中的字符串是不可变的，但是字符串支持 <code>+</code> 级联操作和 <code>+=</code>追加操作，例如：</p>
+<h3 id="go-语言字符串连接"><a href="#go-语言字符串连接" class="headerlink" title="go 语言字符串连接"></a>go 语言字符串连接</h3><p><strong>使用加号</strong></p>
+<p>虽然 Go 语言中的字符串是不可变的，但是字符串支持 <code>+</code> 级联操作和 <code>+=</code>追加操作，例如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">name := &quot;tom&quot;</span><br><span class="line">age := &quot;20&quot;</span><br><span class="line">msg := name + &quot; &quot; + age</span><br><span class="line">fmt.Printf(&quot;msg: %v\n&quot;, msg)</span><br><span class="line">fmt.Println(&quot;-------------&quot;)</span><br><span class="line">msg = &quot;&quot;</span><br><span class="line">msg += name</span><br><span class="line">msg += &quot; &quot;</span><br><span class="line">msg += age</span><br><span class="line">fmt.Printf(&quot;msg: %v\n&quot;, msg)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <blockquote>
@@ -511,7 +510,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">msg: tom,20</span><br></pre></td></tr></table></figure>
 
 <blockquote>
-<p>join会先根据字符串数组的内容，计算出一个拼接之后的长度，然后申请对应大小的内存，一个一个字符串填入，在已有一个数组的情况下，这种效率会很高，但是本来没有，去构造这个数据的代价也不小</p>
+<p>join 会先根据字符串数组的内容，计算出一个拼接之后的长度，然后申请对应大小的内存，一个一个字符串填入，在已有一个数组的情况下，这种效率会很高，但是本来没有，去构造这个数据的代价也不小</p>
 </blockquote>
 <p><strong><code>buffer.WriteString()</code></strong></p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;bytes&quot;</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var buffer bytes.Buffer</span><br><span class="line">buffer.WriteString(&quot;tom&quot;)</span><br><span class="line">buffer.WriteString(&quot;,&quot;)</span><br><span class="line">buffer.WriteString(&quot;20&quot;)</span><br><span class="line">fmt.Printf(&quot;buffer.String(): %v\n&quot;, buffer.String())</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -519,7 +518,7 @@
 <blockquote>
 <p>这个比较理想，可以当成可变字符使用，对内存的增长也有优化，如果能预估字符串的长度，还可以用 <code>buffer.Grow()</code> 接口来设置 capacity</p>
 </blockquote>
-<h3 id="go语言字符串转义字符"><a href="#go语言字符串转义字符" class="headerlink" title="go语言字符串转义字符"></a>go语言字符串转义字符</h3><p>Go 语言的字符串常见转义符包含回车、换行、单双引号、制表符等，如下表所示。</p>
+<h3 id="go-语言字符串转义字符"><a href="#go-语言字符串转义字符" class="headerlink" title="go 语言字符串转义字符"></a>go 语言字符串转义字符</h3><p>Go 语言的字符串常见转义符包含回车、换行、单双引号、制表符等，如下表所示。</p>
 <table>
 <thead>
 <tr>
@@ -558,12 +557,12 @@
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">helloworld</span><br><span class="line">&quot;c:\test\&quot;</span><br></pre></td></tr></table></figure>
 
-<h3 id="go语言字符串切片操作"><a href="#go语言字符串切片操作" class="headerlink" title="go语言字符串切片操作"></a>go语言字符串切片操作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">str := &quot;hello world&quot;</span><br><span class="line">n := 3</span><br><span class="line">m := 5</span><br><span class="line">fmt.Println(str[n])   //获取字符串索引位置为n的原始字节</span><br><span class="line">fmt.Println(str[n:m]) //截取得字符串索引位置为 n 到 m-1 的字符串</span><br><span class="line">fmt.Println(str[n:])  //截取得字符串索引位置为 n 到 len(s)-1 的字符串</span><br><span class="line">fmt.Println(str[:m])  //截取得字符串索引位置为 0 到 m-1 的字符串</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="go-语言字符串切片操作"><a href="#go-语言字符串切片操作" class="headerlink" title="go 语言字符串切片操作"></a>go 语言字符串切片操作</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import (</span><br><span class="line">&quot;fmt&quot;</span><br><span class="line">)</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">str := &quot;hello world&quot;</span><br><span class="line">n := 3</span><br><span class="line">m := 5</span><br><span class="line">fmt.Println(str[n])   //获取字符串索引位置为n的原始字节</span><br><span class="line">fmt.Println(str[n:m]) //截取得字符串索引位置为 n 到 m-1 的字符串</span><br><span class="line">fmt.Println(str[n:])  //截取得字符串索引位置为 n 到 len(s)-1 的字符串</span><br><span class="line">fmt.Println(str[:m])  //截取得字符串索引位置为 0 到 m-1 的字符串</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">108</span><br><span class="line">lo</span><br><span class="line">lo world</span><br><span class="line">hello</span><br></pre></td></tr></table></figure>
 
-<h3 id="go语言字符串常用方法"><a href="#go语言字符串常用方法" class="headerlink" title="go语言字符串常用方法"></a>go语言字符串常用方法</h3><table>
+<h3 id="go-语言字符串常用方法"><a href="#go-语言字符串常用方法" class="headerlink" title="go 语言字符串常用方法"></a>go 语言字符串常用方法</h3><table>
 <thead>
 <tr>
 <th>方法</th>
@@ -575,7 +574,7 @@
 <td>求长度</td>
 </tr>
 <tr>
-<td>+或fmt.Sprintf</td>
+<td>+或 fmt.Sprintf</td>
 <td>拼接字符串</td>
 </tr>
 <tr>
@@ -596,7 +595,7 @@
 </tr>
 <tr>
 <td>strings.Join(a[]string, sep string)</td>
-<td>join操作</td>
+<td>join 操作</td>
 </tr>
 </tbody></table>
 <p><strong>实例</strong></p>
@@ -605,7 +604,7 @@
 <p>运行结果</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">len(s): 14</span><br><span class="line">strings.Split(s, &quot;&quot;): [hello world！]</span><br><span class="line">strings.Contains(s, &quot;hello&quot;): true</span><br><span class="line">strings.HasPrefix(s, &quot;hello&quot;): true</span><br><span class="line">strings.HasSuffix(s, &quot;world！&quot;): true</span><br><span class="line">strings.Index(s, &quot;l&quot;): 2</span><br><span class="line">strings.LastIndex(s, &quot;l&quot;): 9</span><br></pre></td></tr></table></figure>
 
-<h3 id="byte和rune类型"><a href="#byte和rune类型" class="headerlink" title="byte和rune类型"></a>byte和rune类型</h3><p>组成每个字符串的元素叫做“字符”，可以通过遍历或者单个获取字符串元素获得字符。字符用单引号（’）包裹起来，如：</p>
+<h3 id="byte-和-rune-类型"><a href="#byte-和-rune-类型" class="headerlink" title="byte 和 rune 类型"></a>byte 和 rune 类型</h3><p>组成每个字符串的元素叫做“字符”，可以通过遍历或者单个获取字符串元素获得字符。字符用单引号（’）包裹起来，如：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">package main</span><br><span class="line"></span><br><span class="line">import &quot;fmt&quot;</span><br><span class="line"></span><br><span class="line">func main() &#123;</span><br><span class="line">var a = &#x27;华&#x27;</span><br><span class="line">var b = &#x27;a&#x27;</span><br><span class="line">fmt.Printf(&quot;a: %v,%c\n&quot;, a, a)</span><br><span class="line">fmt.Printf(&quot;b: %v,%c\n&quot;, b, b)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果</p>
@@ -618,7 +617,7 @@
 </ol>
 <p>当需要处理中文、日文或者其他复合字符时，则需要用到 <code>rune</code>类型。<code>rune</code>类型实际是一个 <code>int32</code>。</p>
 <p>Go 使用了特殊的 rune 类型来处理 Unicode，让基于 Unicode 的文本处理更为方便，也可以使用 byte 型进行默认字符串处理，性能和扩展性都有照顾。</p>
-<h2 id="Golang格式化输出"><a href="#Golang格式化输出" class="headerlink" title="Golang格式化输出"></a>Golang格式化输出</h2><p>下面实例使用到的结构体</p>
+<h2 id="Golang-格式化输出"><a href="#Golang-格式化输出" class="headerlink" title="Golang 格式化输出"></a>Golang 格式化输出</h2><p>下面实例使用到的结构体</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">type Website struct &#123;</span><br><span class="line">    Name string</span><br><span class="line">&#125;</span><br><span class="line">// 定义结构体变量</span><br><span class="line">var site = Website&#123;Name:&quot;yaowanyu&quot;&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="占位符"><a href="#占位符" class="headerlink" title="占位符"></a>占位符</h3><h4 id="普通占位符"><a href="#普通占位符" class="headerlink" title="普通占位符"></a>普通占位符</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">占位符说明举例输出</span><br><span class="line">%v相应值的默认格式。Printf(&quot;%v&quot;, site)，Printf(&quot;%+v&quot;, site)&#123;yaowanyu&#125;，&#123;Name:yaowanyu&#125;</span><br><span class="line">在打印结构体时，“加号”标记（%+v）会添加字段名</span><br><span class="line">%#v相应值的Go语法表示Printf(&quot;#v&quot;, site)main.Website&#123;Name:&quot;yaowanyu&quot;&#125;</span><br><span class="line">%T相应值的类型的Go语法表示Printf(&quot;%T&quot;, site)main.Website</span><br><span class="line">%%字面上的百分号，并非值的占位符Printf(&quot;%%&quot;)%</span><br></pre></td></tr></table></figure>
@@ -738,7 +737,10 @@
     <a href="/posts/24041/" rel="prev" title="Java JUC笔记PDF-狂神">
       <i class="fa fa-chevron-left"></i> Java JUC笔记PDF-狂神
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/posts/38070/" rel="next" title="Golang学习笔记部分二">
+      Golang学习笔记部分二 <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -798,7 +800,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Go"><span class="nav-number">1.</span> <span class="nav-text">什么是 Go?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Golang 的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#windows-%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.0.1.</span> <span class="nav-text">windows 系统下的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.0.2.</span> <span class="nav-text">Linux 系统下的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mac-%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.0.3.</span> <span class="nav-text">mac 系统下的安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-Golang-%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.</span> <span class="nav-text">第一个 Golang 小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.0.1.</span> <span class="nav-text">实现步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#main-%E5%8C%85%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">main 包的意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-%E5%9F%BA%E6%9C%AC%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">Go 基本常用的命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC-go-help-%E5%91%BD%E4%BB%A4"><span class="nav-number">4.0.1.</span> <span class="nav-text">基本 go help 命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99-golang-%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">如何编写 golang 代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%BB%84%E7%BB%87"><span class="nav-number">5.1.</span> <span class="nav-text">代码组织</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">5.2.</span> <span class="nav-text">go 项目管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8"><span class="nav-number">5.3.</span> <span class="nav-text">创建一个应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang%E5%8F%98%E9%87%8F"><span class="nav-number">6.</span> <span class="nav-text">Golang变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8F"><span class="nav-number">6.1.</span> <span class="nav-text">声明变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="nav-number">6.2.</span> <span class="nav-text">批量声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">6.3.</span> <span class="nav-text">变量的初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%AD%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="nav-number">6.4.</span> <span class="nav-text">短变量声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BF%E5%90%8D%E5%8F%98%E9%87%8F"><span class="nav-number">6.5.</span> <span class="nav-text">匿名变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang%E5%B8%B8%E9%87%8F"><span class="nav-number">7.</span> <span class="nav-text">Golang常量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%B8%B8%E9%87%8F%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">7.1.</span> <span class="nav-text">定义常量的语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="nav-number">8.</span> <span class="nav-text">Golang 布尔类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="nav-number">8.1.</span> <span class="nav-text">布尔类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E5%9C%A8%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E4%B8%AD"><span class="nav-number">8.2.</span> <span class="nav-text">用在条件判断中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E5%9C%A8%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%E4%B8%AD"><span class="nav-number">8.3.</span> <span class="nav-text">用在循环语句中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E5%9C%A8%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD"><span class="nav-number">8.4.</span> <span class="nav-text">用在逻辑表达式中</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B"><span class="nav-number">9.</span> <span class="nav-text">Golang数字类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">9.1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E4%BA%8C%E8%BF%9B%E5%88%B6%E3%80%81%E5%85%AB%E8%BF%9B%E5%88%B6%E6%88%96%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%AE%9A%E4%B9%89%E6%95%B0%E5%AD%97"><span class="nav-number">9.2.</span> <span class="nav-text">以二进制、八进制或十六进制浮点数的格式定义数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E5%9E%8B"><span class="nav-number">9.3.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0"><span class="nav-number">9.4.</span> <span class="nav-text">复数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">10.</span> <span class="nav-text">Golang字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#go%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">10.1.</span> <span class="nav-text">go语言字符串字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5"><span class="nav-number">10.2.</span> <span class="nav-text">go语言字符串连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">10.3.</span> <span class="nav-text">go语言字符串转义字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C"><span class="nav-number">10.4.</span> <span class="nav-text">go语言字符串切片操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">10.5.</span> <span class="nav-text">go语言字符串常用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#byte%E5%92%8Crune%E7%B1%BB%E5%9E%8B"><span class="nav-number">10.6.</span> <span class="nav-text">byte和rune类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-number">11.</span> <span class="nav-text">Golang格式化输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="nav-number">11.1.</span> <span class="nav-text">占位符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="nav-number">11.1.1.</span> <span class="nav-text">普通占位符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-1"><span class="nav-number">12.</span> <span class="nav-text">实例</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AF-Go"><span class="nav-number">1.</span> <span class="nav-text">什么是 Go?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.</span> <span class="nav-text">Golang 的安装</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#windows-%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.0.1.</span> <span class="nav-text">windows 系统下的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Linux-%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.0.2.</span> <span class="nav-text">Linux 系统下的安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#mac-%E7%B3%BB%E7%BB%9F%E4%B8%8B%E7%9A%84%E5%AE%89%E8%A3%85"><span class="nav-number">2.0.3.</span> <span class="nav-text">mac 系统下的安装</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-Golang-%E5%B0%8F%E7%A8%8B%E5%BA%8F"><span class="nav-number">3.</span> <span class="nav-text">第一个 Golang 小程序</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="nav-number">3.0.1.</span> <span class="nav-text">实现步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#main-%E5%8C%85%E7%9A%84%E6%84%8F%E4%B9%89"><span class="nav-number">3.1.</span> <span class="nav-text">main 包的意义</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-%E5%9F%BA%E6%9C%AC%E5%B8%B8%E7%94%A8%E7%9A%84%E5%91%BD%E4%BB%A4"><span class="nav-number">4.</span> <span class="nav-text">Go 基本常用的命令</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%9F%BA%E6%9C%AC-go-help-%E5%91%BD%E4%BB%A4"><span class="nav-number">4.0.1.</span> <span class="nav-text">基本 go help 命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A6%82%E4%BD%95%E7%BC%96%E5%86%99-golang-%E4%BB%A3%E7%A0%81"><span class="nav-number">5.</span> <span class="nav-text">如何编写 golang 代码</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A3%E7%A0%81%E7%BB%84%E7%BB%87"><span class="nav-number">5.1.</span> <span class="nav-text">代码组织</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86%E5%B7%A5%E5%85%B7"><span class="nav-number">5.2.</span> <span class="nav-text">go 项目管理工具</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E5%BA%94%E7%94%A8"><span class="nav-number">5.3.</span> <span class="nav-text">创建一个应用</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E5%8F%98%E9%87%8F"><span class="nav-number">6.</span> <span class="nav-text">Golang 变量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A3%B0%E6%98%8E%E5%8F%98%E9%87%8F"><span class="nav-number">6.1.</span> <span class="nav-text">声明变量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%B9%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="nav-number">6.2.</span> <span class="nav-text">批量声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%98%E9%87%8F%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96"><span class="nav-number">6.3.</span> <span class="nav-text">变量的初始化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%9F%AD%E5%8F%98%E9%87%8F%E5%A3%B0%E6%98%8E"><span class="nav-number">6.4.</span> <span class="nav-text">短变量声明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8C%BF%E5%90%8D%E5%8F%98%E9%87%8F"><span class="nav-number">6.5.</span> <span class="nav-text">匿名变量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E5%B8%B8%E9%87%8F"><span class="nav-number">7.</span> <span class="nav-text">Golang 常量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9A%E4%B9%89%E5%B8%B8%E9%87%8F%E7%9A%84%E8%AF%AD%E6%B3%95"><span class="nav-number">7.1.</span> <span class="nav-text">定义常量的语法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="nav-number">8.</span> <span class="nav-text">Golang 布尔类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%B8%83%E5%B0%94%E7%B1%BB%E5%9E%8B"><span class="nav-number">8.1.</span> <span class="nav-text">布尔类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E5%9C%A8%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD%E4%B8%AD"><span class="nav-number">8.2.</span> <span class="nav-text">用在条件判断中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E5%9C%A8%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5%E4%B8%AD"><span class="nav-number">8.3.</span> <span class="nav-text">用在循环语句中</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%94%A8%E5%9C%A8%E9%80%BB%E8%BE%91%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%AD"><span class="nav-number">8.4.</span> <span class="nav-text">用在逻辑表达式中</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E6%95%B0%E5%AD%97%E7%B1%BB%E5%9E%8B"><span class="nav-number">9.</span> <span class="nav-text">Golang 数字类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">9.1.</span> <span class="nav-text">实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BB%A5%E4%BA%8C%E8%BF%9B%E5%88%B6%E3%80%81%E5%85%AB%E8%BF%9B%E5%88%B6%E6%88%96%E5%8D%81%E5%85%AD%E8%BF%9B%E5%88%B6%E6%B5%AE%E7%82%B9%E6%95%B0%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%AE%9A%E4%B9%89%E6%95%B0%E5%AD%97"><span class="nav-number">9.2.</span> <span class="nav-text">以二进制、八进制或十六进制浮点数的格式定义数字</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%B5%AE%E7%82%B9%E5%9E%8B"><span class="nav-number">9.3.</span> <span class="nav-text">浮点型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E6%95%B0"><span class="nav-number">9.4.</span> <span class="nav-text">复数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E5%AD%97%E7%AC%A6%E4%B8%B2"><span class="nav-number">10.</span> <span class="nav-text">Golang 字符串</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#go-%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%AD%97%E9%9D%A2%E9%87%8F"><span class="nav-number">10.1.</span> <span class="nav-text">go 语言字符串字面量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go-%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BF%9E%E6%8E%A5"><span class="nav-number">10.2.</span> <span class="nav-text">go 语言字符串连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go-%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E4%B9%89%E5%AD%97%E7%AC%A6"><span class="nav-number">10.3.</span> <span class="nav-text">go 语言字符串转义字符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go-%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%88%87%E7%89%87%E6%93%8D%E4%BD%9C"><span class="nav-number">10.4.</span> <span class="nav-text">go 语言字符串切片操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#go-%E8%AF%AD%E8%A8%80%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E7%94%A8%E6%96%B9%E6%B3%95"><span class="nav-number">10.5.</span> <span class="nav-text">go 语言字符串常用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#byte-%E5%92%8C-rune-%E7%B1%BB%E5%9E%8B"><span class="nav-number">10.6.</span> <span class="nav-text">byte 和 rune 类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Golang-%E6%A0%BC%E5%BC%8F%E5%8C%96%E8%BE%93%E5%87%BA"><span class="nav-number">11.</span> <span class="nav-text">Golang 格式化输出</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="nav-number">11.1.</span> <span class="nav-text">占位符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E5%8D%A0%E4%BD%8D%E7%AC%A6"><span class="nav-number">11.1.1.</span> <span class="nav-text">普通占位符</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B-1"><span class="nav-number">12.</span> <span class="nav-text">实例</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -814,7 +816,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">23</span>
           <span class="site-state-item-name">笔记</span>
         </a>
       </div>
@@ -827,7 +829,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">45</span>
+        <span class="site-state-item-count">50</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -862,7 +864,7 @@
 <div class="copyright">
   
   &copy; 2019 – 
-  <span itemprop="copyrightYear">2021</span>
+  <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

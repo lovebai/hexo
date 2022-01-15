@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2021-12-21T10:38:55.469Z</updated>
+  <updated>2022-01-15T05:44:19.550Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -17,19 +17,70 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Golang学习笔记三-函数与结构体</title>
+    <link href="https://19981115.xyz/posts/41763/"/>
+    <id>https://19981115.xyz/posts/41763/</id>
+    <published>2022-01-15T05:30:31.000Z</published>
+    <updated>2022-01-15T05:44:19.550Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Golang-函数&quot;&gt;&lt;a href=&quot;#Golang-函数&quot; class=&quot;headerlink&quot; title=&quot;Golang 函数&quot;&gt;&lt;/a&gt;Golang 函数&lt;/h1&gt;&lt;h2 id=&quot;Golang函数简介&quot;&gt;&lt;a href=&quot;#Golang函数简介&quot; class=&quot;headerlink&quot; title=&quot;Golang函数简介&quot;&gt;&lt;/a&gt;Golang函数简介&lt;/h2&gt;&lt;p&gt;函数的go语言中的&lt;strong&gt;一级公民&lt;/strong&gt; ，我们把所有的功能单元都定义在函数中，可以重复使用。函数包含函数的名称、参数列表和返回值类型，这些构成了函数的签名（signature）。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
+    
+    <category term="Go运营" scheme="https://19981115.xyz/tags/Go%E8%BF%90%E8%90%A5/"/>
+    
+    <category term="函数" scheme="https://19981115.xyz/tags/%E5%87%BD%E6%95%B0/"/>
+    
+    <category term="结构体" scheme="https://19981115.xyz/tags/%E7%BB%93%E6%9E%84%E4%BD%93/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Golang学习笔记部分二</title>
+    <link href="https://19981115.xyz/posts/38070/"/>
+    <id>https://19981115.xyz/posts/38070/</id>
+    <published>2022-01-15T04:46:40.000Z</published>
+    <updated>2022-01-15T05:29:55.764Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Golang运算符&quot;&gt;&lt;a href=&quot;#Golang运算符&quot; class=&quot;headerlink&quot; title=&quot;Golang运算符&quot;&gt;&lt;/a&gt;Golang运算符&lt;/h1&gt;&lt;p&gt;Go 语言内置的运算符有：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;算术运算符&lt;/li&gt;
+&lt;li&gt;关系运算符&lt;/li&gt;
+&lt;li&gt;逻辑运算符&lt;/li&gt;
+&lt;li&gt;位运算符&lt;/li&gt;
+&lt;li&gt;赋值运算符</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
+    
+    <category term="笔记" scheme="https://19981115.xyz/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="基础知识" scheme="https://19981115.xyz/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+  </entry>
+  
+  <entry>
     <title>学习Golang笔记-基础知识一</title>
     <link href="https://19981115.xyz/posts/19895/"/>
     <id>https://19981115.xyz/posts/19895/</id>
     <published>2021-12-17T00:51:04.000Z</published>
-    <updated>2021-12-21T10:38:55.469Z</updated>
+    <updated>2022-01-15T04:17:21.564Z</updated>
     
     
     <summary type="html">&lt;p&gt;开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。&lt;/p&gt;
 &lt;h2 id=&quot;什么是-Go&quot;&gt;&lt;a href=&quot;#什么是-Go&quot; class=&quot;headerlink&quot; title=&quot;什么是 Go?&quot;&gt;&lt;/a&gt;什么是 Go?&lt;/h2&gt;&lt;p&gt;Go 是谷歌支持的开源编程语言,易于学习和入门,内置并发和强大的标准库,不断发展的合作伙伴、社区和工具生态系统。&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;官网：&lt;/strong&gt;&lt;a href=&quot;https://go.dev/&quot; title=&quot;https://go.dev/&quot;&gt;https://go.dev/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;1639702840194.png&quot; alt=&quot;官网&quot; title=&quot;官网截图&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;文档地址:&lt;/strong&gt; &lt;a href=&quot;https://go.dev/doc/&quot; title=&quot;https://go.dev/doc/&quot;&gt;https://go.dev/doc/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;packages&lt;/strong&gt;: &lt;a href=&quot;https://pkg.go.dev/&quot; title=&quot;https://pkg.go.dev/&quot;&gt;https://pkg.go.dev/&lt;/a&gt;&lt;/p&gt;</summary>
+&lt;p&gt;&lt;strong&gt;官网：&lt;/strong&gt;&lt;a href=&quot;https://go.dev/&quot; title=&quot;https://go.dev/&quot;&gt;https://go.dev/&lt;/a&gt;&lt;/p&gt;</summary>
     
     
     
@@ -494,50 +545,6 @@
     <category term="编辑器" scheme="https://19981115.xyz/tags/%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     
     <category term="标记语言" scheme="https://19981115.xyz/tags/%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>要开始写笔记咯</title>
-    <link href="https://19981115.xyz/posts/58320/"/>
-    <id>https://19981115.xyz/posts/58320/</id>
-    <published>2019-01-16T03:44:12.000Z</published>
-    <updated>2021-08-01T07:27:34.546Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;今天使用hexo和github搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用git命令所以还是有点不熟练&lt;br&gt;今天使用 hexo 和 github 搭建了一个无成本的博客，在搭建的时候遇到了很多坑，但最终还是解决了，平时不怎么用 git 命令所以还是有点不熟练，推荐看一下 git 基础，链接我就不贴出来了，过几天可能会换域名，所以不贴了，</summary>
-    
-    
-    
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
-    
-    
-    <category term="hexo" scheme="https://19981115.xyz/tags/hexo/"/>
-    
-    <category term="github" scheme="https://19981115.xyz/tags/github/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>本站主题安装和配置详情</title>
-    <link href="https://19981115.xyz/posts/7434/"/>
-    <id>https://19981115.xyz/posts/7434/</id>
-    <published>2019-01-09T03:37:52.000Z</published>
-    <updated>2021-08-01T08:56:23.640Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;本站主题安装和配置详情&quot;&gt;&lt;a href=&quot;#本站主题安装和配置详情&quot; class=&quot;headerlink&quot; title=&quot;本站主题安装和配置详情&quot;&gt;&lt;/a&gt;本站主题安装和配置详情&lt;/h1&gt;&lt;p&gt;本站主题是一款单栏响应式的[Hexo](&lt;a href=&quot;https://hexo.io)主题;基于/&quot;&gt;https://hexo.io)主题；基于&lt;/a&gt; Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
-    
-    <category term="node.js" scheme="https://19981115.xyz/tags/node-js/"/>
     
   </entry>
   
