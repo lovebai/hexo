@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-01-15T07:11:41.252Z</updated>
+  <updated>2022-01-18T16:34:39.631Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Golang学习笔记五-标准库</title>
+    <link href="https://19981115.xyz/posts/65019/"/>
+    <id>https://19981115.xyz/posts/65019/</id>
+    <published>2022-01-18T16:12:14.000Z</published>
+    <updated>2022-01-18T16:34:39.631Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Golang标准库os模块-文件目录相关&quot;&gt;&lt;a href=&quot;#Golang标准库os模块-文件目录相关&quot; class=&quot;headerlink&quot; title=&quot;Golang标准库os模块-文件目录相关&quot;&gt;&lt;/a&gt;Golang标准库os模块-文件目录相关&lt;/h1&gt;&lt;p&gt;os标准库实现了平台（操作系统）无关的编程接口。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://pkg.go.dev/std&quot;&gt;https://pkg.go.dev/std&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
+    
+    <category term="标准库" scheme="https://19981115.xyz/tags/%E6%A0%87%E5%87%86%E5%BA%93/"/>
+    
+  </entry>
   
   <entry>
     <title>Golang学习笔记四-接口、Golang包和并发</title>
@@ -522,32 +544,6 @@
     <category term="小米" scheme="https://19981115.xyz/tags/%E5%B0%8F%E7%B1%B3/"/>
     
     <category term="笔记本" scheme="https://19981115.xyz/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>咸鱼淘的二手主板到了</title>
-    <link href="https://19981115.xyz/posts/36335/"/>
-    <id>https://19981115.xyz/posts/36335/</id>
-    <published>2019-01-28T03:53:48.000Z</published>
-    <updated>2021-08-01T07:23:31.381Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖&lt;/p&gt;
-&lt;h4 id=&quot;为什么买二手呢？&quot;&gt;&lt;a href=&quot;#为什么买二手呢？&quot; class=&quot;headerlink&quot; title=&quot;为什么买二手呢？&quot;&gt;&lt;/a&gt;为什么买二手呢？&lt;/h4&gt;&lt;p&gt;我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖，我这个本来是 &lt;code&gt;intel&lt;/code&gt;的主板，但是不知道怎么回事竟然坏了，</summary>
-    
-    
-    
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
-    
-    
-    <category term="华硕" scheme="https://19981115.xyz/tags/%E5%8D%8E%E7%A1%95/"/>
-    
-    <category term="电脑" scheme="https://19981115.xyz/tags/%E7%94%B5%E8%84%91/"/>
-    
-    <category term="主板" scheme="https://19981115.xyz/tags/%E4%B8%BB%E6%9D%BF/"/>
-    
-    <category term="咸鱼二手" scheme="https://19981115.xyz/tags/%E5%92%B8%E9%B1%BC%E4%BA%8C%E6%89%8B/"/>
     
   </entry>
   
