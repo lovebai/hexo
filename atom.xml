@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-01-18T16:34:39.631Z</updated>
+  <updated>2022-01-19T09:18:37.989Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Golang学习笔记六-操作MySQL和Mongodb</title>
+    <link href="https://19981115.xyz/posts/20493/"/>
+    <id>https://19981115.xyz/posts/20493/</id>
+    <published>2022-01-19T09:12:48.000Z</published>
+    <updated>2022-01-19T09:18:37.989Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Golang操作mysql数据库-准备数据库和表&quot;&gt;&lt;a href=&quot;#Golang操作mysql数据库-准备数据库和表&quot; class=&quot;headerlink&quot; title=&quot;Golang操作mysql数据库-准备数据库和表&quot;&gt;&lt;/a&gt;Golang操作mysql数据库-准备数据库和表&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;下载安装MySQL&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;https://dev.mysql.com/downloads/mysql/&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;创建一个go_db数据库&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;create&lt;/span&gt; database go_db&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;打开数据库&lt;/strong&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight sql&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;use go_db&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="MySQL" scheme="https://19981115.xyz/tags/MySQL/"/>
+    
+    <category term="Mongodb" scheme="https://19981115.xyz/tags/Mongodb/"/>
+    
+  </entry>
   
   <entry>
     <title>Golang学习笔记五-标准库</title>
@@ -514,36 +542,6 @@
     <category term="go" scheme="https://19981115.xyz/tags/go/"/>
     
     <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>小米游戏本开箱体验</title>
-    <link href="https://19981115.xyz/posts/64043/"/>
-    <id>https://19981115.xyz/posts/64043/</id>
-    <published>2019-01-30T03:57:07.000Z</published>
-    <updated>2021-08-01T08:47:53.483Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;黑色包装箱上印制了小米游戏本的内部X光扫描线稿图，这一点有点新意。全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方&lt;/p&gt;
-&lt;p&gt;黑色包装箱上印制了小米游戏本的内部 X 光扫描线稿图，这一点有点新意。</summary>
-    
-    
-    
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
-    
-    
-    <category term="电脑" scheme="https://19981115.xyz/tags/%E7%94%B5%E8%84%91/"/>
-    
-    <category term="开箱" scheme="https://19981115.xyz/tags/%E5%BC%80%E7%AE%B1/"/>
-    
-    <category term="日常" scheme="https://19981115.xyz/tags/%E6%97%A5%E5%B8%B8/"/>
-    
-    <category term="小米游戏本" scheme="https://19981115.xyz/tags/%E5%B0%8F%E7%B1%B3%E6%B8%B8%E6%88%8F%E6%9C%AC/"/>
-    
-    <category term="小米" scheme="https://19981115.xyz/tags/%E5%B0%8F%E7%B1%B3/"/>
-    
-    <category term="笔记本" scheme="https://19981115.xyz/tags/%E7%AC%94%E8%AE%B0%E6%9C%AC/"/>
     
   </entry>
   
