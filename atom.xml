@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-01-19T09:18:37.989Z</updated>
+  <updated>2022-01-22T15:31:11.765Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Golang-gorm笔记</title>
+    <link href="https://19981115.xyz/posts/3751/"/>
+    <id>https://19981115.xyz/posts/3751/</id>
+    <published>2022-01-22T15:17:31.000Z</published>
+    <updated>2022-01-22T15:31:11.765Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;gorm-概述&quot;&gt;&lt;a href=&quot;#gorm-概述&quot; class=&quot;headerlink&quot; title=&quot;gorm 概述&quot;&gt;&lt;/a&gt;gorm 概述&lt;/h1&gt;&lt;h2 id=&quot;ORM-简介&quot;&gt;&lt;a href=&quot;#ORM-简介&quot; class=&quot;headerlink&quot; title=&quot;ORM 简介&quot;&gt;&lt;/a&gt;ORM 简介&lt;/h2&gt;&lt;p&gt;对象关系映射（Object Relational Mapping，简称 ORM）模式是一种为了解决面向对象与关系数据库（如 mysql 数据库）存在的互不匹配的现象的技术。简单的说，ORM 是通过使用描述对象和数据库之间映射的元数据，将程序中的对象自动持久化到关系数据库中。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
+    
+    <category term="gorm" scheme="https://19981115.xyz/tags/gorm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Golang学习笔记六-操作MySQL和Mongodb</title>
     <link href="https://19981115.xyz/posts/20493/"/>
     <id>https://19981115.xyz/posts/20493/</id>
     <published>2022-01-19T09:12:48.000Z</published>
-    <updated>2022-01-19T09:18:37.989Z</updated>
+    <updated>2022-01-19T09:18:49.606Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;Golang操作mysql数据库-准备数据库和表&quot;&gt;&lt;a href=&quot;#Golang操作mysql数据库-准备数据库和表&quot; class=&quot;headerlink&quot; title=&quot;Golang操作mysql数据库-准备数据库和表&quot;&gt;&lt;/a&gt;Golang操作mysql数据库-准备数据库和表&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;下载安装MySQL&lt;/strong&gt;&lt;/p&gt;
@@ -276,11 +297,11 @@
     <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
+    <category term="MySQL" scheme="https://19981115.xyz/tags/MySQL/"/>
+    
     <category term="Mybatis" scheme="https://19981115.xyz/tags/Mybatis/"/>
     
     <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
-    
-    <category term="MySQL" scheme="https://19981115.xyz/tags/MySQL/"/>
     
   </entry>
   
@@ -514,34 +535,6 @@
     <category term="蚌壳" scheme="https://19981115.xyz/tags/%E8%9A%8C%E5%A3%B3/"/>
     
     <category term="田蚌" scheme="https://19981115.xyz/tags/%E7%94%B0%E8%9A%8C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>HUGO博客程序的安装文档</title>
-    <link href="https://19981115.xyz/posts/57274/"/>
-    <id>https://19981115.xyz/posts/57274/</id>
-    <published>2019-02-15T04:01:31.000Z</published>
-    <updated>2021-08-01T07:24:07.744Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。&lt;/p&gt;
-&lt;p&gt;&lt;img data-src=&quot;https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png&quot; alt=&quot;hugo&quot; title=&quot;hugo&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Hugo 是由 Go 语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;快速开始&quot;&gt;&lt;a href=&quot;#快速开始&quot; class=&quot;headerlink&quot; title=&quot;快速开始&quot;&gt;&lt;/a&gt;快速开始&lt;/h2&gt;&lt;h3 id=&quot;安装-Hugo&quot;&gt;&lt;a href=&quot;#安装-Hugo&quot; class=&quot;headerlink&quot; title=&quot;安装 Hugo&quot;&gt;&lt;/a&gt;安装 Hugo&lt;/h3&gt;&lt;h4 id=&quot;二进制安装（推荐：简单、快速）&quot;&gt;&lt;a href=&quot;#二进制安装（推荐：简单、快速）&quot; class=&quot;headerlink&quot; title=&quot;二进制安装（推荐：简单、快速）&quot;&gt;&lt;/a&gt;二进制安装（推荐：简单、快速）&lt;/h4&gt;&lt;p&gt;到 &lt;a href=&quot;https://github.com/spf13/hugo/releases&quot; title=&quot;Hugo Releases&quot;&gt;Hugo Releases&lt;/a&gt; 下载对应的操作系统版本的 Hugo 二进制文件（hugo 或者 hugo.exe）&lt;br&gt;Mac 下直接使用 &lt;code&gt;Homebrew&lt;/code&gt; 安装：&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="Hugo" scheme="https://19981115.xyz/tags/Hugo/"/>
-    
-    <category term="go" scheme="https://19981115.xyz/tags/go/"/>
-    
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
