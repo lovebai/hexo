@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-01-25T16:12:57.421Z</updated>
+  <updated>2022-03-10T05:50:03.369Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Java注解和反射-KuangShen</title>
+    <link href="https://19981115.xyz/posts/41977/"/>
+    <id>https://19981115.xyz/posts/41977/</id>
+    <published>2022-03-10T04:29:44.000Z</published>
+    <updated>2022-03-10T05:50:03.369Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;注解和反射&quot;&gt;&lt;a href=&quot;#注解和反射&quot; class=&quot;headerlink&quot; title=&quot;注解和反射&quot;&gt;&lt;/a&gt;注解和反射&lt;/h1&gt;&lt;p&gt;注解(Annotation)是 jdk5 引入的新技术。&lt;/p&gt;
+&lt;p&gt;Anotation 的作用：可以对程序作出解释，可以被其它程序（比如编译器等）读取。&lt;/p&gt;
+&lt;p&gt;Annotation 的格式：注解是以”@注释名”在代码中存在的，还可以添加一些参数值。&lt;/p&gt;
+&lt;p&gt;Annotation 可以在 package，class，method，filed 等上面，相当于给它们添加了额外的辅助信息，可以通过反射机制来实现这些元数据的访问。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="注解" scheme="https://19981115.xyz/tags/%E6%B3%A8%E8%A7%A3/"/>
+    
+    <category term="反射" scheme="https://19981115.xyz/tags/%E5%8F%8D%E5%B0%84/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Golang-WEB开发-笔记</title>
     <link href="https://19981115.xyz/posts/45355/"/>
     <id>https://19981115.xyz/posts/45355/</id>
     <published>2022-01-25T16:01:55.000Z</published>
-    <updated>2022-01-25T16:12:57.421Z</updated>
+    <updated>2022-03-10T05:49:41.208Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;Golang-http-标准库&quot;&gt;&lt;a href=&quot;#Golang-http-标准库&quot; class=&quot;headerlink&quot; title=&quot;Golang http 标准库&quot;&gt;&lt;/a&gt;Golang http 标准库&lt;/h1&gt;&lt;p&gt;http 标准库了 http 客户端和服务器的实现，注意了，客户端实现可以发出 http 请求，并解析响应。服务器可以实现 http server 功能。市面上的所有 golang web 框架都是基于 http 标准库实现的。&lt;/p&gt;</summary>
@@ -31,9 +55,9 @@
     <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="WEB" scheme="https://19981115.xyz/tags/WEB/"/>
-    
     <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
+    
+    <category term="WEB" scheme="https://19981115.xyz/tags/WEB/"/>
     
   </entry>
   
@@ -509,29 +533,6 @@
     <category term="wordpress" scheme="https://19981115.xyz/tags/wordpress/"/>
     
     <category term="php" scheme="https://19981115.xyz/tags/php/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>记录一下今天的糗事</title>
-    <link href="https://19981115.xyz/posts/476/"/>
-    <id>https://19981115.xyz/posts/476/</id>
-    <published>2019-02-27T18:33:58.000Z</published>
-    <updated>2021-08-01T07:23:10.059Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）</summary>
-    
-    
-    
-    <category term="闲言碎语" scheme="https://19981115.xyz/categories/%E9%97%B2%E8%A8%80%E7%A2%8E%E8%AF%AD/"/>
-    
-    
-    <category term="网站" scheme="https://19981115.xyz/tags/%E7%BD%91%E7%AB%99/"/>
-    
-    <category term="失误" scheme="https://19981115.xyz/tags/%E5%A4%B1%E8%AF%AF/"/>
-    
-    <category term="文件" scheme="https://19981115.xyz/tags/%E6%96%87%E4%BB%B6/"/>
     
   </entry>
   
