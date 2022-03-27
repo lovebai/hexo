@@ -32,9 +32,9 @@
 <meta property="article:published_time" content="2019-02-15T04:01:31.000Z">
 <meta property="article:modified_time" content="2021-08-01T07:24:07.744Z">
 <meta property="article:author" content="小白">
-<meta property="article:tag" content="博客">
 <meta property="article:tag" content="Hugo">
 <meta property="article:tag" content="go">
+<meta property="article:tag" content="博客">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png">
 
@@ -318,16 +318,6 @@
     
     
     
-        <div class="reward-container">
-  <div></div>
-  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
-    打赏
-  </button>
-  <div id="qr" style="display: none;">
-
-  </div>
-</div>
-
         
 
 <div>
@@ -388,9 +378,9 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
               <a href="/tags/Hugo/" rel="tag"><i class="fa fa-tag"></i> Hugo</a>
               <a href="/tags/go/" rel="tag"><i class="fa fa-tag"></i> go</a>
+              <a href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag"><i class="fa fa-tag"></i> 博客</a>
           </div>
 
         
@@ -418,7 +408,6 @@
 
           </div>
           
-    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -677,26 +666,6 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
   
 
   
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '26a49be573a0abb55aaf',
-      clientSecret: '477a2a1667660c465b7f217a11b31fff4a7b0f55',
-      repo        : 'hexo',
-      owner       : 'lovebai',
-      admin       : ['lovebai'],
-      id          : '917d0d541d6dd5309cb536f738eae94d',
-        language: '',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
 
     </div>
 </body>

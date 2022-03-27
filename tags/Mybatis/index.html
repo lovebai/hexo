@@ -498,11 +498,10 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
 
   
 
-
     </div>
 </body>
 </html>
-{key}=${encodeURIComponent(value)}`).join('&');
+`${key}=${encodeURIComponent(value)}`).join('&');
   let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
 
   if (NexT.utils.supportsPDFs()) {
@@ -520,7 +519,6 @@ document.querySelectorAll('.pdfobject-container').forEach(element => {
   
 
   
-
 
     </div>
 </body>

@@ -115,9 +115,9 @@
     <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="WEB" scheme="https://19981115.xyz/tags/WEB/"/>
-    
     <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
+    
+    <category term="WEB" scheme="https://19981115.xyz/tags/WEB/"/>
     
   </entry>
   
@@ -515,11 +515,11 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
+    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
     <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
     
     <category term="node" scheme="https://19981115.xyz/tags/node/"/>
-    
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -542,11 +542,11 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
+    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
+    
     <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
     
     <category term="node" scheme="https://19981115.xyz/tags/node/"/>
-    
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
