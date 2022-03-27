@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-03-27T02:34:58.022Z</updated>
+  <updated>2022-03-27T04:05:23.734Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://19981115.xyz/posts/6054/"/>
     <id>https://19981115.xyz/posts/6054/</id>
     <published>2022-03-27T01:31:34.000Z</published>
-    <updated>2022-03-27T02:34:58.022Z</updated>
+    <updated>2022-03-27T04:05:23.734Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;OkHttp-简介&quot;&gt;&lt;a href=&quot;#OkHttp-简介&quot; class=&quot;headerlink&quot; title=&quot;OkHttp 简介&quot;&gt;&lt;/a&gt;OkHttp 简介&lt;/h1&gt;&lt;p&gt;HTTP 是现代应用程序网络的方式。这就是我们交换数据和媒体的方式。有效地执行 HTTP 可以使您的内容加载更快并节省带宽。&lt;/p&gt;
@@ -515,11 +515,11 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
     
     <category term="node" scheme="https://19981115.xyz/tags/node/"/>
+    
+    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
@@ -542,11 +542,11 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
     
     <category term="node" scheme="https://19981115.xyz/tags/node/"/>
+    
+    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
