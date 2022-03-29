@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"19981115.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac night"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="Android 网络编程 Retrofit适用于 Android 和 Java 的类型安全 HTTP 客户端。Retrofit 是一款基于注解把 http api 转成接口，使用起来更加简单。 文档和代码文档地址： Retrofit 文档 ：https:&#x2F;&#x2F;square.github.io&#x2F;retrofit&#x2F; Github 地址：https:&#x2F;&#x2F;github.com&#x2F;square&#x2F;retrofit">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android 开发之网络编程 Retrofit">
+<meta property="og:url" content="https://19981115.xyz/posts/18585/index.html">
+<meta property="og:site_name" content="MY-Notes">
+<meta property="og:description" content="Android 网络编程 Retrofit适用于 Android 和 Java 的类型安全 HTTP 客户端。Retrofit 是一款基于注解把 http api 转成接口，使用起来更加简单。 文档和代码文档地址： Retrofit 文档 ：https:&#x2F;&#x2F;square.github.io&#x2F;retrofit&#x2F; Github 地址：https:&#x2F;&#x2F;github.com&#x2F;square&#x2F;retrofit">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648545659312.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648545892178.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546164993.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546257047.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546336183.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546367960.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546392044.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546419181.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546443324.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546460333.png">
+<meta property="og:image" content="https://19981115.xyz/posts/18585/1648546482972.png">
+<meta property="article:published_time" content="2022-03-29T09:11:37.000Z">
+<meta property="article:modified_time" content="2022-03-29T09:42:58.082Z">
+<meta property="article:author" content="小白">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="Retrofit">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://19981115.xyz/posts/18585/1648545659312.png">
+
+<link rel="canonical" href="https://19981115.xyz/posts/18585/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Android 开发之网络编程 Retrofit | MY-Notes</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/atom.xml" title="MY-Notes" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">MY-Notes</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">MY Quick Notes</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://19981115.xyz/posts/18585/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="小白">
+      <meta itemprop="description" content="随言笔记，胡乱编写">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MY-Notes">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Android 开发之网络编程 Retrofit
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2022-03-29 17:11:37 / 修改时间：17:42:58" itemprop="dateCreated datePublished" datetime="2022-03-29T17:11:37+08:00">2022-03-29</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Android-网络编程-Retrofit"><a href="#Android-网络编程-Retrofit" class="headerlink" title="Android 网络编程 Retrofit"></a>Android 网络编程 Retrofit</h1><p>适用于 Android 和 Java 的类型安全 HTTP 客户端。Retrofit 是一款基于注解把 http api 转成接口，使用起来更加简单。</p>
+<h1 id="文档和代码"><a href="#文档和代码" class="headerlink" title="文档和代码"></a>文档和代码</h1><p>文档地址：</p>
+<p>Retrofit 文档 ：<a target="_blank" rel="noopener" href="https://square.github.io/retrofit/">https://square.github.io/retrofit/</a></p>
+<p>Github 地址：<a target="_blank" rel="noopener" href="https://github.com/square/retrofit">https://github.com/square/retrofit</a></p>
+<p>Retrofit API 文档：<a href="">https://square.github.io/retrofit/2.x/retrofit/</a></p>
+<span id="more"></span>
+
+<h1 id="添加依赖"><a href="#添加依赖" class="headerlink" title="添加依赖"></a>添加依赖</h1><p><a target="_blank" rel="noopener" href="https://github.com/square/retrofit/tags">版本</a></p>
+<p>版本在 release 里看就好了</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">&#x27;com.squareup.retrofit2:retrofit:(insert latest version)&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>目前最新的版本是：2.9.0</p>
+<p>所以我这里的依赖就用</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">&#x27;com.squareup.retrofit2:retrofit:2.9.0</span></span><br></pre></td></tr></table></figure>
+
+<p>另外，我们要把结果转成对象，这个时候需要加一些转换器</p>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation <span class="string">&#x27;com.squareup.retrofit2:converter-gson:2.9.0&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>当然啦，有多种。在官方文档中有提到</p>
+<p><img data-src="1648545659312.png"></p>
+<p>可以转 xml 的数据，可以转 Json 的数据。我们的数据格式是 json，可以用 Gson，也可以用 Jackson</p>
+<p>版本地址可以到中央仓库去搜索一下</p>
+<p>converter-gson: <a target="_blank" rel="noopener" href="https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson">https://mvnrepository.com/artifact/com.squareup.retrofit2/converter-gson</a></p>
+<h1 id="入门代码"><a href="#入门代码" class="headerlink" title="入门代码"></a>入门代码</h1><ol>
+<li>先定义一个接口</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">SobMiniWebInterface</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GET(&quot;/get/text&quot;)</span></span><br><span class="line">    <span class="function">Call&lt;JsonResult&gt; <span class="title">getJson</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>定义结果 bean 类(实体类)</li>
+<li>创建 retrofit</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getJson</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">       Retrofit retrofit = <span class="keyword">new</span> Retrofit.Builder()</span><br><span class="line">               .baseUrl(<span class="string">&quot;http//:127.0.0.1:9102&quot;</span>)</span><br><span class="line">               .addConverterFactory(GsonConverterFactory.create())</span><br><span class="line">               .build();</span><br><span class="line">       SobMiniWebInterface sobMiniWebInterface = retrofit.create(SobMiniWebInterface.class);</span><br><span class="line">       Call task = sobMiniWebInterface.getJson();</span><br><span class="line">       task.enqueue(<span class="keyword">new</span> Callback() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call call,Response response)</span> </span>&#123;</span><br><span class="line">               Log.d(TAG,<span class="string">&quot;response -- &gt; &quot;</span> + response.body());</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call call,Throwable t)</span> </span>&#123;</span><br><span class="line">               Log.d(TAG,<span class="string">&quot;exception -- &gt; &quot;</span> + t.toString());</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>执行结果：</li>
+</ol>
+<p><img data-src="1648545892178.png"></p>
+<h1 id="初步封装"><a href="#初步封装" class="headerlink" title="初步封装"></a>初步封装</h1><p>如果我们每次使用，都要去创建 Retrofit，那不是很麻烦吗？</p>
+<p>所以我们可以把这些相关的配置，整合起来。把 Retrofit 的创建和配置定义成一个单例，这样子，我们要去发起请求的时候，直接使用单例获取就完事了。不用再重复去编写 baseURL 、转换器、连接时的相关属性，等等…</p>
+<p>于是我们创建一个单例</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.sunofbeaches.retrofitdemo;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> java.util.concurrent.TimeUnit;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> okhttp3.OkHttpClient;</span><br><span class="line"><span class="keyword">import</span> retrofit2.Retrofit;</span><br><span class="line"><span class="keyword">import</span> retrofit2.converter.gson.GsonConverterFactory;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RetrofitCreator</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> String BASE_URL = <span class="string">&quot;https://127.0.0.1:9102&quot;</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> CONNECT_TIME_OUT = <span class="number">10000</span>;<span class="comment">//毫秒</span></span><br><span class="line">    <span class="keyword">private</span> Retrofit mRetrofit;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">RetrofitCreator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        createRetrofit();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">createRetrofit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//设置一下okHttp的参数</span></span><br><span class="line">        OkHttpClient okHttpClient = <span class="keyword">new</span> OkHttpClient.Builder()</span><br><span class="line">                .connectTimeout(CONNECT_TIME_OUT,TimeUnit.MILLISECONDS)</span><br><span class="line">                .build();</span><br><span class="line">        mRetrofit = <span class="keyword">new</span> Retrofit.Builder()</span><br><span class="line">                .baseUrl(BASE_URL)<span class="comment">//设置BaseUrl</span></span><br><span class="line">                .client(okHttpClient)<span class="comment">//设置请求的client</span></span><br><span class="line">                .addConverterFactory(GsonConverterFactory.create())<span class="comment">//设置转换器</span></span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> RetrofitCreator sRetrofitCreator = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> RetrofitCreator <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(sRetrofitCreator == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">synchronized</span>(RetrofitCreator.class) &#123;</span><br><span class="line">                <span class="keyword">if</span>(sRetrofitCreator == <span class="keyword">null</span>) &#123;</span><br><span class="line">                    sRetrofitCreator = <span class="keyword">new</span> RetrofitCreator();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sRetrofitCreator;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Retrofit <span class="title">getRetrofit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> mRetrofit;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>那使用变成怎么样了呢？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">getJson</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">       SobMiniWebInterface sobMiniWebInterface = RetrofitCreator.getInstance().getRetrofit().create(SobMiniWebInterface.class);</span><br><span class="line">       Call task = sobMiniWebInterface.getJson();</span><br><span class="line">       task.enqueue(<span class="keyword">new</span> Callback() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call call,Response response)</span> </span>&#123;</span><br><span class="line">               Log.d(TAG,<span class="string">&quot;response -- &gt; &quot;</span> + response.body());</span><br><span class="line">           &#125;</span><br><span class="line"></span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call call,Throwable t)</span> </span>&#123;</span><br><span class="line">               Log.d(TAG,<span class="string">&quot;exception -- &gt; &quot;</span> + t.toString());</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;);</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果多个地方使用呢？重复的代码是不是变少啦！</p>
+<h1 id="接口定义"><a href="#接口定义" class="headerlink" title="接口定义"></a>接口定义</h1><p>前面我们定义了一个接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">SobMiniWebInterface</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GET(&quot;/get/text&quot;)</span></span><br><span class="line">    <span class="function">Call&lt;JsonResult&gt; <span class="title">getJson</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这里我们可以看到有一个注解@Get</p>
+<blockquote>
+<p>@Documented</p>
+<p>@Target(value=METHOD)</p>
+<p>@Retention(value=RUNTIME)</p>
+<p>public @interface GET Make a GET request.</p>
+</blockquote>
+<p>从官方的 API 文档里我们可以看到这个注解是作用于方法，是一个运行时起作用的注解。创建一个 get request 之前我们创建 Request 是 new 出来了。Retrofit 则直接使用注解</p>
+<p>知道这个，那就好办了！</p>
+<p>那我 post 请求呢？是不也可以来一个@Post 呢？</p>
+<p>是的！Restrofit，rest 就是 Restful 的意思，按这个套路，肯定有 get、post、delete、put。当然还有其他的。</p>
+<p>那咱们列一个思维导图吧</p>
+<p><img data-src="1648546164993.png"></p>
+<h1 id="get-请求"><a href="#get-请求" class="headerlink" title="get 请求"></a>get 请求</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">SobMiniWebInterface</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GET(&quot;/get/text&quot;)</span></span><br><span class="line">    <span class="function">Call&lt;JsonResult&gt; <span class="title">getJson</span><span class="params">()</span></span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>带参数的咋整呢？</p>
+<p>比如说这个接口：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/get/param</span><br></pre></td></tr></table></figure>
+
+<p>参数: - keyword 关键字 - page 页码 - order 0 顺序 1 逆序</p>
+<p>接口定义：两种写法都可以</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GET(&quot;/get/param&quot;)</span></span><br><span class="line"><span class="function">Call&lt;GetParamsResult&gt; <span class="title">getWithParams</span><span class="params">(<span class="meta">@Query(&quot;keyword&quot;)</span> String keyword,<span class="meta">@Query(&quot;page&quot;)</span> <span class="keyword">int</span> page,<span class="meta">@Query(&quot;order&quot;)</span> String order)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@GET(&quot;/get/param&quot;)</span></span><br><span class="line"><span class="function">Call&lt;GetParamsResult&gt; <span class="title">getWithParams</span><span class="params">(<span class="meta">@QueryMap</span> Map&lt;String,Object&gt; params)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>调用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">Call&lt;GetParamsResult&gt; call = mSobMiniWebInterface.getWithParams(<span class="string">&quot;关键字测试&quot;</span>,<span class="number">1</span>,<span class="string">&quot;1&quot;</span>);</span><br><span class="line">call.enqueue(<span class="keyword">new</span> Callback&lt;GetParamsResult&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;GetParamsResult&gt; call,Response&lt;GetParamsResult&gt; response)</span> </span>&#123;</span><br><span class="line">        GetParamsResult result = response.body();</span><br><span class="line">        Log.d(TAG,<span class="string">&quot;result -- &gt; &quot;</span> + result);</span><br><span class="line">        <span class="keyword">if</span>(result.getCode() == <span class="number">10000</span>) &#123;</span><br><span class="line">            Log.d(TAG,<span class="string">&quot;请求成功&quot;</span>);</span><br><span class="line">            Log.d(TAG,<span class="string">&quot;结果信息 --&gt; &quot;</span> + result.getMessage());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;GetParamsResult&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG,<span class="string">&quot;请求失败...onFailure&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">Map&lt;String,Object&gt; params = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">params.put(<span class="string">&quot;keyword&quot;</span>,<span class="string">&quot;map 参数测试关键字&quot;</span>);</span><br><span class="line">params.put(<span class="string">&quot;page&quot;</span>,<span class="number">1</span>);</span><br><span class="line">params.put(<span class="string">&quot;order&quot;</span>,<span class="string">&quot;0&quot;</span>);</span><br><span class="line">Call&lt;GetParamsResult&gt; mapTask = mSobMiniWebInterface.getWithParams(params);</span><br><span class="line">mapTask.enqueue(<span class="keyword">new</span> Callback&lt;GetParamsResult&gt;() &#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;GetParamsResult&gt; call,Response&lt;GetParamsResult&gt; response)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG,<span class="string">&quot;onResponse ==&gt; &quot;</span> + response.body());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;GetParamsResult&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">        Log.d(TAG,<span class="string">&quot;onFailure == &gt; &quot;</span> + t.toString());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">D/MainActivity: getWithParams..</span><br><span class="line">D/MainActivity: result -- &gt; GetParamsResult&#123;success=true, code=10000, message=&#x27;get带参数请求成功.&#x27;, data=DataBean&#123;page=&#x27;1&#x27;, keyword=&#x27;关键字测试&#x27;, order=&#x27;逆序</span><br><span class="line">D/MainActivity: 请求成功</span><br><span class="line">D/MainActivity: 结果信息 --&gt; get带参数请求成功.</span><br></pre></td></tr></table></figure>
+
+<p>到这里我们就学习了</p>
+<p>@Qeury 注解，@QueryMap 注解</p>
+<h1 id="post-请求，body-携带字符串内容-json"><a href="#post-请求，body-携带字符串内容-json" class="headerlink" title="post 请求，body 携带字符串内容(json)"></a>post 请求，body 携带字符串内容(json)</h1><p>这个参数是 body 的内容</p>
+<p><img data-src="1648546257047.png"></p>
+<p>接口文档看前面呀。</p>
+<p>定义接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@POST(&quot;/post/comment&quot;)</span></span><br><span class="line"><span class="function">Call&lt;PostWithBodyResult&gt; <span class="title">postWithBodyContent</span><span class="params">(<span class="meta">@Body</span> CommentItem commentItem)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>调用代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postWithBody</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        CommentItem commentItem = <span class="keyword">new</span> CommentItem();</span><br><span class="line">        commentItem.setArticleId(<span class="string">&quot;1251412341&quot;</span>);</span><br><span class="line">        commentItem.setCommentContent(<span class="string">&quot;这是我提交的测试评论内容...&quot;</span>);</span><br><span class="line">        Call&lt;PostWithBodyResult&gt; task = mSobMiniWebInterface.postWithBodyContent(commentItem);</span><br><span class="line">        task.enqueue(<span class="keyword">new</span> Callback&lt;PostWithBodyResult&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;PostWithBodyResult&gt; call,Response&lt;PostWithBodyResult&gt; response)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG,<span class="string">&quot;response -- &gt; &quot;</span> + response.body());</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;PostWithBodyResult&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG,<span class="string">&quot;post with body...onFailure&quot;</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">D/MainActivity: response -- &gt; PostWithBodyResult&#123;success=true, code=10000, message=&#x27;评论成功:这是我提交的测试评论内容...&#x27;, data=null&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到这里我们就学习了@Body 注解</p>
+<h1 id="post-请求-Url-携带参数"><a href="#post-请求-Url-携带参数" class="headerlink" title="post 请求 Url 携带参数"></a>post 请求 Url 携带参数</h1><p>接口：</p>
+<p><img data-src="1648546336183.png"></p>
+<p>接口定义：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@POST(&quot;/post/string&quot;)</span></span><br><span class="line"><span class="function">Call&lt;PostWithUrlParamsResult&gt; <span class="title">postWithUrlParams</span><span class="params">(<span class="meta">@Query(&quot;string&quot;)</span> String text)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>调用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postWithUrlParams</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">    Call&lt;PostWithUrlParamsResult&gt; task = mSobMiniWebInterface.postWithUrlParams(<span class="string">&quot;这是我提交的参数内容&quot;</span>);</span><br><span class="line">    task.enqueue(<span class="keyword">new</span> Callback&lt;PostWithUrlParamsResult&gt;() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;PostWithUrlParamsResult&gt; call,Response&lt;PostWithUrlParamsResult&gt; response)</span> </span>&#123;</span><br><span class="line">            Log.d(TAG,<span class="string">&quot;onResponse result -- &gt; &quot;</span> + response.body());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;PostWithUrlParamsResult&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">            Log.d(TAG,<span class="string">&quot;onFailure -- &gt; &quot;</span> + t.toString());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="单文件上传"><a href="#单文件上传" class="headerlink" title="单文件上传"></a>单文件上传</h1><p><img data-src="1648546367960.png"></p>
+<p><strong>权限自行处理</strong></p>
+<p>@Part 注解，要跟@Multipart 注解一起使用。</p>
+<p>而参数类型有三种：</p>
+<ul>
+<li>MultipartBody.Part</li>
+<li>RequestBody</li>
+<li>Other object</li>
+</ul>
+<p>具体可以去看看文档</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">   * The name of the part. Required for all parameter types except</span></span><br><span class="line"><span class="comment">   * &#123;<span class="doctag">@link</span> okhttp3.MultipartBody.Part&#125;.</span></span><br><span class="line"><span class="comment">   */</span></span><br></pre></td></tr></table></figure>
+
+<p>除了 MultipartBody.Part 类型以外，其他的参数类型都要加上注解参数。</p>
+<p>接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">@Multipart</span></span><br><span class="line"><span class="meta">@POST(&quot;/file/upload&quot;)</span></span><br><span class="line"><span class="function">Call&lt;FileUploadResult&gt; <span class="title">postFile</span><span class="params">(<span class="meta">@Part</span> MultipartBody.Part file)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>上传文件调用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postFile</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        File file = <span class="keyword">new</span> File(<span class="string">&quot;/storage/emulated/0/Download/1.jpg&quot;</span>);</span><br><span class="line">        MediaType mediaType = MediaType.parse(<span class="string">&quot;image/jpg&quot;</span>);</span><br><span class="line">        RequestBody fileBody = RequestBody.create(mediaType,file);</span><br><span class="line">        MultipartBody.Part part = MultipartBody.Part.createFormData(<span class="string">&quot;file&quot;</span>,file.getName(),fileBody);</span><br><span class="line">        Call&lt;FileUploadResult&gt; task = mSobMiniWebInterface.postFile(part);</span><br><span class="line">        task.enqueue(<span class="keyword">new</span> Callback&lt;FileUploadResult&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;FileUploadResult&gt; call,Response&lt;FileUploadResult&gt; response)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG,<span class="string">&quot;onResponse -- &gt; &quot;</span> + response.body());</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;FileUploadResult&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG,<span class="string">&quot;onFailure -- &gt; &quot;</span> + t.toString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>上传结果：</p>
+<p><img data-src="1648546392044.png" alt="img"></p>
+<p>到这里我们就学习了@Part 和@Multipart 注解的使用了</p>
+<h1 id="上传文件及附带信息"><a href="#上传文件及附带信息" class="headerlink" title="上传文件及附带信息"></a>上传文件及附带信息</h1><p>提这个方式是为了跟大家了解@PartMap 的使用</p>
+<p>接口定义：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Multipart</span></span><br><span class="line"><span class="meta">@POST(&quot;/multiFiles/upload&quot;)</span></span><br><span class="line"><span class="function">Call&lt;FileUploadResult&gt; <span class="title">postFileWithParams</span><span class="params">(<span class="meta">@PartMap</span> Map&lt;String,Object&gt; params,<span class="meta">@Part</span> MultipartBody.Part file)</span></span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>调用：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postMultiFile</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">    Map&lt;String,Object&gt; params = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    MultipartBody.Part filePart = getPart(<span class="string">&quot;file&quot;</span>,<span class="string">&quot;/storage/emulated/0/Download/rBsADV3nxtKACoSfAAAPx8jyjF8169.png&quot;</span>);</span><br><span class="line">    params.put(<span class="string">&quot;isFree&quot;</span>,<span class="string">&quot;false&quot;</span>);</span><br><span class="line">    params.put(<span class="string">&quot;description&quot;</span>,<span class="string">&quot;我是文件的描述内容...&quot;</span>);</span><br><span class="line">    Call&lt;FileUploadResult&gt; task = mSobMiniWebInterface.postFileWithParams(params,filePart);</span><br><span class="line">    task.enqueue(<span class="keyword">new</span> Callback&lt;FileUploadResult&gt;() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;FileUploadResult&gt; call,Response&lt;FileUploadResult&gt; response)</span> </span>&#123;</span><br><span class="line">            Log.d(TAG,<span class="string">&quot;onResponse -- &gt; &quot;</span> + response.body());</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;FileUploadResult&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">            Log.d(TAG,<span class="string">&quot;onFailure -- &gt;&quot;</span> + t.toString());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">onResponse -- &gt; FileUploadResult&#123;success=true, code=10000, message=&#x27;上传成功.文件路径为：E:\codes\Idear\SobNetworkCourseServer\target\classes\sobUpload\rBsADV3nxtKACoSfAAAPx8jyjF8169.png&#x27;, data=your descriptions is --&gt; &quot;我是文件的描述内容...&quot; isFree == &gt; &quot;false&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="多文件上传"><a href="#多文件上传" class="headerlink" title="多文件上传"></a>多文件上传</h1><p>后台接口：</p>
+<p><img data-src="1648546419181.png"></p>
+<p>定义接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Multipart</span></span><br><span class="line"><span class="meta">@POST(&quot;/files/upload&quot;)</span></span><br><span class="line"><span class="function">Call&lt;FileUploadResult&gt; <span class="title">postFiles</span><span class="params">(<span class="meta">@Part</span> List&lt;MultipartBody.Part&gt; files)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>调用代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postFiles</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">     List&lt;MultipartBody.Part&gt; files = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">     files.add(getPart(<span class="string">&quot;files&quot;</span>,<span class="string">&quot;/storage/emulated/0/Download/1.jpg&quot;</span>));</span><br><span class="line">     files.add(getPart(<span class="string">&quot;files&quot;</span>,<span class="string">&quot;/storage/emulated/0/Download/rBsADV3nxtKACoSfAAAPx8jyjF8169.png&quot;</span>));</span><br><span class="line">     files.add(getPart(<span class="string">&quot;files&quot;</span>,<span class="string">&quot;/storage/emulated/0/Download/rBsADV2rEz-AIzSoAABi-6nfiqs456.png&quot;</span>));</span><br><span class="line"></span><br><span class="line">     Call&lt;FileUploadResult&gt; task = mSobMiniWebInterface.postFiles(files);</span><br><span class="line">     task.enqueue(<span class="keyword">new</span> Callback&lt;FileUploadResult&gt;() &#123;</span><br><span class="line">         <span class="meta">@Override</span></span><br><span class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;FileUploadResult&gt; call,Response&lt;FileUploadResult&gt; response)</span> </span>&#123;</span><br><span class="line">             Log.d(TAG,<span class="string">&quot;多文件上传结果&quot;</span> + response.body());</span><br><span class="line">         &#125;</span><br><span class="line"></span><br><span class="line">         <span class="meta">@Override</span></span><br><span class="line">         <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;FileUploadResult&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">             Log.d(TAG,<span class="string">&quot;onFailure -- &gt; 多文件上传失败 ---&gt; &quot;</span> + t.toString());</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;);</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<p>辅助方法</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> MultipartBody.<span class="function">Part <span class="title">getPart</span><span class="params">(String key,String filePath)</span> </span>&#123;</span><br><span class="line">    File file = <span class="keyword">new</span> File(filePath);</span><br><span class="line">    MediaType mediaType = MediaType.parse(<span class="string">&quot;image/jpg&quot;</span>);</span><br><span class="line">    RequestBody fileBody = RequestBody.create(mediaType,file);</span><br><span class="line">    <span class="keyword">return</span> MultipartBody.Part.createFormData(key,file.getName(),fileBody);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>多文件上传结果</p>
+<p>FileUploadResult{success=true, code=10000, message=’上传成功 3 个文件，路径：C:/Users/TrillGates/Desktop/SOBAndroidMiniWeb/sobUpload’, data=null}</p>
+<p><img data-src="1648546443324.png"></p>
+<h1 id="文件下载"><a href="#文件下载" class="headerlink" title="文件下载"></a>文件下载</h1><p>接口</p>
+<p><img data-src="1648546460333.png"></p>
+<p>定义接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Streaming</span></span><br><span class="line"><span class="meta">@GET</span></span><br><span class="line"><span class="function">Call&lt;ResponseBody&gt; <span class="title">downFile</span><span class="params">(<span class="meta">@Url</span> String url)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>代码调用</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">ublic <span class="keyword">void</span> <span class="title">downFile</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Call&lt;ResponseBody&gt; task = mSobMiniWebInterface.downFile(<span class="string">&quot;/download/10&quot;</span>);</span><br><span class="line">        task.enqueue(<span class="keyword">new</span> Callback&lt;ResponseBody&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;ResponseBody&gt; call,Response&lt;ResponseBody&gt; response)</span> </span>&#123;</span><br><span class="line">                Headers headers = response.headers();</span><br><span class="line">                <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; headers.size(); i++) &#123;</span><br><span class="line">                    Log.d(TAG,headers.name(i) + <span class="string">&quot; == &quot;</span> + headers.value(i));</span><br><span class="line">                &#125;</span><br><span class="line">                writeFile2Sd(response,headers);</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;ResponseBody&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG,<span class="string">&quot;onFailure -- &gt; &quot;</span> + t.toString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>同学们会发现，我们收取的内容，需要进行 iO 操作，但是主线程不可以做文件读取呀。</p>
+<p>所以又整了一个子线程。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">writeFile2Sd</span><span class="params">(<span class="keyword">final</span> Response&lt;ResponseBody&gt; response,<span class="keyword">final</span> Headers headers)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">new</span> Thread(<span class="keyword">new</span> Runnable() &#123;</span><br><span class="line">           <span class="meta">@Override</span></span><br><span class="line">           <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">               String disposition = headers.get(<span class="string">&quot;Content-disposition&quot;</span>);</span><br><span class="line">               <span class="keyword">if</span>(disposition != <span class="keyword">null</span>) &#123;</span><br><span class="line">                   <span class="keyword">int</span> fileNameIndex = disposition.indexOf(<span class="string">&quot;filename=&quot;</span>);</span><br><span class="line">                   Log.d(TAG,<span class="string">&quot;fileNameIndex -- &gt; &quot;</span> + fileNameIndex);</span><br><span class="line">                   String fileName = disposition.substring(fileNameIndex + <span class="string">&quot;filename=&quot;</span>.length());</span><br><span class="line">                   Log.d(TAG,<span class="string">&quot;fileName -- &gt; &quot;</span> + fileName);</span><br><span class="line">                   File picFilePath = MainActivity.<span class="keyword">this</span>.getExternalFilesDir(Environment.DIRECTORY_PICTURES);</span><br><span class="line">                   Log.d(TAG,<span class="string">&quot;picFilePath --&gt; &quot;</span> + picFilePath);</span><br><span class="line">                   File file = <span class="keyword">new</span> File(picFilePath + File.separator + fileName);</span><br><span class="line">                   Log.d(TAG,<span class="string">&quot;file -- &gt; &quot;</span> + file);</span><br><span class="line">                   FileOutputStream fos = <span class="keyword">null</span>;</span><br><span class="line">                   <span class="keyword">try</span> &#123;</span><br><span class="line">                       <span class="keyword">if</span>(!file.getParentFile().exists()) &#123;</span><br><span class="line">                           file.getParentFile().mkdirs();</span><br><span class="line">                       &#125;</span><br><span class="line">                       <span class="keyword">if</span>(!file.exists()) &#123;</span><br><span class="line">                           file.createNewFile();</span><br><span class="line">                       &#125;</span><br><span class="line">                       fos = <span class="keyword">new</span> FileOutputStream(file);</span><br><span class="line">                       InputStream inputStream = response.body().byteStream();</span><br><span class="line">                       <span class="keyword">byte</span>[] buf = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</span><br><span class="line">                       <span class="keyword">int</span> len;</span><br><span class="line">                       <span class="keyword">while</span>((len = inputStream.read(buf,<span class="number">0</span>,buf.length)) != -<span class="number">1</span>) &#123;</span><br><span class="line">                           fos.write(buf,<span class="number">0</span>,len);</span><br><span class="line">                       &#125;</span><br><span class="line">                   &#125; <span class="keyword">catch</span>(Exception e) &#123;</span><br><span class="line">                       e.printStackTrace();</span><br><span class="line">                   &#125; <span class="keyword">finally</span> &#123;</span><br><span class="line">                       <span class="keyword">if</span>(fos != <span class="keyword">null</span>) &#123;</span><br><span class="line">                           <span class="keyword">try</span> &#123;</span><br><span class="line">                               fos.close();</span><br><span class="line">                           &#125; <span class="keyword">catch</span>(IOException e) &#123;</span><br><span class="line">                               e.printStackTrace();</span><br><span class="line">                           &#125;</span><br><span class="line">                       &#125;</span><br><span class="line">                   &#125;</span><br><span class="line">               &#125;</span><br><span class="line">           &#125;</span><br><span class="line">       &#125;).start();</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样子特别不方便，对吧！也不优雅，所以后面我们就要引入 RxJava 去解决这个问题了。</p>
+<p>RxJava 可以很方便地切换线程。</p>
+<p>下载结果</p>
+<h1 id="提交表单"><a href="#提交表单" class="headerlink" title="提交表单"></a>提交表单</h1><p>方法：post 接口：/login</p>
+<p>定义接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FormUrlEncoded</span></span><br><span class="line"><span class="meta">@POST(&quot;/login&quot;)</span></span><br><span class="line"><span class="function">Call&lt;ResponseBody&gt; <span class="title">doLogin</span><span class="params">(<span class="meta">@Field(&quot;userName&quot;)</span> String userName,<span class="meta">@Field(&quot;password&quot;)</span> String password)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>调用代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">login</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">        Call&lt;ResponseBody&gt; call = mSobMiniWebInterface.doLogin(<span class="string">&quot;root&quot;</span>,<span class="string">&quot;admin&quot;</span>);</span><br><span class="line">        call.enqueue(<span class="keyword">new</span> Callback&lt;ResponseBody&gt;() &#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;ResponseBody&gt; call,Response&lt;ResponseBody&gt; response)</span> </span>&#123;</span><br><span class="line">                <span class="keyword">try</span> &#123;</span><br><span class="line">                    Log.d(TAG,<span class="string">&quot;onResponse -- &gt;  &quot;</span> + response.body().string());</span><br><span class="line">                &#125; <span class="keyword">catch</span>(IOException e) &#123;</span><br><span class="line">                    e.printStackTrace();</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;ResponseBody&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">                Log.d(TAG,<span class="string">&quot;onFailure == &gt; &quot;</span> + t.toString());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;success&quot;:true,&quot;code&quot;:10000,&quot;message&quot;:&quot;这是你提交上来的数据：root - admin&quot;,&quot;data&quot;:&quot;8920d231-20e4-46c6-9b41-9812730c4cce&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>到这里的话，我们就把@Failed 搞定了，那@FailedMap 呢？</p>
+<p>相信聪明的你早就想到了，套路跟前面一样呀！</p>
+<p>再来一个，定义接口</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@FormUrlEncoded</span></span><br><span class="line"><span class="meta">@POST(&quot;/login&quot;)</span></span><br><span class="line"><span class="function">Call&lt;ResponseBody&gt; <span class="title">login</span><span class="params">(<span class="meta">@FieldMap</span> Map&lt;String,Object&gt; params)</span></span>;</span><br></pre></td></tr></table></figure>
+
+<p>调用代码</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">login</span><span class="params">(View view)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// Call&lt;ResponseBody&gt; call = mSobMiniWebInterface.doLogin(&quot;root&quot;,&quot;admin&quot;);</span></span><br><span class="line">    Map&lt;String,Object&gt; params = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">    params.put(<span class="string">&quot;password&quot;</span>,<span class="string">&quot;234123lkjsfa&quot;</span>);</span><br><span class="line">    params.put(<span class="string">&quot;userName&quot;</span>,<span class="string">&quot;root&quot;</span>);</span><br><span class="line">    Call&lt;ResponseBody&gt; call = mSobMiniWebInterface.login(params);</span><br><span class="line">    call.enqueue(<span class="keyword">new</span> Callback&lt;ResponseBody&gt;() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onResponse</span><span class="params">(Call&lt;ResponseBody&gt; call,Response&lt;ResponseBody&gt; response)</span> </span>&#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                Log.d(TAG,<span class="string">&quot;onResponse -- &gt;  &quot;</span> + response.body().string());</span><br><span class="line">            &#125; <span class="keyword">catch</span>(IOException e) &#123;</span><br><span class="line">                e.printStackTrace();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">onFailure</span><span class="params">(Call&lt;ResponseBody&gt; call,Throwable t)</span> </span>&#123;</span><br><span class="line">            Log.d(TAG,<span class="string">&quot;onFailure == &gt; &quot;</span> + t.toString());</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;&quot;success&quot;:true,&quot;code&quot;:10000,&quot;message&quot;:&quot;这是你提交上来的数据：root - 234123lkjsfa&quot;,&quot;data&quot;:&quot;5af51e33-8c9c-4898-8c0e-bf44e0d2fc4f&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Okay 啦，到这里@FiledMap 也搞定了</p>
+<h1 id="关于参数的接口"><a href="#关于参数的接口" class="headerlink" title="关于参数的接口"></a>关于参数的接口</h1><p><img data-src="1648546482972.png"></p>
+<p>大家再 review 一下吧。</p>
+<h1 id="header-注解"><a href="#header-注解" class="headerlink" title="header 注解"></a>header 注解</h1><p>请求头注解我们还没使用上，那要怎么使用呢？</p>
+<p>看码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Multipart</span></span><br><span class="line"><span class="meta">@POST(&quot;/file/upload&quot;)</span></span><br><span class="line"><span class="function">Call&lt;FileUploadResult&gt; <span class="title">postFile</span><span class="params">(<span class="meta">@Part</span> MultipartBody.Part file,<span class="meta">@Header(&quot;token&quot;)</span> String token)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Multipart</span></span><br><span class="line"><span class="meta">@POST(&quot;/files/upload&quot;)</span></span><br><span class="line"><span class="function">Call&lt;FileUploadResult&gt; <span class="title">postFiles</span><span class="params">(<span class="meta">@Part</span> List&lt;MultipartBody.Part&gt; files,<span class="meta">@HeaderMap</span> Map&lt;String,String&gt; headers)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Headers(&#123;&quot;token:231231&quot;,&quot;version:1.0&quot;,&quot;client:android&quot;&#125;)</span></span><br><span class="line"><span class="meta">@Multipart</span></span><br><span class="line"><span class="meta">@POST(&quot;/file/params/upload&quot;)</span></span><br><span class="line"><span class="function">Call&lt;FileUploadResult&gt; <span class="title">postFileWithParams</span><span class="params">(<span class="meta">@PartMap</span> Map&lt;String,Object&gt; params,<span class="meta">@Part</span> MultipartBody.Part file)</span></span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>其实我们很少这么用的，假如说，我们是为了用户验证，携带 token 的话，在每个方法都添加，那不是很麻烦吗？</p>
+<p>而 Okhttp 是支持拦截器的，我们直接在每次请求的时候，在头部加上 token 就不可以了吗？</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">createRetrofit</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">//设置一下okHttp的参数</span></span><br><span class="line">        OkHttpClient okHttpClient = <span class="keyword">new</span> OkHttpClient.Builder()</span><br><span class="line">                .connectTimeout(CONNECT_TIME_OUT,TimeUnit.MILLISECONDS)</span><br><span class="line">                .addInterceptor(mHeaderInterceptor)</span><br><span class="line">                .build();</span><br><span class="line">        mRetrofit = <span class="keyword">new</span> Retrofit.Builder()</span><br><span class="line">                .baseUrl(BASE_URL)<span class="comment">//设置BaseUrl</span></span><br><span class="line">                .client(okHttpClient)<span class="comment">//设置请求的client</span></span><br><span class="line">                .addConverterFactory(GsonConverterFactory.create())<span class="comment">//设置转换器</span></span><br><span class="line">                .build();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> Interceptor mHeaderInterceptor = <span class="keyword">new</span> Interceptor() &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> Response <span class="title">intercept</span><span class="params">(Chain chain)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">            Request request = chain.request().newBuilder()</span><br><span class="line">                    .addHeader(<span class="string">&quot;token&quot;</span>,<span class="string">&quot;204391jawslejqowejqwi&quot;</span>)</span><br><span class="line">                    .addHeader(<span class="string">&quot;version&quot;</span>,<span class="string">&quot;1.2.0&quot;</span>)</span><br><span class="line">                    .addHeader(<span class="string">&quot;client&quot;</span>,<span class="string">&quot;android铂金版&quot;</span>)</span><br><span class="line">                    .build();</span><br><span class="line">            <span class="keyword">return</span> chain.proceed(request);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+
+<p>PS:注解里的可以覆盖掉拦截器里的内容.</p>
+
+    </div>
+
+    
+    
+    
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>小白
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="https://19981115.xyz/posts/18585/" title="Android 开发之网络编程 Retrofit">https://19981115.xyz/posts/18585/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://twitter.com/LverBai">
+            <span class="icon">
+              <i class="fab fa-twitter"></i>
+            </span>
+
+            <span class="label">Twitter</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="https://t.me/lmbai">
+            <span class="icon">
+              <i class="fab fa-telegram"></i>
+            </span>
+
+            <span class="label">Telegram</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          
+          <div class="post-tags">
+              <a href="/tags/Android/" rel="tag"><i class="fa fa-tag"></i> Android</a>
+              <a href="/tags/Retrofit/" rel="tag"><i class="fa fa-tag"></i> Retrofit</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/6054/" rel="prev" title="Android开发之网络编程框架-OkHttp">
+      <i class="fa fa-chevron-left"></i> Android开发之网络编程框架-OkHttp
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Android-%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B-Retrofit"><span class="nav-number">1.</span> <span class="nav-text">Android 网络编程 Retrofit</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E6%A1%A3%E5%92%8C%E4%BB%A3%E7%A0%81"><span class="nav-number">2.</span> <span class="nav-text">文档和代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E4%BE%9D%E8%B5%96"><span class="nav-number">3.</span> <span class="nav-text">添加依赖</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%A5%E9%97%A8%E4%BB%A3%E7%A0%81"><span class="nav-number">4.</span> <span class="nav-text">入门代码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%9D%E6%AD%A5%E5%B0%81%E8%A3%85"><span class="nav-number">5.</span> <span class="nav-text">初步封装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A5%E5%8F%A3%E5%AE%9A%E4%B9%89"><span class="nav-number">6.</span> <span class="nav-text">接口定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#get-%E8%AF%B7%E6%B1%82"><span class="nav-number">7.</span> <span class="nav-text">get 请求</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#post-%E8%AF%B7%E6%B1%82%EF%BC%8Cbody-%E6%90%BA%E5%B8%A6%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%86%85%E5%AE%B9-json"><span class="nav-number">8.</span> <span class="nav-text">post 请求，body 携带字符串内容(json)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#post-%E8%AF%B7%E6%B1%82-Url-%E6%90%BA%E5%B8%A6%E5%8F%82%E6%95%B0"><span class="nav-number">9.</span> <span class="nav-text">post 请求 Url 携带参数</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%8D%95%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="nav-number">10.</span> <span class="nav-text">单文件上传</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%B8%8A%E4%BC%A0%E6%96%87%E4%BB%B6%E5%8F%8A%E9%99%84%E5%B8%A6%E4%BF%A1%E6%81%AF"><span class="nav-number">11.</span> <span class="nav-text">上传文件及附带信息</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%A4%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="nav-number">12.</span> <span class="nav-text">多文件上传</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD"><span class="nav-number">13.</span> <span class="nav-text">文件下载</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8F%90%E4%BA%A4%E8%A1%A8%E5%8D%95"><span class="nav-number">14.</span> <span class="nav-text">提交表单</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%B3%E4%BA%8E%E5%8F%82%E6%95%B0%E7%9A%84%E6%8E%A5%E5%8F%A3"><span class="nav-number">15.</span> <span class="nav-text">关于参数的接口</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#header-%E6%B3%A8%E8%A7%A3"><span class="nav-number">16.</span> <span class="nav-text">header 注解</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小白"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小白</p>
+  <div class="site-description" itemprop="description">随言笔记，胡乱编写</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">笔记</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lovebai" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lovebai" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:kuxiaoju@gmail.com" title="E-Mail → mailto:kuxiaoju@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 2019 – 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小白</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+      <script src="https://cdn.jsdelivr.net/gh/lovebai/live2d-widget@master/autoload.js"></script>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+  <script>
+var pjax = new Pjax({
+  selectors: [
+    'head title',
+    '#page-configurations',
+    '.content-wrap',
+    '.post-toc-wrap',
+    '.languages',
+    '#pjax'
+  ],
+  switches: {
+    '.post-toc-wrap': Pjax.switches.innerHTML
+  },
+  analytics: false,
+  cacheBust: false,
+  scrollTo : !CONFIG.bookmark.enable
+});
+
+window.addEventListener('pjax:success', () => {
+  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
+    var code = element.text || element.textContent || element.innerHTML || '';
+    var parent = element.parentNode;
+    parent.removeChild(element);
+    var script = document.createElement('script');
+    if (element.id) {
+      script.id = element.id;
+    }
+    if (element.className) {
+      script.className = element.className;
+    }
+    if (element.type) {
+      script.type = element.type;
+    }
+    if (element.src) {
+      script.src = element.src;
+      // Force synchronous loading of peripheral JS.
+      script.async = false;
+    }
+    if (element.dataset.pjax !== undefined) {
+      script.dataset.pjax = '';
+    }
+    if (code !== '') {
+      script.appendChild(document.createTextNode(code));
+    }
+    parent.appendChild(script);
+  });
+  NexT.boot.refresh();
+  // Define Motion Sequence & Bootstrap Motion.
+  if (CONFIG.motion.enable) {
+    NexT.motion.integrator
+      .init()
+      .add(NexT.motion.middleWares.subMenu)
+      .add(NexT.motion.middleWares.postList)
+      .bootstrap();
+  }
+  NexT.utils.updateSidebarPosition();
+});
+</script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+<script data-pjax>
+document.querySelectorAll('.pdfobject-container').forEach(element => {
+  let url = element.dataset.target;
+  let pdfOpenParams = {
+    navpanes : 0,
+    toolbar  : 0,
+    statusbar: 0,
+    pagemode : 'thumbs',
+    view     : 'FitH'
+  };
+  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
+
+  if (NexT.utils.supportsPDFs()) {
+    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
+  } else {
+    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
+  }
+});
+</script>
+
+
+
+
+    <div id="pjax">
+  
+
+  
+
+    </div>
+</body>
+</html>

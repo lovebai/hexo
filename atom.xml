@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-03-27T04:05:23.734Z</updated>
+  <updated>2022-03-29T09:42:58.082Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android 开发之网络编程 Retrofit</title>
+    <link href="https://19981115.xyz/posts/18585/"/>
+    <id>https://19981115.xyz/posts/18585/</id>
+    <published>2022-03-29T09:11:37.000Z</published>
+    <updated>2022-03-29T09:42:58.082Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Android-网络编程-Retrofit&quot;&gt;&lt;a href=&quot;#Android-网络编程-Retrofit&quot; class=&quot;headerlink&quot; title=&quot;Android 网络编程 Retrofit&quot;&gt;&lt;/a&gt;Android 网络编程 Retrofit&lt;/h1&gt;&lt;p&gt;适用于 Android 和 Java 的类型安全 HTTP 客户端。Retrofit 是一款基于注解把 http api 转成接口，使用起来更加简单。&lt;/p&gt;
+&lt;h1 id=&quot;文档和代码&quot;&gt;&lt;a href=&quot;#文档和代码&quot; class=&quot;headerlink&quot; title=&quot;文档和代码&quot;&gt;&lt;/a&gt;文档和代码&lt;/h1&gt;&lt;p&gt;文档地址：&lt;/p&gt;
+&lt;p&gt;Retrofit 文档 ：&lt;a href=&quot;https://square.github.io/retrofit/&quot;&gt;https://square.github.io/retrofit/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Github 地址：&lt;a href=&quot;https://github.com/square/retrofit&quot;&gt;https://github.com/square/retrofit&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Retrofit API 文档：&lt;a href=&quot;&quot;&gt;https://square.github.io/retrofit/2.x/retrofit/&lt;/a&gt;&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Android" scheme="https://19981115.xyz/tags/Android/"/>
+    
+    <category term="Retrofit" scheme="https://19981115.xyz/tags/Retrofit/"/>
+    
+  </entry>
   
   <entry>
     <title>Android开发之网络编程框架-OkHttp</title>
@@ -115,9 +140,9 @@
     <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
-    
     <category term="WEB" scheme="https://19981115.xyz/tags/WEB/"/>
+    
+    <category term="Golang" scheme="https://19981115.xyz/tags/Golang/"/>
     
   </entry>
   
@@ -509,33 +534,6 @@
 &lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;#123; partial(&amp;#x27;_macro/post.njk&amp;#x27;, &amp;#123;post: post, is_index: true&amp;#125;) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;替换为以下代码即可</summary>
-    
-    
-    
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
-    
-    <category term="node" scheme="https://19981115.xyz/tags/node/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hexo博客使用静态链接</title>
-    <link href="https://19981115.xyz/posts/11857/"/>
-    <id>https://19981115.xyz/posts/11857/</id>
-    <published>2020-03-07T04:18:23.000Z</published>
-    <updated>2021-08-01T07:23:59.659Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;hexo-静态链接&quot;&gt;&lt;a href=&quot;#hexo-静态链接&quot; class=&quot;headerlink&quot; title=&quot;hexo-静态链接&quot;&gt;&lt;/a&gt;hexo-静态链接&lt;/h1&gt;&lt;p&gt;一个基于帖子标题生成静态帖子链接的Hexo插件。&lt;/p&gt;
-&lt;h2 id=&quot;开始安装&quot;&gt;&lt;a href=&quot;#开始安装&quot; class=&quot;headerlink&quot; title=&quot;开始安装&quot;&gt;&lt;/a&gt;开始安装&lt;/h2&gt;&lt;p&gt;添加插件到 HEXO 中，执行以下命令行安装:&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;npm install hexo-abbrlink --save&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;在 config.yml 文件中配置以下信息:</summary>
     
     
     
