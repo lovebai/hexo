@@ -2,9 +2,10 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta name="generator" content="Hexo 5.4.0">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+
+
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
@@ -13,15 +14,14 @@
 <link rel="stylesheet" href="/css/main.css">
 
 
-<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
 
-<script id="hexo-configurations">
-    var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"19981115.xyz","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac night"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
-  </script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
 
-  <meta name="description" content="Golang http 标准库http 标准库了 http 客户端和服务器的实现，注意了，客户端实现可以发出 http 请求，并解析响应。服务器可以实现 http server 功能。市面上的所有 golang web 框架都是基于 http 标准库实现的。">
+<script class="next-config" data-name="main" type="application/json">{"hostname":"19981115.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Golang http 标准库http 标准库了 http 客户端和服务器的实现，注意了，客户端实现可以发出 http 请求，并解析响应。服务器可以实现 http server 功能。市面上的所有 golang web 框架都是基于 http 标准库实现的。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Golang-WEB开发-笔记">
 <meta property="og:url" content="https://19981115.xyz/posts/45355/index.html">
@@ -35,73 +35,47 @@
 <meta property="article:tag" content="Golang">
 <meta name="twitter:card" content="summary">
 
+
 <link rel="canonical" href="https://19981115.xyz/posts/45355/">
 
 
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome : false,
-    isPost : true,
-    lang   : 'zh-CN'
-  };
-</script>
 
-  <title>Golang-WEB开发-笔记 | MY-Notes</title>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://19981115.xyz/posts/45355/","path":"posts/45355/","title":"Golang-WEB开发-笔记"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Golang-WEB开发-笔记 | MY-Notes</title>
   
 
 
 
 
 
-
   <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
 <link rel="alternate" href="/atom.xml" title="MY-Notes" type="application/atom+xml">
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage">
-  <div class="container use-motion">
-    <div class="headband"></div>
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
 
+  <main class="main">
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏">
-      <span class="toggle-line toggle-line-first"></span>
-      <span class="toggle-line toggle-line-middle"></span>
-      <span class="toggle-line toggle-line-last"></span>
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
     </div>
   </div>
 
   <div class="site-meta">
 
     <a href="/" class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <h1 class="site-title">MY-Notes</h1>
-      <span class="logo-line-after"><i></i></span>
+      <i class="logo-line"></i>
+      <p class="site-title">MY-Notes</p>
+      <i class="logo-line"></i>
     </a>
       <p class="site-subtitle" itemprop="description">MY Quick Notes</p>
   </div>
@@ -115,34 +89,8 @@
 
 
 
-
 <nav class="site-nav">
-  <ul id="menu" class="main-menu menu">
-        <li class="menu-item menu-item-home">
-
-    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
-
-  </li>
-        <li class="menu-item menu-item-about">
-
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
-
-  </li>
-        <li class="menu-item menu-item-tags">
-
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
-
-  </li>
-        <li class="menu-item menu-item-categories">
-
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
-
-  </li>
-        <li class="menu-item menu-item-archives">
-
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
-
-  </li>
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -153,23 +101,22 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup">
-        <div class="search-header">
+    <div class="popup search-popup"><div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
   <div class="search-input-container">
-    <input autocomplete="off" autocapitalize="off"
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close">
+  <span class="popup-btn-close" role="button">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
-<div id="search-result">
-  <div id="no-result">
-    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
   </div>
 </div>
 
@@ -177,70 +124,153 @@
   </div>
 
 </div>
-    </header>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
 
-    
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Golang-http-%E6%A0%87%E5%87%86%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">Golang http 标准库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#http-%E6%A0%87%E5%87%86%E5%BA%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8A%9F%E8%83%BD"><span class="nav-number">1.1.</span> <span class="nav-text">http 标准库客户端功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%87%BA-GET-%E8%AF%B7%E6%B1%82"><span class="nav-number">1.1.1.</span> <span class="nav-text">发出 GET 请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET-%E8%AF%B7%E6%B1%82%EF%BC%8C%E6%8A%8A%E4%B8%80%E4%BA%9B%E5%8F%82%E6%95%B0%E5%81%9A%E6%88%90%E5%8F%98%E9%87%8F%E8%80%8C%E4%B8%8D%E6%98%AF%E7%9B%B4%E6%8E%A5%E6%94%BE%E5%88%B0-url"><span class="nav-number">1.1.2.</span> <span class="nav-text">GET 请求，把一些参数做成变量而不是直接放到 url</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-JSON-%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C"><span class="nav-number">1.1.3.</span> <span class="nav-text">解析 JSON 类型的返回结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET-%E8%AF%B7%E6%B1%82%E6%B7%BB%E5%8A%A0%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="nav-number">1.1.4.</span> <span class="nav-text">GET 请求添加请求头</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%87%BA-POST-%E8%AF%B7%E6%B1%82"><span class="nav-number">1.2.</span> <span class="nav-text">发出 POST 请求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E9%80%81-JSON-%E6%95%B0%E6%8D%AE%E7%9A%84-post-%E8%AF%B7%E6%B1%82"><span class="nav-number">1.2.1.</span> <span class="nav-text">发送 JSON 数据的 post 请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Client-%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82"><span class="nav-number">1.2.2.</span> <span class="nav-text">使用 Client 自定义请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-Server"><span class="nav-number">1.3.</span> <span class="nav-text">HTTP Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Handler-%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%A4%84%E7%90%86"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用 Handler 实现并发处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Golang-%E6%A0%87%E5%87%86%E5%BA%93-template"><span class="nav-number">2.</span> <span class="nav-text">Golang 标准库 template</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%A8%A1%E6%9D%BF%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.1.</span> <span class="nav-text">第一个模板实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%98%AF%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text">也可以是结构体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html-%E6%A8%A1%E6%9D%BF"><span class="nav-number">2.3.</span> <span class="nav-text">html 模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%92%8C%E7%A9%BA%E6%A0%BC"><span class="nav-number">2.4.</span> <span class="nav-text">文本和空格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E9%81%93-pipeline"><span class="nav-number">2.5.</span> <span class="nav-text">管道 pipeline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">2.6.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="nav-number">2.7.</span> <span class="nav-text">条件判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%BF%AD%E4%BB%A3"><span class="nav-number">2.8.</span> <span class="nav-text">循环迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#with%E2%80%A6end"><span class="nav-number">2.9.</span> <span class="nav-text">with…end</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-number">2.10.</span> <span class="nav-text">内置函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97-template%EF%BC%9Adefine-%E5%92%8C-template"><span class="nav-number">2.11.</span> <span class="nav-text">嵌套 template：define 和 template</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HttpRouter"><span class="nav-number">3.</span> <span class="nav-text">HttpRouter</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">3.1.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%B7%AF%E7%94%B1%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.2.</span> <span class="nav-text">第一个路由实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-router-%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">http router 请求方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#restful-%E9%A3%8E%E6%A0%BC%E8%B7%AF%E7%94%B1"><span class="nav-number">3.4.</span> <span class="nav-text">restful 风格路由</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E7%AE%80%E4%BB%8B"><span class="nav-number">4.</span> <span class="nav-text">Gin 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gin-%E5%AE%98%E7%BD%91"><span class="nav-number">4.1.</span> <span class="nav-text">Gin 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gin-%E7%AE%80%E4%BB%8B"><span class="nav-number">4.2.</span> <span class="nav-text">gin 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gin-%E7%89%B9%E5%BE%81"><span class="nav-number">4.3.</span> <span class="nav-text">gin 特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-gin"><span class="nav-number">4.4.</span> <span class="nav-text">第一个 gin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%AE%9E%E7%8E%B0%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95"><span class="nav-number">5.</span> <span class="nav-text">Gin 实现用户登录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="nav-number">5.1.</span> <span class="nav-text">实现步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6-tempates"><span class="nav-number">5.1.1.</span> <span class="nav-text">创建一个文件 tempates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95-html-%E6%96%87%E4%BB%B6"><span class="nav-number">5.1.2.</span> <span class="nav-text">创建一个登录 html 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%AC%A2%E8%BF%8E-html-%E9%A1%B5%E9%9D%A2"><span class="nav-number">5.1.3.</span> <span class="nav-text">创建一个欢迎 html 页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Gin-%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91"><span class="nav-number">5.1.4.</span> <span class="nav-text">使用 Gin 处理逻辑</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">Gin 请求参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Get-%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0"><span class="nav-number">6.1.</span> <span class="nav-text">Get 请求参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Post-%E5%8F%82%E6%95%B0"><span class="nav-number">6.2.</span> <span class="nav-text">Post 参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%8A%B2%E5%8F%82%E6%95%B0%EF%BC%88restful-%E9%A3%8E%E6%A0%BC%EF%BC%89"><span class="nav-number">6.3.</span> <span class="nav-text">路劲参数（restful 风格）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A2%E6%9C%89-Get-%E4%B9%9F%E6%9C%89-Post"><span class="nav-number">6.4.</span> <span class="nav-text">既有 Get 也有 Post</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E8%A1%A8%E5%8D%95%E5%A4%84%E7%90%86"><span class="nav-number">7.</span> <span class="nav-text">Gin 表单处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-HTML-%E8%A1%A8%E5%8D%95"><span class="nav-number">7.1.</span> <span class="nav-text">创建一个 HTML 表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-code"><span class="nav-number">7.2.</span> <span class="nav-text">Go code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A"><span class="nav-number">8.</span> <span class="nav-text">Gin 数据绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A-Form-%E8%A1%A8%E5%8D%95"><span class="nav-number">8.1.</span> <span class="nav-text">绑定 Form 表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0"><span class="nav-number">8.2.</span> <span class="nav-text">绑定查询参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%BB%91%E5%AE%9A"><span class="nav-number">8.3.</span> <span class="nav-text">路径请求参数绑定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E8%AE%BF%E9%97%AE%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90-BootStrap-%E6%A1%86%E6%9E%B6"><span class="nav-number">9.</span> <span class="nav-text">Gin 访问静态文件集成 BootStrap 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-BootStrap"><span class="nav-number">9.1.</span> <span class="nav-text">下载 BootStrap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-bootstrap-css-%E5%92%8C-js-%E6%96%87%E4%BB%B6"><span class="nav-number">9.2.</span> <span class="nav-text">添加 bootstrap css 和 js 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-html-%E6%96%87%E4%BB%B6"><span class="nav-number">9.3.</span> <span class="nav-text">创建 html 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-Code"><span class="nav-number">9.4.</span> <span class="nav-text">Go Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">10.</span> <span class="nav-text">Gin 使用中间件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gin-%E9%BB%98%E8%AE%A4%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">10.1.</span> <span class="nav-text">Gin 默认中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">10.2.</span> <span class="nav-text">自定义中间件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Gin-BasicAuth-%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">11.</span> <span class="nav-text">使用 Gin BasicAuth 中间件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">11.1.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">11.2.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-cookie-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">12.</span> <span class="nav-text">Gin cookie 的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gin-cookie-%E7%9A%84%E4%BD%BF%E7%94%A8-1"><span class="nav-number">12.1.</span> <span class="nav-text">Gin cookie 的使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E4%BD%BF%E7%94%A8-Session"><span class="nav-number">13.</span> <span class="nav-text">Gin 使用 Session</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-gin-session-%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">13.1.</span> <span class="nav-text">使用 gin session 中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">13.2.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%AE%9E%E7%8E%B0-restful-%E9%A3%8E%E6%A0%BC%E7%9A%84-CRUD"><span class="nav-number">14.</span> <span class="nav-text">Gin 实现 restful 风格的 CRUD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%88%86%E7%BB%84"><span class="nav-number">15.</span> <span class="nav-text">Gin 实现路由分组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E8%BE%93%E5%87%BA%E6%B8%B2%E6%9F%93"><span class="nav-number">16.</span> <span class="nav-text">Gin 输出渲染</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="nav-number">17.</span> <span class="nav-text">Gin 实现文件上传</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-html-%E6%96%87%E4%BB%B6-1"><span class="nav-number">17.1.</span> <span class="nav-text">创建 html 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-Code-1"><span class="nav-number">17.2.</span> <span class="nav-text">Go Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84"><span class="nav-number">18.</span> <span class="nav-text">Gin 博客项目-项目架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E8%8C%83%E5%8C%85%E5%8F%8A%E7%9B%AE%E5%BD%95"><span class="nav-number">18.1.</span> <span class="nav-text">规范包及目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="nav-number">18.2.</span> <span class="nav-text">初始化项目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E9%9B%86%E6%88%90-gorm"><span class="nav-number">19.</span> <span class="nav-text">Gin 博客项目-集成 gorm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%8C%85"><span class="nav-number">19.1.</span> <span class="nav-text">下载包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B"><span class="nav-number">19.2.</span> <span class="nav-text">创建模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-Dao"><span class="nav-number">19.3.</span> <span class="nav-text">创建 Dao</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95-1"><span class="nav-number">19.4.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E9%9B%86%E6%88%90-Bootstrap-%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E8%A1%A8%E5%8D%95"><span class="nav-number">20.</span> <span class="nav-text">Gin 博客项目-集成 Bootstrap 创建用户表单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-bootstrap"><span class="nav-number">20.1.</span> <span class="nav-text">下载 bootstrap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-js-%E5%92%8C-css-%E5%88%B0-assets-%E7%9B%AE%E5%BD%95%E4%B8%8B%E9%9D%A2"><span class="nav-number">20.2.</span> <span class="nav-text">添加 js 和 css 到 assets 目录下面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7-html"><span class="nav-number">20.3.</span> <span class="nav-text">创建添加用户 html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8C%E8%B7%AF%E7%94%B1"><span class="nav-number">21.</span> <span class="nav-text">Gin 博客项目-实现控制器和路由</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8-controller"><span class="nav-number">21.1.</span> <span class="nav-text">控制器 controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1-router"><span class="nav-number">21.2.</span> <span class="nav-text">路由 router</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E8%AE%BE%E8%AE%A1%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2"><span class="nav-number">22.</span> <span class="nav-text">Gin 博客项目-设计静态页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#header"><span class="nav-number">22.1.</span> <span class="nav-text">header</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C-register-html"><span class="nav-number">22.2.</span> <span class="nav-text">注册 register.html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95-login-html"><span class="nav-number">22.3.</span> <span class="nav-text">登录 login.html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E9%A1%B5-index-html"><span class="nav-number">22.4.</span> <span class="nav-text">首页 index.html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C"><span class="nav-number">23.</span> <span class="nav-text">Gin 博客项目-用户注册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#controller"><span class="nav-number">23.1.</span> <span class="nav-text">controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#router"><span class="nav-number">23.2.</span> <span class="nav-text">router</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95"><span class="nav-number">24.</span> <span class="nav-text">Gin 博客项目-用户登录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dao"><span class="nav-number">24.1.</span> <span class="nav-text">dao</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#controller-1"><span class="nav-number">24.2.</span> <span class="nav-text">controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#router-1"><span class="nav-number">24.3.</span> <span class="nav-text">router</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#login-html"><span class="nav-number">24.4.</span> <span class="nav-text">login.html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E9%9B%86%E6%88%90-markdown-%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">25.</span> <span class="nav-text">Gin 博客项目-集成 markdown 编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-mdeditor"><span class="nav-number">25.1.</span> <span class="nav-text">下载 mdeditor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90"><span class="nav-number">25.2.</span> <span class="nav-text">集成</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%A8%A1%E5%9E%8B%E5%92%8C-DAO"><span class="nav-number">26.</span> <span class="nav-text">Gin 博客项目-创建博客模型和 DAO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B-1"><span class="nav-number">26.1.</span> <span class="nav-text">创建模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-DAO"><span class="nav-number">26.2.</span> <span class="nav-text">创建 DAO</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8C%E8%B7%AF%E7%94%B1"><span class="nav-number">27.</span> <span class="nav-text">Gin 博客项目-创建博客控制器和路由</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-number">27.1.</span> <span class="nav-text">创建控制器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1"><span class="nav-number">27.2.</span> <span class="nav-text">创建路由</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E6%B7%BB%E5%8A%A0%E5%8D%9A%E5%AE%A2"><span class="nav-number">28.</span> <span class="nav-text">Gin 博客项目-添加博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2"><span class="nav-number">28.1.</span> <span class="nav-text">添加博客页面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E5%88%97%E8%A1%A8"><span class="nav-number">29.</span> <span class="nav-text">Gin 博客项目-实现博客列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E5%88%97%E8%A1%A8"><span class="nav-number">29.1.</span> <span class="nav-text">博客列表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86"><span class="nav-number">30.</span> <span class="nav-text">Gin 博客项目-实现博客详细</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E9%A1%B5%E9%9D%A2"><span class="nav-number">30.1.</span> <span class="nav-text">博客详细页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-number">30.2.</span> <span class="nav-text">博客详细控制器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beego-%E8%B5%B7%E6%AD%A5"><span class="nav-number">31.</span> <span class="nav-text">beego 起步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85-beego"><span class="nav-number">31.1.</span> <span class="nav-text">下载安装 beego</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#beego-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7-bee"><span class="nav-number">31.2.</span> <span class="nav-text">beego 命令行工具 bee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-beego-%E9%A1%B9%E7%9B%AE"><span class="nav-number">31.3.</span> <span class="nav-text">第一个 beego 项目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beego-restful-api"><span class="nav-number">32.</span> <span class="nav-text">beego restful api</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-restful-api-%E9%A1%B9%E7%9B%AE"><span class="nav-number">32.1.</span> <span class="nav-text">创建 restful api 项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B-2"><span class="nav-number">32.2.</span> <span class="nav-text">创建模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%8E%A7%E5%88%B6%E5%99%A8-controller"><span class="nav-number">32.3.</span> <span class="nav-text">创建控制器 controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1-1"><span class="nav-number">32.4.</span> <span class="nav-text">创建路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E5%B9%B6%E7%94%9F%E6%88%90-swagger"><span class="nav-number">32.5.</span> <span class="nav-text">运行并生成 swagger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95-2"><span class="nav-number">32.6.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beego-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%86%99%E4%B8%80%E4%B8%AA-beego-%E9%A1%B9%E7%9B%AE"><span class="nav-number">33.</span> <span class="nav-text">beego 从零开始写一个 beego 项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="nav-number">33.1.</span> <span class="nav-text">1. 创建项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA-controller"><span class="nav-number">33.2.</span> <span class="nav-text">2. 创建 controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BA-router-%E8%B7%AF%E7%94%B1"><span class="nav-number">33.3.</span> <span class="nav-text">3. 创建 router 路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6-index-tpl"><span class="nav-number">33.4.</span> <span class="nav-text">4. 创建模板文件 index.tpl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-main-go"><span class="nav-number">33.5.</span> <span class="nav-text">5. main.go</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beego-orm-%E8%B5%B7%E6%AD%A5"><span class="nav-number">34.</span> <span class="nav-text">beego orm 起步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%BA%93"><span class="nav-number">34.1.</span> <span class="nav-text">安装库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B"><span class="nav-number">34.1.1.</span> <span class="nav-text">简单示例</span></a></li></ol></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小白"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小白</p>
+  <div class="site-description" itemprop="description">随言笔记，胡乱编写</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">65</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lovebai" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lovebai" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:kuxiaoju@gmail.com" title="E-Mail → mailto:kuxiaoju@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
   </div>
 
 
-    <main class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
 
-          <div class="content post posts-expand">
-            
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
 
     
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
   
   
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://19981115.xyz/posts/45355/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
       <meta itemprop="name" content="小白">
-      <meta itemprop="description" content="随言笔记，胡乱编写">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="MY-Notes">
+      <meta itemprop="description" content="随言笔记，胡乱编写">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Golang-WEB开发-笔记 | MY-Notes">
+      <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
           Golang-WEB开发-笔记
         </h1>
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2022-01-26 00:01:55" itemprop="dateCreated datePublished" datetime="2022-01-26T00:01:55+08:00">2022-01-26</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2022-03-10 13:49:41" itemprop="dateModified" datetime="2022-03-10T13:49:41+08:00">2022-03-10</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-                </span>
-            </span>
+      <time title="创建时间：2022-01-26 00:01:55" itemprop="dateCreated datePublished" datetime="2022-01-26T00:01:55+08:00">2022-01-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2022-03-10 13:49:41" itemprop="dateModified" datetime="2022-03-10T13:49:41+08:00">2022-03-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
 
-          
+  
+</div>
 
         </div>
       </header>
@@ -249,8 +279,6 @@
     
     
     <div class="post-body" itemprop="articleBody">
-
-      
         <h1 id="Golang-http-标准库"><a href="#Golang-http-标准库" class="headerlink" title="Golang http 标准库"></a>Golang http 标准库</h1><p>http 标准库了 http 客户端和服务器的实现，注意了，客户端实现可以发出 http 请求，并解析响应。服务器可以实现 http server 功能。市面上的所有 golang web 框架都是基于 http 标准库实现的。</p>
 <span id="more"></span>
 
@@ -684,16 +712,18 @@
     
     
     
-        
 
-<div>
-<ul class="post-copyright">
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
   <li class="post-copyright-author">
-    <strong>本文作者： </strong>小白
+      <strong>原作者： </strong>小白
   </li>
   <li class="post-copyright-link">
-    <strong>本文链接：</strong>
-    <a href="https://19981115.xyz/posts/45355/" title="Golang-WEB开发-笔记">https://19981115.xyz/posts/45355/</a>
+      <strong>本文链接：</strong>
+      <a href="https://19981115.xyz/posts/45355/" title="Golang-WEB开发-笔记">https://19981115.xyz/posts/45355/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -701,48 +731,43 @@
 </ul>
 </div>
 
-        
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
 
-  <div class="followme">
-    <p>欢迎关注我的其它发布渠道</p>
+  <div class="social-list">
 
-    <div class="social-list">
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://twitter.com/LverBai">
+          <span class="icon">
+            <i class="fab fa-twitter"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://twitter.com/LverBai">
-            <span class="icon">
-              <i class="fab fa-twitter"></i>
-            </span>
+          <span class="label">Twitter</span>
+        </a>
+      </div>
 
-            <span class="label">Twitter</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="https://t.me/lmbai">
+          <span class="icon">
+            <i class="fab fa-telegram"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="https://t.me/lmbai">
-            <span class="icon">
-              <i class="fab fa-telegram"></i>
-            </span>
+          <span class="label">Telegram</span>
+        </a>
+      </div>
 
-            <span class="label">Telegram</span>
-          </a>
-        </div>
+      <div class="social-item">
+        <a target="_blank" class="social-link" href="/atom.xml">
+          <span class="icon">
+            <i class="fa fa-rss"></i>
+          </span>
 
-        <div class="social-item">
-          <a target="_blank" class="social-link" href="/atom.xml">
-            <span class="icon">
-              <i class="fa fa-rss"></i>
-            </span>
-
-            <span class="label">RSS</span>
-          </a>
-        </div>
-    </div>
+          <span class="label">RSS</span>
+        </a>
+      </div>
   </div>
+</div>
 
-
-      <footer class="post-footer">
-          
           <div class="post-tags">
               <a href="/tags/WEB/" rel="tag"><i class="fa fa-tag"></i> WEB</a>
               <a href="/tags/Golang/" rel="tag"><i class="fa fa-tag"></i> Golang</a>
@@ -750,288 +775,73 @@
 
         
 
-
-        
-    <div class="post-nav">
-      <div class="post-nav-item">
-    <a href="/posts/3751/" rel="prev" title="Golang-gorm笔记">
-      <i class="fa fa-chevron-left"></i> Golang-gorm笔记
-    </a></div>
-      <div class="post-nav-item">
-    <a href="/posts/41977/" rel="next" title="Java注解和反射-KuangShen">
-      Java注解和反射-KuangShen <i class="fa fa-chevron-right"></i>
-    </a></div>
-    </div>
-      </footer>
-    
-  </article>
-  
-  
-  
-
-
-
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/3751/" rel="prev" title="Golang-gorm笔记">
+                  <i class="fa fa-chevron-left"></i> Golang-gorm笔记
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/posts/41977/" rel="next" title="Java注解和反射-KuangShen">
+                  Java注解和反射-KuangShen <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
           </div>
-          
-
-<script>
-  window.addEventListener('tabs:register', () => {
-    let { activeClass } = CONFIG.comments;
-    if (CONFIG.comments.storage) {
-      activeClass = localStorage.getItem('comments_active') || activeClass;
-    }
-    if (activeClass) {
-      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
-      if (activeTab) {
-        activeTab.click();
-      }
-    }
-  });
-  if (CONFIG.comments.storage) {
-    window.addEventListener('tabs:click', event => {
-      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
-      let commentClass = event.target.classList[1];
-      localStorage.setItem('comments_active', commentClass);
-    });
-  }
-</script>
-
-        </div>
-          
-  
-  <div class="toggle sidebar-toggle">
-    <span class="toggle-line toggle-line-first"></span>
-    <span class="toggle-line toggle-line-middle"></span>
-    <span class="toggle-line toggle-line-last"></span>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          文章目录
-        </li>
-        <li class="sidebar-nav-overview">
-          站点概览
-        </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Golang-http-%E6%A0%87%E5%87%86%E5%BA%93"><span class="nav-number">1.</span> <span class="nav-text">Golang http 标准库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#http-%E6%A0%87%E5%87%86%E5%BA%93%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8A%9F%E8%83%BD"><span class="nav-number">1.1.</span> <span class="nav-text">http 标准库客户端功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E5%87%BA-GET-%E8%AF%B7%E6%B1%82"><span class="nav-number">1.1.1.</span> <span class="nav-text">发出 GET 请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET-%E8%AF%B7%E6%B1%82%EF%BC%8C%E6%8A%8A%E4%B8%80%E4%BA%9B%E5%8F%82%E6%95%B0%E5%81%9A%E6%88%90%E5%8F%98%E9%87%8F%E8%80%8C%E4%B8%8D%E6%98%AF%E7%9B%B4%E6%8E%A5%E6%94%BE%E5%88%B0-url"><span class="nav-number">1.1.2.</span> <span class="nav-text">GET 请求，把一些参数做成变量而不是直接放到 url</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%A7%A3%E6%9E%90-JSON-%E7%B1%BB%E5%9E%8B%E7%9A%84%E8%BF%94%E5%9B%9E%E7%BB%93%E6%9E%9C"><span class="nav-number">1.1.3.</span> <span class="nav-text">解析 JSON 类型的返回结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#GET-%E8%AF%B7%E6%B1%82%E6%B7%BB%E5%8A%A0%E8%AF%B7%E6%B1%82%E5%A4%B4"><span class="nav-number">1.1.4.</span> <span class="nav-text">GET 请求添加请求头</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%91%E5%87%BA-POST-%E8%AF%B7%E6%B1%82"><span class="nav-number">1.2.</span> <span class="nav-text">发出 POST 请求</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8F%91%E9%80%81-JSON-%E6%95%B0%E6%8D%AE%E7%9A%84-post-%E8%AF%B7%E6%B1%82"><span class="nav-number">1.2.1.</span> <span class="nav-text">发送 JSON 数据的 post 请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Client-%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%B7%E6%B1%82"><span class="nav-number">1.2.2.</span> <span class="nav-text">使用 Client 自定义请求</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-Server"><span class="nav-number">1.3.</span> <span class="nav-text">HTTP Server</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Handler-%E5%AE%9E%E7%8E%B0%E5%B9%B6%E5%8F%91%E5%A4%84%E7%90%86"><span class="nav-number">1.3.1.</span> <span class="nav-text">使用 Handler 实现并发处理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Golang-%E6%A0%87%E5%87%86%E5%BA%93-template"><span class="nav-number">2.</span> <span class="nav-text">Golang 标准库 template</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%A8%A1%E6%9D%BF%E5%AE%9E%E4%BE%8B"><span class="nav-number">2.1.</span> <span class="nav-text">第一个模板实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B9%9F%E5%8F%AF%E4%BB%A5%E6%98%AF%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">2.2.</span> <span class="nav-text">也可以是结构体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#html-%E6%A8%A1%E6%9D%BF"><span class="nav-number">2.3.</span> <span class="nav-text">html 模板</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E6%9C%AC%E5%92%8C%E7%A9%BA%E6%A0%BC"><span class="nav-number">2.4.</span> <span class="nav-text">文本和空格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%A1%E9%81%93-pipeline"><span class="nav-number">2.5.</span> <span class="nav-text">管道 pipeline</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%98%E9%87%8F"><span class="nav-number">2.6.</span> <span class="nav-text">变量</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9D%A1%E4%BB%B6%E5%88%A4%E6%96%AD"><span class="nav-number">2.7.</span> <span class="nav-text">条件判断</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BE%AA%E7%8E%AF%E8%BF%AD%E4%BB%A3"><span class="nav-number">2.8.</span> <span class="nav-text">循环迭代</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#with%E2%80%A6end"><span class="nav-number">2.9.</span> <span class="nav-text">with…end</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E7%BD%AE%E5%87%BD%E6%95%B0"><span class="nav-number">2.10.</span> <span class="nav-text">内置函数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%B5%8C%E5%A5%97-template%EF%BC%9Adefine-%E5%92%8C-template"><span class="nav-number">2.11.</span> <span class="nav-text">嵌套 template：define 和 template</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#HttpRouter"><span class="nav-number">3.</span> <span class="nav-text">HttpRouter</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85"><span class="nav-number">3.1.</span> <span class="nav-text">下载安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA%E8%B7%AF%E7%94%B1%E5%AE%9E%E4%BE%8B"><span class="nav-number">3.2.</span> <span class="nav-text">第一个路由实例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-router-%E8%AF%B7%E6%B1%82%E6%96%B9%E6%B3%95"><span class="nav-number">3.3.</span> <span class="nav-text">http router 请求方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#restful-%E9%A3%8E%E6%A0%BC%E8%B7%AF%E7%94%B1"><span class="nav-number">3.4.</span> <span class="nav-text">restful 风格路由</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E7%AE%80%E4%BB%8B"><span class="nav-number">4.</span> <span class="nav-text">Gin 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gin-%E5%AE%98%E7%BD%91"><span class="nav-number">4.1.</span> <span class="nav-text">Gin 官网</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gin-%E7%AE%80%E4%BB%8B"><span class="nav-number">4.2.</span> <span class="nav-text">gin 简介</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#gin-%E7%89%B9%E5%BE%81"><span class="nav-number">4.3.</span> <span class="nav-text">gin 特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-gin"><span class="nav-number">4.4.</span> <span class="nav-text">第一个 gin</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%AE%9E%E7%8E%B0%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95"><span class="nav-number">5.</span> <span class="nav-text">Gin 实现用户登录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%AD%A5%E9%AA%A4"><span class="nav-number">5.1.</span> <span class="nav-text">实现步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%96%87%E4%BB%B6-tempates"><span class="nav-number">5.1.1.</span> <span class="nav-text">创建一个文件 tempates</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E7%99%BB%E5%BD%95-html-%E6%96%87%E4%BB%B6"><span class="nav-number">5.1.2.</span> <span class="nav-text">创建一个登录 html 文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E6%AC%A2%E8%BF%8E-html-%E9%A1%B5%E9%9D%A2"><span class="nav-number">5.1.3.</span> <span class="nav-text">创建一个欢迎 html 页面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Gin-%E5%A4%84%E7%90%86%E9%80%BB%E8%BE%91"><span class="nav-number">5.1.4.</span> <span class="nav-text">使用 Gin 处理逻辑</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0"><span class="nav-number">6.</span> <span class="nav-text">Gin 请求参数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Get-%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0"><span class="nav-number">6.1.</span> <span class="nav-text">Get 请求参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Post-%E5%8F%82%E6%95%B0"><span class="nav-number">6.2.</span> <span class="nav-text">Post 参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%8A%B2%E5%8F%82%E6%95%B0%EF%BC%88restful-%E9%A3%8E%E6%A0%BC%EF%BC%89"><span class="nav-number">6.3.</span> <span class="nav-text">路劲参数（restful 风格）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%97%A2%E6%9C%89-Get-%E4%B9%9F%E6%9C%89-Post"><span class="nav-number">6.4.</span> <span class="nav-text">既有 Get 也有 Post</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E8%A1%A8%E5%8D%95%E5%A4%84%E7%90%86"><span class="nav-number">7.</span> <span class="nav-text">Gin 表单处理</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA-HTML-%E8%A1%A8%E5%8D%95"><span class="nav-number">7.1.</span> <span class="nav-text">创建一个 HTML 表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-code"><span class="nav-number">7.2.</span> <span class="nav-text">Go code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E6%95%B0%E6%8D%AE%E7%BB%91%E5%AE%9A"><span class="nav-number">8.</span> <span class="nav-text">Gin 数据绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A-Form-%E8%A1%A8%E5%8D%95"><span class="nav-number">8.1.</span> <span class="nav-text">绑定 Form 表单</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BB%91%E5%AE%9A%E6%9F%A5%E8%AF%A2%E5%8F%82%E6%95%B0"><span class="nav-number">8.2.</span> <span class="nav-text">绑定查询参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E5%BE%84%E8%AF%B7%E6%B1%82%E5%8F%82%E6%95%B0%E7%BB%91%E5%AE%9A"><span class="nav-number">8.3.</span> <span class="nav-text">路径请求参数绑定</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E8%AE%BF%E9%97%AE%E9%9D%99%E6%80%81%E6%96%87%E4%BB%B6%E9%9B%86%E6%88%90-BootStrap-%E6%A1%86%E6%9E%B6"><span class="nav-number">9.</span> <span class="nav-text">Gin 访问静态文件集成 BootStrap 框架</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-BootStrap"><span class="nav-number">9.1.</span> <span class="nav-text">下载 BootStrap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-bootstrap-css-%E5%92%8C-js-%E6%96%87%E4%BB%B6"><span class="nav-number">9.2.</span> <span class="nav-text">添加 bootstrap css 和 js 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-html-%E6%96%87%E4%BB%B6"><span class="nav-number">9.3.</span> <span class="nav-text">创建 html 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-Code"><span class="nav-number">9.4.</span> <span class="nav-text">Go Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">10.</span> <span class="nav-text">Gin 使用中间件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gin-%E9%BB%98%E8%AE%A4%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">10.1.</span> <span class="nav-text">Gin 默认中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">10.2.</span> <span class="nav-text">自定义中间件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-Gin-BasicAuth-%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">11.</span> <span class="nav-text">使用 Gin BasicAuth 中间件</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%A4%BA%E4%BE%8B"><span class="nav-number">11.1.</span> <span class="nav-text">示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95"><span class="nav-number">11.2.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-cookie-%E7%9A%84%E4%BD%BF%E7%94%A8"><span class="nav-number">12.</span> <span class="nav-text">Gin cookie 的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Gin-cookie-%E7%9A%84%E4%BD%BF%E7%94%A8-1"><span class="nav-number">12.1.</span> <span class="nav-text">Gin cookie 的使用</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E4%BD%BF%E7%94%A8-Session"><span class="nav-number">13.</span> <span class="nav-text">Gin 使用 Session</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%BF%E7%94%A8-gin-session-%E4%B8%AD%E9%97%B4%E4%BB%B6"><span class="nav-number">13.1.</span> <span class="nav-text">使用 gin session 中间件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E4%BE%8B"><span class="nav-number">13.2.</span> <span class="nav-text">实例</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%AE%9E%E7%8E%B0-restful-%E9%A3%8E%E6%A0%BC%E7%9A%84-CRUD"><span class="nav-number">14.</span> <span class="nav-text">Gin 实现 restful 风格的 CRUD</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%AE%9E%E7%8E%B0%E8%B7%AF%E7%94%B1%E5%88%86%E7%BB%84"><span class="nav-number">15.</span> <span class="nav-text">Gin 实现路由分组</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E8%BE%93%E5%87%BA%E6%B8%B2%E6%9F%93"><span class="nav-number">16.</span> <span class="nav-text">Gin 输出渲染</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0"><span class="nav-number">17.</span> <span class="nav-text">Gin 实现文件上传</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-html-%E6%96%87%E4%BB%B6-1"><span class="nav-number">17.1.</span> <span class="nav-text">创建 html 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Go-Code-1"><span class="nav-number">17.2.</span> <span class="nav-text">Go Code</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84"><span class="nav-number">18.</span> <span class="nav-text">Gin 博客项目-项目架构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A7%84%E8%8C%83%E5%8C%85%E5%8F%8A%E7%9B%AE%E5%BD%95"><span class="nav-number">18.1.</span> <span class="nav-text">规范包及目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9D%E5%A7%8B%E5%8C%96%E9%A1%B9%E7%9B%AE"><span class="nav-number">18.2.</span> <span class="nav-text">初始化项目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E9%9B%86%E6%88%90-gorm"><span class="nav-number">19.</span> <span class="nav-text">Gin 博客项目-集成 gorm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%8C%85"><span class="nav-number">19.1.</span> <span class="nav-text">下载包</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B"><span class="nav-number">19.2.</span> <span class="nav-text">创建模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-Dao"><span class="nav-number">19.3.</span> <span class="nav-text">创建 Dao</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95-1"><span class="nav-number">19.4.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E9%9B%86%E6%88%90-Bootstrap-%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E8%A1%A8%E5%8D%95"><span class="nav-number">20.</span> <span class="nav-text">Gin 博客项目-集成 Bootstrap 创建用户表单</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-bootstrap"><span class="nav-number">20.1.</span> <span class="nav-text">下载 bootstrap</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0-js-%E5%92%8C-css-%E5%88%B0-assets-%E7%9B%AE%E5%BD%95%E4%B8%8B%E9%9D%A2"><span class="nav-number">20.2.</span> <span class="nav-text">添加 js 和 css 到 assets 目录下面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7-html"><span class="nav-number">20.3.</span> <span class="nav-text">创建添加用户 html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%AE%9E%E7%8E%B0%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8C%E8%B7%AF%E7%94%B1"><span class="nav-number">21.</span> <span class="nav-text">Gin 博客项目-实现控制器和路由</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8E%A7%E5%88%B6%E5%99%A8-controller"><span class="nav-number">21.1.</span> <span class="nav-text">控制器 controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%B7%AF%E7%94%B1-router"><span class="nav-number">21.2.</span> <span class="nav-text">路由 router</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E8%AE%BE%E8%AE%A1%E9%9D%99%E6%80%81%E9%A1%B5%E9%9D%A2"><span class="nav-number">22.</span> <span class="nav-text">Gin 博客项目-设计静态页面</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#header"><span class="nav-number">22.1.</span> <span class="nav-text">header</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B3%A8%E5%86%8C-register-html"><span class="nav-number">22.2.</span> <span class="nav-text">注册 register.html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%99%BB%E5%BD%95-login-html"><span class="nav-number">22.3.</span> <span class="nav-text">登录 login.html</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%A6%96%E9%A1%B5-index-html"><span class="nav-number">22.4.</span> <span class="nav-text">首页 index.html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E7%94%A8%E6%88%B7%E6%B3%A8%E5%86%8C"><span class="nav-number">23.</span> <span class="nav-text">Gin 博客项目-用户注册</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#controller"><span class="nav-number">23.1.</span> <span class="nav-text">controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#router"><span class="nav-number">23.2.</span> <span class="nav-text">router</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95"><span class="nav-number">24.</span> <span class="nav-text">Gin 博客项目-用户登录</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#dao"><span class="nav-number">24.1.</span> <span class="nav-text">dao</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#controller-1"><span class="nav-number">24.2.</span> <span class="nav-text">controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#router-1"><span class="nav-number">24.3.</span> <span class="nav-text">router</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#login-html"><span class="nav-number">24.4.</span> <span class="nav-text">login.html</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E9%9B%86%E6%88%90-markdown-%E7%BC%96%E8%BE%91%E5%99%A8"><span class="nav-number">25.</span> <span class="nav-text">Gin 博客项目-集成 markdown 编辑器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD-mdeditor"><span class="nav-number">25.1.</span> <span class="nav-text">下载 mdeditor</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E9%9B%86%E6%88%90"><span class="nav-number">25.2.</span> <span class="nav-text">集成</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%A8%A1%E5%9E%8B%E5%92%8C-DAO"><span class="nav-number">26.</span> <span class="nav-text">Gin 博客项目-创建博客模型和 DAO</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B-1"><span class="nav-number">26.1.</span> <span class="nav-text">创建模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-DAO"><span class="nav-number">26.2.</span> <span class="nav-text">创建 DAO</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%88%9B%E5%BB%BA%E5%8D%9A%E5%AE%A2%E6%8E%A7%E5%88%B6%E5%99%A8%E5%92%8C%E8%B7%AF%E7%94%B1"><span class="nav-number">27.</span> <span class="nav-text">Gin 博客项目-创建博客控制器和路由</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-number">27.1.</span> <span class="nav-text">创建控制器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1"><span class="nav-number">27.2.</span> <span class="nav-text">创建路由</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E6%B7%BB%E5%8A%A0%E5%8D%9A%E5%AE%A2"><span class="nav-number">28.</span> <span class="nav-text">Gin 博客项目-添加博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B7%BB%E5%8A%A0%E5%8D%9A%E5%AE%A2%E9%A1%B5%E9%9D%A2"><span class="nav-number">28.1.</span> <span class="nav-text">添加博客页面</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E5%88%97%E8%A1%A8"><span class="nav-number">29.</span> <span class="nav-text">Gin 博客项目-实现博客列表</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E5%88%97%E8%A1%A8"><span class="nav-number">29.1.</span> <span class="nav-text">博客列表</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Gin-%E5%8D%9A%E5%AE%A2%E9%A1%B9%E7%9B%AE-%E5%AE%9E%E7%8E%B0%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86"><span class="nav-number">30.</span> <span class="nav-text">Gin 博客项目-实现博客详细</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E9%A1%B5%E9%9D%A2"><span class="nav-number">30.1.</span> <span class="nav-text">博客详细页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8D%9A%E5%AE%A2%E8%AF%A6%E7%BB%86%E6%8E%A7%E5%88%B6%E5%99%A8"><span class="nav-number">30.2.</span> <span class="nav-text">博客详细控制器</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beego-%E8%B5%B7%E6%AD%A5"><span class="nav-number">31.</span> <span class="nav-text">beego 起步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85-beego"><span class="nav-number">31.1.</span> <span class="nav-text">下载安装 beego</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#beego-%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7-bee"><span class="nav-number">31.2.</span> <span class="nav-text">beego 命令行工具 bee</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E4%B8%AA-beego-%E9%A1%B9%E7%9B%AE"><span class="nav-number">31.3.</span> <span class="nav-text">第一个 beego 项目</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beego-restful-api"><span class="nav-number">32.</span> <span class="nav-text">beego restful api</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA-restful-api-%E9%A1%B9%E7%9B%AE"><span class="nav-number">32.1.</span> <span class="nav-text">创建 restful api 项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%A8%A1%E5%9E%8B-2"><span class="nav-number">32.2.</span> <span class="nav-text">创建模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E6%8E%A7%E5%88%B6%E5%99%A8-controller"><span class="nav-number">32.3.</span> <span class="nav-text">创建控制器 controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%88%9B%E5%BB%BA%E8%B7%AF%E7%94%B1-1"><span class="nav-number">32.4.</span> <span class="nav-text">创建路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E5%B9%B6%E7%94%9F%E6%88%90-swagger"><span class="nav-number">32.5.</span> <span class="nav-text">运行并生成 swagger</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B5%8B%E8%AF%95-2"><span class="nav-number">32.6.</span> <span class="nav-text">测试</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beego-%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E5%86%99%E4%B8%80%E4%B8%AA-beego-%E9%A1%B9%E7%9B%AE"><span class="nav-number">33.</span> <span class="nav-text">beego 从零开始写一个 beego 项目</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="nav-number">33.1.</span> <span class="nav-text">1. 创建项目结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E5%88%9B%E5%BB%BA-controller"><span class="nav-number">33.2.</span> <span class="nav-text">2. 创建 controller</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E5%88%9B%E5%BB%BA-router-%E8%B7%AF%E7%94%B1"><span class="nav-number">33.3.</span> <span class="nav-text">3. 创建 router 路由</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%88%9B%E5%BB%BA%E6%A8%A1%E6%9D%BF%E6%96%87%E4%BB%B6-index-tpl"><span class="nav-number">33.4.</span> <span class="nav-text">4. 创建模板文件 index.tpl</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-main-go"><span class="nav-number">33.5.</span> <span class="nav-text">5. main.go</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#beego-orm-%E8%B5%B7%E6%AD%A5"><span class="nav-number">34.</span> <span class="nav-text">beego orm 起步</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%89%E8%A3%85%E5%BA%93"><span class="nav-number">34.1.</span> <span class="nav-text">安装库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AE%80%E5%8D%95%E7%A4%BA%E4%BE%8B"><span class="nav-number">34.1.1.</span> <span class="nav-text">简单示例</span></a></li></ol></li></ol></li></ol></div>
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="小白"
-      src="/images/avatar.jpg">
-  <p class="site-author-name" itemprop="name">小白</p>
-  <div class="site-description" itemprop="description">随言笔记，胡乱编写</div>
+    </footer>
+  </article>
 </div>
-<div class="site-state-wrap motion-element">
-  <nav class="site-state">
-      <div class="site-state-item site-state-posts">
-          <a href="/archives/">
-        
-          <span class="site-state-item-count">32</span>
-          <span class="site-state-item-name">笔记</span>
-        </a>
-      </div>
-      <div class="site-state-item site-state-categories">
-            <a href="/categories/">
-          
-        <span class="site-state-item-count">3</span>
-        <span class="site-state-item-name">分类</span></a>
-      </div>
-      <div class="site-state-item site-state-tags">
-            <a href="/tags/">
-          
-        <span class="site-state-item-count">65</span>
-        <span class="site-state-item-name">标签</span></a>
-      </div>
-  </nav>
+
+
+
+
+
+
 </div>
-  <div class="links-of-author motion-element">
-      <span class="links-of-author-item">
-        <a href="https://github.com/lovebai" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lovebai" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:kuxiaoju@gmail.com" title="E-Mail → mailto:kuxiaoju@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
-      </span>
-  </div>
+  </main>
 
+  <footer class="footer">
+    <div class="footer-inner">
 
-
-      </div>
-
-    </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
-
-
-      </div>
-    </main>
-
-    <footer class="footer">
-      <div class="footer-inner">
-        
-
-        
 
 <div class="copyright">
-  
-  &copy; 2019 – 
+  &copy; 
   <span itemprop="copyrightYear">2022</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">小白</span>
 </div>
-  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
   </div>
-
-        
-
-
-
-
-
-
-
-
-      </div>
-      <script src="https://cdn.jsdelivr.net/gh/lovebai/live2d-widget@master/autoload.js"></script>
-    </footer>
-  </div>
-
-  
-  <script src="/lib/anime.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/theme-next/theme-next-pjax@0/pjax.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
-  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
-  <script src="//cdn.jsdelivr.net/npm/lozad@1/dist/lozad.min.js"></script>
-  <script src="/lib/velocity/velocity.min.js"></script>
-  <script src="/lib/velocity/velocity.ui.min.js"></script>
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/motion.js"></script>
-
-
-<script src="/js/schemes/pisces.js"></script>
-
-
-<script src="/js/next-boot.js"></script>
-
-  <script>
-var pjax = new Pjax({
-  selectors: [
-    'head title',
-    '#page-configurations',
-    '.content-wrap',
-    '.post-toc-wrap',
-    '.languages',
-    '#pjax'
-  ],
-  switches: {
-    '.post-toc-wrap': Pjax.switches.innerHTML
-  },
-  analytics: false,
-  cacheBust: false,
-  scrollTo : !CONFIG.bookmark.enable
-});
-
-window.addEventListener('pjax:success', () => {
-  document.querySelectorAll('script[data-pjax], script#page-configurations, #pjax script').forEach(element => {
-    var code = element.text || element.textContent || element.innerHTML || '';
-    var parent = element.parentNode;
-    parent.removeChild(element);
-    var script = document.createElement('script');
-    if (element.id) {
-      script.id = element.id;
-    }
-    if (element.className) {
-      script.className = element.className;
-    }
-    if (element.type) {
-      script.type = element.type;
-    }
-    if (element.src) {
-      script.src = element.src;
-      // Force synchronous loading of peripheral JS.
-      script.async = false;
-    }
-    if (element.dataset.pjax !== undefined) {
-      script.dataset.pjax = '';
-    }
-    if (code !== '') {
-      script.appendChild(document.createTextNode(code));
-    }
-    parent.appendChild(script);
-  });
-  NexT.boot.refresh();
-  // Define Motion Sequence & Bootstrap Motion.
-  if (CONFIG.motion.enable) {
-    NexT.motion.integrator
-      .init()
-      .add(NexT.motion.middleWares.subMenu)
-      .add(NexT.motion.middleWares.postList)
-      .bootstrap();
-  }
-  NexT.utils.updateSidebarPosition();
-});
-</script>
-
-
-
-
-  
-
-
-
-
-  
-<script src="/js/local-search.js"></script>
-
-
-
-
-
-
-
-
-
-<script data-pjax>
-document.querySelectorAll('.pdfobject-container').forEach(element => {
-  let url = element.dataset.target;
-  let pdfOpenParams = {
-    navpanes : 0,
-    toolbar  : 0,
-    statusbar: 0,
-    pagemode : 'thumbs',
-    view     : 'FitH'
-  };
-  let pdfOpenFragment = '#' + Object.entries(pdfOpenParams).map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
-  let fullURL = `/lib/pdf/web/viewer.html?file=${encodeURIComponent(url)}${pdfOpenFragment}`;
-
-  if (NexT.utils.supportsPDFs()) {
-    element.innerHTML = `<embed class="pdfobject" src="${url + pdfOpenFragment}" type="application/pdf" style="height: ${element.dataset.height};">`;
-  } else {
-    element.innerHTML = `<iframe src="${fullURL}" style="height: ${element.dataset.height};" frameborder="0"></iframe>`;
-  }
-});
-</script>
-
-
-
-
-    <div id="pjax">
-  
-
-  
 
     </div>
+  </footer>
+
+  
+  <script size="300" alpha="0.6" zIndex="-1" src="https://cdn.jsdelivr.net/npm/ribbon.js@1.0.2/dist/ribbon.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@next-theme/pjax@0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdn.jsdelivr.net/npm/pdfobject@2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+
+
+
+
+
 </body>
 </html>

@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-03-29T09:42:58.082Z</updated>
+  <updated>2022-03-29T09:43:40.163Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://19981115.xyz/posts/18585/"/>
     <id>https://19981115.xyz/posts/18585/</id>
     <published>2022-03-29T09:11:37.000Z</published>
-    <updated>2022-03-29T09:42:58.082Z</updated>
+    <updated>2022-03-29T09:43:40.163Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;Android-网络编程-Retrofit&quot;&gt;&lt;a href=&quot;#Android-网络编程-Retrofit&quot; class=&quot;headerlink&quot; title=&quot;Android 网络编程 Retrofit&quot;&gt;&lt;/a&gt;Android 网络编程 Retrofit&lt;/h1&gt;&lt;p&gt;适用于 Android 和 Java 的类型安全 HTTP 客户端。Retrofit 是一款基于注解把 http api 转成接口，使用起来更加简单。&lt;/p&gt;
