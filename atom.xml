@@ -483,9 +483,9 @@
     <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="java" scheme="https://19981115.xyz/tags/java/"/>
-    
     <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
+    
+    <category term="java" scheme="https://19981115.xyz/tags/java/"/>
     
     <category term="SSH" scheme="https://19981115.xyz/tags/SSH/"/>
     
