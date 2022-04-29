@@ -375,16 +375,16 @@
     <link href="https://19981115.xyz/posts/21119/"/>
     <id>https://19981115.xyz/posts/21119/</id>
     <published>2021-10-29T15:24:55.000Z</published>
-    <updated>2021-10-29T16:22:18.553Z</updated>
+    <updated>2022-04-29T10:31:51.609Z</updated>
     
     
-    <summary type="html">&lt;h1 id=&quot;一&quot;&gt;&lt;a href=&quot;#一&quot; class=&quot;headerlink&quot; title=&quot;(一)&quot;&gt;&lt;/a&gt;(一)&lt;/h1&gt;&lt;h2 id=&quot;1、SpringBoot简介&quot;&gt;&lt;a href=&quot;#1、SpringBoot简介&quot; class=&quot;headerlink&quot; title=&quot;1、SpringBoot简介&quot;&gt;&lt;/a&gt;1、SpringBoot简介&lt;/h2&gt;&lt;h3 id=&quot;回顾什么是Spring&quot;&gt;&lt;a href=&quot;#回顾什么是Spring&quot; class=&quot;headerlink&quot; title=&quot;回顾什么是Spring&quot;&gt;&lt;/a&gt;回顾什么是Spring&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Spring是一个开源框架，2003 年兴起的一个轻量级的Java 开发框架，作者：Rod Johnson  。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Spring是为了解决企业级应用开发的复杂性而创建的，简化开发。&lt;/strong&gt;&lt;/li&gt;
+    <summary type="html">&lt;h1 id=&quot;1、SpringBoot-简介&quot;&gt;&lt;a href=&quot;#1、SpringBoot-简介&quot; class=&quot;headerlink&quot; title=&quot;1、SpringBoot 简介&quot;&gt;&lt;/a&gt;1、SpringBoot 简介&lt;/h1&gt;&lt;h3 id=&quot;回顾什么是-Spring&quot;&gt;&lt;a href=&quot;#回顾什么是-Spring&quot; class=&quot;headerlink&quot; title=&quot;回顾什么是 Spring&quot;&gt;&lt;/a&gt;回顾什么是 Spring&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Spring 是一个开源框架，2003 年兴起的一个轻量级的 Java 开发框架，作者：Rod Johnson 。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Spring 是为了解决企业级应用开发的复杂性而创建的，简化开发。&lt;/strong&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&quot;Spring是如何简化Java开发的&quot;&gt;&lt;a href=&quot;#Spring是如何简化Java开发的&quot; class=&quot;headerlink&quot; title=&quot;Spring是如何简化Java开发的&quot;&gt;&lt;/a&gt;Spring是如何简化Java开发的&lt;/h3&gt;&lt;p&gt;为了降低Java开发的复杂性，Spring采用了以下4种关键策略：&lt;/p&gt;
-&lt;p&gt;1、基于POJO的轻量级和最小侵入性编程，所有东西都是bean；&lt;/p&gt;
-&lt;p&gt;2、通过IOC，依赖注入（DI）和面向接口实现松耦合；&lt;/p&gt;
+&lt;h3 id=&quot;Spring-是如何简化-Java-开发的&quot;&gt;&lt;a href=&quot;#Spring-是如何简化-Java-开发的&quot; class=&quot;headerlink&quot; title=&quot;Spring 是如何简化 Java 开发的&quot;&gt;&lt;/a&gt;Spring 是如何简化 Java 开发的&lt;/h3&gt;&lt;p&gt;为了降低 Java 开发的复杂性，Spring 采用了以下 4 种关键策略：&lt;/p&gt;
+&lt;p&gt;1、基于 POJO 的轻量级和最小侵入性编程，所有东西都是 bean；&lt;/p&gt;
+&lt;p&gt;2、通过 IOC，依赖注入（DI）和面向接口实现松耦合；&lt;/p&gt;
 &lt;p&gt;3、基于切面（AOP）和惯例进行声明式编程；&lt;/p&gt;
 &lt;p&gt;4、通过切面和模版减少样式代码，RedisTemplate，xxxTemplate；&lt;/p&gt;</summary>
     
@@ -395,9 +395,9 @@
     
     <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
     
-    <category term="MVC" scheme="https://19981115.xyz/tags/MVC/"/>
-    
     <category term="SpringBoot" scheme="https://19981115.xyz/tags/SpringBoot/"/>
+    
+    <category term="MVC" scheme="https://19981115.xyz/tags/MVC/"/>
     
   </entry>
   
@@ -483,9 +483,9 @@
     <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     
     
-    <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
-    
     <category term="java" scheme="https://19981115.xyz/tags/java/"/>
+    
+    <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
     
     <category term="SSH" scheme="https://19981115.xyz/tags/SSH/"/>
     
@@ -540,11 +540,11 @@
     <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
     
     
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
     <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
     
     <category term="node" scheme="https://19981115.xyz/tags/node/"/>
+    
+    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
