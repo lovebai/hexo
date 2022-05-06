@@ -395,9 +395,9 @@
     
     <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
     
-    <category term="SpringBoot" scheme="https://19981115.xyz/tags/SpringBoot/"/>
-    
     <category term="MVC" scheme="https://19981115.xyz/tags/MVC/"/>
+    
+    <category term="SpringBoot" scheme="https://19981115.xyz/tags/SpringBoot/"/>
     
   </entry>
   
