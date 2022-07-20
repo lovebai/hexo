@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-03-29T09:43:40.163Z</updated>
+  <updated>2022-07-20T01:46:34.631Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,55 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux服务器屏蔽国外IP方法</title>
+    <link href="https://19981115.xyz/posts/52615/"/>
+    <id>https://19981115.xyz/posts/52615/</id>
+    <published>2022-07-20T01:43:09.000Z</published>
+    <updated>2022-07-20T01:46:34.631Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;通过SSH远程登录Linux云服务器，运行如下命令语句获取国内IP网段，会保存为/root/china_ip.txt&lt;/p&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="Linux" scheme="https://19981115.xyz/tags/Linux/"/>
+    
+    <category term="服务器" scheme="https://19981115.xyz/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>通俗易懂的23种设计模式</title>
+    <link href="https://19981115.xyz/posts/27954/"/>
+    <id>https://19981115.xyz/posts/27954/</id>
+    <published>2022-05-25T12:39:11.000Z</published>
+    <updated>2022-05-28T12:13:07.208Z</updated>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;什么是设计模式&quot;&gt;&lt;a href=&quot;#什么是设计模式&quot; class=&quot;headerlink&quot; title=&quot;什么是设计模式&quot;&gt;&lt;/a&gt;什么是设计模式&lt;/h1&gt;&lt;p&gt;设计模式（Design Pattern）是对代码开发经验的总结，是解决特定问题的一系列套路，并不是语法规定，而是一套用于提高代码可复用性、可维护性、可读性、稳健性以及安全性的解决方案。（重点面向对象 OOP）&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="设计模式" scheme="https://19981115.xyz/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    <category term="Design Pattern" scheme="https://19981115.xyz/tags/Design-Pattern/"/>
+    
+  </entry>
   
   <entry>
     <title>Android 开发之网络编程 Retrofit</title>
@@ -492,59 +541,6 @@
     <category term="SSM" scheme="https://19981115.xyz/tags/SSM/"/>
     
     <category term="MVC" scheme="https://19981115.xyz/tags/MVC/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Mybatis 学习笔记</title>
-    <link href="https://19981115.xyz/posts/47476/"/>
-    <id>https://19981115.xyz/posts/47476/</id>
-    <published>2021-08-02T04:45:31.000Z</published>
-    <updated>2021-08-02T04:59:22.959Z</updated>
-    
-    
-    <summary type="html">&lt;h2 id=&quot;Mybatis-9-28&quot;&gt;&lt;a href=&quot;#Mybatis-9-28&quot; class=&quot;headerlink&quot; title=&quot;Mybatis-9.28&quot;&gt;&lt;/a&gt;Mybatis-9.28&lt;/h2&gt;&lt;p&gt;环境：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;JDK1.8&lt;/li&gt;
-&lt;li&gt;Mysql 5.7&lt;/li&gt;
-&lt;li&gt;maven 3.6.1&lt;/li&gt;
-&lt;li&gt;IDEA</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="java" scheme="https://19981115.xyz/tags/java/"/>
-    
-    <category term="mybatis" scheme="https://19981115.xyz/tags/mybatis/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>最新HEXO博客NEXT主题隐藏文章方法</title>
-    <link href="https://19981115.xyz/posts/27190/"/>
-    <id>https://19981115.xyz/posts/27190/</id>
-    <published>2020-11-21T04:25:16.000Z</published>
-    <updated>2021-08-01T07:23:47.099Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;其实方法很简单，打开主题首页对应的文件，添加一个判断即可&lt;/p&gt;
-&lt;p&gt;打开文件 &lt;code&gt;\themes\next\layout\index.njk&lt;/code&gt;文件，大概在11行把&lt;/p&gt;
-&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&amp;#123;&amp;#123; partial(&amp;#x27;_macro/post.njk&amp;#x27;, &amp;#123;post: post, is_index: true&amp;#125;) &amp;#125;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;替换为以下代码即可</summary>
-    
-    
-    
-    <category term="常用技术" scheme="https://19981115.xyz/categories/%E5%B8%B8%E7%94%A8%E6%8A%80%E6%9C%AF/"/>
-    
-    
-    <category term="博客" scheme="https://19981115.xyz/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-    <category term="Hexo" scheme="https://19981115.xyz/tags/Hexo/"/>
-    
-    <category term="node" scheme="https://19981115.xyz/tags/node/"/>
     
   </entry>
   
