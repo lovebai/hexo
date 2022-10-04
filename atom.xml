@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-07-20T01:46:59.075Z</updated>
+  <updated>2022-10-04T14:09:51.780Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>WrodPress 禁止特定内容评论</title>
+    <link href="https://19981115.xyz/posts/38108/"/>
+    <id>https://19981115.xyz/posts/38108/</id>
+    <published>2022-10-04T14:02:59.000Z</published>
+    <updated>2022-10-04T14:09:51.780Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;这里就记录一种无插件纯代码实现禁止 WordPress 纯外文垃圾评论的方法，只需要把所需的代码复制到当前主题的 functions.php 文件最后一个 &lt;code&gt; ？&amp;gt;&lt;/code&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="WordPress" scheme="https://19981115.xyz/tags/WordPress/"/>
+    
+    <category term="教程" scheme="https://19981115.xyz/tags/%E6%95%99%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux服务器屏蔽国外IP方法</title>
@@ -507,40 +534,6 @@
     <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
     
     <category term="SpringBoot" scheme="https://19981115.xyz/tags/SpringBoot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Spring-学习笔记及演示代码</title>
-    <link href="https://19981115.xyz/posts/52199/"/>
-    <id>https://19981115.xyz/posts/52199/</id>
-    <published>2021-08-04T00:07:37.000Z</published>
-    <updated>2021-08-04T00:12:41.186Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;1.Spring&lt;/p&gt;
-&lt;h3 id=&quot;1-1、简介&quot;&gt;&lt;a href=&quot;#1-1、简介&quot; class=&quot;headerlink&quot; title=&quot;1.1、简介&quot;&gt;&lt;/a&gt;1.1、简介&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Spring：春天—&amp;gt; 给软件行业带来了春天&lt;/li&gt;
-&lt;li&gt;2002年，Rod Jahnson首次推出了Spring框架雏形interface21框架。&lt;/li&gt;
-&lt;li&gt;2004年3月24日，Spring框架以interface21框架为基础，经过重新设计，发布了1.0正式版。&lt;/li&gt;
-&lt;li&gt;很难想象Rod Johnson的学历 , 他是悉尼大学的博士，然而他的专业不是计算机，而是音乐学。&lt;/li&gt;
-&lt;li&gt;Spring理念 : 使现有技术更加实用 . 本身就是一个大杂烩 , 整合现有的框架技术&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
-    
-    <category term="java" scheme="https://19981115.xyz/tags/java/"/>
-    
-    <category term="SSH" scheme="https://19981115.xyz/tags/SSH/"/>
-    
-    <category term="SSM" scheme="https://19981115.xyz/tags/SSM/"/>
-    
-    <category term="MVC" scheme="https://19981115.xyz/tags/MVC/"/>
     
   </entry>
   

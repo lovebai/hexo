@@ -158,7 +158,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -169,7 +169,7 @@
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">69</span>
+        <span class="site-state-item-count">71</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -207,6 +207,93 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://19981115.xyz/posts/38108/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="小白">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MY-Notes">
+      <meta itemprop="description" content="随言笔记，胡乱编写">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="undefined | MY-Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/38108/" class="post-title-link" itemprop="url">WrodPress 禁止特定内容评论</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2022-10-04 22:02:59 / 修改时间：22:09:51" itemprop="dateCreated datePublished" datetime="2022-10-04T22:02:59+08:00">2022-10-04</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p>这里就记录一种无插件纯代码实现禁止 WordPress 纯外文垃圾评论的方法，只需要把所需的代码复制到当前主题的 functions.php 文件最后一个 <code> ？&gt;</code> 的前面即可。</p>
+<p>1、禁止全英文或者日文的评论</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 屏蔽纯英文评论和纯日文</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">refused_english_comments</span>(<span class="params"><span class="variable">$incoming_comment</span></span>) </span>&#123;</span><br><span class="line"><span class="variable">$pattern</span> = <span class="string">&#x27;/[一-龥]/u&#x27;</span>;</span><br><span class="line"><span class="comment">// 禁止全英文评论</span></span><br><span class="line"><span class="keyword">if</span>(!preg_match(<span class="variable">$pattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">wp_die( <span class="string">&quot;您的评论中必须包含汉字!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$pattern</span> = <span class="string">&#x27;/[あ-んア-ン]/u&#x27;</span>;</span><br><span class="line"><span class="comment">// 禁止日文评论</span></span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$pattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">wp_die( <span class="string">&quot;评论禁止包含日文!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;refused_english_comments&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>2、禁止全英文、日文、俄文、韩文、阿拉伯文、泰文的评论</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 禁止全英日俄韩阿泰语评论</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ssdax_comment_all_post</span>(<span class="params"> <span class="variable">$incoming_comment</span> </span>) </span>&#123;</span><br><span class="line"><span class="variable">$enpattern</span> = <span class="string">&#x27;/[一-龥]/u&#x27;</span>;</span><br><span class="line"><span class="variable">$jpattern</span> =<span class="string">&#x27;/[ぁ-ん]+|[ァ-ヴ]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$ruattern</span> =<span class="string">&#x27;/[А-я]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$krattern</span> =<span class="string">&#x27;/[갂-줎]+|[줐-쥯]+|[쥱-짛]+|[짞-쪧]+|[쪨-쬊]+|[쬋-쭬]+|[쵡-힝]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$arattern</span> =<span class="string">&#x27;/[؟-ض]+|[ط-ل]+|[م-م]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$thattern</span> =<span class="string">&#x27;/[ก-๛]+/u&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(!preg_match(<span class="variable">$enpattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">err( <span class="string">&quot;写点汉字吧，博主外语很捉急！ Please write some chinese words！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$jpattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;日文禁止！Japanese Get out！日本語出て行け！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$ruattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止语种！Russians, get away！Savage выйти из Русского Севера!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$krattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;思密达的世界你永远不懂！Please do not use Korean！하시기 바랍니다 한국 / 한국어 사용하지 마십시오！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$arattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止使用阿拉伯语！Please do not use Arabic！！من فضلك لا تستخدم اللغة العربية&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$thattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止泰语！Please do not use Thai！กรุณาอย่าใช้ภาษาไทย！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;ssdax_comment_all_post&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>3、禁止评论内容带有链接</p>
+<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//禁止发链接</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wp_comment_post</span>(<span class="params"> <span class="variable">$incoming_comment</span> </span>) </span>&#123;</span><br><span class="line"><span class="variable">$http</span> = <span class="string">&#x27;/[href=&quot;|rel=&quot;nofollow&quot;|http:\/\/|&lt;\/a&gt;]/u&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$http</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">err( <span class="string">&quot;本站禁止发链接地址！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;wp_comment_post&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1021,93 +1108,6 @@
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/posts/20493/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://19981115.xyz/posts/65019/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="小白">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="MY-Notes">
-      <meta itemprop="description" content="随言笔记，胡乱编写">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="undefined | MY-Notes">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/65019/" class="post-title-link" itemprop="url">Golang学习笔记五-标准库</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2022-01-19 00:12:14 / 修改时间：00:34:39" itemprop="dateCreated datePublished" datetime="2022-01-19T00:12:14+08:00">2022-01-19</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
-        </span>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Golang标准库os模块-文件目录相关"><a href="#Golang标准库os模块-文件目录相关" class="headerlink" title="Golang标准库os模块-文件目录相关"></a>Golang标准库os模块-文件目录相关</h1><p>os标准库实现了平台（操作系统）无关的编程接口。</p>
-<p><a target="_blank" rel="noopener" href="https://pkg.go.dev/std">https://pkg.go.dev/std</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/posts/65019/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
