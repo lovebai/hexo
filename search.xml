@@ -2409,6 +2409,112 @@
       </tags>
   </entry>
   <entry>
+    <title>Golang爬虫技术</title>
+    <url>/posts/28913/</url>
+    <content><![CDATA[<h1 id="Golang-爬虫简介"><a href="#Golang-爬虫简介" class="headerlink" title="Golang 爬虫简介"></a>Golang 爬虫简介</h1><h2 id="什么是爬虫"><a href="#什么是爬虫" class="headerlink" title="什么是爬虫"></a>什么是爬虫</h2><p>利用编程手段获取数据，为其他应用程序提供数据。如常用的搜索引擎等（Google、Baidu）。</p>
+<h2 id="学习爬虫预备知识"><a href="#学习爬虫预备知识" class="headerlink" title="学习爬虫预备知识"></a>学习爬虫预备知识</h2><ul>
+<li>Html</li>
+<li>Css</li>
+<li>JavaScript</li>
+<li>浏览器调试</li>
+</ul>
+<h2 id="爬虫实现方法"><a href="#爬虫实现方法" class="headerlink" title="爬虫实现方法"></a>爬虫实现方法</h2><ol>
+<li>使用 http 标准库 <code>net/http</code></li>
+<li>使用爬虫框架</li>
+</ol>
+<ul>
+<li>Colly</li>
+<li>Goquery# 第一次个爬虫程序</li>
+</ul>
+<h1 id="第一个爬虫程序"><a href="#第一个爬虫程序" class="headerlink" title="第一个爬虫程序"></a>第一个爬虫程序</h1><p>使用 Golang 中的 http 标准库实现</p>
+<h2 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;io/ioutil&quot;</span></span><br><span class="line">	<span class="string">&quot;net/http&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建请求"><a href="#创建请求" class="headerlink" title="创建请求"></a>创建请求</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">client := &amp;http.Client&#123;&#125;</span><br><span class="line">req, _ := http.NewRequest(<span class="string">&quot;GET&quot;</span>, url, <span class="literal">nil</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="设置请求-header-和-cookie"><a href="#设置请求-header-和-cookie" class="headerlink" title="设置请求 header 和 cookie"></a>设置请求 header 和 cookie</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">req.Header.Set(<span class="string">&quot;User-Agent&quot;</span>,<span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36&quot;</span>)</span><br><span class="line">req.Header.Add(<span class="string">&quot;cookie&quot;</span>,<span class="string">&quot;__yjs_duid=1_f3119d919ba464b8e6563af405bd8d7f1647049585313; wordpress_test_cookie=WP+Cookie+check; yjs_use_ob=0; mk-font-size=100; __gads=ID=335c7013b1ddf54b-220cf1fdf4d00063:T=1647153036:RT=1647153036:S=ALNI_MZV-Mj-gp4y4E4yaNmryFh3Cv85Rw;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>未完持续…</p>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Golang</tag>
+        <tag>爬虫</tag>
+        <tag>框架</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>HUGO博客程序的安装文档</title>
+    <url>/posts/57274/</url>
+    <content><![CDATA[<p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。</p>
+<p><img data-src="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png" alt="hugo" title="hugo"></p>
+<blockquote>
+<p>Hugo 是由 Go 语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。</p>
+</blockquote>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="安装-Hugo"><a href="#安装-Hugo" class="headerlink" title="安装 Hugo"></a>安装 Hugo</h3><h4 id="二进制安装（推荐：简单、快速）"><a href="#二进制安装（推荐：简单、快速）" class="headerlink" title="二进制安装（推荐：简单、快速）"></a>二进制安装（推荐：简单、快速）</h4><p>到 <a href="https://github.com/spf13/hugo/releases" title="Hugo Releases">Hugo Releases</a> 下载对应的操作系统版本的 Hugo 二进制文件（hugo 或者 hugo.exe）<br>Mac 下直接使用 <code>Homebrew</code> 安装：</p>
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install hugo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="2-源码安装"><a href="#2-源码安装" class="headerlink" title="2. 源码安装"></a>2. 源码安装</h4><p>源码编译安装，首先安装好依赖的工具：</p>
+<p><a href="https://git-scm.com/" title="Git">Git</a><br><a href="http://mercurial.selenic.com/" title="Mercurial">Mercurial</a><br><a href="https://golang.org/" title="Go">Go</a> 1.3+ (Go 1.4+ on Windows)<br>设置好 <code>GOPATH</code> 环境变量，获取源码并编译：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ export GOPATH=$HOME/go</span><br><span class="line">$ go get -v github.com/spf13/hugo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>源码会下载到 <code>$GOPATH/src</code> 目录，二进制在 <code>$GOPATH/bin/</code></p>
+<p>如果需要更新所有 Hugo 的依赖库，增加 <code>-u</code> 参数：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ go get -u -v github.com/spf13/hugo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="生成站点"><a href="#生成站点" class="headerlink" title="生成站点"></a>生成站点</h3><p>使用 Hugo 快速生成站点，比如希望生成到 <code>/path/to/site</code> 路径：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo new site /path/to/site</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样就在 <code>/path/to/site</code> 目录里生成了初始站点，进去目录：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd /path/to/site</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>站点目录结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">▸ archetypes/</span><br><span class="line">▸ content/</span><br><span class="line">▸ layouts/</span><br><span class="line">▸ static/</span><br><span class="line">  config.toml</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h3><p>创建一个 <code>about</code> 页面：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo new about.md</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>about.md</code> 自动生成到了 <code>content/about.md</code> ，打开 <code>about.md</code> 看下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+++</span><br><span class="line">date = &quot;2015-10-25T08:36:54-07:00&quot;</span><br><span class="line">draft = true</span><br><span class="line">title = &quot;about&quot;</span><br><span class="line">+++</span><br><span class="line">正文内容</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>内容是 Markdown 格式的，+++ 之间的内容是 TOML 格式的，根据你的喜好，你可以换成 YAML 格式（使用 — 标记）或者 JSON 格式。</p>
+<p>创建第一篇文章，放到 <code>post</code> 目录，方便之后生成聚合页面。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo new post/first.md</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>打开编辑 <code>post/first.md</code> ：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">date: &quot;2015-10-25T08:36:54-07:00&quot;</span><br><span class="line">title: &quot;first&quot;</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">### Hello Hugo</span><br><span class="line"></span><br><span class="line"> 1. aaa</span><br><span class="line"> 1. bbb</span><br><span class="line"> 1. ccc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装皮肤"><a href="#安装皮肤" class="headerlink" title="安装皮肤"></a>安装皮肤</h3><p>到 皮肤列表 挑选一个心仪的皮肤，比如你觉得 Hyde 皮肤不错，找到相关的 GitHub 地址，创建目录 themes，在 <code>themes</code> 目录里把皮肤 <code>git clone</code> 下来：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 创建 themes 目录</span><br><span class="line">$ cd themes</span><br><span class="line">$ git clone https://github.com/spf13/hyde.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="运行-Hugo"><a href="#运行-Hugo" class="headerlink" title="运行 Hugo"></a>运行 Hugo</h3><p>在你的站点根目录执行 <code>Hugo</code> 命令进行调试：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo server --theme=hyde --buildDrafts</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>（注明：v0.15 版本之后，不再需要使用 <code>--watch</code> 参数了）</p>
+<p>浏览器里打开： <code>http://localhost:1313</code></p>
+<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>假设你需要部署在 <code>GitHub Pages</code> 上，首先在 GitHub 上创建一个 Repository，命名为：<code>coderzh.github.io</code> （coderzh 替换为你的 github 用户名）。</p>
+<p>在站点根目录执行 <code>Hugo</code> 命令生成最终页面：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo --theme=hyde --baseUrl=&quot;http://coderzh.github.io/&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 <code>draft=true</code> 再重新生成。）</p>
+<p>如果一切顺利，所有静态页面都会生成到 <code>public</code> 目录，将 pubilc 目录里所有文件 <code>push</code> 到刚创建的 Repository 的 <code>master</code> 分支。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd public</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin https://github.com/coderzh/coderzh.github.io.git</span><br><span class="line">$ git add -A</span><br><span class="line">$ git commit -m &quot;first commit&quot;</span><br><span class="line">$ git push -u origin master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>浏览器里访问：<code>http://coderzh.github.io/</code></p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>Hugo</tag>
+        <tag>go</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Golang学习笔记部分二</title>
     <url>/posts/38070/</url>
     <content><![CDATA[<h1 id="Golang运算符"><a href="#Golang运算符" class="headerlink" title="Golang运算符"></a>Golang运算符</h1><p>Go 语言内置的运算符有：</p>
@@ -3048,112 +3154,6 @@
         <tag>Golang</tag>
         <tag>笔记</tag>
         <tag>基础知识</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>HUGO博客程序的安装文档</title>
-    <url>/posts/57274/</url>
-    <content><![CDATA[<p>Hugo是由Go语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。</p>
-<p><img data-src="https://raw.githubusercontent.com/gohugoio/hugoDocs/master/static/img/hugo-logo.png" alt="hugo" title="hugo"></p>
-<blockquote>
-<p>Hugo 是由 Go 语言实现的静态网站生成器。简单、易用、高效、易扩展、快速部署。</p>
-</blockquote>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="安装-Hugo"><a href="#安装-Hugo" class="headerlink" title="安装 Hugo"></a>安装 Hugo</h3><h4 id="二进制安装（推荐：简单、快速）"><a href="#二进制安装（推荐：简单、快速）" class="headerlink" title="二进制安装（推荐：简单、快速）"></a>二进制安装（推荐：简单、快速）</h4><p>到 <a href="https://github.com/spf13/hugo/releases" title="Hugo Releases">Hugo Releases</a> 下载对应的操作系统版本的 Hugo 二进制文件（hugo 或者 hugo.exe）<br>Mac 下直接使用 <code>Homebrew</code> 安装：</p>
-<span id="more"></span>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">brew install hugo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h4 id="2-源码安装"><a href="#2-源码安装" class="headerlink" title="2. 源码安装"></a>2. 源码安装</h4><p>源码编译安装，首先安装好依赖的工具：</p>
-<p><a href="https://git-scm.com/" title="Git">Git</a><br><a href="http://mercurial.selenic.com/" title="Mercurial">Mercurial</a><br><a href="https://golang.org/" title="Go">Go</a> 1.3+ (Go 1.4+ on Windows)<br>设置好 <code>GOPATH</code> 环境变量，获取源码并编译：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ export GOPATH=$HOME/go</span><br><span class="line">$ go get -v github.com/spf13/hugo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>源码会下载到 <code>$GOPATH/src</code> 目录，二进制在 <code>$GOPATH/bin/</code></p>
-<p>如果需要更新所有 Hugo 的依赖库，增加 <code>-u</code> 参数：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ go get -u -v github.com/spf13/hugo</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="生成站点"><a href="#生成站点" class="headerlink" title="生成站点"></a>生成站点</h3><p>使用 Hugo 快速生成站点，比如希望生成到 <code>/path/to/site</code> 路径：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo new site /path/to/site</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>这样就在 <code>/path/to/site</code> 目录里生成了初始站点，进去目录：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd /path/to/site</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>站点目录结构：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">▸ archetypes/</span><br><span class="line">▸ content/</span><br><span class="line">▸ layouts/</span><br><span class="line">▸ static/</span><br><span class="line">  config.toml</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h3><p>创建一个 <code>about</code> 页面：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo new about.md</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p><code>about.md</code> 自动生成到了 <code>content/about.md</code> ，打开 <code>about.md</code> 看下：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">+++</span><br><span class="line">date = &quot;2015-10-25T08:36:54-07:00&quot;</span><br><span class="line">draft = true</span><br><span class="line">title = &quot;about&quot;</span><br><span class="line">+++</span><br><span class="line">正文内容</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>内容是 Markdown 格式的，+++ 之间的内容是 TOML 格式的，根据你的喜好，你可以换成 YAML 格式（使用 — 标记）或者 JSON 格式。</p>
-<p>创建第一篇文章，放到 <code>post</code> 目录，方便之后生成聚合页面。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo new post/first.md</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>打开编辑 <code>post/first.md</code> ：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">date: &quot;2015-10-25T08:36:54-07:00&quot;</span><br><span class="line">title: &quot;first&quot;</span><br><span class="line"></span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">### Hello Hugo</span><br><span class="line"></span><br><span class="line"> 1. aaa</span><br><span class="line"> 1. bbb</span><br><span class="line"> 1. ccc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="安装皮肤"><a href="#安装皮肤" class="headerlink" title="安装皮肤"></a>安装皮肤</h3><p>到 皮肤列表 挑选一个心仪的皮肤，比如你觉得 Hyde 皮肤不错，找到相关的 GitHub 地址，创建目录 themes，在 <code>themes</code> 目录里把皮肤 <code>git clone</code> 下来：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 创建 themes 目录</span><br><span class="line">$ cd themes</span><br><span class="line">$ git clone https://github.com/spf13/hyde.git</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="运行-Hugo"><a href="#运行-Hugo" class="headerlink" title="运行 Hugo"></a>运行 Hugo</h3><p>在你的站点根目录执行 <code>Hugo</code> 命令进行调试：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo server --theme=hyde --buildDrafts</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>（注明：v0.15 版本之后，不再需要使用 <code>--watch</code> 参数了）</p>
-<p>浏览器里打开： <code>http://localhost:1313</code></p>
-<h3 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h3><p>假设你需要部署在 <code>GitHub Pages</code> 上，首先在 GitHub 上创建一个 Repository，命名为：<code>coderzh.github.io</code> （coderzh 替换为你的 github 用户名）。</p>
-<p>在站点根目录执行 <code>Hugo</code> 命令生成最终页面：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hugo --theme=hyde --baseUrl=&quot;http://coderzh.github.io/&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>（注意，以上命令并不会生成草稿页面，如果未生成任何文章，请去掉文章头部的 <code>draft=true</code> 再重新生成。）</p>
-<p>如果一切顺利，所有静态页面都会生成到 <code>public</code> 目录，将 pubilc 目录里所有文件 <code>push</code> 到刚创建的 Repository 的 <code>master</code> 分支。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ cd public</span><br><span class="line">$ git init</span><br><span class="line">$ git remote add origin https://github.com/coderzh/coderzh.github.io.git</span><br><span class="line">$ git add -A</span><br><span class="line">$ git commit -m &quot;first commit&quot;</span><br><span class="line">$ git push -u origin master</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>浏览器里访问：<code>http://coderzh.github.io/</code></p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>Hugo</tag>
-        <tag>go</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Golang爬虫技术</title>
-    <url>/posts/28913/</url>
-    <content><![CDATA[<h1 id="Golang-爬虫简介"><a href="#Golang-爬虫简介" class="headerlink" title="Golang 爬虫简介"></a>Golang 爬虫简介</h1><h2 id="什么是爬虫"><a href="#什么是爬虫" class="headerlink" title="什么是爬虫"></a>什么是爬虫</h2><p>利用编程手段获取数据，为其他应用程序提供数据。如常用的搜索引擎等（Google、Baidu）。</p>
-<h2 id="学习爬虫预备知识"><a href="#学习爬虫预备知识" class="headerlink" title="学习爬虫预备知识"></a>学习爬虫预备知识</h2><ul>
-<li>Html</li>
-<li>Css</li>
-<li>JavaScript</li>
-<li>浏览器调试</li>
-</ul>
-<h2 id="爬虫实现方法"><a href="#爬虫实现方法" class="headerlink" title="爬虫实现方法"></a>爬虫实现方法</h2><ol>
-<li>使用 http 标准库 <code>net/http</code></li>
-<li>使用爬虫框架</li>
-</ol>
-<ul>
-<li>Colly</li>
-<li>Goquery# 第一次个爬虫程序</li>
-</ul>
-<h1 id="第一个爬虫程序"><a href="#第一个爬虫程序" class="headerlink" title="第一个爬虫程序"></a>第一个爬虫程序</h1><p>使用 Golang 中的 http 标准库实现</p>
-<h2 id="导包"><a href="#导包" class="headerlink" title="导包"></a>导包</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;io/ioutil&quot;</span></span><br><span class="line">	<span class="string">&quot;net/http&quot;</span></span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h2 id="创建请求"><a href="#创建请求" class="headerlink" title="创建请求"></a>创建请求</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">client := &amp;http.Client&#123;&#125;</span><br><span class="line">req, _ := http.NewRequest(<span class="string">&quot;GET&quot;</span>, url, <span class="literal">nil</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="设置请求-header-和-cookie"><a href="#设置请求-header-和-cookie" class="headerlink" title="设置请求 header 和 cookie"></a>设置请求 header 和 cookie</h2><figure class="highlight go"><table><tr><td class="code"><pre><span class="line">req.Header.Set(<span class="string">&quot;User-Agent&quot;</span>,<span class="string">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.74 Safari/537.36&quot;</span>)</span><br><span class="line">req.Header.Add(<span class="string">&quot;cookie&quot;</span>,<span class="string">&quot;__yjs_duid=1_f3119d919ba464b8e6563af405bd8d7f1647049585313; wordpress_test_cookie=WP+Cookie+check; yjs_use_ob=0; mk-font-size=100; __gads=ID=335c7013b1ddf54b-220cf1fdf4d00063:T=1647153036:RT=1647153036:S=ALNI_MZV-Mj-gp4y4E4yaNmryFh3Cv85Rw;&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>未完持续…</p>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Golang</tag>
-        <tag>爬虫</tag>
-        <tag>框架</tag>
       </tags>
   </entry>
   <entry>
@@ -4413,32 +4413,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Linux服务器屏蔽国外IP方法</title>
-    <url>/posts/52615/</url>
-    <content><![CDATA[<p>通过SSH远程登录Linux云服务器，运行如下命令语句获取国内IP网段，会保存为/root/china_ip.txt</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -q --timeout=60 -O- &#x27;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&#x27; | awk -F\| &#x27;/CN\|ipv4/ &#123; printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) &#125;&#x27; &gt; /root/china_ip.txt</span><br></pre></td></tr></table></figure>
-
-<p>将下面脚本保存为/root/allcn.sh</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mmode=$1</span><br><span class="line">CNIP=&quot;/root/china_ip.txt&quot;</span><br><span class="line">gen_iplist() &#123;</span><br><span class="line">        cat &lt;&lt;-EOF</span><br><span class="line">                $(cat $&#123;CNIP:=/dev/null&#125; 2&gt;/dev/null)</span><br><span class="line">EOF</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">flush_r() &#123;</span><br><span class="line">iptables  -F ALLCNRULE 2&gt;/dev/null</span><br><span class="line">iptables -D INPUT -p tcp -j ALLCNRULE 2&gt;/dev/null</span><br><span class="line">iptables  -X ALLCNRULE 2&gt;/dev/null</span><br><span class="line">ipset -X allcn 2&gt;/dev/null</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mstart() &#123;</span><br><span class="line">ipset create allcn hash:net 2&gt;/dev/null</span><br><span class="line">ipset -! -R &lt;&lt;-EOF </span><br><span class="line"><span class="meta">$</span><span class="bash">(gen_iplist | sed -e <span class="string">&quot;s/^/add allcn /&quot;</span>)</span></span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">iptables -N ALLCNRULE </span><br><span class="line">iptables -I INPUT -p tcp -j ALLCNRULE </span><br><span class="line">iptables -A ALLCNRULE -s 127.0.0.0/8 -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -s 169.254.0.0/16 -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -s 224.0.0.0/4 -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -s 255.255.255.255 -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -m set --match-set allcn  src -j RETURN </span><br><span class="line">iptables -A ALLCNRULE -p tcp -j DROP </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if [ &quot;$mmode&quot; == &quot;stop&quot; ] ;then</span><br><span class="line">flush_r</span><br><span class="line">exit 0</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">flush_r</span><br><span class="line">sleep 1</span><br><span class="line">mstart</span><br></pre></td></tr></table></figure>
-
-<p>将该脚本设置为可执行</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">chmod +x  allcn.sh</span><br></pre></td></tr></table></figure>
-
-<p>执行如下命令即可开始屏蔽国外IP访问。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/root/allcn.sh</span><br></pre></td></tr></table></figure>
-
-<p>执行如下命令即可停止屏蔽国外IP访问。</p>
-<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/root/allcn.sh stop</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>Linux</tag>
-        <tag>服务器</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Java注解和反射-KuangShen</title>
     <url>/posts/41977/</url>
     <content><![CDATA[<h1 id="注解和反射"><a href="#注解和反射" class="headerlink" title="注解和反射"></a>注解和反射</h1><p>注解(Annotation)是 jdk5 引入的新技术。</p>
@@ -4571,6 +4545,34 @@
       <tags>
         <tag>注解</tag>
         <tag>反射</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Linux服务器屏蔽国外IP方法</title>
+    <url>/posts/52615/</url>
+    <content><![CDATA[<p>通过 SSH 远程登录 Linux 云服务器，运行如下命令语句获取国内 IP 网段，会保存为/root/china_ip.txt</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">wget -q --timeout=60 -O- &#x27;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&#x27; | awk -F\| &#x27;/CN\|ipv4/ &#123; printf(&quot;%s/%d\n&quot;, $4, 32-log($5)/log(2)) &#125;&#x27; &gt; /root/china_ip.txt</span><br></pre></td></tr></table></figure>
+
+<p>将下面脚本保存为/root/allcn.sh</p>
+<span id="more"></span>
+
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">mmode=$1</span><br><span class="line">CNIP=&quot;/root/china_ip.txt&quot;</span><br><span class="line">gen_iplist() &#123;</span><br><span class="line">        cat &lt;&lt;-EOF</span><br><span class="line">                $(cat $&#123;CNIP:=/dev/null&#125; 2&gt;/dev/null)</span><br><span class="line">EOF</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">flush_r() &#123;</span><br><span class="line">iptables  -F ALLCNRULE 2&gt;/dev/null</span><br><span class="line">iptables -D INPUT -p tcp -j ALLCNRULE 2&gt;/dev/null</span><br><span class="line">iptables  -X ALLCNRULE 2&gt;/dev/null</span><br><span class="line">ipset -X allcn 2&gt;/dev/null</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">mstart() &#123;</span><br><span class="line">ipset create allcn hash:net 2&gt;/dev/null</span><br><span class="line">ipset -! -R &lt;&lt;-EOF</span><br><span class="line"><span class="meta">$</span><span class="bash">(gen_iplist | sed -e <span class="string">&quot;s/^/add allcn /&quot;</span>)</span></span><br><span class="line">EOF</span><br><span class="line"></span><br><span class="line">iptables -N ALLCNRULE</span><br><span class="line">iptables -I INPUT -p tcp -j ALLCNRULE</span><br><span class="line">iptables -A ALLCNRULE -s 127.0.0.0/8 -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -s 169.254.0.0/16 -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -s 224.0.0.0/4 -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -s 255.255.255.255 -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -m set --match-set allcn  src -j RETURN</span><br><span class="line">iptables -A ALLCNRULE -p tcp -j DROP</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">if [ &quot;$mmode&quot; == &quot;stop&quot; ] ;then</span><br><span class="line">flush_r</span><br><span class="line">exit 0</span><br><span class="line">fi</span><br><span class="line"></span><br><span class="line">flush_r</span><br><span class="line">sleep 1</span><br><span class="line">mstart</span><br></pre></td></tr></table></figure>
+
+<p>将该脚本设置为可执行</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">chmod +x  allcn.sh</span><br></pre></td></tr></table></figure>
+
+<p>执行如下命令即可开始屏蔽国外 IP 访问。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/root/allcn.sh</span><br></pre></td></tr></table></figure>
+
+<p>执行如下命令即可停止屏蔽国外 IP 访问。</p>
+<figure class="highlight shell"><table><tr><td class="code"><pre><span class="line">/root/allcn.sh stop</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>Linux</tag>
+        <tag>服务器</tag>
       </tags>
   </entry>
   <entry>
@@ -5241,6 +5243,29 @@
       <tags>
         <tag>java</tag>
         <tag>mybatis</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WrodPress 禁止特定内容评论</title>
+    <url>/posts/38108/</url>
+    <content><![CDATA[<p>这里就记录一种无插件纯代码实现禁止 WordPress 纯外文垃圾评论的方法，只需要把所需的代码复制到当前主题的 functions.php 文件最后一个 <code> ？&gt;</code> 的前面即可。</p>
+<span id="more"></span>
+
+<p>1、禁止全英文或者日文的评论</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 屏蔽纯英文评论和纯日文</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">refused_english_comments</span>(<span class="params"><span class="variable">$incoming_comment</span></span>) </span>&#123;</span><br><span class="line"><span class="variable">$pattern</span> = <span class="string">&#x27;/[一-龥]/u&#x27;</span>;</span><br><span class="line"><span class="comment">// 禁止全英文评论</span></span><br><span class="line"><span class="keyword">if</span>(!preg_match(<span class="variable">$pattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">wp_die( <span class="string">&quot;您的评论中必须包含汉字!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$pattern</span> = <span class="string">&#x27;/[あ-んア-ン]/u&#x27;</span>;</span><br><span class="line"><span class="comment">// 禁止日文评论</span></span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$pattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">wp_die( <span class="string">&quot;评论禁止包含日文!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;refused_english_comments&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>2、禁止全英文、日文、俄文、韩文、阿拉伯文、泰文的评论</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 禁止全英日俄韩阿泰语评论</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ssdax_comment_all_post</span>(<span class="params"> <span class="variable">$incoming_comment</span> </span>) </span>&#123;</span><br><span class="line"><span class="variable">$enpattern</span> = <span class="string">&#x27;/[一-龥]/u&#x27;</span>;</span><br><span class="line"><span class="variable">$jpattern</span> =<span class="string">&#x27;/[ぁ-ん]+|[ァ-ヴ]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$ruattern</span> =<span class="string">&#x27;/[А-я]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$krattern</span> =<span class="string">&#x27;/[갂-줎]+|[줐-쥯]+|[쥱-짛]+|[짞-쪧]+|[쪨-쬊]+|[쬋-쭬]+|[쵡-힝]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$arattern</span> =<span class="string">&#x27;/[؟-ض]+|[ط-ل]+|[م-م]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$thattern</span> =<span class="string">&#x27;/[ก-๛]+/u&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(!preg_match(<span class="variable">$enpattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">err( <span class="string">&quot;写点汉字吧，博主外语很捉急！ Please write some chinese words！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$jpattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;日文禁止！Japanese Get out！日本語出て行け！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$ruattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止语种！Russians, get away！Savage выйти из Русского Севера!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$krattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;思密达的世界你永远不懂！Please do not use Korean！하시기 바랍니다 한국 / 한국어 사용하지 마십시오！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$arattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止使用阿拉伯语！Please do not use Arabic！！من فضلك لا تستخدم اللغة العربية&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$thattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止泰语！Please do not use Thai！กรุณาอย่าใช้ภาษาไทย！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;ssdax_comment_all_post&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<p>3、禁止评论内容带有链接</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//禁止发链接</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wp_comment_post</span>(<span class="params"> <span class="variable">$incoming_comment</span> </span>) </span>&#123;</span><br><span class="line"><span class="variable">$http</span> = <span class="string">&#x27;/[href=&quot;|rel=&quot;nofollow&quot;|http:\/\/|&lt;\/a&gt;]/u&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$http</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">err( <span class="string">&quot;本站禁止发链接地址！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;wp_comment_post&#x27;</span>);</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>学习笔记</category>
+      </categories>
+      <tags>
+        <tag>WordPress</tag>
+        <tag>教程</tag>
       </tags>
   </entry>
   <entry>
@@ -5929,27 +5954,6 @@
       </tags>
   </entry>
   <entry>
-    <title>WrodPress 禁止特定内容评论</title>
-    <url>/posts/38108/</url>
-    <content><![CDATA[<p>这里就记录一种无插件纯代码实现禁止 WordPress 纯外文垃圾评论的方法，只需要把所需的代码复制到当前主题的 functions.php 文件最后一个 <code> ？&gt;</code> 的前面即可。</p>
-<p>1、禁止全英文或者日文的评论</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 屏蔽纯英文评论和纯日文</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">refused_english_comments</span>(<span class="params"><span class="variable">$incoming_comment</span></span>) </span>&#123;</span><br><span class="line"><span class="variable">$pattern</span> = <span class="string">&#x27;/[一-龥]/u&#x27;</span>;</span><br><span class="line"><span class="comment">// 禁止全英文评论</span></span><br><span class="line"><span class="keyword">if</span>(!preg_match(<span class="variable">$pattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">wp_die( <span class="string">&quot;您的评论中必须包含汉字!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable">$pattern</span> = <span class="string">&#x27;/[あ-んア-ン]/u&#x27;</span>;</span><br><span class="line"><span class="comment">// 禁止日文评论</span></span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$pattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">wp_die( <span class="string">&quot;评论禁止包含日文!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;refused_english_comments&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>2、禁止全英文、日文、俄文、韩文、阿拉伯文、泰文的评论</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 禁止全英日俄韩阿泰语评论</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">ssdax_comment_all_post</span>(<span class="params"> <span class="variable">$incoming_comment</span> </span>) </span>&#123;</span><br><span class="line"><span class="variable">$enpattern</span> = <span class="string">&#x27;/[一-龥]/u&#x27;</span>;</span><br><span class="line"><span class="variable">$jpattern</span> =<span class="string">&#x27;/[ぁ-ん]+|[ァ-ヴ]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$ruattern</span> =<span class="string">&#x27;/[А-я]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$krattern</span> =<span class="string">&#x27;/[갂-줎]+|[줐-쥯]+|[쥱-짛]+|[짞-쪧]+|[쪨-쬊]+|[쬋-쭬]+|[쵡-힝]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$arattern</span> =<span class="string">&#x27;/[؟-ض]+|[ط-ل]+|[م-م]+/u&#x27;</span>;</span><br><span class="line"><span class="variable">$thattern</span> =<span class="string">&#x27;/[ก-๛]+/u&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(!preg_match(<span class="variable">$enpattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">err( <span class="string">&quot;写点汉字吧，博主外语很捉急！ Please write some chinese words！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$jpattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;日文禁止！Japanese Get out！日本語出て行け！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$ruattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止语种！Russians, get away！Savage выйти из Русского Севера!&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$krattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;思密达的世界你永远不懂！Please do not use Korean！하시기 바랍니다 한국 / 한국어 사용하지 마십시오！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$arattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止使用阿拉伯语！Please do not use Arabic！！من فضلك لا تستخدم اللغة العربية&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$thattern</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>]))&#123;</span><br><span class="line">err( <span class="string">&quot;禁止泰语！Please do not use Thai！กรุณาอย่าใช้ภาษาไทย！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;ssdax_comment_all_post&#x27;</span>);</span><br></pre></td></tr></table></figure>
-
-<p>3、禁止评论内容带有链接</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="comment">//禁止发链接</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">wp_comment_post</span>(<span class="params"> <span class="variable">$incoming_comment</span> </span>) </span>&#123;</span><br><span class="line"><span class="variable">$http</span> = <span class="string">&#x27;/[href=&quot;|rel=&quot;nofollow&quot;|http:\/\/|&lt;\/a&gt;]/u&#x27;</span>;</span><br><span class="line"><span class="keyword">if</span>(preg_match(<span class="variable">$http</span>, <span class="variable">$incoming_comment</span>[<span class="string">&#x27;comment_content&#x27;</span>])) &#123;</span><br><span class="line">err( <span class="string">&quot;本站禁止发链接地址！&quot;</span> );</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span>( <span class="variable">$incoming_comment</span> );</span><br><span class="line">&#125;</span><br><span class="line">add_filter(<span class="string">&#x27;preprocess_comment&#x27;</span>, <span class="string">&#x27;wp_comment_post&#x27;</span>);</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>学习笔记</category>
-      </categories>
-      <tags>
-        <tag>WordPress</tag>
-        <tag>教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>使用Markdown编辑器的基本语法</title>
     <url>/posts/41250/</url>
     <content><![CDATA[<h2 id="主要内容"><a href="#主要内容" class="headerlink" title="主要内容"></a>主要内容</h2><blockquote>
@@ -6124,6 +6128,44 @@
       </tags>
   </entry>
   <entry>
+    <title>Hello World</title>
+    <url>/posts/16112/</url>
+    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看 <a href="https://hexo.io/docs/">文档</a> 以获取更多信息。如果您在使用 Hexo 时遇到任何问题，可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除中</a>找到答案，或者您可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>询问我。</p>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请<a href="https://github.com/hexojs/hexo/issues" title="提交问题">提交问题</a>，我会尽力解决您的问题。</p>
+<span id="more"></span>
+
+<h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：<br><a href="https://nodejs.org/" title="Node.js">Node.js</a><br><a href="https://git-scm.com/" title="Git">Git</a></p>
+<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
+<!--more-->
+
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>更多信息: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>npm</tag>
+        <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>咸鱼淘的二手主板到了</title>
     <url>/posts/36335/</url>
     <content><![CDATA[<p>我这个是一台比较老的台式机，但是我舍不得卖，不然我也可以在咸鱼、转转、拍拍等二手平台上拿去卖</p>
@@ -6160,44 +6202,6 @@
         <tag>博客</tag>
         <tag>wordpress</tag>
         <tag>php</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/posts/16112/</url>
-    <content><![CDATA[<p>欢迎来到 <a href="https://hexo.io/">Hexo</a>！这是你的第一篇文章。查看 <a href="https://hexo.io/docs/">文档</a> 以获取更多信息。如果您在使用 Hexo 时遇到任何问题，可以在 <a href="https://hexo.io/docs/troubleshooting.html">故障排除中</a>找到答案，或者您可以在 <a href="https://github.com/hexojs/hexo/issues">GitHub</a>询问我。</p>
-<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>安装 Hexo 只需几分钟时间，若您在安装过程中遇到问题或无法找到解决方式，请<a href="https://github.com/hexojs/hexo/issues" title="提交问题">提交问题</a>，我会尽力解决您的问题。</p>
-<span id="more"></span>
-
-<h3 id="安装前提"><a href="#安装前提" class="headerlink" title="安装前提"></a>安装前提</h3><p>安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：<br><a href="https://nodejs.org/" title="Node.js">Node.js</a><br><a href="https://git-scm.com/" title="Git">Git</a></p>
-<p>如果您的电脑中已经安装上述必备程序，那么恭喜您！接下来只需要使用 npm 即可完成 Hexo 的安装。</p>
-<!--more-->
-
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
-<p>安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init &lt;folder&gt;</span><br><span class="line">$ cd &lt;folder&gt;</span><br><span class="line">$ npm install</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="创建一个新帖子"><a href="#创建一个新帖子" class="headerlink" title="创建一个新帖子"></a>创建一个新帖子</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new &quot;My New Post&quot;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="运行服务"><a href="#运行服务" class="headerlink" title="运行服务"></a>运行服务</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="部署到远程站点"><a href="#部署到远程站点" class="headerlink" title="部署到远程站点"></a>部署到远程站点</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>更多信息: <a href="https://hexo.io/docs/deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>npm</tag>
-        <tag>node.js</tag>
       </tags>
   </entry>
   <entry>
@@ -7040,6 +7044,37 @@
       </tags>
   </entry>
   <entry>
+    <title>小米游戏本开箱体验</title>
+    <url>/posts/64043/</url>
+    <content><![CDATA[<p>黑色包装箱上印制了小米游戏本的内部X光扫描线稿图，这一点有点新意。全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方</p>
+<p>黑色包装箱上印制了小米游戏本的内部 X 光扫描线稿图，这一点有点新意。<span id="more"></span><br>全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方，整体造型属于看起来有点低调，但同时又能给你隐隐觉得“好像有点厉害”的感觉全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方，整体造型属于看起来有点低调，但同时又能给你隐隐觉得“好像有点厉害”的感觉。</p>
+<p><img data-src="xmyxb1.jpg" alt="外观1" title="外观 1"><br><img data-src="xmyxb2.jpg" alt="外观2" title="外观 2"><br><img data-src="xmyxb3.jpg" alt="外观3" title="外观 3"><br><img data-src="xmyxb4.jpg" alt="外观4" title="外观 4"><br><img data-src="xmyxb5.jpg" alt="外观5" title="外观 5"></p>
+<h3 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h3><p>正如雷老板所说，确实是外观低调，内心澎湃。第一眼看上去就是标准的笔记本。但是当你打开灯效的时候又燥了起来。我还挺喜欢这种设计。</p>
+<h3 id="续航"><a href="#续航" class="headerlink" title="续航"></a>续航</h3><p>经本人不严谨的测试，看了 3 个电影正好没电，耗时 6 个小时左右。</p>
+<h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>重点来了，买游戏本的都奔着游戏来的，包括我。玩了几款游戏，绝地求生 魔兽世界 守望先锋 LOL 等，都是完美运行，没有出现卡顿，掉帧的现象。</p>
+<p><img data-src="xmyxb6.jpg" alt="键盘" title="键盘"><br><img data-src="xmyxb8.jpg" alt="键盘" title="键盘"><br><img data-src="xmyxb9.jpg" alt="键盘" title="键盘"><br><img data-src="xmyxb7.jpg" alt="键盘" title="键盘"></p>
+<h3 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h3><p>总体来说，个人觉得键盘手感不错，用起来挺舒适的，码字贼爽，<code>但是过几天我要买个青轴键盘</code>。</p>
+<p><img data-src="xmyxb10.jpg" alt="屏幕" title="屏幕"></p>
+<h3 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h3><p>我对屏幕不懂，看不出好还是不好，就不多说了。不过游戏本用 72%色域的屏幕，雷老板还是挺良心的。</p>
+<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>确实接口很丰富，要啥有啥，不过我确实觉得 SD 卡的接口可以不要，还能省点成本。另外说下 HDMI 可以输出 4K，这个比较赞。</p>
+<h3 id="散热"><a href="#散热" class="headerlink" title="散热"></a>散热</h3><p>真如发布会上所说，龙卷风确实很牛逼，再加上背面的超大散热面积，散热杠杠的，完全不用担心，并且有一键龙卷风按键，点击一下即开启，挺方便。</p>
+<h3 id="音效"><a href="#音效" class="headerlink" title="音效"></a>音效</h3><p>外置喇叭声音还原非常好，层次清晰。耳机的话，支持杜比音效，音效确实不错。</p>
+<h3 id="触摸板"><a href="#触摸板" class="headerlink" title="触摸板"></a>触摸板</h3><p>这个手感真的不错，是让人能愿意去用的。比我之前的 L 家的好太多。</p>
+<h3 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h3><p>bios 界面全部是简体中文，这是我用过电脑里最喜欢的 BIOS。功能界面看着贼舒服。<br><img data-src="c182cd3ab582297b59a41a7c6a66757d.jpg" alt="BIOS" title="BIOS"></p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>电脑</tag>
+        <tag>开箱</tag>
+        <tag>日常</tag>
+        <tag>小米游戏本</tag>
+        <tag>小米</tag>
+        <tag>笔记本</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>学习Golang笔记-基础知识一</title>
     <url>/posts/19895/</url>
     <content><![CDATA[<p>开启我学习新编程语言的篇章。笔记嘛，不多说，直入主题。</p>
@@ -7437,37 +7472,6 @@
       </tags>
   </entry>
   <entry>
-    <title>小米游戏本开箱体验</title>
-    <url>/posts/64043/</url>
-    <content><![CDATA[<p>黑色包装箱上印制了小米游戏本的内部X光扫描线稿图，这一点有点新意。全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方</p>
-<p>黑色包装箱上印制了小米游戏本的内部 X 光扫描线稿图，这一点有点新意。<span id="more"></span><br>全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方，整体造型属于看起来有点低调，但同时又能给你隐隐觉得“好像有点厉害”的感觉全金属机身设计，顶盖无 LOGO，“MI”被设计在显示屏的下方，整体造型属于看起来有点低调，但同时又能给你隐隐觉得“好像有点厉害”的感觉。</p>
-<p><img data-src="xmyxb1.jpg" alt="外观1" title="外观 1"><br><img data-src="xmyxb2.jpg" alt="外观2" title="外观 2"><br><img data-src="xmyxb3.jpg" alt="外观3" title="外观 3"><br><img data-src="xmyxb4.jpg" alt="外观4" title="外观 4"><br><img data-src="xmyxb5.jpg" alt="外观5" title="外观 5"></p>
-<h3 id="外观"><a href="#外观" class="headerlink" title="外观"></a>外观</h3><p>正如雷老板所说，确实是外观低调，内心澎湃。第一眼看上去就是标准的笔记本。但是当你打开灯效的时候又燥了起来。我还挺喜欢这种设计。</p>
-<h3 id="续航"><a href="#续航" class="headerlink" title="续航"></a>续航</h3><p>经本人不严谨的测试，看了 3 个电影正好没电，耗时 6 个小时左右。</p>
-<h3 id="游戏"><a href="#游戏" class="headerlink" title="游戏"></a>游戏</h3><p>重点来了，买游戏本的都奔着游戏来的，包括我。玩了几款游戏，绝地求生 魔兽世界 守望先锋 LOL 等，都是完美运行，没有出现卡顿，掉帧的现象。</p>
-<p><img data-src="xmyxb6.jpg" alt="键盘" title="键盘"><br><img data-src="xmyxb8.jpg" alt="键盘" title="键盘"><br><img data-src="xmyxb9.jpg" alt="键盘" title="键盘"><br><img data-src="xmyxb7.jpg" alt="键盘" title="键盘"></p>
-<h3 id="键盘"><a href="#键盘" class="headerlink" title="键盘"></a>键盘</h3><p>总体来说，个人觉得键盘手感不错，用起来挺舒适的，码字贼爽，<code>但是过几天我要买个青轴键盘</code>。</p>
-<p><img data-src="xmyxb10.jpg" alt="屏幕" title="屏幕"></p>
-<h3 id="屏幕"><a href="#屏幕" class="headerlink" title="屏幕"></a>屏幕</h3><p>我对屏幕不懂，看不出好还是不好，就不多说了。不过游戏本用 72%色域的屏幕，雷老板还是挺良心的。</p>
-<h3 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h3><p>确实接口很丰富，要啥有啥，不过我确实觉得 SD 卡的接口可以不要，还能省点成本。另外说下 HDMI 可以输出 4K，这个比较赞。</p>
-<h3 id="散热"><a href="#散热" class="headerlink" title="散热"></a>散热</h3><p>真如发布会上所说，龙卷风确实很牛逼，再加上背面的超大散热面积，散热杠杠的，完全不用担心，并且有一键龙卷风按键，点击一下即开启，挺方便。</p>
-<h3 id="音效"><a href="#音效" class="headerlink" title="音效"></a>音效</h3><p>外置喇叭声音还原非常好，层次清晰。耳机的话，支持杜比音效，音效确实不错。</p>
-<h3 id="触摸板"><a href="#触摸板" class="headerlink" title="触摸板"></a>触摸板</h3><p>这个手感真的不错，是让人能愿意去用的。比我之前的 L 家的好太多。</p>
-<h3 id="BIOS"><a href="#BIOS" class="headerlink" title="BIOS"></a>BIOS</h3><p>bios 界面全部是简体中文，这是我用过电脑里最喜欢的 BIOS。功能界面看着贼舒服。<br><img data-src="c182cd3ab582297b59a41a7c6a66757d.jpg" alt="BIOS" title="BIOS"></p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>电脑</tag>
-        <tag>开箱</tag>
-        <tag>日常</tag>
-        <tag>小米游戏本</tag>
-        <tag>小米</tag>
-        <tag>笔记本</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>整合SSM笔记-狂神</title>
     <url>/posts/31217/</url>
     <content><![CDATA[<h1 id="整合SSM框架"><a href="#整合SSM框架" class="headerlink" title="整合SSM框架"></a>整合SSM框架</h1><h2 id="环境要求"><a href="#环境要求" class="headerlink" title="环境要求"></a>环境要求</h2><p>环境：</p>
@@ -7595,31 +7599,6 @@
       </tags>
   </entry>
   <entry>
-    <title>最新HEXO博客NEXT主题隐藏文章方法</title>
-    <url>/posts/27190/</url>
-    <content><![CDATA[<p>其实方法很简单，打开主题首页对应的文件，添加一个判断即可</p>
-<p>打开文件 <code>\themes\next\layout\index.njk</code>文件，大概在11行把</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>替换为以下代码即可 <span id="more"></span></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if post.hide != true %&#125;</span><br><span class="line">	&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<p>如图</p>
-<p><img data-src="2020-11-21203459.png" alt="代码页截图"></p>
-<p>然后在post文章头中加入 <code>hide:true</code>即可实现首页文章隐藏，true为隐藏false或者不写则为显示</p>
-<p>建议直接在 <code>/scaffolds/post.md</code>中直接添加 <code>hide:false</code>，即可实现新建文章自动添加</p>
-<p>在分类或者标签中实现隐藏也是同理</p>
-]]></content>
-      <categories>
-        <category>常用技术</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>Hexo</tag>
-        <tag>node</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>本站主题安装和配置详情</title>
     <url>/posts/7434/</url>
     <content><![CDATA[<h1 id="本站主题安装和配置详情"><a href="#本站主题安装和配置详情" class="headerlink" title="本站主题安装和配置详情"></a>本站主题安装和配置详情</h1><p>本站主题是一款单栏响应式的[Hexo](<a href="https://hexo.io)主题;基于/">https://hexo.io)主题；基于</a> Hexo 3.0+ 制作，兼容移动端浏览；主题的代码托管在GitHub上</p>
@@ -7686,6 +7665,31 @@
         <tag>博客</tag>
         <tag>Hexo</tag>
         <tag>node.js</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>最新HEXO博客NEXT主题隐藏文章方法</title>
+    <url>/posts/27190/</url>
+    <content><![CDATA[<p>其实方法很简单，打开主题首页对应的文件，添加一个判断即可</p>
+<p>打开文件 <code>\themes\next\layout\index.njk</code>文件，大概在11行把</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>替换为以下代码即可 <span id="more"></span></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;%- if post.hide != true %&#125;</span><br><span class="line">	&#123;&#123; partial(&#x27;_macro/post.njk&#x27;, &#123;post: post, is_index: true&#125;) &#125;&#125;</span><br><span class="line">&#123;%- endif %&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>如图</p>
+<p><img data-src="2020-11-21203459.png" alt="代码页截图"></p>
+<p>然后在post文章头中加入 <code>hide:true</code>即可实现首页文章隐藏，true为隐藏false或者不写则为显示</p>
+<p>建议直接在 <code>/scaffolds/post.md</code>中直接添加 <code>hide:false</code>，即可实现新建文章自动添加</p>
+<p>在分类或者标签中实现隐藏也是同理</p>
+]]></content>
+      <categories>
+        <category>常用技术</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>Hexo</tag>
+        <tag>node</tag>
       </tags>
   </entry>
   <entry>
@@ -7758,6 +7762,29 @@
       <tags>
         <tag>hexo</tag>
         <tag>github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>记录一下今天的糗事</title>
+    <url>/posts/476/</url>
+    <content><![CDATA[<p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）<span id="more"></span></p>
+<blockquote>
+<p>唉，今天糗了，好烦恼！<br><img data-src="1.PNG" alt="捕获" title="捕获1"></p>
+</blockquote>
+<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy文件【discuz系统做的分类信息网】）<br>真是太手残了，该打</p>
+<h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><p>正在下载阿里云oss上的备份文件……<br>下载好了<br>但是并不可以得到解决<br>看来只能从数据库入手了</p>
+<p>然后就恢复_common_block、_common_diy_data与_common_template_block数据表<br>以及data下diy的所有文件<br>做了以上步骤差不多已经好了，只是推荐用户模块丢失了，没办法只能自己重新写代码了<br>不过不错；</p>
+<p><img data-src="2.PNG" alt="捕" title="捕获"></p>
+<h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><p>DZ系统的模块数据不可以随便清理，有备份的不影响，现在我也要做一份备份了</p>
+<p>说起来比着还糟糕，懒得打字，各位晚安！</p>
+]]></content>
+      <categories>
+        <category>闲言碎语</category>
+      </categories>
+      <tags>
+        <tag>网站</tag>
+        <tag>失误</tag>
+        <tag>文件</tag>
       </tags>
   </entry>
   <entry>
@@ -10644,29 +10671,6 @@
       <tags>
         <tag>设计模式</tag>
         <tag>Design Pattern</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>记录一下今天的糗事</title>
-    <url>/posts/476/</url>
-    <content><![CDATA[<p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy 文件【discuz 系统做的分类信息网】）<span id="more"></span></p>
-<blockquote>
-<p>唉，今天糗了，好烦恼！<br><img data-src="1.PNG" alt="捕获" title="捕获1"></p>
-</blockquote>
-<h3 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h3><p>本来今天在弄墨江信息网【一个地方的网站】，本来差不多要好了，可是我手残把 文件不小心删除了，而且删除的是主站的文件（diy文件【discuz系统做的分类信息网】）<br>真是太手残了，该打</p>
-<h3 id="解决过程"><a href="#解决过程" class="headerlink" title="解决过程"></a>解决过程</h3><p>正在下载阿里云oss上的备份文件……<br>下载好了<br>但是并不可以得到解决<br>看来只能从数据库入手了</p>
-<p>然后就恢复_common_block、_common_diy_data与_common_template_block数据表<br>以及data下diy的所有文件<br>做了以上步骤差不多已经好了，只是推荐用户模块丢失了，没办法只能自己重新写代码了<br>不过不错；</p>
-<p><img data-src="2.PNG" alt="捕" title="捕获"></p>
-<h3 id="经验"><a href="#经验" class="headerlink" title="经验"></a>经验</h3><p>DZ系统的模块数据不可以随便清理，有备份的不影响，现在我也要做一份备份了</p>
-<p>说起来比着还糟糕，懒得打字，各位晚安！</p>
-]]></content>
-      <categories>
-        <category>闲言碎语</category>
-      </categories>
-      <tags>
-        <tag>网站</tag>
-        <tag>失误</tag>
-        <tag>文件</tag>
       </tags>
   </entry>
 </search>
