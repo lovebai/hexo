@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-10-07T04:33:49.186Z</updated>
+  <updated>2022-10-12T05:29:25.007Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,59 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>中学教资科目二答题汇总及记忆口诀</title>
+    <link href="https://19981115.xyz/posts/3152/"/>
+    <id>https://19981115.xyz/posts/3152/</id>
+    <published>2022-10-12T04:55:57.000Z</published>
+    <updated>2022-10-12T05:29:25.007Z</updated>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;背会它们，不光是对简答题有用，对做单选题、材料分析题的也是大有裨益的啊。其中【一级】重点背诵，【二级】精力&lt;br&gt;充足，可以背背。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="中学教资" scheme="https://19981115.xyz/tags/%E4%B8%AD%E5%AD%A6%E6%95%99%E8%B5%84/"/>
+    
+    <category term="教育能力" scheme="https://19981115.xyz/tags/%E6%95%99%E8%82%B2%E8%83%BD%E5%8A%9B/"/>
+    
+    <category term="综合知识" scheme="https://19981115.xyz/tags/%E7%BB%BC%E5%90%88%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="口诀技巧" scheme="https://19981115.xyz/tags/%E5%8F%A3%E8%AF%80%E6%8A%80%E5%B7%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>教资科目二重点总结98条</title>
+    <link href="https://19981115.xyz/posts/54757/"/>
+    <id>https://19981115.xyz/posts/54757/</id>
+    <published>2022-10-12T04:54:59.000Z</published>
+    <updated>2022-10-12T05:29:44.338Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;教育基础知识&quot;&gt;&lt;a href=&quot;#教育基础知识&quot; class=&quot;headerlink&quot; title=&quot;教育基础知识&quot;&gt;&lt;/a&gt;教育基础知识&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;《学记》是世界上最早的一部教育著作。&lt;/li&gt;
+&lt;li&gt;《学记》教育原则：教学相长、及时而教、不陵节而施、长善救失、道而弗牵、强而弗抑、开而弗达、学不躐（ liè ）等、藏息&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="基础知识" scheme="https://19981115.xyz/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    <category term="教育能力" scheme="https://19981115.xyz/tags/%E6%95%99%E8%82%B2%E8%83%BD%E5%8A%9B/"/>
+    
+    <category term="教师资格" scheme="https://19981115.xyz/tags/%E6%95%99%E5%B8%88%E8%B5%84%E6%A0%BC/"/>
+    
+  </entry>
   
   <entry>
     <title>WrodPress 禁止特定内容评论</title>
@@ -462,66 +515,6 @@
     <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
     
     <category term="MVC" scheme="https://19981115.xyz/tags/MVC/"/>
-    
-    <category term="SpringBoot" scheme="https://19981115.xyz/tags/SpringBoot/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>整合SSM笔记-狂神</title>
-    <link href="https://19981115.xyz/posts/31217/"/>
-    <id>https://19981115.xyz/posts/31217/</id>
-    <published>2021-10-29T15:14:59.000Z</published>
-    <updated>2021-10-29T15:19:15.768Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;整合SSM框架&quot;&gt;&lt;a href=&quot;#整合SSM框架&quot; class=&quot;headerlink&quot; title=&quot;整合SSM框架&quot;&gt;&lt;/a&gt;整合SSM框架&lt;/h1&gt;&lt;h2 id=&quot;环境要求&quot;&gt;&lt;a href=&quot;#环境要求&quot; class=&quot;headerlink&quot; title=&quot;环境要求&quot;&gt;&lt;/a&gt;环境要求&lt;/h2&gt;&lt;p&gt;环境：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;IDEA&lt;/li&gt;
-&lt;li&gt;MySQL 5.7.19&lt;/li&gt;
-&lt;li&gt;Tomcat 9&lt;/li&gt;
-&lt;li&gt;Maven 3.6&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt; 要求：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;需要熟练掌握MySQL数据库，Spring，JavaWeb及MyBatis知识，简单的前端知识；&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;数据库环境&quot;&gt;&lt;a href=&quot;#数据库环境&quot; class=&quot;headerlink&quot; title=&quot;数据库环境&quot;&gt;&lt;/a&gt;数据库环境&lt;/h2&gt;&lt;p&gt;创建一个存放书籍数据的数据库表&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="MySQL" scheme="https://19981115.xyz/tags/MySQL/"/>
-    
-    <category term="Mybatis" scheme="https://19981115.xyz/tags/Mybatis/"/>
-    
-    <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>SpringMVC学习笔记-狂神</title>
-    <link href="https://19981115.xyz/posts/18901/"/>
-    <id>https://19981115.xyz/posts/18901/</id>
-    <published>2021-10-29T15:04:04.000Z</published>
-    <updated>2021-10-29T15:21:15.277Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;SpringMVC&quot;&gt;&lt;a href=&quot;#SpringMVC&quot; class=&quot;headerlink&quot; title=&quot;SpringMVC&quot;&gt;&lt;/a&gt;SpringMVC&lt;/h1&gt;&lt;h2 id=&quot;1、回顾MVC&quot;&gt;&lt;a href=&quot;#1、回顾MVC&quot; class=&quot;headerlink&quot; title=&quot;1、回顾MVC&quot;&gt;&lt;/a&gt;1、回顾MVC&lt;/h2&gt;&lt;h3 id=&quot;1-1、什么是MVC&quot;&gt;&lt;a href=&quot;#1-1、什么是MVC&quot; class=&quot;headerlink&quot; title=&quot;1.1、什么是MVC&quot;&gt;&lt;/a&gt;1.1、什么是MVC&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;MVC是模型(Model)、视图(View)、控制器(Controller)的简写，是一种软件设计规范。&lt;/li&gt;
-&lt;li&gt;是将业务逻辑、数据、显示分离的方法来组织代码。&lt;/li&gt;
-&lt;li&gt;MVC主要作用是&lt;strong&gt;降低了视图与业务逻辑间的双向偶合&lt;/strong&gt;。&lt;/li&gt;
-&lt;li&gt;MVC不是一种设计模式，&lt;strong&gt;MVC是一种架构模式&lt;/strong&gt;。当然不同的MVC存在差异。&lt;/li&gt;
-&lt;/ul&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
     
     <category term="SpringBoot" scheme="https://19981115.xyz/tags/SpringBoot/"/>
     
