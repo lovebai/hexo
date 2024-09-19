@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha256-DfWjNxDkM94fVBWx1H5BMMp0Zq7luBlV8QRcSES7s+0=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"19981115.xyz","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="参数绑定模型可以将请求体自动绑定到结构体中，目前支持绑定的请求类型有 JSON 、XML 、YAML 和标准表单 form数据 foo&#x3D;bar&amp;boo&#x3D;baz 等。换句话说，只要定义好结构体，就可以将请求中包含的数据自动接收过来，这是 Gin 框架非常神奇的功能。   在定义绑定对应的结构体时，需要给结构体字段设置绑定类型的标签，比如绑定 JSON 数据时，设置字段标签为 json:&amp;qu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Gin 框架学习笔记 — 参数自动绑定到结构体">
+<meta property="og:url" content="https://19981115.xyz/posts/50157/index.html">
+<meta property="og:site_name" content="MY-Notes">
+<meta property="og:description" content="参数绑定模型可以将请求体自动绑定到结构体中，目前支持绑定的请求类型有 JSON 、XML 、YAML 和标准表单 form数据 foo&#x3D;bar&amp;boo&#x3D;baz 等。换句话说，只要定义好结构体，就可以将请求中包含的数据自动接收过来，这是 Gin 框架非常神奇的功能。   在定义绑定对应的结构体时，需要给结构体字段设置绑定类型的标签，比如绑定 JSON 数据时，设置字段标签为 json:&amp;qu">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-09-19T03:41:01.000Z">
+<meta property="article:modified_time" content="2024-09-19T03:43:03.097Z">
+<meta property="article:author" content="小白">
+<meta property="article:tag" content="golang">
+<meta property="article:tag" content="gin">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://19981115.xyz/posts/50157/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://19981115.xyz/posts/50157/","path":"posts/50157/","title":"Gin 框架学习笔记 — 参数自动绑定到结构体"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Gin 框架学习笔记 — 参数自动绑定到结构体 | MY-Notes</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="MY-Notes" type="application/atom+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">MY-Notes</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">MY Quick Notes</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li><li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li><li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li><li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E7%BB%91%E5%AE%9A%E6%9F%A5%E8%AF%A2%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%88%96%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE"><span class="nav-number">1.</span> <span class="nav-text">1. 绑定查询字符串或表单数据</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Multipart-Urlencoded-%E7%BB%91%E5%AE%9A"><span class="nav-number">2.</span> <span class="nav-text">2. Multipart&#x2F;Urlencoded 绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-URI-%E5%8F%82%E6%95%B0%E7%BB%91%E5%AE%9A"><span class="nav-number">3.</span> <span class="nav-text">3. URI 参数绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E7%BB%91%E5%AE%9A-HTML-%E5%A4%8D%E9%80%89%E6%A1%86"><span class="nav-number">4.</span> <span class="nav-text">4. 绑定 HTML 复选框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E7%BB%91%E5%AE%9A%E8%A1%A8%E5%8D%95%E6%95%B0%E6%8D%AE%E8%87%B3%E5%B5%8C%E5%85%A5%E7%BB%93%E6%9E%84%E4%BD%93"><span class="nav-number">5.</span> <span class="nav-text">5. 绑定表单数据至嵌入结构体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E5%B0%86%E8%AF%B7%E6%B1%82%E4%BD%93%E7%BB%91%E5%AE%9A%E5%88%B0%E4%B8%8D%E5%90%8C%E7%9A%84%E7%BB%93%E6%9E%84%E4%BD%93%E4%B8%AD"><span class="nav-number">6.</span> <span class="nav-text">6. 将请求体绑定到不同的结构体中</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-%E5%8F%AA%E7%BB%91%E5%AE%9A-URL-Query-%E5%8F%82%E6%95%B0"><span class="nav-number">7.</span> <span class="nav-text">7. 只绑定 URL Query 参数</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-JSON-%E6%A8%A1%E5%9E%8B%E7%BB%91%E5%AE%9A"><span class="nav-number">8.</span> <span class="nav-text">8. JSON 模型绑定</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9-Header-%E5%A4%B4%E4%BF%A1%E6%81%AF%E7%BB%91%E5%AE%9A"><span class="nav-number">9.</span> <span class="nav-text">9. Header 头信息绑定</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="小白"
+      src="/images/avatar.jpg">
+  <p class="site-author-name" itemprop="name">小白</p>
+  <div class="site-description" itemprop="description">随言笔记，胡乱编写</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">78</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/lovebai" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;lovebai" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:kuxiaoju@gmail.com" title="E-Mail → mailto:kuxiaoju@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://19981115.xyz/posts/50157/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="小白">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MY-Notes">
+      <meta itemprop="description" content="随言笔记，胡乱编写">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Gin 框架学习笔记 — 参数自动绑定到结构体 | MY-Notes">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Gin 框架学习笔记 — 参数自动绑定到结构体
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2024-09-19 11:41:01 / 修改时间：11:43:03" itemprop="dateCreated datePublished" datetime="2024-09-19T11:41:01+08:00">2024-09-19</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">学习笔记</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>参数绑定模型可以将请求体自动绑定到结构体中，目前支持绑定的请求类型有 <code>JSON</code> 、<code>XML</code> 、<code>YAML</code> 和标准表单 <code>form</code>数据 <code>foo=bar&amp;boo=baz</code> 等。换句话说，只要定义好结构体，就可以将请求中包含的数据自动接收过来，这是 <code>Gin</code> 框架非常神奇的功能。  </p>
+<p>在定义绑定对应的结构体时，需要给结构体字段设置绑定类型的标签，比如绑定 <code>JSON</code> 数据时，设置字段标签为 <code>json:&quot;fieldname&quot;</code> 。使用绑定可以更快捷地把数据传递给程序中的数据对象。  </p>
+<span id="more"></span>
+
+<p>使用 <code>Gin</code>框架中系列绑定有关方法时，<code>Gin</code> 会根据请求头中 <code>Content-Type</code> 推断如何绑定，也就是自动绑定。但如果明确绑定的类型，开发人员也可以使用 <code>MustBindWith()</code> 方法或 <code>BindJSON()</code> 等方法而不用自动推断。可以指定结构体某字段是必需的，字段需要设置标签 <code>binding:&quot;required&quot;</code> ，但如果绑定时是空值，<code>Gin</code> 会报错。  </p>
+<p>在 <code>Gin</code> 框架的 <code>binding</code> 包中，定义了 <code>Content-Type</code> 请求头信息的多种 <code>MIME</code> 类型，以便在自动绑定时进行类型判别进而采用对应的处理方法：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> ( MIMEJSON = <span class="string">&quot;application/json&quot;</span> MIMEHTML = <span class="string">&quot;text/html&quot;</span> MIMEXML = <span class="string">&quot;application/xml&quot;</span> MIMEXML2 = <span class="string">&quot;text/xml&quot;</span> MIMEPlain = <span class="string">&quot;text/plain&quot;</span> MIMEPOSTForm = <span class="string">&quot;application/x-www-form-urlencoded&quot;</span> MIMEMultipartPOSTForm = <span class="string">&quot;multipart/form-data&quot;</span> MIMEPROTOBUF = <span class="string">&quot;application/x-protobuf&quot;</span> MIMEMSGPACK = <span class="string">&quot;application/x-msgpack&quot;</span> MIMEMSGPACK2 = <span class="string">&quot;application/msgpack&quot;</span> MIMEYAML = <span class="string">&quot;application/x-yaml&quot;</span> )</span><br></pre></td></tr></table></figure>
+
+<p>在所有绑定的方法中，首先 <code>c.Bind()</code> 方法会根据 <code>Content-Type</code> 推断得到一个 <code>bindding</code> 实例对象。因为它会调用函数 <code>func Default(method, contentType string) Binding</code> ，这个函数根据 <code>HTTP</code> 请求的方法和 <code>Content-Type</code> 来实例化具体的 <code>bindding</code> 对象。一共可以实例化为下面几种类型：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> ( JSON = jsonBinding&#123;&#125; XML = xmlBinding&#123;&#125; Form = formBinding&#123;&#125; Query = queryBinding&#123;&#125; FormPost = formPostBinding&#123;&#125; FormMultipart = formMultipartBinding&#123;&#125; ProtoBuf = protobufBinding&#123;&#125; MsgPack = msgpackBinding&#123;&#125; YAML = yamlBinding&#123;&#125; Uri = uriBinding&#123;&#125; Header = headerBinding&#123;&#125; )</span><br></pre></td></tr></table></figure>
+
+<p>在 <code>binding</code> 包也就是 <code>binding</code> 目录中，可以看到每种实例结构都单独在一个文件定义了系列处理方法。 <code>c.Bind()</code> 方法得到 <code>binding</code> 实例对象后，会调用 <code>c.MustBindWith(obj, b)</code> 方法， <code>b</code> 为实例化的某类 <code>binding</code> 对象，而像 <code>c.BindJSON()</code> 方法由于知道实例化对象是 <code>JSON</code> ，所以也调用 <code>c.MustBindWith(obj, b)</code> ，这里的 <code>b</code> 是 <code>jsonBinding&#123;&#125;</code> 对象。其他像 <code>XML</code> 等的处理过程类似。  </p>
+<p>而 <code>c.MustBindWith()</code> 方法会统一调用 <code>c.ShouldBindWith()</code> 方法，在 <code>c.ShouldBindWith()</code> 方法中会调用具体实例的处理方法： <code>b.Bind(c.Request, obj)</code> ，这个 <code>b.Bind()</code>方法很关键，每种 <code>binding</code> 实例对象都有实现这个方法，它实现了参数的绑定功能。  </p>
+<p>在参数绑定过程中，大致可以认为是这个过程：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Bind-&gt;MustBindWith-&gt;ShouldBindWith-&gt;b.Bind</span><br></pre></td></tr></table></figure>
+
+<p>在参数绑定中，无论是采用 <code>c.Bind()</code> 系列方法、或者是 <code>c.ShouldBindWith()</code> 系列方法，最终都是通过具体实例的 <code>b.Bind()</code> 方法来实现参数绑定到结构体指针。而这个实例可以在 <code>binding</code> 目录中找到其方法的实现文件。如： <code>json.go</code> 、 <code>uri.go</code> 以及 <code>form.go</code> 等等文件，文件名都对应着不同的 <code>Content-Type</code> 。  </p>
+<p>在 <code>Gin</code> 框架中下列方法可以用处理绑定：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Bind 检查 Content-Type 来自动选择绑定引擎 // 依靠 &quot;Content-Type&quot; 头来使用不同的绑定 // &quot;application/json&quot; 绑定 JSON // &quot;application/xml&quot; 绑定 XML // 否则返回错误信息 // 如果 Content-Type ==“application / json”，JSON 或 XML 作为 JSON 输入， // Bind 会将请求的主体解析为 JSON。 // 它将 JSON 有效负载解码为指定为指针的结构。 // 如果输入无效，它会写入 400 错误并在响应中设置 Content-Type 标题 “text / plain” 。 func (c *Context) Bind(obj interface&#123;&#125;) error // BindJSON 是 c.MustBindWith(obj, binding.JSON) 的简写 func (c *Context) BindJSON(obj interface&#123;&#125;) error // BindXML 是 c.MustBindWith(obj, binding.BindXML) 的简写 func (c *Context) BindXML(obj interface&#123;&#125;) error // BindQuery 是 c.MustBindWith(obj, binding.Query) 的简写 func (c *Context) BindQuery(obj interface&#123;&#125;) error // BindYAML 是 c.MustBindWith(obj, binding.YAML) 的简写 func (c *Context) BindYAML(obj interface&#123;&#125;) error // BindHeader 是 c.MustBindWith(obj, binding.Header) 的简写 func (c *Context) BindHeader(obj interface&#123;&#125;) error // BindUri 使用 binding.Uri 绑定传递的结构体指针。 // 如果发生任何错误，它将使用 HTTP 400 中止请求。 func (c *Context) BindUri(obj interface&#123;&#125;) error // MustBindWith 使用指定的绑定引擎绑定传递的 struct 指针。 // 如果发生任何错误，它将使用 HTTP 400 中止请求。 func (c *Context) MustBindWith(obj interface&#123;&#125;, b binding.Binding) error // ShouldBind 检查 Content-Type 来自动选择绑定引擎 // 依靠 &quot;Content-Type&quot; 头来使用不同的绑定 // &quot;application/json&quot; 绑定 JSON // &quot;application/xml&quot; 绑定 XML // 否则返回错误信息 // 如果 Content-Type ==“application/json” ，JSON 或 XML 作为 JSON 输入， // Bind 会将请求的主体解析为JSON。 // 它将 JSON 有效负载解码为指定为指针的结构。 // 类似 c.Bind() ，但这个方法在 JSON 无效时不支持写 400 到响应里。 func (c *Context) ShouldBind(obj interface&#123;&#125;) error // ShouldBindJSON 是c.ShouldBindWith(obj, binding.JSON)的简写 func (c *Context) ShouldBindJSON(obj interface&#123;&#125;) error // ShouldBindXML 是c.ShouldBindWith(obj, binding.XML)的简写 func (c *Context) ShouldBindXML(obj interface&#123;&#125;) error // ShouldBindQuery 是c.ShouldBindWith(obj, binding.Query)的简写 func (c *Context) ShouldBindQuery(obj interface&#123;&#125;) error // ShouldBindYAML 是c.ShouldBindWith(obj, binding.YAML)的简写 func (c *Context) ShouldBindYAML(obj interface&#123;&#125;) error // ShouldBindHeader 是c.ShouldBindWith(obj, binding.Header)的简写 func (c *Context) ShouldBindHeader(obj interface&#123;&#125;) error // ShouldBindUri使用指定的绑定引擎绑定传递的struct指针。 func (c *Context) ShouldBindUri(obj interface&#123;&#125;) error // ShouldBindWith使用自定的绑定引擎绑定传递的struct指针。 func (c *Context) ShouldBindWith(obj interface&#123;&#125;, b binding.Binding) error // ShouldBindBodyWith与ShouldBindWith类似，但它存储请求 // ShouldBindBodyWith可进入上下文，并在再次调用时重用。 // // 注意：此方法在绑定之前读取正文。 所以推荐使用 // 如果只需要调用一次，那么ShouldBindWith可以获得更好的性能。 func (c *Context) ShouldBindBodyWith(obj interface&#123;&#125;, bb binding.BindingBody) (err error)</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="1-绑定查询字符串或表单数据"><a href="#1-绑定查询字符串或表单数据" class="headerlink" title="1. 绑定查询字符串或表单数据"></a>1. 绑定查询字符串或表单数据</h2><p>表单和 <code>URLQuery</code> 方式传递参数，程序通过绑定的方式得到参数值，在参数的提取上更加自动。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main <span class="keyword">import</span> ( <span class="string">&quot;log&quot;</span> <span class="string">&quot;github.com/gin-gonic/gin&quot;</span> ) <span class="keyword">type</span> Person <span class="keyword">struct</span> &#123; Name <span class="keyword">string</span> <span class="string">`form:&quot;name&quot;`</span> Address <span class="keyword">string</span> <span class="string">`form:&quot;address&quot;`</span> &#125; <span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; route := gin.Default() route.POST(<span class="string">&quot;/testing&quot;</span>, startPage) route.Run(<span class="string">&quot;:8080&quot;</span>) &#125; <span class="function"><span class="keyword">func</span> <span class="title">startPage</span><span class="params">(c *gin.Context)</span></span> &#123; <span class="keyword">var</span> person Person <span class="comment">// 如果是 `GET` 请求，只使用 `Form` 绑定引擎（`query`）。 // 如果是 `POST` 请求，首先检查 `content-type` 是否为 `JSON` 或 `XML`， // 然后再使用 `Form`（`form-data`）。 if c.ShouldBind(&amp;person) == nil &#123; log.Println(person.Name) log.Println(person.Address) &#125; c.String(200, &quot;Success&quot;) &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>程序运行在 Debug 模式时，在命令行运行下面三条命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST &quot;http://localhost:8080/testing?name=appleboy&amp;address=xyz&quot; curl -H &quot;Content-Type:application/json&quot; -X POST -d &#x27;&#123;&quot;name&quot;:&quot;appleeboy&quot;,&quot;address&quot;:&quot;xyz&quot;&#125;&#x27; &lt;http://localhost:8080/testing&gt; curl -H &quot;Content-Type:application/x-www-form-urlencoded&quot; -X POST -d &quot;name=appleboy&amp;address=xyz&quot; &quot;&lt;http://localhost:8080/testing&gt;&quot;</span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[GIN-debug] Listening and serving HTTP on :8080 2019/07/13 12:54:34 appleboy 2019/07/13 12:54:34 xyz [GIN] 2019/07/13 - 12:54:34 | 200 | 18.9504ms | 127.0.0.1 | POST /testing?name=appleboy&amp;address=xyz 2019/07/13 12:54:38 appleeboy 2019/07/13 12:54:38 xyz [GIN] 2019/07/13 - 12:54:38 | 200 | 0s | 127.0.0.1 | POST /testing 2019/07/13 12:54:46 appleboy 2019/07/13 12:54:46 xyz [GIN] 2019/07/13 - 12:54:46 | 200 | 0s | 127.0.0.1 | POST /testing</span><br></pre></td></tr></table></figure>
+
+<p>通过 <code>POST</code> 方法，采用 <code>Urlencoded</code> 编码或 <code>JSON</code> 方式都能被绑定正常解析。但如果把程序接收方法改为 <code>GET</code> 方法：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">route.GET(<span class="string">&quot;/testing&quot;</span>, startPage)</span><br></pre></td></tr></table></figure>
+
+<p>则只能通过 URL Query 传递参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X GET &quot;http://localhost:8080/testing?name=appleboy&amp;address=xyz&quot;</span><br></pre></td></tr></table></figure>
+
+<p>这样通过 <code>URL Query</code> 传递参数也能被正常绑定。  </p>
+<h2 id="2-Multipart-Urlencoded-绑定"><a href="#2-Multipart-Urlencoded-绑定" class="headerlink" title="2. Multipart/Urlencoded 绑定"></a>2. Multipart/Urlencoded 绑定</h2><p>通过表单传递参数，下面程序通过绑定的方式得到参数值。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> LoginForm <span class="keyword">struct</span> &#123; User <span class="keyword">string</span> <span class="string">`form:&quot;user&quot; binding:&quot;required&quot;`</span> Password <span class="keyword">string</span> <span class="string">`form:&quot;password&quot; binding:&quot;required&quot;`</span> &#125; <span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; router := gin.Default() router.POST(<span class="string">&quot;/login&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123; <span class="keyword">var</span> form LoginForm <span class="comment">// 可显式绑定表单 // c.ShouldBindWith(&amp;form, binding.Form) // 或者简单地使用 ShouldBind 方法自动绑定 if c.ShouldBind(&amp;form) == nil &#123; if form.User == &quot;user&quot; &amp;&amp; form.Password == &quot;password&quot; &#123; c.JSON(200, gin.H&#123;&quot;status&quot;: &quot;you are logged in&quot;&#125;) &#125; else &#123; c.JSON(401, gin.H&#123;&quot;status&quot;: &quot;unauthorized&quot;&#125;) &#125; &#125; &#125;) router.Run(&quot;:8080&quot;) &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>上面程序中结构体的标签： <code>form:&quot;user&quot;</code> ，表示在 <code>form</code> 表单中的名为 <code>user</code>。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">User <span class="keyword">string</span> <span class="string">`form:&quot;user&quot; binding:&quot;required&quot;`</span> Password <span class="keyword">string</span> <span class="string">`form:&quot;password&quot; binding:&quot;required&quot;`</span></span><br></pre></td></tr></table></figure>
+
+<p>程序运行在 Debug 模式时，在命令行运行下面两条命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X POST -d &quot;user=user&amp;password=password&quot; &lt;http://localhost:8080/login&gt; Curl -H &quot;Content-Type:multipart/form-data&quot; -X POST -d &quot;user=user&amp;password=password&quot; http://localhost:8080/login</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-URI-参数绑定"><a href="#3-URI-参数绑定" class="headerlink" title="3. URI 参数绑定"></a>3. URI 参数绑定</h2><p><code>Gin</code> 框架支持在路由 <code>URI</code> 中存在参数，也支持通过绑定得到这些参数，需要在结构体中指定字段标签为 <code>uri</code>。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main <span class="keyword">import</span> <span class="string">&quot;github.com/gin-gonic/gin&quot;</span> <span class="keyword">type</span> Person <span class="keyword">struct</span> &#123; ID <span class="keyword">string</span> <span class="string">`uri:&quot;id&quot; binding:&quot;required,uuid&quot;`</span> Name <span class="keyword">string</span> <span class="string">`uri:&quot;name&quot; binding:&quot;required&quot;`</span> &#125; <span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; route := gin.Default() route.GET(<span class="string">&quot;/:name/:id&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123; <span class="keyword">var</span> person Person <span class="keyword">if</span> err := c.ShouldBindUri(&amp;person); err != <span class="literal">nil</span> &#123; c.JSON(<span class="number">400</span>, gin.H&#123;<span class="string">&quot;msg&quot;</span>: err&#125;) <span class="keyword">return</span> &#125; c.JSON(<span class="number">200</span>, gin.H&#123;<span class="string">&quot;name&quot;</span>: person.Name, <span class="string">&quot;uuid&quot;</span>: person.ID&#125;) &#125;) route.Run(<span class="string">&quot;:8088&quot;</span>) &#125;</span><br></pre></td></tr></table></figure>
+
+<p>上面程序中结构体的标签： <code>uri:&quot;id&quot;</code> ，表示在 <code>URI</code> 中的参数名为 <code>id</code>。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UserID <span class="keyword">string</span> <span class="string">`uri:&quot;id&quot; binding:&quot;required&quot;`</span> Name <span class="keyword">string</span> <span class="string">`uri:&quot;name&quot; binding:&quot;required&quot;`</span></span><br></pre></td></tr></table></figure>
+
+<p>程序运行在 Debug 模式时，在命令行运行下面命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -X GET http://localhost:8080/Go/42</span><br></pre></td></tr></table></figure>
+
+<h2 id="4-绑定-HTML-复选框"><a href="#4-绑定-HTML-复选框" class="headerlink" title="4. 绑定 HTML 复选框"></a>4. 绑定 HTML 复选框</h2><p><code>Gin</code> 框架很方便地通过绑定得到 <code>HTML FORM</code> 元素的值，需要在结构体中指定字段标签<code>form:filedname</code> 。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> CheckForm <span class="keyword">struct</span> &#123; Colors []<span class="keyword">string</span> <span class="string">`form:&quot;colors[]&quot;`</span> &#125; <span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; router := gin.Default() router.Static(<span class="string">&quot;/&quot;</span>, <span class="string">&quot;./public&quot;</span>) router.POST(<span class="string">&quot;/check&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123; <span class="keyword">var</span> form CheckForm <span class="comment">// 简单地使用 ShouldBind 方法自动绑定 if c.ShouldBind(&amp;form) == nil &#123; c.JSON(200, gin.H&#123;&quot;color&quot;: form.Colors&#125;) &#125; &#125;) router.Run(&quot;:8080&quot;) &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>index.html 文件放在程序目录下 public 目录中。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">&quot;/check&quot;</span> <span class="attr">method</span>=<span class="string">&quot;POST&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">p</span>&gt;</span>Check some colors<span class="tag">&lt;/<span class="name">p</span>&gt;</span> <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;red&quot;</span>&gt;</span>Red<span class="tag">&lt;/<span class="name">label</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;colors[]&quot;</span> <span class="attr">value</span>=<span class="string">&quot;red&quot;</span> <span class="attr">id</span>=<span class="string">&quot;red&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;green&quot;</span>&gt;</span>Green<span class="tag">&lt;/<span class="name">label</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;colors[]&quot;</span> <span class="attr">value</span>=<span class="string">&quot;green&quot;</span> <span class="attr">id</span>=<span class="string">&quot;green&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">label</span> <span class="attr">for</span>=<span class="string">&quot;blue&quot;</span>&gt;</span>Blue<span class="tag">&lt;/<span class="name">label</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;checkbox&quot;</span> <span class="attr">name</span>=<span class="string">&quot;colors[]&quot;</span> <span class="attr">value</span>=<span class="string">&quot;blue&quot;</span> <span class="attr">id</span>=<span class="string">&quot;blue&quot;</span>&gt;</span> <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">&quot;submit&quot;</span>&gt;</span> <span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>注意，上面程序中结构体标签： <code>colors[]</code> 与复选框的名字一致，这里表示数组所以可以得到多个已选项的值。<br>运行程序，通过浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080/</a> ，出现复选框表单，选择两个以上选项，这里选择红，绿两种颜色，然后提交表单（请求发送到 <a target="_blank" rel="noopener" href="http://localhost:8080/check">http://localhost:8080/check</a> ）。  </p>
+<p>页面显示，符合提交的选项：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attr">&quot;color&quot;</span>:[<span class="string">&quot;red&quot;</span>,<span class="string">&quot;green&quot;</span>]&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-绑定表单数据至嵌入结构体"><a href="#5-绑定表单数据至嵌入结构体" class="headerlink" title="5. 绑定表单数据至嵌入结构体"></a>5. 绑定表单数据至嵌入结构体</h2><p>前面已经知道通过绑定可以自动取得数据到简单结构体对象，对有嵌入的结构体也可以通过绑定自动得到数据，不过嵌入的结构体后面不要指定标签。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> StructA <span class="keyword">struct</span> &#123; FieldA <span class="keyword">string</span> <span class="string">`form:&quot;field_a&quot;`</span> &#125; <span class="keyword">type</span> StructB <span class="keyword">struct</span> &#123; NestedStruct StructA <span class="comment">// 不要指定标签 FieldB string `form:&quot;field_b&quot;` &#125; type StructC struct &#123; NestedStructPointer *StructA FieldC string `form:&quot;field_c&quot;` &#125; type StructD struct &#123; NestedAnonyStruct struct &#123; FieldX string `form:&quot;field_x&quot;` &#125; FieldD string `form:&quot;field_d&quot;` &#125; func GetDataB(c *gin.Context) &#123; var b StructB c.Bind(&amp;b) c.JSON(200, gin.H&#123; &quot;a&quot;: b.NestedStruct, &quot;b&quot;: b.FieldB, &#125;) &#125; func GetDataC(c *gin.Context) &#123; var b StructC c.Bind(&amp;b) c.JSON(200, gin.H&#123; &quot;a&quot;: b.NestedStructPointer, &quot;c&quot;: b.FieldC, &#125;) &#125; func GetDataD(c *gin.Context) &#123; var b StructD c.Bind(&amp;b) c.JSON(200, gin.H&#123; &quot;x&quot;: b.NestedAnonyStruct, &quot;d&quot;: b.FieldD, &#125;) &#125; func main() &#123; router := gin.Default() router.GET(&quot;/getb&quot;, GetDataB) router.GET(&quot;/getc&quot;, GetDataC) router.GET(&quot;/getd&quot;, GetDataD) router.Run() &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>输入输出结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl &quot;http://localhost:8080/getb?field_a=hello&amp;field_b=world&quot; Go&#123;&quot;a&quot;:&#123;&quot;FieldA&quot;:&quot;hello&quot;&#125;,&quot;b&quot;:&quot;world&quot;&#125; curl &quot;http://localhost:8080/getc?field_a=hello&amp;field_c=world&quot; Go&#123;&quot;a&quot;:&#123;&quot;FieldA&quot;:&quot;hello&quot;&#125;,&quot;c&quot;:&quot;world&quot;&#125; curl &quot;http://localhost:8080/getd?field_x=hello&amp;field_d=world&quot; Go&#123;&quot;d&quot;:&quot;world&quot;,&quot;x&quot;:&#123;&quot;FieldX&quot;:&quot;hello&quot;&#125;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="6-将请求体绑定到不同的结构体中"><a href="#6-将请求体绑定到不同的结构体中" class="headerlink" title="6. 将请求体绑定到不同的结构体中"></a>6. 将请求体绑定到不同的结构体中</h2><p>一般通过调用 <code>ShouldBind()</code> 方法绑定数据，但注意某些情况不能多次调用这个方法。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> formA <span class="keyword">struct</span> &#123; Foo <span class="keyword">string</span> <span class="string">`json:&quot;foo&quot; xml:&quot;foo&quot; binding:&quot;required&quot;`</span> &#125; <span class="keyword">type</span> formB <span class="keyword">struct</span> &#123; Bar <span class="keyword">string</span> <span class="string">`json:&quot;bar&quot; xml:&quot;bar&quot; binding:&quot;required&quot;`</span> &#125; <span class="function"><span class="keyword">func</span> <span class="title">BindHandler</span><span class="params">(c *gin.Context)</span></span> &#123; objA := formA&#123;&#125; objB := formB&#123;&#125; <span class="comment">// c.ShouldBind 使用了 c.Request.Body ，不可重用。 if errA := c.ShouldBind(&amp;objA); errA != nil &#123; fmt.Println(errA) c.String(http.StatusOK, `the body should be formA`) // 因为现在 c.Request.Body 是 EOF，所以这里会报错。 &#125; else if errB := c.ShouldBind(&amp;objB); errB != nil &#123; fmt.Println(errB) c.String(http.StatusOK, `the body should be formB`) &#125; else &#123; c.String(http.StatusOK, `Success`) &#125; &#125; func main() &#123; route := gin.Default() route.Any(&quot;/bind&quot;, BindHandler) route.Run(&quot;:8080&quot;) &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>运行程序，通过浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:8080/bind?foo=foo&bar=bar">http://localhost:8080/bind?foo=foo&amp;bar=bar</a> ，页面显示：<br>the body should be formA<br>程序运行在 Debug 模式时，在命令行运行下面命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -H &quot;Content-Type:application/json&quot; -v -X POST -d &#x27;&#123;&quot;foo&quot;:&quot;foo&quot;,&quot;bar&quot;:&quot;bar&quot;&#125;&#x27; http://localhost:8080/bind</span><br></pre></td></tr></table></figure>
+
+<p>命令返回：<br>the body should be formB<br>表明在第二次运行 <code>ShouldBind()</code> 方法时出错，要想多次绑定，可以使用 <code>c.ShouldBindBodyWith()</code> 方法。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">BindHandler</span><span class="params">(c *gin.Context)</span></span> &#123; objA := formA&#123;&#125; objB := formB&#123;&#125; <span class="comment">// ShouldBindBodyWith() 读取 c.Request.Body 并将结果存入上下文。 if errA := c.ShouldBindBodyWith(&amp;objA, binding.JSON); errA != nil &#123; fmt.Println(errA) c.String(http.StatusOK, `the body should be formA`) // 这时, 复用存储在上下文中的 body 。 &#125; else if errB := c.ShouldBindBodyWith(&amp;objB, binding.JSON); errB != nil &#123; fmt.Println(errB) c.String(http.StatusOK, `the body should be formB JSON`) // 可以接受其他格式 &#125; else &#123; c.String(http.StatusOK, `Success`) &#125; &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p><code>c.ShouldBindBodyWith()</code> 会在绑定之前将请求体存储到上下文中。 这会对性能造成轻微影响，如果调用一次就能完成绑定的话，那就不要用这个方法。<br>只有某些格式需要此功能，如 <code>JSON</code> ，<code>XML</code> ，<code>MsgPack</code> ，<code>ProtoBuf</code> 。对于其他格式，如 <code>Query</code> ，<code>Form</code> ，<code>FormPost</code> ，<code>FormMultipart</code> 可以多次调用 <code>c.ShouldBind()</code> 而不会造成任任何性能损失，这也是前面结构体中的标签没有定义 <code>form</code> ，只有定义 <code>json:&quot;foo&quot; xml:&quot;foo&quot; binding:&quot;required&quot;</code> 的原因。</p>
+<h2 id="7-只绑定-URL-Query-参数"><a href="#7-只绑定-URL-Query-参数" class="headerlink" title="7. 只绑定 URL Query 参数"></a>7. 只绑定 URL Query 参数</h2><p><code>ShouldBind()</code> 方法支持 <code>URL Query</code> 参数绑定，也支持 <code>POST</code> 参数绑定。而 <code>ShouldBindQuery()</code> 方法只绑定 <code>URL Query</code> 参数而忽略 <code>POST</code> 数据。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> Person <span class="keyword">struct</span> &#123; Name <span class="keyword">string</span> <span class="string">`form:&quot;name&quot;`</span> Address <span class="keyword">string</span> <span class="string">`form:&quot;address&quot;`</span> &#125; <span class="function"><span class="keyword">func</span> <span class="title">startPage</span><span class="params">(c *gin.Context)</span></span> &#123; <span class="keyword">var</span> person Person <span class="keyword">if</span> c.ShouldBindQuery(&amp;person) == <span class="literal">nil</span> &#123; fmt.Println(person.Name) fmt.Println(person.Address) c.String(<span class="number">200</span>, <span class="string">&quot;Success&quot;</span>) &#125; <span class="keyword">else</span> &#123; c.String(<span class="number">400</span>, <span class="string">&quot;Error&quot;</span>) &#125; &#125; <span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; route := gin.Default() route.Any(<span class="string">&quot;/bindquery&quot;</span>, startPage) route.Run(<span class="string">&quot;:8080&quot;</span>) &#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行程序，通过浏览器访问 <a target="_blank" rel="noopener" href="http://localhost:8080/">http://localhost:8080/</a> ，页面显示 “Sucess” 。输出结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[GIN-debug] GET /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] POST /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] PUT /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] PATCH /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] HEAD /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] OPTIONS /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] DELETE /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] CONNECT /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] TRACE /bindquery --&gt; main.startPage (3 handlers) [GIN-debug] Listening and serving HTTP on :8080 titan cs [GIN] 2019/07/13 - 17:06:23 | 200 | 0s | ::1 | GET /bindquery?name=titan&amp;address=cs</span><br></pre></td></tr></table></figure>
+
+<p>输出表明 <code>URL Query</code> 参数通过 <code>GET</code> 方法能被程序正常绑定，注意上面程序中使用了 <code>Any()</code> 方法，它能匹配众多的 <code>HTTP</code> 方法。<br>如果程序继续运行在 Debug 模式时，在命令行运行下面命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -v -X POST -d &quot;name=titan&amp;address=cs&quot; http://localhost:8080/bindquery * Connected to localhost (::1) port 8080 (#0) &gt; POST /bindquery HTTP/1.1 &gt; Host: localhost:8080 &gt; User-Agent: curl/7.55.1 &gt; Accept: */* &gt; Content-Length: 21 &gt; Content-Type: application/x-www-form-urlencoded &gt; * upload completely sent off: 21 out of 21 bytes &lt; HTTP/1.1 200 OK &lt; Content-Type: text/plain; charset=utf-8 &lt; Date: Sat, 13 Jul 2019 17:12:37 &lt; Content-Length: 7 &lt; Success</span><br></pre></td></tr></table></figure>
+
+<p>命令行的返回表明通过 <code>POST</code> 方法已经成功提交请求，服务端成功返回，状态代码： 200 ，返回内容： Success 。<br>控制台输出结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[GIN] 2019/07/13 - 17:12:37 | 200 | 0s | ::1 | POST /bindquery</span><br></pre></td></tr></table></figure>
+
+<p>从控制台输出可以看到，通过 <code>POST</code> 提交的数据没有正常绑定。但是前面通过 <code>ShouldBind()</code> 方法可以正常绑定。这表明 <code>ShouldBindQuery()</code> 只绑定 <code>URL Query</code> 参数而忽略 <code>POST</code> 数据。</p>
+<h2 id="8-JSON-模型绑定"><a href="#8-JSON-模型绑定" class="headerlink" title="8. JSON 模型绑定"></a>8. JSON 模型绑定</h2><p>通过 <code>POST</code> 方法提交 <code>JSON</code> 格式数据，程序通过绑定的方式得到 <code>JSON</code> 数据，并传递给结构体，但需要指定字段标签为 <code>json</code> 。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 绑定 JSON type Login struct &#123; User string `form:&quot;user&quot; json:&quot;user&quot; xml:&quot;user&quot; binding:&quot;required&quot;` Password string `form:&quot;password&quot; json:&quot;password&quot; xml:&quot;password&quot; binding:&quot;required&quot;` &#125; func main() &#123; router := gin.Default() // 绑定 JSON (&#123;&quot;user&quot;: &quot;manu&quot;, &quot;password&quot;: &quot;123&quot;&#125;) router.POST(&quot;/loginJSON&quot;, func(c *gin.Context) &#123; var json Login if err := c.ShouldBindJSON(&amp;json); err != nil &#123; c.JSON(http.StatusBadRequest, gin.H&#123;&quot;error&quot;: err.Error()&#125;) return &#125; if json.User != &quot;manu&quot; || json.Password != &quot;123&quot; &#123; c.JSON(http.StatusUnauthorized, gin.H&#123;&quot;status&quot;: &quot;unauthorized&quot;&#125;) return &#125; c.JSON(http.StatusOK, gin.H&#123;&quot;status&quot;: &quot;you are logged in&quot;&#125;) &#125;) // 绑定 HTML 表单 (user=manu&amp;password=123) router.POST(&quot;/loginForm&quot;, func(c *gin.Context) &#123; var form Login // 根据 Content-Type Header 推断使用哪个绑定器。 if err := c.ShouldBind(&amp;form); err != nil &#123; c.JSON(http.StatusBadRequest, gin.H&#123;&quot;error&quot;: err.Error()&#125;) return &#125; if form.User != &quot;manu&quot; || form.Password != &quot;123&quot; &#123; c.JSON(http.StatusUnauthorized, gin.H&#123;&quot;status&quot;: &quot;unauthorized&quot;&#125;) return &#125; c.JSON(http.StatusOK, gin.H&#123;&quot;status&quot;: &quot;you are logged in&quot;&#125;) &#125;) // 监听并启动服务 router.Run(&quot;:8080&quot;) &#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>输出结果：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -v -H &#x27;content-type: application/json&#x27; -X POST http://localhost:8080/loginJSON -d &#x27;&#123; &quot;user&quot;: &quot;manu&quot; , &quot;password&quot; :&quot;123&quot; &#125;&#x27; &gt; POST /loginJSON HTTP/1.1 &gt; Host: localhost:8080 &gt; User-Agent: curl/7.47.0 &gt; Accept: */* &gt; content-type: application/json &gt; Content-Length: 38 &gt; * upload completely sent off: 38 out of 38 bytes &lt; HTTP/1.1 200 OK &lt; Content-Type: application/json; charset=utf-8 &lt; Date: Sat, 13 Jul 2019 15:08:29 GMT &lt; Content-Length: 31 &lt; &#123;&quot;status&quot;:&quot;you are logged in&quot;&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-Header-头信息绑定"><a href="#9-Header-头信息绑定" class="headerlink" title="9. Header 头信息绑定"></a>9. Header 头信息绑定</h2><p><code>Header</code> 也可以传递参数，程序通过绑定的方式得到参数值，在结构体的字段标签上需要指定为 <code>header</code> 。</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">type</span> testHeader <span class="keyword">struct</span> &#123; Rate <span class="keyword">int</span> <span class="string">`header:&quot;Rate&quot;`</span> Domain <span class="keyword">string</span> <span class="string">`header:&quot;Domain&quot;`</span> &#125; <span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123; router := gin.Default() router.GET(<span class="string">&quot;/&quot;</span>, <span class="function"><span class="keyword">func</span><span class="params">(c *gin.Context)</span></span> &#123; h := testHeader&#123;&#125; <span class="keyword">if</span> err := c.ShouldBindHeader(&amp;h); err != <span class="literal">nil</span> &#123; c.JSON(<span class="number">200</span>, err) &#125; fmt.Printf(<span class="string">&quot;%#v\\n&quot;</span>, h) c.JSON(<span class="number">200</span>, gin.H&#123;<span class="string">&quot;Rate&quot;</span>: h.Rate, <span class="string">&quot;Domain&quot;</span>: h.Domain&#125;) &#125;) router.Run(<span class="string">&quot;:8080&quot;</span>) &#125;</span><br></pre></td></tr></table></figure>
+
+<p>运行命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -H &quot;rate:300&quot; -H &quot;domain:music&quot; http://localhost:8080/ &#123;&quot;Domain&quot;:&quot;music&quot;,&quot;Rate&quot;:300&#125;</span><br></pre></td></tr></table></figure>
+
+<p>通过 <code>curl</code> 命令带上自定义的头部信息给 <code>Handler</code> 处理程序， <code>ShouldBindHeader()</code> 方法自动绑定头部变量到结构体。  </p>
+<p>参考：<a target="_blank" rel="noopener" href="https://gitbook.cn/gitchat/column/5dab061e7d66831b22aa0b44/topic/5dab09f37d66831b22aa0b5d">https://gitbook.cn/gitchat/column/5dab061e7d66831b22aa0b44/topic/5dab09f37d66831b22aa0b5d</a></p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>原作者： </strong>小白
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://19981115.xyz/posts/50157/" title="Gin 框架学习笔记 — 参数自动绑定到结构体">https://19981115.xyz/posts/50157/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/golang/" rel="tag"><i class="fa fa-tag"></i> golang</a>
+              <a href="/tags/gin/" rel="tag"><i class="fa fa-tag"></i> gin</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/posts/3152/" rel="prev" title="中学教资科目二答题汇总及记忆口诀">
+                  <i class="fa fa-chevron-left"></i> 中学教资科目二答题汇总及记忆口诀
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">小白</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/next-theme-pjax/0.5.0/pjax.min.js" integrity="sha256-3NkoLDrmHLTYj7csHIZSr0MHAFTXth7Ua/DDt4MRUAg=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lozad.js/1.16.0/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.0/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+  <script class="next-config" data-name="pdf" type="application/json">{"object_url":{"url":"https://cdnjs.cloudflare.com/ajax/libs/pdfobject/2.2.7/pdfobject.min.js","integrity":"sha256-ph3Dk89VmuTVXG6x/RDzk53SU9LPdAh1tpv0UvnDZ2I="},"url":"/lib/pdf/web/viewer.html"}</script>
+  <script src="/js/third-party/tags/pdf.js"></script>
+
+
+  <script src="/js/third-party/fancybox.js"></script>
+
+
+  
+
+
+
+
+
+</body>
+</html>

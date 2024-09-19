@@ -6,7 +6,7 @@
   <link href="https://19981115.xyz/atom.xml" rel="self"/>
   
   <link href="https://19981115.xyz/"/>
-  <updated>2022-10-12T05:40:48.054Z</updated>
+  <updated>2024-09-19T03:43:03.097Z</updated>
   <id>https://19981115.xyz/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Gin 框架学习笔记 — 参数自动绑定到结构体</title>
+    <link href="https://19981115.xyz/posts/50157/"/>
+    <id>https://19981115.xyz/posts/50157/</id>
+    <published>2024-09-19T03:41:01.000Z</published>
+    <updated>2024-09-19T03:43:03.097Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;参数绑定模型可以将请求体自动绑定到结构体中，目前支持绑定的请求类型有 &lt;code&gt;JSON&lt;/code&gt; 、&lt;code&gt;XML&lt;/code&gt; 、&lt;code&gt;YAML&lt;/code&gt; 和标准表单 &lt;code&gt;form&lt;/code&gt;数据 &lt;code&gt;foo=bar&amp;amp;boo=baz&lt;/code&gt; 等。换句话说，只要定义好结构体，就可以将请求中包含的数据自动接收过来，这是 &lt;code&gt;Gin&lt;/code&gt; 框架非常神奇的功能。  &lt;/p&gt;
+&lt;p&gt;在定义绑定对应的结构体时，需要给结构体字段设置绑定类型的标签，比如绑定 &lt;code&gt;JSON&lt;/code&gt; 数据时，设置字段标签为 &lt;code&gt;json:&amp;quot;fieldname&amp;quot;&lt;/code&gt; 。使用绑定可以更快捷地把数据传递给程序中的数据对象。  &lt;/p&gt;</summary>
+    
+    
+    
+    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="golang" scheme="https://19981115.xyz/tags/golang/"/>
+    
+    <category term="gin" scheme="https://19981115.xyz/tags/gin/"/>
+    
+  </entry>
   
   <entry>
     <title>中学教资科目二答题汇总及记忆口诀</title>
@@ -486,37 +508,6 @@
     <category term="Mybatis" scheme="https://19981115.xyz/tags/Mybatis/"/>
     
     <category term="Mybatis-plus" scheme="https://19981115.xyz/tags/Mybatis-plus/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>学习SpringBoot合并笔记-狂神</title>
-    <link href="https://19981115.xyz/posts/21119/"/>
-    <id>https://19981115.xyz/posts/21119/</id>
-    <published>2021-10-29T15:24:55.000Z</published>
-    <updated>2022-04-29T10:31:51.609Z</updated>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;1、SpringBoot-简介&quot;&gt;&lt;a href=&quot;#1、SpringBoot-简介&quot; class=&quot;headerlink&quot; title=&quot;1、SpringBoot 简介&quot;&gt;&lt;/a&gt;1、SpringBoot 简介&lt;/h1&gt;&lt;h3 id=&quot;回顾什么是-Spring&quot;&gt;&lt;a href=&quot;#回顾什么是-Spring&quot; class=&quot;headerlink&quot; title=&quot;回顾什么是 Spring&quot;&gt;&lt;/a&gt;回顾什么是 Spring&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Spring 是一个开源框架，2003 年兴起的一个轻量级的 Java 开发框架，作者：Rod Johnson 。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Spring 是为了解决企业级应用开发的复杂性而创建的，简化开发。&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&quot;Spring-是如何简化-Java-开发的&quot;&gt;&lt;a href=&quot;#Spring-是如何简化-Java-开发的&quot; class=&quot;headerlink&quot; title=&quot;Spring 是如何简化 Java 开发的&quot;&gt;&lt;/a&gt;Spring 是如何简化 Java 开发的&lt;/h3&gt;&lt;p&gt;为了降低 Java 开发的复杂性，Spring 采用了以下 4 种关键策略：&lt;/p&gt;
-&lt;p&gt;1、基于 POJO 的轻量级和最小侵入性编程，所有东西都是 bean；&lt;/p&gt;
-&lt;p&gt;2、通过 IOC，依赖注入（DI）和面向接口实现松耦合；&lt;/p&gt;
-&lt;p&gt;3、基于切面（AOP）和惯例进行声明式编程；&lt;/p&gt;
-&lt;p&gt;4、通过切面和模版减少样式代码，RedisTemplate，xxxTemplate；&lt;/p&gt;</summary>
-    
-    
-    
-    <category term="学习笔记" scheme="https://19981115.xyz/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="Spring" scheme="https://19981115.xyz/tags/Spring/"/>
-    
-    <category term="MVC" scheme="https://19981115.xyz/tags/MVC/"/>
-    
-    <category term="SpringBoot" scheme="https://19981115.xyz/tags/SpringBoot/"/>
     
   </entry>
   
