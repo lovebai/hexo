@@ -121,7 +121,7 @@
     
     
     <summary type="html">&lt;p&gt;通过 SSH 远程登录 Linux 云服务器，运行如下命令语句获取国内 IP 网段，会保存为/root/china_ip.txt&lt;/p&gt;
-&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget -q --timeout=60 -O- &amp;#x27;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&amp;#x27; | awk -F\| &amp;#x27;/CN\|ipv4/ &amp;#123; printf(&amp;quot;%s/%d\n&amp;quot;, $4, 32-log($5)/log(2)) &amp;#125;&amp;#x27; &amp;gt; /root/china_ip.txt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;wget -q --timeout=60 -O- &amp;#x27;http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest&amp;#x27; | awk -F&#92;| &amp;#x27;/CN&#92;|ipv4/ &amp;#123; printf(&amp;quot;%s/%d&#92;n&amp;quot;, $4, 32-log($5)/log(2)) &amp;#125;&amp;#x27; &amp;gt; /root/china_ip.txt&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 
 &lt;p&gt;将下面脚本保存为/root/allcn.sh&lt;/p&gt;</summary>
     
